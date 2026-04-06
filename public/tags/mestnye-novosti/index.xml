@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mestnye-Novosti on My Blog</title>
-    <link>http://localhost:1313/tags/mestnye-novosti/</link>
+    <link>https://solbadguy.github.io/tags/mestnye-novosti/</link>
     <description>Recent content in Mestnye-Novosti on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Jun 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mestnye-novosti/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/mestnye-novosti/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Яндекс запустил свое радио</title>
-      <link>http://localhost:1313/posts/yandeks-zapustil-svoe-radio/</link>
+      <link>https://solbadguy.github.io/posts/yandeks-zapustil-svoe-radio/</link>
       <pubDate>Thu, 04 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/yandeks-zapustil-svoe-radio/</guid>
+      <guid>https://solbadguy.github.io/posts/yandeks-zapustil-svoe-radio/</guid>
       <description>&lt;p&gt;Наверняка многие пользователи интернета наслышаны про обилие далеких от поиска сервисов «Яндекса». Сказать, что это плохо я не могу, скорее даже наоборот. Сегодня в Москве был представлен новый сервис Яндекса - «Яндекс.Радио».&lt;/p&gt;</description>
     </item>
     <item>
       <title>Google отдает предпочтение сайтам, которые обладают мобильной версией</title>
-      <link>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</link>
+      <link>https://solbadguy.github.io/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</link>
       <pubDate>Mon, 02 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</guid>
+      <guid>https://solbadguy.github.io/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</guid>
       <description>&lt;p&gt;Гугл официально заявил о том, что сайты, которые оптимизированы под мобильные устройства будут более предпочтительными в формировании поисковой выдачи.&lt;/p&gt;</description>
     </item>
   </channel>

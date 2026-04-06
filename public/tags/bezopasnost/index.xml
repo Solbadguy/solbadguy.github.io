@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Bezopasnost on My Blog</title>
-    <link>http://localhost:1313/tags/bezopasnost/</link>
+    <link>https://solbadguy.github.io/tags/bezopasnost/</link>
     <description>Recent content in Bezopasnost on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Apr 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bezopasnost/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/bezopasnost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Как заблокировать порно сайты от детей?</title>
-      <link>http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/</link>
+      <link>https://solbadguy.github.io/posts/kak-zablokirovat-porno-sajty-ot-detej/</link>
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-zablokirovat-porno-sajty-ot-detej/</guid>
       <description>&lt;p&gt;Многие родители со временем начинают беспокоится о том, что их дети сидя в интернете могут наткнуться на порно сайты или непристойные картинки. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Вышел Zentyal 4.1</title>
-      <link>http://localhost:1313/posts/vyshel-zentyal-4-1/</link>
+      <link>https://solbadguy.github.io/posts/vyshel-zentyal-4-1/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vyshel-zentyal-4-1/</guid>
+      <guid>https://solbadguy.github.io/posts/vyshel-zentyal-4-1/</guid>
       <description>&lt;p&gt;Позавчера команда, которая ведет разработку Zentyal на своем официальном сайте опубликовала новость, о том, что в свет вышел дистрибутив версии 4.1.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как узнать открытые порты?</title>
-      <link>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</link>
+      <link>https://solbadguy.github.io/posts/kak-uznat-otkrytye-porty/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-uznat-otkrytye-porty/</guid>
       <description>&lt;p&gt;Наверняка многие пользователи, которые тесно связаны с работой в интернете когда-нибудь сталкивались с таким вопросом - &amp;ldquo;как узнать открытые порты?&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Статусы портов в командной строке</title>
-      <link>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</link>
+      <link>https://solbadguy.github.io/posts/statusy-portov-v-komandnoj-stroke/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</guid>
+      <guid>https://solbadguy.github.io/posts/statusy-portov-v-komandnoj-stroke/</guid>
       <description>&lt;p&gt;Зачастую, при просмотре состояния открытых соединений через командную строку, в поле статус отображаются разные значения. Давайте разберемся в том, о чем они сообщают.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Бесплатный антивирус для предприятий</title>
-      <link>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</link>
+      <link>https://solbadguy.github.io/posts/besplatnyj-antivirus-dlya-predpriyatij/</link>
       <pubDate>Tue, 17 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</guid>
+      <guid>https://solbadguy.github.io/posts/besplatnyj-antivirus-dlya-predpriyatij/</guid>
       <description>&lt;p&gt;Работая в сфере информационных технологий, многие (если не каждый) сталкивались с вопросом о выборе антивирусного программного обеспечения. Вопрос можно считать довольно серьезным, особенно, если учитывать специфику - вы находитесь не возле своего домашнего компьютера.&lt;/p&gt;</description>
     </item>
   </channel>

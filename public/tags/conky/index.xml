@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Conky on My Blog</title>
-    <link>http://localhost:1313/tags/conky/</link>
+    <link>https://solbadguy.github.io/tags/conky/</link>
     <description>Recent content in Conky on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Jan 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/conky/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/conky/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Простой и минималистичный конфиг для Conky</title>
-      <link>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</link>
+      <link>https://solbadguy.github.io/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</guid>
+      <guid>https://solbadguy.github.io/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</guid>
       <description>&lt;p&gt;Подозреваю, что после установки ОС, почти каждый пользователь первым делом занимается персонализацией системы под себя. У абсолютного большинства людей все сводится к установке понравившихся обоев и замены цвета панелек. Я предлагаю пойти дальше, под катом краткий ман по установке Conky, а так же простой, но симпатичный конфиг для Conky.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Conky Ubuntu - установка</title>
-      <link>http://localhost:1313/posts/conky-ubuntu-ustanovka/</link>
+      <link>https://solbadguy.github.io/posts/conky-ubuntu-ustanovka/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/conky-ubuntu-ustanovka/</guid>
+      <guid>https://solbadguy.github.io/posts/conky-ubuntu-ustanovka/</guid>
       <description>&lt;p&gt;Наверняка многие пользователи ПК когда-нибудь задавались целью получения удобного доступа к системной информации своего компьютера. Это особенно актуально для владельцев портативной техники (ноутбуки), т.к. те зачастую могут сильно перегреваться. &lt;/p&gt;</description>
     </item>
   </channel>

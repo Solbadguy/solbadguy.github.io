@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tvitter on My Blog</title>
-    <link>http://localhost:1313/tags/tvitter/</link>
+    <link>https://solbadguy.github.io/tags/tvitter/</link>
     <description>Recent content in Tvitter on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 Mar 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tvitter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/tvitter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Twitter могут заблокировать на территории России</title>
-      <link>http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</link>
+      <link>https://solbadguy.github.io/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</link>
       <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</guid>
+      <guid>https://solbadguy.github.io/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</guid>
       <description>&lt;p&gt;Роскомнадзор в очередной раз намерен вплотную заняться американской социальной сетью &amp;ldquo;Twitter&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Россия преуспела в блокировке информации</title>
-      <link>http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/</link>
+      <link>https://solbadguy.github.io/posts/rossiya-preuspela-v-blokirovke-informacii/</link>
       <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/</guid>
+      <guid>https://solbadguy.github.io/posts/rossiya-preuspela-v-blokirovke-informacii/</guid>
       <description>&lt;p&gt;В течении всего прошлого года в офис твиттера поступало огромное количество запросов на удаление размещенной на его страницы информации.&lt;/p&gt;</description>
     </item>
   </channel>

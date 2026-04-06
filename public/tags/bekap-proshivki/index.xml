@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Bekap-Proshivki on My Blog</title>
-    <link>http://localhost:1313/tags/bekap-proshivki/</link>
+    <link>https://solbadguy.github.io/tags/bekap-proshivki/</link>
     <description>Recent content in Bekap-Proshivki on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Feb 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bekap-proshivki/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/bekap-proshivki/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Как создать резервную копию прошивки телефона?</title>
-      <link>http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</link>
+      <link>https://solbadguy.github.io/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</link>
       <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</guid>
       <description>&lt;p&gt;Каждый человек, который хочет поменять прошивку в своем смартфоне/планшете всегда должен помнить - бэкап это залог спокойного сна и крепких нервов! Прежде чем приступить к прошивке своего девайса в обязательном порядке нужно создавать резервную копию прошивки. О том, как это быстро сделать читайте под катом.&lt;/p&gt;</description>
     </item>
   </channel>

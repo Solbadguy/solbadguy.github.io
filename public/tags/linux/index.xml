@@ -2,195 +2,195 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on My Blog</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://solbadguy.github.io/tags/linux/</link>
     <description>Recent content in Linux on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Права для директории .ssh - шпаргалка</title>
-      <link>http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/</link>
+      <link>https://solbadguy.github.io/posts/prava-dlya-direktorii-ssh-shpargalka/</link>
       <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/</guid>
+      <guid>https://solbadguy.github.io/posts/prava-dlya-direktorii-ssh-shpargalka/</guid>
       <description>&lt;p&gt;Если создаете папки и файлы руками, не забывайте про правильные права на файлы&lt;/p&gt;</description>
     </item>
     <item>
       <title>Получаем WildCard от Let’s Encrypt</title>
-      <link>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</link>
+      <link>https://solbadguy.github.io/posts/poluchaem-wildcard-ot-lets-encrypt/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</guid>
+      <guid>https://solbadguy.github.io/posts/poluchaem-wildcard-ot-lets-encrypt/</guid>
       <description>&lt;p&gt;Немного о том как вручную получить WildCard для домена и его поддоменов, используя верификацию через dns record.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Администрирование 1C-сервера под Linux</title>
-      <link>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</link>
+      <link>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</link>
       <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</guid>
       <description>&lt;p&gt;Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой &amp;ldquo;Администриарование сервера 1С&amp;rdquo;. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenMediaVault WebGui login not working</title>
-      <link>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</link>
+      <link>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</guid>
+      <guid>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</guid>
       <description>&lt;p&gt;OpenMediaVault - это отличная система для управления хранением файлов, которая работает по принципу &amp;ldquo;настроил и забыл&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Совсем недавно потребовалось попасть в веб-интерфейс управления такой системы, НО учетные данные для входа система принимать отказалась. Ниже возможные решения.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Convert PDF to JPG in Ubuntu</title>
-      <link>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
+      <link>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
+      <guid>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
       <description>&lt;p&gt;Очень простой и удобным метод конвертирования изображений из PDF в JPG.  В качестве альтернативы можно рассмотреть пакет imagemagick, но на момент написания статьи он не совсем верно обработал выходные изображения.&lt;/p&gt;
 &lt;p&gt;В данной заметке я предлагаю использовать утилиты из пакета Poppler, которые, наоборот, справились на 5+.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Motd script for SSH login</title>
-      <link>http://localhost:1313/posts/motd-script-for-ssh-login/</link>
+      <link>https://solbadguy.github.io/posts/motd-script-for-ssh-login/</link>
       <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/motd-script-for-ssh-login/</guid>
+      <guid>https://solbadguy.github.io/posts/motd-script-for-ssh-login/</guid>
       <description>&lt;p&gt;В этом небольшом руководстве пойдет речь о кастомизации сообщения motd при авторизации в системе. В РУнете информация устарела, либо ее нет, либо я плохо искал. В продолжении статьи готовый скрипт, примерный выхлоп и пошаговое руководство.&lt;/p&gt;
 &lt;p&gt;При необходимости скрипт легко меняется под ваши нужды.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RDesktop - подключение к Windows из Linux по RDP</title>
-      <link>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</link>
+      <link>https://solbadguy.github.io/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</link>
       <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</guid>
+      <guid>https://solbadguy.github.io/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</guid>
       <description>&lt;p&gt;Простой способ подключения к станциям под управлением Windows из под любого Linux-based дистрибутива.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как изменить цвет шрифта на рабочем столе в XFCE 4.12</title>
-      <link>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</link>
+      <link>https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</link>
       <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</guid>
       <description>&lt;p&gt;В большинстве случаев, если вы выбираете темный фон для рабочего стола,  приходится осознать неприятный факт - черный шрифт под иконками  имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Корректное отображение кириллицы в Midnight Commander</title>
-      <link>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
+      <link>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
+      <guid>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
       <description>&lt;p&gt;Возникла необходимость воспользоваться специализированным дистрибутивом, который работает под Debian, так вот русской локализации в нем конечно же не было. Файлы и папки в консоли\ файловом менеджере в названии которых была кириллица отображались неправильно - вместо букв отображались знаки вопроса. Решить эту проблему очень просто.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Прошивка сматфонов Xiaomi в Ubuntu</title>
-      <link>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</link>
+      <link>https://solbadguy.github.io/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</link>
       <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</guid>
+      <guid>https://solbadguy.github.io/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</guid>
       <description>&lt;p&gt;Среди владельцев сматфонов Xiaomi и пользователей *buntu, есть много тех, кто не знает о том, что их девайс можно прошить прямо из консоли, ни какие программы на вроде Miflash при этом не понадобятся. Автор статьи, описывая действия, предварительно скачал архив с прошивкой рассчитанной для установки из MiFlash. Материал в первую очередь написан для тех, кто не работает под Windows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как создать Swap файл подкачки в Linux-подобных ОС</title>
-      <link>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</link>
+      <link>https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</link>
       <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</guid>
       <description>&lt;p&gt;Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).&lt;/p&gt;</description>
     </item>
     <item>
       <title>7 лучших альтернатив Notepad &#43;&#43; для Linux</title>
-      <link>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</link>
+      <link>https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/</link>
       <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/</guid>
       <description>&lt;p&gt;Notepad ++ это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad ++. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad ++ так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad ++ для Linux.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64</title>
-      <link>http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</link>
+      <link>https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</link>
       <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</guid>
+      <guid>https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</guid>
       <description>&lt;p&gt;Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Монтирование дисков Linux и fstab</title>
-      <link>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</link>
+      <link>https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/</link>
       <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</guid>
+      <guid>https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/</guid>
       <description>&lt;p&gt;Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Conky Ubuntu - установка</title>
-      <link>http://localhost:1313/posts/conky-ubuntu-ustanovka/</link>
+      <link>https://solbadguy.github.io/posts/conky-ubuntu-ustanovka/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/conky-ubuntu-ustanovka/</guid>
+      <guid>https://solbadguy.github.io/posts/conky-ubuntu-ustanovka/</guid>
       <description>&lt;p&gt;Наверняка многие пользователи ПК когда-нибудь задавались целью получения удобного доступа к системной информации своего компьютера. Это особенно актуально для владельцев портативной техники (ноутбуки), т.к. те зачастую могут сильно перегреваться. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Elementary tweaks Freya - установка</title>
-      <link>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</link>
+      <link>https://solbadguy.github.io/posts/elementary-tweaks-freya-ustanovka/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</guid>
+      <guid>https://solbadguy.github.io/posts/elementary-tweaks-freya-ustanovka/</guid>
       <description>&lt;p&gt;Даже самый удачный &amp;ldquo;минимализм&amp;rdquo; лучше настраивать &amp;ldquo;под себя&amp;rdquo;, давайте разберемся чем может помочь Elementary tweaks и как его установить. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Wifi Hotspot Manjaro</title>
-      <link>http://localhost:1313/posts/wifi-hotspot-manjaro/</link>
+      <link>https://solbadguy.github.io/posts/wifi-hotspot-manjaro/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/wifi-hotspot-manjaro/</guid>
+      <guid>https://solbadguy.github.io/posts/wifi-hotspot-manjaro/</guid>
       <description>&lt;p&gt;Часто бывает так, что работая за ноутбуком, который подключен к интернету через кабель, хочется видеть Wifi на других девайсах (допустим смартфон под управлением android).&lt;/p&gt;</description>
     </item>
     <item>
       <title>IfTop мониторинг сети на Ubuntu Server</title>
-      <link>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</link>
+      <link>https://solbadguy.github.io/posts/iftop-monitoring-seti-na-ubuntu-server/</link>
       <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</guid>
+      <guid>https://solbadguy.github.io/posts/iftop-monitoring-seti-na-ubuntu-server/</guid>
       <description>&lt;p&gt;Сразу оговорюсь, что эта консольная утилита работает не только под Ubuntu. Информация о использовании сетевого трафика выводится прямо в консоли.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SARG: присваиваем ip-адресам имена сотрудников</title>
-      <link>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</link>
+      <link>https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</link>
       <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</guid>
+      <guid>https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</guid>
       <description>&lt;p&gt;Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как исключить ip-адрес из логов SARG?</title>
-      <link>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</link>
+      <link>https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</link>
       <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</guid>
       <description>&lt;p&gt;Наверняка после того, как все ip-адреса получили &lt;a href=&#34;https://netlab-kursk.ru/nastrojka-sarg-na-baze-ubuntu-server/&#34;&gt;читаемые имена&lt;/a&gt; многим захотелось исключить свой айпи из списков.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Настройка SaRG на базе Ubuntu Server</title>
-      <link>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</link>
+      <link>https://solbadguy.github.io/posts/nastrojka-sarg-na-baze-ubuntu-server/</link>
       <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</guid>
+      <guid>https://solbadguy.github.io/posts/nastrojka-sarg-na-baze-ubuntu-server/</guid>
       <description>&lt;p&gt;Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Android в помощь системному администратору.</title>
-      <link>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
+      <link>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
+      <guid>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
       <description>&lt;p&gt;Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Вышел Zentyal 4.1</title>
-      <link>http://localhost:1313/posts/vyshel-zentyal-4-1/</link>
+      <link>https://solbadguy.github.io/posts/vyshel-zentyal-4-1/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vyshel-zentyal-4-1/</guid>
+      <guid>https://solbadguy.github.io/posts/vyshel-zentyal-4-1/</guid>
       <description>&lt;p&gt;Позавчера команда, которая ведет разработку Zentyal на своем официальном сайте опубликовала новость, о том, что в свет вышел дистрибутив версии 4.1.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как узнать время через консоль Linux</title>
-      <link>http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/</link>
+      <link>https://solbadguy.github.io/posts/kak-uznat-vremya-cherez-konsol-linux/</link>
       <pubDate>Mon, 30 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-uznat-vremya-cherez-konsol-linux/</guid>
       <description>&lt;p&gt;Наверное у многих были ситуации, когда под руками только консоль, а время узнать нужно.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Краткий обзор Zentyal</title>
-      <link>http://localhost:1313/posts/kratkij-obzor-zentyal/</link>
+      <link>https://solbadguy.github.io/posts/kratkij-obzor-zentyal/</link>
       <pubDate>Tue, 03 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kratkij-obzor-zentyal/</guid>
+      <guid>https://solbadguy.github.io/posts/kratkij-obzor-zentyal/</guid>
       <description>&lt;p&gt;Наверняка многим начинающим системным администраторам трудно осваивать управление сервером в организации пользуясь только командной строкой. Свою работу в далеком 2010 году я начал с администрирования Win server 2003 и до определенного времени Linux подобные системы оставались для меня некой очень интересной загадкой с приятными плюшками на подобии средства распространения - GPL.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как установить Telegram на Ubuntu/Linux</title>
-      <link>http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/</link>
+      <link>https://solbadguy.github.io/posts/kak-ustanovit-telegram-na-ubuntulinux/</link>
       <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-ustanovit-telegram-na-ubuntulinux/</guid>
       <description>&lt;p&gt;Если вы пользуетесь мессенжером от Павла Дурова на телефоне, то вам наверняка захочется продолжать общение и на персональном компьютере.&lt;/p&gt;</description>
     </item>
   </channel>

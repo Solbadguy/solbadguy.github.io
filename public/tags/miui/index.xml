@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Miui on My Blog</title>
-    <link>http://localhost:1313/tags/miui/</link>
+    <link>https://solbadguy.github.io/tags/miui/</link>
     <description>Recent content in Miui on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/miui/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/miui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Как отключить службы Google/Xiaomi в прошивках MIUI</title>
-      <link>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</link>
+      <link>https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</guid>
       <description>&lt;p&gt;Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Оптимизация системной памяти Android</title>
-      <link>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</link>
+      <link>https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</guid>
+      <guid>https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/</guid>
       <description>&lt;p&gt;По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Обман MultiRom</title>
-      <link>http://localhost:1313/posts/obman-multirom/</link>
+      <link>https://solbadguy.github.io/posts/obman-multirom/</link>
       <pubDate>Wed, 27 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/obman-multirom/</guid>
+      <guid>https://solbadguy.github.io/posts/obman-multirom/</guid>
       <description>&lt;p&gt;Сразу хочу сказать, что ничего не имею против отдельных личностей и команды MultiRom  в целом. Они делают по настоящему хорошие переводы. Однако на просторах интернета я очень часто слышал мнение, что &amp;ldquo;они самые лучшие&amp;rdquo;, т.к.&amp;quot; ОПТИМИЗИРУюТ прошивки&amp;quot;, &amp;ldquo;там больше свободной Оперативной памяти&amp;rdquo; и т.п. .  Неприятно было узнать о том, что это просто фокус.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MIUI 7, фото звонящего не отображается</title>
-      <link>http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</link>
+      <link>https://solbadguy.github.io/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</link>
       <pubDate>Fri, 24 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</guid>
+      <guid>https://solbadguy.github.io/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</guid>
       <description>&lt;p&gt;Многие владельцы смартфонов под управлением MIUI 7 сталкиваются с проблемой, когда фотографии присвоенные контактам не отображаются при входящем звонке. Решение проблемы очень простое, подробности ниже.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Android - Удаляем рекламу из приложений</title>
-      <link>http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/</link>
+      <link>https://solbadguy.github.io/posts/android-udalyaem-reklamu-iz-prilozhenij/</link>
       <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/</guid>
+      <guid>https://solbadguy.github.io/posts/android-udalyaem-reklamu-iz-prilozhenij/</guid>
       <description>&lt;p&gt;Root-доступ на android-смартфоне дает каждому пользователю практически неограниченные возможности по его настройке. В статье пойдет речь об одном из самых популярных методов его настройки &amp;ldquo;под себя&amp;rdquo; - удаление рекламы из приложений.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Настройка MIUI 7, оптимизация энергопотребления.</title>
-      <link>http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</link>
+      <link>https://solbadguy.github.io/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</link>
       <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</guid>
+      <guid>https://solbadguy.github.io/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</guid>
       <description>&lt;p&gt;Инструкция в первую очередь направлена не на отключение и выпиливание сервисов от Xiaomi\Google, а на повседневное использование телефона в качестве основного девайса со всеми его прелестями и недостатками. Отключение тех приложений, которые будут в инструкции указаны, не несет никаких последствий в нормальной работе устройства, а всего лишь дает возможность избавиться от назойливых сервисов, которые постоянно пытаются отправить логи и отчеты об ошибках (отчеты об использовании устройства), а также предоставляют выбор пользователю &lt;strong&gt;&amp;ldquo;отключать&amp;rdquo;&lt;/strong&gt; или &lt;strong&gt;&amp;ldquo;не отключать&amp;rdquo;&lt;/strong&gt; данные сервисы и их приложения.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Настройка MIUI 7: удаляем системные приложения</title>
-      <link>http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</link>
+      <link>https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</link>
       <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</guid>
+      <guid>https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</guid>
       <description>&lt;p&gt;Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона&lt;/p&gt;</description>
     </item>
   </channel>

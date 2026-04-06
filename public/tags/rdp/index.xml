@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Rdp on My Blog</title>
-    <link>http://localhost:1313/tags/rdp/</link>
+    <link>https://solbadguy.github.io/tags/rdp/</link>
     <description>Recent content in Rdp on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Aug 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/rdp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/rdp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RDesktop - подключение к Windows из Linux по RDP</title>
-      <link>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</link>
+      <link>https://solbadguy.github.io/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</link>
       <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</guid>
+      <guid>https://solbadguy.github.io/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</guid>
       <description>&lt;p&gt;Простой способ подключения к станциям под управлением Windows из под любого Linux-based дистрибутива.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Android в помощь системному администратору.</title>
-      <link>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
+      <link>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
+      <guid>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
       <description>&lt;p&gt;Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?&lt;/p&gt;</description>
     </item>
   </channel>

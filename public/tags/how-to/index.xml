@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>How-To on My Blog</title>
-    <link>http://localhost:1313/tags/how-to/</link>
+    <link>https://solbadguy.github.io/tags/how-to/</link>
     <description>Recent content in How-To on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Как изменить цвет шрифта на рабочем столе в XFCE 4.12</title>
-      <link>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</link>
+      <link>https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</link>
       <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</guid>
       <description>&lt;p&gt;В большинстве случаев, если вы выбираете темный фон для рабочего стола,  приходится осознать неприятный факт - черный шрифт под иконками  имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.&lt;/p&gt;</description>
     </item>
   </channel>

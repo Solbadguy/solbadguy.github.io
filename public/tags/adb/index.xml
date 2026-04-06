@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Adb on My Blog</title>
-    <link>http://localhost:1313/tags/adb/</link>
+    <link>https://solbadguy.github.io/tags/adb/</link>
     <description>Recent content in Adb on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/adb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/adb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?</title>
-      <link>http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</link>
+      <link>https://solbadguy.github.io/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</link>
       <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</guid>
       <description>&lt;p&gt;Как вы знаете с недавнего времени смартфоны от Xiaomi продаются с заблокированным загрузчиком, о причинах говорить не буду, лучше давайте узнаем как проверить статус бутлоадера в Linux-подобных ОС.&lt;/p&gt;</description>
     </item>
   </channel>

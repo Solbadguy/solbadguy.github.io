@@ -2,49 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Novosti on My Blog</title>
-    <link>http://localhost:1313/categories/novosti/</link>
+    <link>https://solbadguy.github.io/categories/novosti/</link>
     <description>Recent content in Novosti on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/novosti/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/categories/novosti/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nextcloud через webDAV: «Windows не может получить доступ ...</title>
-      <link>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</link>
+      <link>https://solbadguy.github.io/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</guid>
+      <guid>https://solbadguy.github.io/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</guid>
       <description>&lt;p&gt;Ошибка возникает при попытке подключения сетевого хранилища через webdav стандартными средствами Windows.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>crontab</title>
-      <link>http://localhost:1313/posts/_drafts/id-3236/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/_drafts/id-3236/</guid>
-      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* * * * * выполняемая команда
-- - - - -
-| | | | |
-| | | | ----- День недели (0 - 7) (Воскресенье =0 или =7)
-| | | ------- Месяц (1 - 12)
-| | --------- День (1 - 31)
-| ----------- Час (0 - 23)
-------------- Минута (0 - 59)
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
-      <title>open wrt error</title>
-      <link>http://localhost:1313/posts/_drafts/id-3250/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/_drafts/id-3250/</guid>
-      <description>&lt;p&gt;open wrt error Collected errors: * opkg_install_cmd: Cannot install package ***&lt;/p&gt;
-&lt;p&gt;solved http://192.168.1.1/cgi-bin/luci/admin/system/packages&lt;/p&gt;
-&lt;p&gt;button update packege&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Коротко о</title>
-      <link>http://localhost:1313/posts/_drafts/id-3190/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/_drafts/id-3190/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

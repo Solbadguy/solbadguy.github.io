@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>VDS диски в Windows. Автомонтирование. | My Blog</title>
 <meta name="keywords" content="cmd, vhd, windows">
 <meta name="description" content="При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,79 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="VDS диски в Windows. Автомонтирование.">
+  <meta property="og:description" content="При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-04-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-04-15T00:00:00+00:00">
+    <meta property="article:tag" content="Cmd">
+    <meta property="article:tag" content="Vhd">
+    <meta property="article:tag" content="Windows">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="VDS диски в Windows. Автомонтирование.">
+  <meta name="twitter:description" content="При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "VDS диски в Windows. Автомонтирование.",
+      "item": "https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "VDS диски в Windows. Автомонтирование.",
+  "name": "VDS диски в Windows. Автомонтирование.",
+  "description": "При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.\n",
+  "keywords": [
+    "cmd", "vhd", "windows"
+  ],
+  "articleBody": "При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.\nНемного о самих дисках:\nVHD (Virtual Hard Drive) - это виртуальные диски, которые выглядят в системе как отдельные физические диски и могут использоваться для хранения произвольных данных. Существенный недостаток таких дисков — при каждой перезагрузке Windows приходится каждый раз вручную монтировать все VHD/VHDX файлы. Кроме того, право на монтирование файлов виртуальных дисков vhd есть только у администраторов компьютера, простые пользователи не могут самостоятельно подключить VHDx файл (каждый раз приходится вмешиваться администратору).\nДалее создадим папку в корне системного диска (сейчас и далее буду работать из консоли, но это не обязательно):\nmkdir C:\\Scripts Создадим файл со сценарием:\ncd C:\\Scripts copy con attach_vhd.txt Вставим следующий текст:\nselect vdisk file=\"F:\\disk1.vhd\" attach vdisk select part 1 assign letter=T select vdisk file=\"F:\\disk2.vhd\" attach vdisk select part 1 assign letter=S exit Немного поясню\nУ меня два вирт. диска F:\\disk1.vhd – полный путь к файлу диска K – буква диска, которую нужно назначить Итак файл со сценарием готов, теперь нам осталось настроить автозапуск:\nНажимаем - Win+R\nВыполняем - Taskschd.msc\nДалее - действия - создать задачу\nВкладка Главное -- Укажите имя задания\n-- Поставьте чекбокс - Выполнять независимо от того вошел пользователь или нет\n-- Поставьте чекбокс - Выполнять с наивысшими правами\nВкладка Тригеры\n-- Создаем тригер, который будет запускаться при включении;\nВкладка Действия\n-- Действие запуск программы ; – Программа/скрипт: diskpart ; – В качестве аргументов программы укажем**:** /s C:\\Scripts\\attach_vhd.txt ;\nСохраните изменения\n-- Система попросит выбрать пользователя от которого будет выполняться задача, выберем администратора, введем пароль и закроем планировщик.\nДля проверки можно либо перезагрузить ПК, либо выполнить задачу в планировщике.\nP.S.\nНазвания некоторых пунктов могут быть не точными, но смысл передан верно.\nИсточники:\nwinitpro.ru\n",
+  "wordCount" : "305",
+  "inLanguage": "en",
+  "datePublished": "2020-04-15T00:00:00Z",
+  "dateModified": "2020-04-15T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +168,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +184,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       VDS диски в Windows. Автомонтирование.
     </h1>
@@ -181,17 +247,17 @@ exit
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/cmd/">Cmd</a></li>
-      <li><a href="http://localhost:1313/tags/vhd/">Vhd</a></li>
-      <li><a href="http://localhost:1313/tags/windows/">Windows</a></li>
+      <li><a href="https://solbadguy.github.io/tags/cmd/">Cmd</a></li>
+      <li><a href="https://solbadguy.github.io/tags/vhd/">Vhd</a></li>
+      <li><a href="https://solbadguy.github.io/tags/windows/">Windows</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/netplan-wifi-on-ubuntu-18-04/">
+  <a class="prev" href="https://solbadguy.github.io/posts/netplan-wifi-on-ubuntu-18-04/">
     <span class="title">« Prev</span>
     <br>
     <span>Netplan Wifi on Ubuntu 18.04</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/">
+  <a class="next" href="https://solbadguy.github.io/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/">
     <span class="title">Next »</span>
     <br>
     <span>Linux Mint 19. Настраиваем удаленное подключение через VNC</span>
@@ -203,7 +269,7 @@ exit
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

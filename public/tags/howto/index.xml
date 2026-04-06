@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Howto on My Blog</title>
-    <link>http://localhost:1313/tags/howto/</link>
+    <link>https://solbadguy.github.io/tags/howto/</link>
     <description>Recent content in Howto on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 10 после чистой установки: Chocolatey and Pshell scripts.</title>
-      <link>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</link>
+      <link>https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</guid>
+      <guid>https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</guid>
       <description>&lt;p&gt;Ряд дейсвий, которые я выполяю после чистой установки Windows 10.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Convert PDF to JPG in Ubuntu</title>
-      <link>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
+      <link>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
+      <guid>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
       <description>&lt;p&gt;Очень простой и удобным метод конвертирования изображений из PDF в JPG.  В качестве альтернативы можно рассмотреть пакет imagemagick, но на момент написания статьи он не совсем верно обработал выходные изображения.&lt;/p&gt;
 &lt;p&gt;В данной заметке я предлагаю использовать утилиты из пакета Poppler, которые, наоборот, справились на 5+.&lt;/p&gt;</description>
     </item>

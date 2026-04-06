@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Komandnaya-Stroka on My Blog</title>
-    <link>http://localhost:1313/tags/komandnaya-stroka/</link>
+    <link>https://solbadguy.github.io/tags/komandnaya-stroka/</link>
     <description>Recent content in Komandnaya-Stroka on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/komandnaya-stroka/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/komandnaya-stroka/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Администрирование 1C-сервера под Linux</title>
-      <link>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</link>
+      <link>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</link>
       <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</guid>
       <description>&lt;p&gt;Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой &amp;ldquo;Администриарование сервера 1С&amp;rdquo;. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenMediaVault WebGui login not working</title>
-      <link>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</link>
+      <link>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</guid>
+      <guid>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</guid>
       <description>&lt;p&gt;OpenMediaVault - это отличная система для управления хранением файлов, которая работает по принципу &amp;ldquo;настроил и забыл&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Совсем недавно потребовалось попасть в веб-интерфейс управления такой системы, НО учетные данные для входа система принимать отказалась. Ниже возможные решения.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Convert PDF to JPG in Ubuntu</title>
-      <link>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
+      <link>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
+      <guid>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
       <description>&lt;p&gt;Очень простой и удобным метод конвертирования изображений из PDF в JPG.  В качестве альтернативы можно рассмотреть пакет imagemagick, но на момент написания статьи он не совсем верно обработал выходные изображения.&lt;/p&gt;
 &lt;p&gt;В данной заметке я предлагаю использовать утилиты из пакета Poppler, которые, наоборот, справились на 5+.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Программе установки Windows не удалось настроить Windows для работы с оборудованием</title>
-      <link>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</link>
+      <link>https://solbadguy.github.io/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</guid>
+      <guid>https://solbadguy.github.io/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</guid>
       <description>&lt;p&gt;Нужно было установить Windows 7 на китайский ноутбук, при установке с флешки постоянно возникала ошибка &amp;ldquo;Программе установки Windows не удалось настроить Windows для работы с оборудованием&amp;rdquo;. Что интересно, выскакивала ровно тогда, когда процесс настройки оборудования заканчивался на 100%.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Автоматическое выключение компьютера в заданное время</title>
-      <link>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</link>
+      <link>https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</guid>
+      <guid>https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</guid>
       <description>&lt;p&gt;Наверняка у многих людей возникали ситуации, когда нужно было уйти/лечь спать/погулять с собачкой при этом оставив работать компьютер в течении заданного времени. Многие наверняка решают подобные проблемы используя сторонние программы, забыв (или не зная) о том, что в Windows уже есть такой набор функций - &lt;strong&gt;shutdown.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Монтирование дисков Linux и fstab</title>
-      <link>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</link>
+      <link>https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/</link>
       <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</guid>
+      <guid>https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/</guid>
       <description>&lt;p&gt;Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Раздача WiFi с ноутбука через командную строку (ОС Windows)</title>
-      <link>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
+      <link>https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
       <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
+      <guid>https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
       <description>&lt;p&gt;Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.&lt;/p&gt;
 &lt;p&gt;Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Android в помощь системному администратору.</title>
-      <link>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
+      <link>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
+      <guid>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
       <description>&lt;p&gt;Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Статусы портов в командной строке</title>
-      <link>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</link>
+      <link>https://solbadguy.github.io/posts/statusy-portov-v-komandnoj-stroke/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</guid>
+      <guid>https://solbadguy.github.io/posts/statusy-portov-v-komandnoj-stroke/</guid>
       <description>&lt;p&gt;Зачастую, при просмотре состояния открытых соединений через командную строку, в поле статус отображаются разные значения. Давайте разберемся в том, о чем они сообщают.&lt;/p&gt;</description>
     </item>
   </channel>

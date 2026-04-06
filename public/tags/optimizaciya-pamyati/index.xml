@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Optimizaciya-Pamyati on My Blog</title>
-    <link>http://localhost:1313/tags/optimizaciya-pamyati/</link>
+    <link>https://solbadguy.github.io/tags/optimizaciya-pamyati/</link>
     <description>Recent content in Optimizaciya-Pamyati on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/optimizaciya-pamyati/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/optimizaciya-pamyati/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Как отключить службы Google/Xiaomi в прошивках MIUI</title>
-      <link>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</link>
+      <link>https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</guid>
       <description>&lt;p&gt;Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Оптимизация системной памяти Android</title>
-      <link>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</link>
+      <link>https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</guid>
+      <guid>https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/</guid>
       <description>&lt;p&gt;По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.&lt;/p&gt;</description>
     </item>
   </channel>

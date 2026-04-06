@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ubuntu-Server on My Blog</title>
-    <link>http://localhost:1313/categories/ubuntu-server/</link>
+    <link>https://solbadguy.github.io/categories/ubuntu-server/</link>
     <description>Recent content in Ubuntu-Server on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/ubuntu-server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/categories/ubuntu-server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>connect to nextcloud waiting for authorization</title>
-      <link>http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/</link>
+      <link>https://solbadguy.github.io/posts/connect-to-nextcloud-waiting-for-authorization/</link>
       <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/</guid>
+      <guid>https://solbadguy.github.io/posts/connect-to-nextcloud-waiting-for-authorization/</guid>
       <description>&lt;p&gt;Не так давно мне потребовалось настроить крайнюю версию Nextcloud -a на виртуальной машине. В данной заметке пойдет речь об одной из ошибок, которые пришлось решать на пути к его полноценной работе.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04</title>
-      <link>http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/</link>
+      <link>https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/</guid>
+      <guid>https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/</guid>
       <description>&lt;p&gt;В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Администрирование 1C-сервера под Linux</title>
-      <link>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</link>
+      <link>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</link>
       <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</guid>
       <description>&lt;p&gt;Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой &amp;ldquo;Администриарование сервера 1С&amp;rdquo;. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.&lt;/p&gt;</description>
     </item>
     <item>
       <title>1C server - Ragent: not running.</title>
-      <link>http://localhost:1313/posts/1c-server-ragent-not-running/</link>
+      <link>https://solbadguy.github.io/posts/1c-server-ragent-not-running/</link>
       <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/1c-server-ragent-not-running/</guid>
+      <guid>https://solbadguy.github.io/posts/1c-server-ragent-not-running/</guid>
       <description>&lt;p&gt;Не так давно столкнулся с проблемой на сервере 1С (Ubuntu 16.04) - аутсорсинговая компания решила поэксперементировать на проде, в результате чего на системном разделе закончилось место.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenMediaVault WebGui login not working</title>
-      <link>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</link>
+      <link>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</guid>
+      <guid>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</guid>
       <description>&lt;p&gt;OpenMediaVault - это отличная система для управления хранением файлов, которая работает по принципу &amp;ldquo;настроил и забыл&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Совсем недавно потребовалось попасть в веб-интерфейс управления такой системы, НО учетные данные для входа система принимать отказалась. Ниже возможные решения.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Корректное отображение кириллицы в Midnight Commander</title>
-      <link>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
+      <link>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
+      <guid>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
       <description>&lt;p&gt;Возникла необходимость воспользоваться специализированным дистрибутивом, который работает под Debian, так вот русской локализации в нем конечно же не было. Файлы и папки в консоли\ файловом менеджере в названии которых была кириллица отображались неправильно - вместо букв отображались знаки вопроса. Решить эту проблему очень просто.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Долой Phpmyadmin- Импорт базы msql прямо из консоли</title>
-      <link>http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/</link>
+      <link>https://solbadguy.github.io/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/</guid>
+      <guid>https://solbadguy.github.io/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/</guid>
       <description>&lt;p&gt;Зачастую вебмастера могут сталкиваться с ограничениями хостинга на размер загружаемой базы. Для решения этой проблемы нужно писать в саппорт, ждать ждать ждать&amp;hellip;. Но ведь есть и другие способы.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Замена диска в программном Raid 1. Ubuntu Server 14.04</title>
-      <link>http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/</link>
+      <link>https://solbadguy.github.io/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/</guid>
+      <guid>https://solbadguy.github.io/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/</guid>
       <description></description>
     </item>
     <item>
       <title>Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64</title>
-      <link>http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</link>
+      <link>https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</link>
       <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</guid>
+      <guid>https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</guid>
       <description>&lt;p&gt;Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SARG: присваиваем ip-адресам имена сотрудников</title>
-      <link>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</link>
+      <link>https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</link>
       <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</guid>
+      <guid>https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</guid>
       <description>&lt;p&gt;Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как исключить ip-адрес из логов SARG?</title>
-      <link>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</link>
+      <link>https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</link>
       <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</guid>
       <description>&lt;p&gt;Наверняка после того, как все ip-адреса получили &lt;a href=&#34;https://netlab-kursk.ru/nastrojka-sarg-na-baze-ubuntu-server/&#34;&gt;читаемые имена&lt;/a&gt; многим захотелось исключить свой айпи из списков.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Настройка SaRG на базе Ubuntu Server</title>
-      <link>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</link>
+      <link>https://solbadguy.github.io/posts/nastrojka-sarg-na-baze-ubuntu-server/</link>
       <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</guid>
+      <guid>https://solbadguy.github.io/posts/nastrojka-sarg-na-baze-ubuntu-server/</guid>
       <description>&lt;p&gt;Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.&lt;/p&gt;</description>
     </item>
   </channel>

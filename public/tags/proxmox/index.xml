@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Proxmox on My Blog</title>
-    <link>http://localhost:1313/tags/proxmox/</link>
+    <link>https://solbadguy.github.io/tags/proxmox/</link>
     <description>Recent content in Proxmox on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Nov 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/proxmox/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/proxmox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Переименование ноды Proxmox VE</title>
-      <link>http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/</link>
+      <link>https://solbadguy.github.io/posts/pereimenovanie-nody-proxmox-ve/</link>
       <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/</guid>
+      <guid>https://solbadguy.github.io/posts/pereimenovanie-nody-proxmox-ve/</guid>
       <description>&lt;p&gt;Во время одной из установок ОС была допущена опечатка в имени сервера. Под катом решение этой проблемы.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Connection error 401: permission denied - invalid PVE ticket</title>
-      <link>http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/</link>
+      <link>https://solbadguy.github.io/posts/connection-error-401-permission-denied-invalid-pve-ticket/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/</guid>
+      <guid>https://solbadguy.github.io/posts/connection-error-401-permission-denied-invalid-pve-ticket/</guid>
       <description>&lt;p&gt;Не совсем очевидное решение данной ошибки.&lt;/p&gt;</description>
     </item>
   </channel>

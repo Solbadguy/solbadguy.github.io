@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64 | My Blog</title>
 <meta name="keywords" content="linux">
 <meta name="description" content="Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,77 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64">
+  <meta property="og:description" content="Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2015-09-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2015-09-30T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64">
+  <meta name="twitter:description" content="Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Полная установка PostgreSQL 9.2.4-1.1C + 1C 8.3.5.1119 на Ubuntu Server 14.04 X64",
+      "item": "https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Полная установка PostgreSQL 9.2.4-1.1C + 1C 8.3.5.1119 на Ubuntu Server 14.04 X64",
+  "name": "Полная установка PostgreSQL 9.2.4-1.1C \u002b 1C 8.3.5.1119 на Ubuntu Server 14.04 X64",
+  "description": "Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.\n",
+  "keywords": [
+    "linux"
+  ],
+  "articleBody": "Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.\nУвеличиваем максимальный размер сегмента памяти до 4Гб (Обычно половина объема ОЗУ):\n#echo \"kernel.shmmax=1073741824\" \u003e\u003e/etc/sysctl.conf #sysctl -p Генерируем необходимые локали и задаем переменную среды LANG, для работы скрипта инициализации БД.\n#locale-gen en_US ru_RU ru_RU.UTF-8 #export LANG=\"ru_RU.UTF-8\" Устанавливаем необходимые зависимости:\n#apt-get install libssl0.9.8 libossp-uuid16 libxslt1.1 libicu52 libt1-5 t1utils imagemagick ttf-mscorefonts-installer unixodbc texlive-base libgfs-1.3-2 Качаем с сайта 1C необходимые пакеты Postgre 9.2.4 и устанавливаем их именно в такой последовательности:\n#dpkg -i libpq5_9.2.4-1.1C_amd64.deb #wget http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-common/postgresql-client-common_154_all.deb #dpkg -i postgresql-client-common_154_all.deb #dpkg -i postgresql-client-9.2_9.2.4-1.1C_amd64.deb #wget http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-common/postgresql-common_154_all.deb #dpkg -i postgresql-common_154_all.deb Пересобираем contrib:\n#dpkg -x postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb tmpdir #dpkg -e postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb tmpdir/DEBIAN #mcedit ./tmpdir/DEBIAN/control ищем строку libicu46 (\u003e= 1.4.6) и меняем ее на libicu52 (\u003e= 1.4.6) сохраняем изменения #rm postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb #dpkg -b tmpdir postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb #dpkg -i postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb #dpkg -i postgresql-9.2_9.2.4-1.1C_amd64.deb Проверяем, запущен ли сервер:\n#service postgresql status Выхлоп: 9.2/main (port 5433): online Создаем директорию для хранения баз банных 1С:\n#mkdir /mnt/1с/db/ #chown postgres:postgres -R /mnt/1c/db Инициализируем БД и создаем администратора БД:\n#su postgres $/usr/lib/postgresql/9.2/bin/initdb -D /mnt/1c/db --locale=ru_RU.UTF-8 $psql -U postgres -c \"alter user postgres with password 'наш_пароль';\" Правим конфиг для корректной авторизации администратора БД (/mnt/1c/db/pg_hba.conf). Меняем:\n# IPv4 local connections: host all all 127.0.0.1/32 ident # IPv6 local connections: host all all ::1/128 ident На:\n# IPv4 local connections: host all all 127.0.0.1/32 md5 # IPv6 local connections: host all all ::1/128 md5 Перезапускаем PostgreSQL:\n#service postgresql restart Проверяем:\n#netstat -atn|grep 5432 выхлоп: tcp 0 0 0.0.0.0:5432 0.0.0.0:* LISTEN значит все гуд На этом этапе установка PostgreSQL завершена.\nУстанавливаем сервер 1С Создаем симлинк:\n#ln -s /usr/lib/x86_64-linux-gnu/libMagickWand.so.5 /usr/lib/x86_64-linux-gnu/libMagickWand.so Ставим все необходимые пакеты:\n#dpkg -i 1c-enterprise83-common_8.3.4-476_amd64.deb 1c-enterprise83-server_8.3.4-476_amd64.deb 1c-enterprise83-ws_8.3.4-476_amd64.deb 1c-enterprise83-common-nls_8.3.4-476_amd64.deb 1c-enterprise83-server-nls_8.3.4-476_amd64.deb 1c-enterprise83-ws-nls_8.3.4-476_amd64.deb #wget http://old-releases.ubuntu.com/ubuntu/pool/universe/t/ttf2pt1/ttf2pt1_3.4.4-1.4_amd64.deb #dpkg -i ttf2pt1_3.4.4-1.4_amd64.deb Разрешаем запись:\n#chown -R usr1cv8:grp1cv8 /opt/1C Перезапускаем сервер 1с:\n#service srv1cv83 restart Проверяем порты:\n#netstat -atn |grep 0.0.0.0:15 tcp 0 0 0.0.0.0:1560 0.0.0.0:* LISTEN tcp 0 0 0.0.0.0:1540 0.0.0.0:* LISTEN tcp 0 0 0.0.0.0:1541 0.0.0.0:* LISTEN Так же можно для профилактики проверить, все ли процессы сервера запущены:\n#ps aux|grep 1c usr1cv8 28351 0.0 1.1 264284 22664 ? Ssl 10:01 0:00 /opt/1C/v8.3/x86_64/ragent -daemon usr1cv8 28354 0.3 2.0 776216 41956 ? Sl 10:01 0:00 /opt/1C/v8.3/x86_64/rmngr -port 1541 -host test -range 1560:1591 usr1cv8 28378 0.1 1.6 323900 34076 ? Sl 10:01 0:00 /opt/1C/v8.3/x86_64/rphost -range 1560:1591 -reghost test -regport 1541 -pid f10fbd88-c9eb-11e3-0599-40618600e473 root 28439 0.0 0.0 13472 892 pts/2 S+ 10:03 0:00 grep --color=auto 1c Установка Sentinel HASP USB:\n#wget ftp://ftp.cis-app.com/pub/hasp/Sentinel_HASP/Runtime_(Drivers)/6.62/Sentinel_LDK_Ubuntu_DEB_Run-time_Installer.tar.gz #dpkg --add-architecture i386 #apt-get update #apt-get install libc6:i386 #dpkg -i aksusbd_2.2-1_i386.deb #/etc/init.d/aksusbd restart Тушим сервер. Вставляем ключи USB. Запускаем сервер.\n#service aksusbd status AKSUSB is running. WINEHASP is running. HASPLM is running. На этом этапе всё готово для создания БД из под оснастки Windows “Администрирование серверов предприятия”!!!!!!!!!!!!!!!!!!!\nВозможные ошибки: “Ошибка СУБД: ERROR: type “mvarchar” does not exist at character 31”\nОзначает что база данных была создана не из оснастки 1с. Необходимо удалить БД и создать ее из оснастки. ______________________________________________________________________\n1С Предприятие Ошибка СУБД: ERROR: invalid byte sequence for encoding “UTF8”: 0x01 (0x01 это для примера, адреса бывают разные)\nНевосстановимая ошибка приводящая к вылету клиента Наблюдается на платформе 1C 8.3.4 и 8.3.5 Редко на УТ 10, и часто на УТ 11\nЛекарство: Установить значение параметра standard_conforming_strings в конфиге postgresql.conf в значение ‘off’ Параметр лучше поправить как для БД, так и в глобальных настройках. ______________________________________________________________________\nОшибка при получении характеристик по причине: {(1, 31)}: Поле не найдено “Свойство.Presentation” SELECT «?»\nОзначает, что не хватает прав на справочники “ЗначенияСвойствОбъектов”, “ЗначенияСвойствОбъектовИерархия” и план видов характеристик “ДополнительныеРеквизитыИСведения”. Соответственно лечится установкой прав на эти объектов хотя бы на “чтение/просмотр” ______________________________________________________________________\nУлучшаем работу сервера 1С предприятие 8.3.5 Через оснастку администрирования серверов 1с для конкретной БД выставляем свойства:\nКоличество ИБ на процесс = 1 Количество соединений на процесс = 10\nЭто даёт нам автоматическую балансировку нагрузки по рабочим процессам. Сервер сам создаёт нужное количество рабочих процессов согласно указанным параметрам и также автоматически закрывает неиспользуемые рабочие процессы. Тем самым мы обеспечили не только балансировку, но и ротацию (перезагрузку) рабочих процессов с целью защиты от «пожирания памяти».\nза текст выражайте благодарности этому ростовскому парню.\n",
+  "wordCount" : "657",
+  "inLanguage": "en",
+  "datePublished": "2015-09-30T00:00:00Z",
+  "dateModified": "2015-09-30T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +166,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +182,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64
     </h1>
@@ -245,15 +309,15 @@ HASPLM is running.
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="https://solbadguy.github.io/tags/linux/">Linux</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/">
+  <a class="prev" href="https://solbadguy.github.io/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/">
     <span class="title">« Prev</span>
     <br>
     <span>Замена диска в программном Raid 1. Ubuntu Server 14.04</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/">
+  <a class="next" href="https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/">
     <span class="title">Next »</span>
     <br>
     <span>Монтирование дисков Linux и fstab</span>
@@ -265,7 +329,7 @@ HASPLM is running.
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

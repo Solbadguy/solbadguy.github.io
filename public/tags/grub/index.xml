@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Grub on My Blog</title>
-    <link>http://localhost:1313/tags/grub/</link>
+    <link>https://solbadguy.github.io/tags/grub/</link>
     <description>Recent content in Grub on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/grub/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>grub-install: warning: this GPT partition label contains no BIOS Boot Partition; embedding won’t be possible.</title>
-      <link>http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</link>
+      <link>https://solbadguy.github.io/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</guid>
+      <guid>https://solbadguy.github.io/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</guid>
       <description>&lt;p&gt;Во время установки Debian 10 на компьютер в котором было установлено 2 HDD по 4TB + был создан Raid 1 я столкнулся с этой ошибкой. Решение оказалось простым, хоть явно об этом нигде и не сказано.&lt;/p&gt;</description>
     </item>
   </channel>

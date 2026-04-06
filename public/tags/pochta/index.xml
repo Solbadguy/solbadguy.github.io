@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pochta on My Blog</title>
-    <link>http://localhost:1313/tags/pochta/</link>
+    <link>https://solbadguy.github.io/tags/pochta/</link>
     <description>Recent content in Pochta on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Mar 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/pochta/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/pochta/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Пользователи Yahoo перестанут использовать пароли</title>
-      <link>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</link>
+      <link>https://solbadguy.github.io/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</link>
       <pubDate>Wed, 18 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</guid>
+      <guid>https://solbadguy.github.io/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</guid>
       <description>&lt;p&gt;Руководство компании &amp;ldquo;Yahoo&amp;rdquo; решило полностью отказаться от использования паролей, которые требовались для входа в аккаунт электронной почты.&lt;/p&gt;</description>
     </item>
   </channel>

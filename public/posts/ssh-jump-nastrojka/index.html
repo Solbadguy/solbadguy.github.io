@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>SSH-Jump. Настройка. | My Blog</title>
 <meta name="keywords" content="ssh, ssh-jump">
 <meta name="description" content="В свое время открыл для себя такую вещь как SSH-Jump, с тех пор пользуюсь ей ежедневно. Сегодня подобные &ldquo;прыжки&rdquo; пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/ssh-jump-nastrojka/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/ssh-jump-nastrojka/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ssh-jump-nastrojka/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/ssh-jump-nastrojka/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,78 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/ssh-jump-nastrojka/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="SSH-Jump. Настройка.">
+  <meta property="og:description" content="В свое время открыл для себя такую вещь как SSH-Jump, с тех пор пользуюсь ей ежедневно. Сегодня подобные “прыжки” пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-09-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-09-22T00:00:00+00:00">
+    <meta property="article:tag" content="Ssh">
+    <meta property="article:tag" content="Ssh-Jump">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SSH-Jump. Настройка.">
+  <meta name="twitter:description" content="В свое время открыл для себя такую вещь как SSH-Jump, с тех пор пользуюсь ей ежедневно. Сегодня подобные “прыжки” пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "SSH-Jump. Настройка.",
+      "item": "https://solbadguy.github.io/posts/ssh-jump-nastrojka/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "SSH-Jump. Настройка.",
+  "name": "SSH-Jump. Настройка.",
+  "description": "В свое время открыл для себя такую вещь как SSH-Jump, с тех пор пользуюсь ей ежедневно. Сегодня подобные \u0026ldquo;прыжки\u0026rdquo; пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.\n",
+  "keywords": [
+    "ssh", "ssh-jump"
+  ],
+  "articleBody": "В свое время открыл для себя такую вещь как SSH-Jump, с тех пор пользуюсь ей ежедневно. Сегодня подобные “прыжки” пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.\nSSH-Jump. Настройка. Открываем файл:\nnano ~/.ssh/config В конец файла добавляем следующую конфигурацию:\nHost worksrv HostName *внешний адрес нашего сервера* IdentityFile ~/.ssh/id_rsa User *имя пользоваетеля* Host gitwork HostName *вн.адрес вирт машины* IdentityFile ~/.ssh/id_rsa Port 22 User *имя пользователя* ProxyCommand ssh -q -W %h:%p worksrv Теперь немного пояснений\nДля подкл. к первому серверу, достаточно выполнить след. команду:\nssh worksrv Для подкл. ко второму:\nssh git-work Можно еще упростить ввод для доступа к требуемой вирт. машине.\nОткрываем файл:\nnano ~/.bashrc Добавляем в конец файла:\nalias git-work='ssh git-work' Теперь для подключения достаточно написать git-work Автодополнение в консоли при этом должно работать, поэтому достаточно будет написать git+TAB\n",
+  "wordCount" : "136",
+  "inLanguage": "en",
+  "datePublished": "2020-09-22T00:00:00Z",
+  "dateModified": "2020-09-22T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/ssh-jump-nastrojka/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +167,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +183,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       SSH-Jump. Настройка.
     </h1>
@@ -158,16 +223,16 @@ ProxyCommand ssh -q -W %h:%p worksrv
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/ssh/">Ssh</a></li>
-      <li><a href="http://localhost:1313/tags/ssh-jump/">Ssh-Jump</a></li>
+      <li><a href="https://solbadguy.github.io/tags/ssh/">Ssh</a></li>
+      <li><a href="https://solbadguy.github.io/tags/ssh-jump/">Ssh-Jump</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/">
+  <a class="prev" href="https://solbadguy.github.io/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/">
     <span class="title">« Prev</span>
     <br>
     <span>Блокируем рекламу в домашней сети. Docker iHole &#43; DnsCrypt</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/">
+  <a class="next" href="https://solbadguy.github.io/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/">
     <span class="title">Next »</span>
     <br>
     <span>grub-install: warning: this GPT partition label contains no BIOS Boot Partition; embedding won’t be possible.</span>
@@ -179,7 +244,7 @@ ProxyCommand ssh -q -W %h:%p worksrv
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

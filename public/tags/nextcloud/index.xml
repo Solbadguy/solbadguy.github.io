@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Nextcloud on My Blog</title>
-    <link>http://localhost:1313/tags/nextcloud/</link>
+    <link>https://solbadguy.github.io/tags/nextcloud/</link>
     <description>Recent content in Nextcloud on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>connect to nextcloud waiting for authorization</title>
-      <link>http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/</link>
+      <link>https://solbadguy.github.io/posts/connect-to-nextcloud-waiting-for-authorization/</link>
       <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/</guid>
+      <guid>https://solbadguy.github.io/posts/connect-to-nextcloud-waiting-for-authorization/</guid>
       <description>&lt;p&gt;Не так давно мне потребовалось настроить крайнюю версию Nextcloud -a на виртуальной машине. В данной заметке пойдет речь об одной из ошибок, которые пришлось решать на пути к его полноценной работе.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nextcloud через webDAV: «Windows не может получить доступ ...</title>
-      <link>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</link>
+      <link>https://solbadguy.github.io/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</guid>
+      <guid>https://solbadguy.github.io/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</guid>
       <description>&lt;p&gt;Ошибка возникает при попытке подключения сетевого хранилища через webdav стандартными средствами Windows.&lt;/p&gt;</description>
     </item>
   </channel>

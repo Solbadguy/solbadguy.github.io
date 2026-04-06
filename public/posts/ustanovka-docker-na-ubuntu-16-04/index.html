@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Установка Docker на Ubuntu 16.04 | My Blog</title>
 <meta name="keywords" content="docker, ubuntu">
 <meta name="description" content="Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,78 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Установка Docker на Ubuntu 16.04">
+  <meta property="og:description" content="Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-09-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-09-04T00:00:00+00:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Ubuntu">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Установка Docker на Ubuntu 16.04">
+  <meta name="twitter:description" content="Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Установка Docker на Ubuntu 16.04",
+      "item": "https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Установка Docker на Ubuntu 16.04",
+  "name": "Установка Docker на Ubuntu 16.04",
+  "description": "Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы\n",
+  "keywords": [
+    "docker", "ubuntu"
+  ],
+  "articleBody": "Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы\nЧто имеем: Свежеустановленную ОС Ubuntu 16.04 Root-доступ Доступ в интернет Установка Docker Обновим базу данных пакетов системы:\napt-get update **Импортируем GPG ключ оф. репо Docker:**apt-key adv –keyserver hkp://p80.pool.sks-keyservers.net:80 –recv-keys 58118E89F3A912897C070ADBF76221572C52609D\nДобавим репо Docker в список источников пакетов:\napt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' Обновим базу данных пакетов системы:\napt-get update Установим Docker:\napt-get install -y docker-engine Проверим, что процесс запущен:\nservice docker status Установка в пару кликов cd ~/ \u0026 nano install-docker Копируем следующие команды и сохраняем файл\n#!/bin/bash ## add key apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D #add repo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' #upd apt-get update #install docker apt-get install -y docker-engine Сделаем файл исполняемым\nchmod +x install-docker Установим docker\nsh install-docker Упрощаем работу Иногда мне приходится в интенсивном режиме отдавать команды Docker -у и порой надоедает набирать однотипный текст в консоли. Избавить себя от этого просто - создадим алиасы.\ncd ~/ \u0026 nano .bashrc В конец файла добавим название алиаса и команду, которая будет выполняться\nalias dsta='docker start' alias dsto='docker stop' alias dps='docker ps' alias dlo='docker logs' ",
+  "wordCount" : "186",
+  "inLanguage": "en",
+  "datePublished": "2018-09-04T00:00:00Z",
+  "dateModified": "2018-09-04T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +167,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +183,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Установка Docker на Ubuntu 16.04
     </h1>
@@ -178,16 +243,16 @@ alias dlo=&#39;docker logs&#39;
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
-      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="https://solbadguy.github.io/tags/docker/">Docker</a></li>
+      <li><a href="https://solbadguy.github.io/tags/ubuntu/">Ubuntu</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/">
+  <a class="prev" href="https://solbadguy.github.io/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/">
     <span class="title">« Prev</span>
     <br>
     <span>Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/openmediavault-webgui-login-not-working/">
+  <a class="next" href="https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/">
     <span class="title">Next »</span>
     <br>
     <span>OpenMediaVault WebGui login not working</span>
@@ -199,7 +264,7 @@ alias dlo=&#39;docker logs&#39;
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

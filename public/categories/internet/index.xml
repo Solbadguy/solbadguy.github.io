@@ -2,136 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Internet on My Blog</title>
-    <link>http://localhost:1313/categories/internet/</link>
+    <link>https://solbadguy.github.io/categories/internet/</link>
     <description>Recent content in Internet on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Jun 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/internet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/categories/internet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Telegram и умные боты</title>
-      <link>http://localhost:1313/posts/telegram-i-umnye-boty/</link>
+      <link>https://solbadguy.github.io/posts/telegram-i-umnye-boty/</link>
       <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/telegram-i-umnye-boty/</guid>
+      <guid>https://solbadguy.github.io/posts/telegram-i-umnye-boty/</guid>
       <description>&lt;p&gt;В середине прошлой недели мессенджер Telegram запустил платформу для создания ботов. Последние смогут взаимодействовать с приложениями и сервисами, которые доступны вне мессенджера. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Gmail позволит возвращать отправленные письма</title>
-      <link>http://localhost:1313/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/</link>
+      <link>https://solbadguy.github.io/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/</link>
       <pubDate>Mon, 29 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/</guid>
+      <guid>https://solbadguy.github.io/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/</guid>
       <description>&lt;p&gt;С недавнего времени все пользователи Gmail могут воспользоваться новой функцией в почте, которая позволит вернуть назад отправленное письмо.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Яндекс запустил свое радио</title>
-      <link>http://localhost:1313/posts/yandeks-zapustil-svoe-radio/</link>
+      <link>https://solbadguy.github.io/posts/yandeks-zapustil-svoe-radio/</link>
       <pubDate>Thu, 04 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/yandeks-zapustil-svoe-radio/</guid>
+      <guid>https://solbadguy.github.io/posts/yandeks-zapustil-svoe-radio/</guid>
       <description>&lt;p&gt;Наверняка многие пользователи интернета наслышаны про обилие далеких от поиска сервисов «Яндекса». Сказать, что это плохо я не могу, скорее даже наоборот. Сегодня в Москве был представлен новый сервис Яндекса - «Яндекс.Радио».&lt;/p&gt;</description>
     </item>
     <item>
       <title>Adblock Plus анонсировал мобильный браузер для Android</title>
-      <link>http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/</link>
+      <link>https://solbadguy.github.io/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/</link>
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/</guid>
+      <guid>https://solbadguy.github.io/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/</guid>
       <description>&lt;p&gt;Разработчики одного из самых популярных расширений для браузеров, сделанных на движке Chromium на днях представили свой собственный браузер для платформ работающих под управлением ОС android.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Windows 10 станет последней в линейке ОС Microsoft</title>
-      <link>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</link>
+      <link>https://solbadguy.github.io/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</link>
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</guid>
+      <guid>https://solbadguy.github.io/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</guid>
       <description>&lt;p&gt;По словам представителя компании Джери Никсона Windows 10 станет последним крупным обновлением, которое выпустит Microsoft.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Спрашивай.ру был взломан</title>
-      <link>http://localhost:1313/posts/sprashivaj-ru-byl-vzloman/</link>
+      <link>https://solbadguy.github.io/posts/sprashivaj-ru-byl-vzloman/</link>
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sprashivaj-ru-byl-vzloman/</guid>
+      <guid>https://solbadguy.github.io/posts/sprashivaj-ru-byl-vzloman/</guid>
       <description>&lt;p&gt;Популярный среди школьников сайт &amp;ldquo;Спрашивай.ру&amp;rdquo; был взломан во время майских праздников.&lt;/p&gt;</description>
     </item>
     <item>
       <title>В новостной ленте «Вконтакте» появятся рекламные записи.</title>
-      <link>http://localhost:1313/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/</link>
+      <link>https://solbadguy.github.io/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/</link>
       <pubDate>Thu, 23 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/</guid>
+      <guid>https://solbadguy.github.io/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/</guid>
       <description>&lt;p&gt;В середине мая всех пользователей социальной сети «Вконтакте» можно будет поздравить с очередным &amp;ldquo;нововведением&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>eBay будет хранить персональные данные россиян в России</title>
-      <link>http://localhost:1313/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/</link>
+      <link>https://solbadguy.github.io/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/</guid>
+      <guid>https://solbadguy.github.io/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/</guid>
       <description>&lt;p&gt;Один из крупнейших интернет-аукционов в мире, согласился хранить персональные данные российских пользователей на территории РФ.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Рунету исполняется 21 год</title>
-      <link>http://localhost:1313/posts/runetu-ispolnyaetsya-21-god/</link>
+      <link>https://solbadguy.github.io/posts/runetu-ispolnyaetsya-21-god/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/runetu-ispolnyaetsya-21-god/</guid>
+      <guid>https://solbadguy.github.io/posts/runetu-ispolnyaetsya-21-god/</guid>
       <description>&lt;p&gt;Для РУнета 7-е апреля является не просто датой, а днем рождения.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Twitter могут заблокировать на территории России</title>
-      <link>http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</link>
+      <link>https://solbadguy.github.io/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</link>
       <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</guid>
+      <guid>https://solbadguy.github.io/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</guid>
       <description>&lt;p&gt;Роскомнадзор в очередной раз намерен вплотную заняться американской социальной сетью &amp;ldquo;Twitter&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>&#34;Одноклассники&#34; запустит онлайн кинотеатр для мобильных устройств</title>
-      <link>http://localhost:1313/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/</link>
+      <link>https://solbadguy.github.io/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/</link>
       <pubDate>Fri, 27 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/</guid>
+      <guid>https://solbadguy.github.io/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/</guid>
       <description>&lt;p&gt;На этой неделе в сразу несколько средств массовой информации  сообщили о намерении руководства социальной сети «Одноклассники» запустить свой собственный онлайн-кинотеатр.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Facebook запустил сервис денежных переводов</title>
-      <link>http://localhost:1313/posts/facebook-zapustil-servis-denezhnyx-perevodov/</link>
+      <link>https://solbadguy.github.io/posts/facebook-zapustil-servis-denezhnyx-perevodov/</link>
       <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/facebook-zapustil-servis-denezhnyx-perevodov/</guid>
+      <guid>https://solbadguy.github.io/posts/facebook-zapustil-servis-denezhnyx-perevodov/</guid>
       <description>&lt;p&gt;В скором времени каждый пользователь соц. сети Facebook сможет проводить денежные транзакции из своего аккаунта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Пользователи Yahoo перестанут использовать пароли</title>
-      <link>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</link>
+      <link>https://solbadguy.github.io/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</link>
       <pubDate>Wed, 18 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</guid>
+      <guid>https://solbadguy.github.io/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</guid>
       <description>&lt;p&gt;Руководство компании &amp;ldquo;Yahoo&amp;rdquo; решило полностью отказаться от использования паролей, которые требовались для входа в аккаунт электронной почты.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Новая возможность на Youtube</title>
-      <link>http://localhost:1313/posts/novaya-vozmozhnost-na-youtube/</link>
+      <link>https://solbadguy.github.io/posts/novaya-vozmozhnost-na-youtube/</link>
       <pubDate>Mon, 16 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/novaya-vozmozhnost-na-youtube/</guid>
+      <guid>https://solbadguy.github.io/posts/novaya-vozmozhnost-na-youtube/</guid>
       <description>&lt;p&gt;На днях YouTube объявил о том, что пользователям сервиса доступна новая функция - просмотр панорамного видео.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Google отдает предпочтение сайтам, которые обладают мобильной версией</title>
-      <link>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</link>
+      <link>https://solbadguy.github.io/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</link>
       <pubDate>Mon, 02 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</guid>
+      <guid>https://solbadguy.github.io/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</guid>
       <description>&lt;p&gt;Гугл официально заявил о том, что сайты, которые оптимизированы под мобильные устройства будут более предпочтительными в формировании поисковой выдачи.&lt;/p&gt;</description>
     </item>
     <item>
       <title>На Ютубе появится платная подписка.</title>
-      <link>http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/</link>
+      <link>https://solbadguy.github.io/posts/na-yutube-poyavitsya-platnaya-podpiska/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/</guid>
+      <guid>https://solbadguy.github.io/posts/na-yutube-poyavitsya-platnaya-podpiska/</guid>
       <description>&lt;p&gt;В скором будущем на популярнейшем видеопортале YouTube появится платная подписка.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Был взломан крупнейший украинский торрент-трекер</title>
-      <link>http://localhost:1313/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/</link>
+      <link>https://solbadguy.github.io/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/</link>
       <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/</guid>
+      <guid>https://solbadguy.github.io/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/</guid>
       <description>&lt;p&gt;Праздник всех влюбленных администрация сайта torrents.net.ua встретила неожиданным образом.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Россия преуспела в блокировке информации</title>
-      <link>http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/</link>
+      <link>https://solbadguy.github.io/posts/rossiya-preuspela-v-blokirovke-informacii/</link>
       <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/</guid>
+      <guid>https://solbadguy.github.io/posts/rossiya-preuspela-v-blokirovke-informacii/</guid>
       <description>&lt;p&gt;В течении всего прошлого года в офис твиттера поступало огромное количество запросов на удаление размещенной на его страницы информации.&lt;/p&gt;</description>
     </item>
   </channel>

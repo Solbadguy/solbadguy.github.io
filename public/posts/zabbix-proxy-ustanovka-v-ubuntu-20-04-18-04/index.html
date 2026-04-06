@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04 | My Blog</title>
 <meta name="keywords" content="zabbix-proxy, zabbix-proksi">
 <meta name="description" content="В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,78 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04">
+  <meta property="og:description" content="В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-07-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-07-01T00:00:00+00:00">
+    <meta property="article:tag" content="Zabbix-Proxy">
+    <meta property="article:tag" content="Zabbix-Proksi">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04">
+  <meta name="twitter:description" content="В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04",
+      "item": "https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04",
+  "name": "Zabbix Proxy. Установка в Ubuntu 20.04 \/ 18.04",
+  "description": "В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.\n",
+  "keywords": [
+    "zabbix-proxy", "zabbix-proksi"
+  ],
+  "articleBody": "В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.\nZabbix proxy - это сервис, который собирант данные о производительности и доступности конечных устройств, а затем передает их Zabbix-серверу.\nКак правило он используется для мониторинга инфраструктуры, которая находится за брандмауэром, либо для разгрузки Zabbix-сервера в больших средах.\nА теперь мы установим последнюю версию 5.0 прокси-сервера Zabbix в Ubuntu (20.04, 18.04)\nШаг 1: Установка Zabbix Proxy в Ubuntu Для установки прокси мной была заранее подготовлена чистая вирт, на которой я и буду выполнять настройку этого сервиса.\nsudo wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+$(lsb_release -sc)_all.deb sudo dpkg -i zabbix-release_5.0-1+$(lsb_release -sc)_all.deb sudo apt update sudo apt -y install zabbix-proxy-mysql Шаг 2. Настройка базы данных Для примера я буду использовать пароль rootDBpass в качестве пароля root-пользователя базы данных и zabbixDBpass в качестве пароля базы данных Zabbix. Из соображений безопасности обязательно меняйте его на свой.\n2.1 Настройка Mysql\nsudo mysql_secure_installation Enter current password for root (enter for none): Press the Enter Set root password? [Y/n]: Y New password: Re-enter new password: Remove anonymous users? [Y/n]: Y Disallow root login remotely? [Y/n]: Y Remove test database and access to it? [Y/n]: Y Reload privilege tables now? [Y/n]: Y 2.2 Создание БД\nsudo mysql -uroot -p'rootDBpass' mysql\u003e create database zabbix_proxy character set utf8 collate utf8_bin; mysql\u003e grant all privileges on zabbix_proxy.* to zabbix@localhost identified by 'zabbixDBpass'; mysql\u003e quit; 3.1 Импорт схемы БД\nzcat /usr/share/doc/zabbix-proxy-mysql*/schema.sql.gz | mysql -uzabbix -p'zabbixDBpass' zabbix_proxy Шаг 3: Настройка прокси В рамках этой статья я назову свой прокси Zproxy и настрою его для связи с Zabbix-сервером по адресу 192.168.0.3 - измените эти значения в соответствии с вашей средой.\nСколпируйте, а затем откройте файл zabbix_proxy.confс помощью команды:\nsudo cp /etc/zabbix/zabbix_proxy.conf /etc/zabbix/zabbix_proxy.conf_bk sudo nano /etc/zabbix/zabbix_proxy.conf теперь нам надо исправить некоторые значения:\nServer=192.168.0.3 Hostname=Zproxy DBName=zabbix_proxy DBUser=zabbix Сохраните изменения.\nШаг 4. Запустите и включите прокси-сервис Перезапустим службу и включим автозапуск при загрузке ОС:\nsudo systemctl restart zabbix-proxy sudo systemctl enable zabbix-proxy Шаг 5: Зарегистрируйте прокси-сервер в веб-интерфейсе Zabbix Теперь, когда ваш прокси-сервер работает, вам необходимо зарегистрировать его в веб-интерфейсе Zabbix.\nДля этого перейдем по пути:\nАдминистрирование -\u003e Прокси-\u003e Создать прокси , где укажем следующее:\nИмя - Zproxy Режим - Активный Обратите внимание, что для работы прокси в активном режиме « Имя прокси» должно совпадать с параметром « hostname » в zabbix_proxy.conf.\nШаг 6: Настройте хосты в Zabbix для мониторинга через прокси На данный момент наш прокси работает, но он не передает никаких данных, т.к. мы не еще не создали ни одного узла сети, который бы работал через него.\nВ настройке узла нет ничего сложного, отмечу лишь, что адреса клиентов должны быть “локальными”, т.е. находмться в той же сети что и сам прокси.\nПо окончании настройки не забудьте выбрать наш новенький прокси в одноименном пункте настроек.\nШаг 7. Настройка шифрования PSK на прокси (необязательно) Zabbix поддерживает зашифрованные соединения между сервером Zabbix и прокси-сервером, используя протокол TLS (vLS). Вы можете использовать шифрование на основании сертификатов или ключей (PSK). В этом руководстве мы настроим последнее.\n7.1. Создадим PSK ключ\nopenssl rand -hex 32 382eb0sadasdc207cc4980cdb1bb181asdasd82b7fddcda00281311a8fb955 полученный ключ - 382eb0sadasdc207cc4980cdb1bb181asdasd82b7fddcda00281311a8fb955\nСоздайте и откройте файл zabbix_proxy.psk:\nsudo nano /etc/zabbix/zabbix_proxy.psk скопируйте в него только что созданный ключ.\nИзменим права:\nsudo chown zabbix: zabbix /etc/zabbix/zabbix_proxy.psk sudo chmod 644 /etc/zabbix/zabbix_proxy.psk 7.2. Настроим прокси для работы через PSK\nОткроем файл конф.:\nsudo nano /etc/zabbix/zabbix_proxy.conf Добавим строчки:\nTLSConnect = psk TLSAccept = psk TLSPSKFile = /etc/zabbix/zabbix_proxy.psk TLSPSKIdentity = zproxy_psk Перезапустим прокси:\nsudo systemctl restart zabbix-proxy 7.3. Включим шифрование на Zabbix-сервере\nСвязь между прокси и Zabbix-сервером еще не зашифрована, потому что мы включили шифрование PSK на стороне прокси, но не на стороне сервера.\nНам нужно включить шифрование на стороне сервера, поэтому зайдите в веб-интерфейс и выберите свой прокси, а затем выберите параметр Шифрование, где:\nУстановите тип PSK Скопируйте имя Скопируйте ключ На этом настройку Zappix-proxy можно считать оконченной.\nНапомню лишь, что его логи можно отслеживать командой:\ntail -500 /var/log/zabbix/zabbix_proxy.log а так же помните, что Zabbix-прокси использует порт 10051 для связи с Zabbix-сервером, поэтому убедитесь, что вы разрешаете тсходящий трафик на этом порту.\n",
+  "wordCount" : "672",
+  "inLanguage": "en",
+  "datePublished": "2020-07-01T00:00:00Z",
+  "dateModified": "2020-07-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +167,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +183,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04
     </h1>
@@ -232,16 +297,16 @@ TLSPSKIdentity = zproxy_psk
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/zabbix-proxy/">Zabbix-Proxy</a></li>
-      <li><a href="http://localhost:1313/tags/zabbix-proksi/">Zabbix-Proksi</a></li>
+      <li><a href="https://solbadguy.github.io/tags/zabbix-proxy/">Zabbix-Proxy</a></li>
+      <li><a href="https://solbadguy.github.io/tags/zabbix-proksi/">Zabbix-Proksi</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/">
+  <a class="prev" href="https://solbadguy.github.io/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/">
     <span class="title">« Prev</span>
     <br>
     <span>Настраиваем отправку почты с сервера через пакет SSMTP</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/">
+  <a class="next" href="https://solbadguy.github.io/posts/supervisor-nastraivaem-perezapusk-programmy/">
     <span class="title">Next »</span>
     <br>
     <span>Supervisor. Настраиваем перезапуск программы.</span>
@@ -253,7 +318,7 @@ TLSPSKIdentity = zproxy_psk
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

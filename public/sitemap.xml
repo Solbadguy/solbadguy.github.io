@@ -2,742 +2,726 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://solbadguy.github.io/categories/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://solbadguy.github.io/tags/linux/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/permissions/</loc>
+    <loc>https://solbadguy.github.io/tags/permissions/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://solbadguy.github.io/posts/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://solbadguy.github.io/tags/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/unix/</loc>
+    <loc>https://solbadguy.github.io/categories/unix/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://solbadguy.github.io/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/</loc>
+    <loc>https://solbadguy.github.io/posts/prava-dlya-direktorii-ssh-shpargalka/</loc>
     <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bond/</loc>
+    <loc>https://solbadguy.github.io/tags/bond/</loc>
     <lastmod>2022-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/</loc>
+    <loc>https://solbadguy.github.io/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/</loc>
     <lastmod>2022-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/proxmox/</loc>
+    <loc>https://solbadguy.github.io/tags/proxmox/</loc>
     <lastmod>2022-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/</loc>
+    <loc>https://solbadguy.github.io/posts/pereimenovanie-nody-proxmox-ve/</loc>
     <lastmod>2022-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/</loc>
+    <loc>https://solbadguy.github.io/posts/connection-error-401-permission-denied-invalid-pve-ticket/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pve/</loc>
+    <loc>https://solbadguy.github.io/tags/pve/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lets-encrypt/</loc>
+    <loc>https://solbadguy.github.io/tags/lets-encrypt/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssl/</loc>
+    <loc>https://solbadguy.github.io/tags/ssl/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</loc>
+    <loc>https://solbadguy.github.io/posts/poluchaem-wildcard-ot-lets-encrypt/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/zabbix/</loc>
+    <loc>https://solbadguy.github.io/tags/zabbix/</loc>
     <lastmod>2022-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/zabbix-database-error-connection-refused/</loc>
+    <loc>https://solbadguy.github.io/posts/zabbix-database-error-connection-refused/</loc>
     <lastmod>2022-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/chrony/</loc>
+    <loc>https://solbadguy.github.io/tags/chrony/</loc>
     <lastmod>2022-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/</loc>
+    <loc>https://solbadguy.github.io/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/</loc>
     <lastmod>2022-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/</loc>
+    <loc>https://solbadguy.github.io/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/</loc>
     <lastmod>2022-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/</loc>
+    <loc>https://solbadguy.github.io/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/</loc>
     <lastmod>2022-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vagrant/</loc>
+    <loc>https://solbadguy.github.io/tags/vagrant/</loc>
     <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</loc>
+    <loc>https://solbadguy.github.io/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</loc>
     <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/yakuake/</loc>
+    <loc>https://solbadguy.github.io/tags/yakuake/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/</loc>
+    <loc>https://solbadguy.github.io/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/alias-bash/</loc>
+    <loc>https://solbadguy.github.io/tags/alias-bash/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/pogoda-v-konsoli/</loc>
+    <loc>https://solbadguy.github.io/posts/pogoda-v-konsoli/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/konsol/</loc>
+    <loc>https://solbadguy.github.io/tags/konsol/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/</loc>
+    <loc>https://solbadguy.github.io/posts/connect-to-nextcloud-waiting-for-authorization/</loc>
     <lastmod>2020-10-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nextcloud/</loc>
+    <loc>https://solbadguy.github.io/tags/nextcloud/</loc>
     <lastmod>2020-10-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/ubuntu-server/</loc>
+    <loc>https://solbadguy.github.io/categories/ubuntu-server/</loc>
     <lastmod>2020-10-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dnscrypt/</loc>
+    <loc>https://solbadguy.github.io/tags/dnscrypt/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://solbadguy.github.io/tags/docker/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pihole/</loc>
+    <loc>https://solbadguy.github.io/tags/pihole/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/</loc>
+    <loc>https://solbadguy.github.io/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
+    <loc>https://solbadguy.github.io/tags/ssh/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh-jump/</loc>
+    <loc>https://solbadguy.github.io/tags/ssh-jump/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ssh-jump-nastrojka/</loc>
+    <loc>https://solbadguy.github.io/posts/ssh-jump-nastrojka/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/debian/</loc>
+    <loc>https://solbadguy.github.io/tags/debian/</loc>
     <lastmod>2020-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/grub/</loc>
+    <loc>https://solbadguy.github.io/tags/grub/</loc>
     <lastmod>2020-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</loc>
+    <loc>https://solbadguy.github.io/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</loc>
     <lastmod>2020-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssmtp/</loc>
+    <loc>https://solbadguy.github.io/tags/ssmtp/</loc>
     <lastmod>2020-07-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/</loc>
+    <loc>https://solbadguy.github.io/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/</loc>
     <lastmod>2020-07-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/</loc>
+    <loc>https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/zabbix-proksi/</loc>
+    <loc>https://solbadguy.github.io/tags/zabbix-proksi/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/zabbix-proxy/</loc>
+    <loc>https://solbadguy.github.io/tags/zabbix-proxy/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/supervisor/</loc>
+    <loc>https://solbadguy.github.io/tags/supervisor/</loc>
     <lastmod>2020-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</loc>
+    <loc>https://solbadguy.github.io/posts/supervisor-nastraivaem-perezapusk-programmy/</loc>
     <lastmod>2020-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
+    <loc>https://solbadguy.github.io/tags/ubuntu/</loc>
     <lastmod>2020-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/netplan/</loc>
+    <loc>https://solbadguy.github.io/tags/netplan/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/netplan-wifi-on-ubuntu-18-04/</loc>
+    <loc>https://solbadguy.github.io/posts/netplan-wifi-on-ubuntu-18-04/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cmd/</loc>
+    <loc>https://solbadguy.github.io/tags/cmd/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/stati/</loc>
+    <loc>https://solbadguy.github.io/categories/stati/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/</loc>
+    <loc>https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vhd/</loc>
+    <loc>https://solbadguy.github.io/tags/vhd/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows/</loc>
+    <loc>https://solbadguy.github.io/tags/windows/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/</loc>
+    <loc>https://solbadguy.github.io/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux-mint/</loc>
+    <loc>https://solbadguy.github.io/tags/linux-mint/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vnc/</loc>
+    <loc>https://solbadguy.github.io/tags/vnc/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/chocolatey/</loc>
+    <loc>https://solbadguy.github.io/tags/chocolatey/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/howto/</loc>
+    <loc>https://solbadguy.github.io/tags/howto/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/powershell/</loc>
+    <loc>https://solbadguy.github.io/tags/powershell/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/script/</loc>
+    <loc>https://solbadguy.github.io/tags/script/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</loc>
+    <loc>https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows-10/</loc>
+    <loc>https://solbadguy.github.io/tags/windows-10/</loc>
     <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/telegram/</loc>
+    <loc>https://solbadguy.github.io/tags/telegram/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/</loc>
+    <loc>https://solbadguy.github.io/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hetzner/</loc>
+    <loc>https://solbadguy.github.io/tags/hetzner/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hetzner-storagebox-nastraivaem-avtorizaciyu-po-klyucham/</loc>
+    <loc>https://solbadguy.github.io/posts/hetzner-storagebox-nastraivaem-avtorizaciyu-po-klyucham/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh-keygen/</loc>
+    <loc>https://solbadguy.github.io/tags/ssh-keygen/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/iredmail/</loc>
+    <loc>https://solbadguy.github.io/tags/iredmail/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/logrotate/</loc>
+    <loc>https://solbadguy.github.io/tags/logrotate/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/</loc>
+    <loc>https://solbadguy.github.io/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mail-server/</loc>
+    <loc>https://solbadguy.github.io/tags/mail-server/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nginx/</loc>
+    <loc>https://solbadguy.github.io/tags/nginx/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/1c/</loc>
+    <loc>https://solbadguy.github.io/tags/1c/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/it/</loc>
+    <loc>https://solbadguy.github.io/tags/it/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/komandnaya-stroka/</loc>
+    <loc>https://solbadguy.github.io/tags/komandnaya-stroka/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</loc>
+    <loc>https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/centos/</loc>
+    <loc>https://solbadguy.github.io/tags/centos/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/https/</loc>
+    <loc>https://solbadguy.github.io/tags/https/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/</loc>
+    <loc>https://solbadguy.github.io/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sertifikat/</loc>
+    <loc>https://solbadguy.github.io/tags/sertifikat/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/1c-server-ragent-not-running/</loc>
+    <loc>https://solbadguy.github.io/posts/1c-server-ragent-not-running/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/1c-server/</loc>
+    <loc>https://solbadguy.github.io/tags/1c-server/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</loc>
+    <loc>https://solbadguy.github.io/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/novosti/</loc>
+    <loc>https://solbadguy.github.io/categories/novosti/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/webdav/</loc>
+    <loc>https://solbadguy.github.io/tags/webdav/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vagrant-problem-solving/</loc>
+    <loc>https://solbadguy.github.io/posts/vagrant-problem-solving/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/android/</loc>
+    <loc>https://solbadguy.github.io/categories/android/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/android/</loc>
+    <loc>https://solbadguy.github.io/tags/android/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/</loc>
+    <loc>https://solbadguy.github.io/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/</loc>
     <lastmod>2018-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/aceproxy/</loc>
+    <loc>https://solbadguy.github.io/tags/aceproxy/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/acestream/</loc>
+    <loc>https://solbadguy.github.io/tags/acestream/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tv/</loc>
+    <loc>https://solbadguy.github.io/tags/tv/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/</loc>
+    <loc>https://solbadguy.github.io/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</loc>
+    <loc>https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/openmediavault/</loc>
+    <loc>https://solbadguy.github.io/tags/openmediavault/</loc>
     <lastmod>2018-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</loc>
+    <loc>https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/</loc>
     <lastmod>2018-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</loc>
+    <loc>https://solbadguy.github.io/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</loc>
     <lastmod>2018-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/motd/</loc>
+    <loc>https://solbadguy.github.io/tags/motd/</loc>
     <lastmod>2018-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/motd-script-for-ssh-login/</loc>
+    <loc>https://solbadguy.github.io/posts/motd-script-for-ssh-login/</loc>
     <lastmod>2018-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/win7/</loc>
+    <loc>https://solbadguy.github.io/tags/win7/</loc>
     <lastmod>2018-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</loc>
+    <loc>https://solbadguy.github.io/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</loc>
     <lastmod>2018-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/proxmox-ve-5-0-fix-update/</loc>
+    <loc>https://solbadguy.github.io/posts/proxmox-ve-5-0-fix-update/</loc>
     <lastmod>2017-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gapps/</loc>
+    <loc>https://solbadguy.github.io/tags/gapps/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/google-service/</loc>
+    <loc>https://solbadguy.github.io/tags/google-service/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/minimalnyj-nabor-servisov-google/</loc>
+    <loc>https://solbadguy.github.io/posts/minimalnyj-nabor-servisov-google/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</loc>
+    <loc>https://solbadguy.github.io/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</loc>
     <lastmod>2017-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rdp/</loc>
+    <loc>https://solbadguy.github.io/tags/rdp/</loc>
     <lastmod>2017-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/</loc>
+    <loc>https://solbadguy.github.io/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/</loc>
     <lastmod>2017-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fastboot/</loc>
+    <loc>https://solbadguy.github.io/tags/fastboot/</loc>
     <lastmod>2017-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/root/</loc>
+    <loc>https://solbadguy.github.io/tags/root/</loc>
     <lastmod>2017-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/sovety-po-nastrojke-android-os/</loc>
+    <loc>https://solbadguy.github.io/categories/sovety-po-nastrojke-android-os/</loc>
     <lastmod>2017-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/twrp/</loc>
+    <loc>https://solbadguy.github.io/tags/twrp/</loc>
     <lastmod>2017-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/</loc>
+    <loc>https://solbadguy.github.io/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/</loc>
     <lastmod>2017-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/winxp/</loc>
+    <loc>https://solbadguy.github.io/tags/winxp/</loc>
     <lastmod>2017-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</loc>
+    <loc>https://solbadguy.github.io/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</loc>
     <lastmod>2017-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/</loc>
+    <loc>https://solbadguy.github.io/posts/vosstanovlenie-parolya-enterprise-security-suite/</loc>
     <lastmod>2017-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/xiaomi/</loc>
+    <loc>https://solbadguy.github.io/tags/xiaomi/</loc>
     <lastmod>2017-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/</loc>
+    <loc>https://solbadguy.github.io/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/</loc>
     <lastmod>2017-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/how-to/</loc>
+    <loc>https://solbadguy.github.io/tags/how-to/</loc>
     <lastmod>2017-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/ubuntu-desktop/</loc>
+    <loc>https://solbadguy.github.io/categories/ubuntu-desktop/</loc>
     <lastmod>2017-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/xfce4/</loc>
+    <loc>https://solbadguy.github.io/tags/xfce4/</loc>
     <lastmod>2017-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</loc>
     <lastmod>2017-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/redaktory/</loc>
+    <loc>https://solbadguy.github.io/tags/redaktory/</loc>
     <lastmod>2017-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/soft/</loc>
+    <loc>https://solbadguy.github.io/tags/soft/</loc>
     <lastmod>2017-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</loc>
+    <loc>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</loc>
     <lastmod>2017-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gaaps/</loc>
+    <loc>https://solbadguy.github.io/tags/gaaps/</loc>
     <lastmod>2016-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/</loc>
+    <loc>https://solbadguy.github.io/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/</loc>
     <lastmod>2016-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/</loc>
+    <loc>https://solbadguy.github.io/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/</loc>
     <lastmod>2016-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/proshivka-telefonov-xiaomi-v-kurske/</loc>
+    <loc>https://solbadguy.github.io/proshivka-telefonov-xiaomi-v-kurske/</loc>
     <lastmod>2016-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/proshivki/</loc>
+    <loc>https://solbadguy.github.io/categories/proshivki/</loc>
     <lastmod>2016-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</loc>
+    <loc>https://solbadguy.github.io/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</loc>
     <lastmod>2016-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</loc>
+    <loc>https://solbadguy.github.io/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</loc>
     <lastmod>2016-10-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/</loc>
+    <loc>https://solbadguy.github.io/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/</loc>
     <lastmod>2016-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/google/</loc>
+    <loc>https://solbadguy.github.io/tags/google/</loc>
     <lastmod>2016-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/miui/</loc>
+    <loc>https://solbadguy.github.io/tags/miui/</loc>
     <lastmod>2016-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/optimizaciya-pamyati/</loc>
+    <loc>https://solbadguy.github.io/tags/optimizaciya-pamyati/</loc>
     <lastmod>2016-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</loc>
     <lastmod>2016-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</loc>
+    <loc>https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/</loc>
     <lastmod>2016-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</loc>
+    <loc>https://solbadguy.github.io/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</loc>
     <lastmod>2016-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/</loc>
     <lastmod>2016-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/adb/</loc>
+    <loc>https://solbadguy.github.io/tags/adb/</loc>
     <lastmod>2016-08-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</loc>
     <lastmod>2016-08-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/obman-multirom/</loc>
+    <loc>https://solbadguy.github.io/posts/obman-multirom/</loc>
     <lastmod>2016-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</loc>
+    <loc>https://solbadguy.github.io/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</loc>
     <lastmod>2016-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/associacii-fajlov/</loc>
+    <loc>https://solbadguy.github.io/tags/associacii-fajlov/</loc>
     <lastmod>2016-06-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</loc>
     <lastmod>2016-06-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/</loc>
+    <loc>https://solbadguy.github.io/posts/android-udalyaem-reklamu-iz-prilozhenij/</loc>
     <lastmod>2016-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</loc>
+    <loc>https://solbadguy.github.io/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</loc>
     <lastmod>2016-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</loc>
+    <loc>https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</loc>
     <lastmod>2016-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</loc>
+    <loc>https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</loc>
     <lastmod>2016-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microsoft/</loc>
+    <loc>https://solbadguy.github.io/tags/microsoft/</loc>
     <lastmod>2016-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/news/</loc>
+    <loc>https://solbadguy.github.io/categories/news/</loc>
     <lastmod>2016-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/</loc>
+    <loc>https://solbadguy.github.io/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/</loc>
     <lastmod>2016-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</loc>
+    <loc>https://solbadguy.github.io/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</loc>
     <lastmod>2016-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contacts/</loc>
+    <loc>https://solbadguy.github.io/contacts/</loc>
     <lastmod>2016-02-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</loc>
+    <loc>https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/</loc>
     <lastmod>2016-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bekap-proshivki/</loc>
+    <loc>https://solbadguy.github.io/tags/bekap-proshivki/</loc>
     <lastmod>2016-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</loc>
     <lastmod>2016-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/</loc>
+    <loc>https://solbadguy.github.io/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/conky/</loc>
+    <loc>https://solbadguy.github.io/tags/conky/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</loc>
+    <loc>https://solbadguy.github.io/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/optimiziruem-svoj-smartfon-na-android/</loc>
+    <loc>https://solbadguy.github.io/posts/optimiziruem-svoj-smartfon-na-android/</loc>
     <lastmod>2015-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/</loc>
+    <loc>https://solbadguy.github.io/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/</loc>
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</loc>
+    <loc>https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/</loc>
     <lastmod>2015-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/obo-mne/</loc>
+    <loc>https://solbadguy.github.io/obo-mne/</loc>
     <lastmod>2015-09-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</loc>
+    <loc>https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/</loc>
     <lastmod>2015-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/internet/</loc>
+    <loc>https://solbadguy.github.io/tags/internet/</loc>
     <lastmod>2015-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</loc>
+    <loc>https://solbadguy.github.io/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</loc>
     <lastmod>2015-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/mikro-pk-lenovo-ideacentre-stick-300/</loc>
+    <loc>https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/</loc>
     <lastmod>2015-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/internet/</loc>
+    <loc>https://solbadguy.github.io/categories/internet/</loc>
     <lastmod>2015-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/telegram-i-umnye-boty/</loc>
+    <loc>https://solbadguy.github.io/posts/telegram-i-umnye-boty/</loc>
     <lastmod>2015-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/</loc>
+    <loc>https://solbadguy.github.io/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/</loc>
     <lastmod>2015-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/conky-ubuntu-ustanovka/</loc>
+    <loc>https://solbadguy.github.io/posts/conky-ubuntu-ustanovka/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/elementary/</loc>
+    <loc>https://solbadguy.github.io/tags/elementary/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</loc>
+    <loc>https://solbadguy.github.io/posts/elementary-tweaks-freya-ustanovka/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hotspot/</loc>
+    <loc>https://solbadguy.github.io/tags/hotspot/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/manjaro/</loc>
+    <loc>https://solbadguy.github.io/tags/manjaro/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wifi/</loc>
+    <loc>https://solbadguy.github.io/tags/wifi/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/wifi-hotspot-manjaro/</loc>
+    <loc>https://solbadguy.github.io/posts/wifi-hotspot-manjaro/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mestnye-novosti/</loc>
+    <loc>https://solbadguy.github.io/tags/mestnye-novosti/</loc>
     <lastmod>2015-06-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/yandeks-zapustil-svoe-radio/</loc>
+    <loc>https://solbadguy.github.io/posts/yandeks-zapustil-svoe-radio/</loc>
     <lastmod>2015-06-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/</loc>
+    <loc>https://solbadguy.github.io/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/</loc>
     <lastmod>2015-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/</loc>
+    <loc>https://solbadguy.github.io/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/</loc>
     <lastmod>2015-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</loc>
+    <loc>https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</loc>
     <lastmod>2015-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</loc>
+    <loc>https://solbadguy.github.io/posts/iftop-monitoring-seti-na-ubuntu-server/</loc>
     <lastmod>2015-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</loc>
+    <loc>https://solbadguy.github.io/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</loc>
     <lastmod>2015-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sprashivaj-ru-byl-vzloman/</loc>
+    <loc>https://solbadguy.github.io/posts/sprashivaj-ru-byl-vzloman/</loc>
     <lastmod>2015-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sarg/</loc>
+    <loc>https://solbadguy.github.io/tags/sarg/</loc>
     <lastmod>2015-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</loc>
+    <loc>https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</loc>
     <lastmod>2015-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</loc>
     <lastmod>2015-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vk/</loc>
+    <loc>https://solbadguy.github.io/tags/vk/</loc>
     <lastmod>2015-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/</loc>
+    <loc>https://solbadguy.github.io/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/</loc>
     <lastmod>2015-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bezopasnost/</loc>
+    <loc>https://solbadguy.github.io/tags/bezopasnost/</loc>
     <lastmod>2015-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-zablokirovat-porno-sajty-ot-detej/</loc>
     <lastmod>2015-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</loc>
+    <loc>https://solbadguy.github.io/posts/nastrojka-sarg-na-baze-ubuntu-server/</loc>
     <lastmod>2015-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</loc>
+    <loc>https://solbadguy.github.io/posts/android-v-pomoshh-sistemnomu-administratoru/</loc>
     <lastmod>2015-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ebay/</loc>
+    <loc>https://solbadguy.github.io/tags/ebay/</loc>
     <lastmod>2015-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/</loc>
+    <loc>https://solbadguy.github.io/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/</loc>
     <lastmod>2015-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hosting/</loc>
+    <loc>https://solbadguy.github.io/tags/hosting/</loc>
     <lastmod>2015-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/runetu-ispolnyaetsya-21-god/</loc>
+    <loc>https://solbadguy.github.io/posts/runetu-ispolnyaetsya-21-god/</loc>
     <lastmod>2015-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/zentyal/</loc>
+    <loc>https://solbadguy.github.io/categories/zentyal/</loc>
     <lastmod>2015-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/zentyal/</loc>
+    <loc>https://solbadguy.github.io/tags/zentyal/</loc>
     <lastmod>2015-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vyshel-zentyal-4-1/</loc>
+    <loc>https://solbadguy.github.io/posts/vyshel-zentyal-4-1/</loc>
     <lastmod>2015-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-uznat-otkrytye-porty/</loc>
     <lastmod>2015-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</loc>
+    <loc>https://solbadguy.github.io/posts/statusy-portov-v-komandnoj-stroke/</loc>
     <lastmod>2015-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tvitter/</loc>
+    <loc>https://solbadguy.github.io/tags/tvitter/</loc>
     <lastmod>2015-03-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</loc>
+    <loc>https://solbadguy.github.io/posts/twitter-mogut-zablokirovat-na-territorii-rossii/</loc>
     <lastmod>2015-03-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-uznat-vremya-cherez-konsol-linux/</loc>
     <lastmod>2015-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/</loc>
+    <loc>https://solbadguy.github.io/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mts/</loc>
+    <loc>https://solbadguy.github.io/tags/mts/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/facebook/</loc>
+    <loc>https://solbadguy.github.io/tags/facebook/</loc>
     <lastmod>2015-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/facebook-zapustil-servis-denezhnyx-perevodov/</loc>
+    <loc>https://solbadguy.github.io/posts/facebook-zapustil-servis-denezhnyx-perevodov/</loc>
     <lastmod>2015-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pochta/</loc>
+    <loc>https://solbadguy.github.io/tags/pochta/</loc>
     <lastmod>2015-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</loc>
+    <loc>https://solbadguy.github.io/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</loc>
     <lastmod>2015-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</loc>
+    <loc>https://solbadguy.github.io/posts/besplatnyj-antivirus-dlya-predpriyatij/</loc>
     <lastmod>2015-03-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/panoramnoe-video/</loc>
+    <loc>https://solbadguy.github.io/tags/panoramnoe-video/</loc>
     <lastmod>2015-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/youtube/</loc>
+    <loc>https://solbadguy.github.io/tags/youtube/</loc>
     <lastmod>2015-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/novaya-vozmozhnost-na-youtube/</loc>
+    <loc>https://solbadguy.github.io/posts/novaya-vozmozhnost-na-youtube/</loc>
     <lastmod>2015-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kratkij-obzor-zentyal/</loc>
+    <loc>https://solbadguy.github.io/posts/kratkij-obzor-zentyal/</loc>
     <lastmod>2015-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</loc>
+    <loc>https://solbadguy.github.io/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</loc>
     <lastmod>2015-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/optimizaciya/</loc>
+    <loc>https://solbadguy.github.io/tags/optimizaciya/</loc>
     <lastmod>2015-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/</loc>
+    <loc>https://solbadguy.github.io/posts/kak-ustanovit-telegram-na-ubuntulinux/</loc>
     <lastmod>2015-02-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/yutub/</loc>
+    <loc>https://solbadguy.github.io/tags/yutub/</loc>
     <lastmod>2015-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/</loc>
+    <loc>https://solbadguy.github.io/posts/na-yutube-poyavitsya-platnaya-podpiska/</loc>
     <lastmod>2015-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/plasma-5-install-usb-error/</loc>
+    <loc>https://solbadguy.github.io/posts/plasma-5-install-usb-error/</loc>
     <lastmod>2015-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/</loc>
+    <loc>https://solbadguy.github.io/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/</loc>
     <lastmod>2015-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/iphone/</loc>
+    <loc>https://solbadguy.github.io/tags/iphone/</loc>
     <lastmod>2015-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/</loc>
+    <loc>https://solbadguy.github.io/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/</loc>
     <lastmod>2015-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/</loc>
+    <loc>https://solbadguy.github.io/posts/rossiya-preuspela-v-blokirovke-informacii/</loc>
     <lastmod>2015-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/xakery-prodali-s-molotka-uyazvimost-o/</loc>
+    <loc>https://solbadguy.github.io/posts/xakery-prodali-s-molotka-uyazvimost-o/</loc>
     <lastmod>2014-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/morephone-smartfon-izgibaetsya-pri-vyzove/</loc>
+    <loc>https://solbadguy.github.io/posts/morephone-smartfon-izgibaetsya-pri-vyzove/</loc>
     <lastmod>2014-07-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/youtube-zapuskaet-platnuyu-video-platformu/</loc>
+    <loc>https://solbadguy.github.io/posts/youtube-zapuskaet-platnuyu-video-platformu/</loc>
     <lastmod>2014-07-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/</loc>
+    <loc>https://solbadguy.github.io/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/</loc>
     <lastmod>2014-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-2152/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-2458/</loc>
-  </url><url>
-    <loc>http://localhost:1313/readme/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-2979/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-3416/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-3236/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-3250/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-2185/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/_drafts/id-3190/</loc>
+    <loc>https://solbadguy.github.io/readme/</loc>
   </url>
 </urlset>

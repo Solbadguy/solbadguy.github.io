@@ -1,19 +1,43 @@
 baseURL = "https://solbadguy.github.io/"
-languageCode = "en-us"
-title = "My Blog"
+languageCode = "ru"
+defaultContentLanguage = "ru"
+title = "admin46"
 theme = "PaperMod"
 enableRobotsTXT = true
 
+# Формат дат (русский)
+dateFormat = "02.01.2006"
+
+# Пагинация
 [pagination]
   pagerSize = 10
 
+# Выводы (включаем RSS и JSON для поиска)
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Параметры PaperMod
 [params]
+  env = "production"                 # включает SEO-режим
+  defaultTheme = "auto"              # авто-тема
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  defaultTheme = "auto"
+  disableAnalytics = true            # отключает google_analytics.html
+  disableThemeToggle = false
+  ShowShareButtons = false
+  ShowToc = false
+  comments = false
 
+  # SEO
+  keywords = ["блог", "linux", "it", "администрирование", "devops"]
+  description = "Личный блог admin46 — заметки по Linux, DevOps, сетям и инфраструктуре."
+
+  # OpenGraph / Twitter
+  images = ["images/og-image.png"]
+
+# Меню
 [menu]
 
   [[menu.main]]

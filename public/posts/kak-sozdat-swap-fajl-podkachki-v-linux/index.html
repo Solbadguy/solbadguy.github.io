@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Как создать Swap файл подкачки в Linux-подобных ОС | My Blog</title>
 <meta name="keywords" content="linux, ubuntu">
 <meta name="description" content="Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,78 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Как создать Swap файл подкачки в Linux-подобных ОС">
+  <meta property="og:description" content="Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-03-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-03-02T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Ubuntu">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Как создать Swap файл подкачки в Linux-подобных ОС">
+  <meta name="twitter:description" content="Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Как создать Swap файл подкачки в Linux-подобных ОС",
+      "item": "https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как создать Swap файл подкачки в Linux-подобных ОС",
+  "name": "Как создать Swap файл подкачки в Linux-подобных ОС",
+  "description": "Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).\n",
+  "keywords": [
+    "linux", "ubuntu"
+  ],
+  "articleBody": "Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).\nЧто такое Swap (файл подкачки) Swap — это механизм памяти, при работе которого неактивные процессы выгружаются из оперативной памяти на жёсткий диск, таким образом происходит ее разгрузка. Это полезно, если количество памяти строго ограничено, говоря простым языком, если памяти катастрофически мало или ее не хватает.\nSwap может быть представлен в двух исполнениях:\nотдельный раздел на диске файл на диске. Примечательно, что в случае, если ваша система работает на SSD диске, то производительность swap файла не будет сильно уступать по скорости доступа ОП.\nПроверяем наличие Swap файла подкачки в Linux Заходим на сервер через SSH, для проверки наличия файла подкачки вводим команду:\nswapon -s При наличии файла подкачки результат команды будет таким:\n[root@server]# swapon -s Filename Type Size Used Priority /var/swap.img file 1023992 30248 -1 Есть и альтернативный метод:\nfree Если файла подкачки нет, то напротив соответствующего пункта будут нули:\nSwap: 0 0 0 Как создать Swap файл подкачки в Linux Переходим в папку /var:\ncd /var Создаем Swap файл и задаем права доступа к нему:\ntouch swap.img chmod 0600 swap.img Выбираем размер файла подкачки Как говорил Владимир Павлович - “размер Swap файла должен быть равен объему оперативной памяти, либо превышать ее в два раза”. Из вышесказанного делаем вывод, что при размере памяти равному 1024мб, размер файла подкачки будет равен 1024мб/2048мб.\nИспользуя консольную утилиту dd заполним только что созданный файл нулями:\ndd if=/dev/zero of=/var/swap.img bs=1024k count=1000 status=progress Инициализируем Swap файл командой mkswap:\nmkswap /var/swap.img Поздравляю, Swap файл готов к использованию.\nВключаем Swap командой swapon:\nswapon /var/swap.img Проверяем действительно ли это так:\nswapon -s или\nfree Добавляем Swap в fstab Важно знать, что Swap файл будет работать только до перезагрузки системы, после его нужно будет включать заново. Чтобы избавить себя от этих занятий, давайте пропишем в системе, что он есть и его нужно использовать. Выполним команду:\necho \"/var/swap.img none swap sw 0 0\" \u003e\u003e /etc/fstab или\nnano /etc/fstab и дописываем там строку\n/var/swap.img none swap sw 0 0 Зададим приоритеты использования памяти в системе Поскольку теперь в системе есть по сути два варианта памяти - RAM и Swap, то неплохо будет определить, каким образом система будет их использовать. Используя утилиту sysctl с параметром запуска vm.swappiness, зададим, на каком этапе загрузки RAM (оперативной памяти) будет использоваться Swap. Значение sysctl может варьироваться в пределах от 0 до 100. В случае, если указать максимальное значение - 100, система будет использовать только ОП и наоборот, если указать 0, то она будет использовать только Swap.\nЯ предерживаюсь мнения, что стоит остановить свой выбор на значении vm.swappiness=30. В этом случае при загрузке RAM на 70%, неактивные процессы будут выгружаться в Swap.\nВыполняем команду:\nsysctl -w vm.swappiness=30 Для отключения свап-файла используйте команду:\nswapoff /var/swap.img На этом вопрос о том как создать Swap файл подкачки в Linux можно считать закрытым.\n",
+  "wordCount" : "480",
+  "inLanguage": "en",
+  "datePublished": "2016-03-02T00:00:00Z",
+  "dateModified": "2016-03-02T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +167,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +183,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Как создать Swap файл подкачки в Linux-подобных ОС
     </h1>
@@ -185,16 +250,16 @@ chmod 0600 swap.img
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
-      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="https://solbadguy.github.io/tags/linux/">Linux</a></li>
+      <li><a href="https://solbadguy.github.io/tags/ubuntu/">Ubuntu</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/">
+  <a class="prev" href="https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/">
     <span class="title">« Prev</span>
     <br>
     <span>Автоматическое выключение компьютера в заданное время</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/">
+  <a class="next" href="https://solbadguy.github.io/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/">
     <span class="title">Next »</span>
     <br>
     <span>Долой Phpmyadmin- Импорт базы msql прямо из консоли</span>
@@ -206,7 +271,7 @@ chmod 0600 swap.img
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

@@ -2,91 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>News on My Blog</title>
-    <link>http://localhost:1313/categories/news/</link>
+    <link>https://solbadguy.github.io/categories/news/</link>
     <description>Recent content in News on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Mar 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/categories/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Новый комплект поставки лицензионной Windows 10 (unboxing)</title>
-      <link>http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</link>
+      <link>https://solbadguy.github.io/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</guid>
+      <guid>https://solbadguy.github.io/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</guid>
       <description>&lt;p&gt;Ранее я &lt;a href=&#34;http://admin.netlab-kursk.ru/windows-10-mozhno-budet-kupit-na-usb-nositele/&#34;&gt;уже писал&lt;/a&gt;, что с официальным анонсом Windows 10 мелкомягкие решили пересмотреть формат распространения коробочных лицензий на свой продукт. Под катом пара своих фотографий, которые не поленился сделать. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Windows 10 можно будет купить на USB-носителе</title>
-      <link>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</link>
+      <link>https://solbadguy.github.io/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</link>
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</guid>
+      <guid>https://solbadguy.github.io/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</guid>
       <description>&lt;p&gt;Microsoft планирует продавать Windows 10 на USB-носителях, а не только на DVD-дисках, как было раньше.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Микро-ПК Lenovo ideacentre Stick 300</title>
-      <link>http://localhost:1313/posts/mikro-pk-lenovo-ideacentre-stick-300/</link>
+      <link>https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/</link>
       <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/mikro-pk-lenovo-ideacentre-stick-300/</guid>
+      <guid>https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/</guid>
       <description>&lt;p&gt;В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.&lt;/p&gt;</description>
     </item>
     <item>
       <title>На iPhone теперь нельзя слушать музыку из &#34;Вконтакте&#34;</title>
-      <link>http://localhost:1313/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/</link>
+      <link>https://solbadguy.github.io/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/</link>
       <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/</guid>
+      <guid>https://solbadguy.github.io/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/</guid>
       <description>&lt;p&gt;Сегодня в магазине приложений &amp;ldquo;Apple&amp;rdquo; появилось обновление для приложении соц. сети &amp;ldquo;Вконтакте&amp;rdquo;, которое оптимизировано для последней версии IOS 8.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Хакеры продали с молотка уязвимость, обнаруженную в iOS 7</title>
-      <link>http://localhost:1313/posts/xakery-prodali-s-molotka-uyazvimost-o/</link>
+      <link>https://solbadguy.github.io/posts/xakery-prodali-s-molotka-uyazvimost-o/</link>
       <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/xakery-prodali-s-molotka-uyazvimost-o/</guid>
+      <guid>https://solbadguy.github.io/posts/xakery-prodali-s-molotka-uyazvimost-o/</guid>
       <description>&lt;p&gt;Итальянские хакеры Луиджи Ауриема и Донато Ферран обнаружили на платформе iOS 7 так называемую «уязвимость нулевого дня», а затем продали ее на аукционе за $ 500 тысяч.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MorePhone - смартфон, изгибается при вызове</title>
-      <link>http://localhost:1313/posts/morephone-smartfon-izgibaetsya-pri-vyzove/</link>
+      <link>https://solbadguy.github.io/posts/morephone-smartfon-izgibaetsya-pri-vyzove/</link>
       <pubDate>Sat, 26 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/morephone-smartfon-izgibaetsya-pri-vyzove/</guid>
+      <guid>https://solbadguy.github.io/posts/morephone-smartfon-izgibaetsya-pri-vyzove/</guid>
       <description>&lt;p&gt;Исследователям из Human Media Lab (Канада) удалось придумать смартфон, который реагирует на входящий вызов, новое сообщение или любое другое событие, достаточно необычным способом - экран устройства изменяет форму.&lt;/p&gt;</description>
     </item>
     <item>
       <title>YouTube запускает платную видео платформу</title>
-      <link>http://localhost:1313/posts/youtube-zapuskaet-platnuyu-video-platformu/</link>
+      <link>https://solbadguy.github.io/posts/youtube-zapuskaet-platnuyu-video-platformu/</link>
       <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/youtube-zapuskaet-platnuyu-video-platformu/</guid>
+      <guid>https://solbadguy.github.io/posts/youtube-zapuskaet-platnuyu-video-platformu/</guid>
       <description>&lt;p&gt;Портал планирует запустить сервис ежемесячных подписок, который за определенную плату позволит пользователям получать доступ к некоторым специализированным видеоканалам.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Вскоре Google может начать создание собственных Android-игр</title>
-      <link>http://localhost:1313/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/</link>
+      <link>https://solbadguy.github.io/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/</link>
       <pubDate>Wed, 16 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/</guid>
+      <guid>https://solbadguy.github.io/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/</guid>
       <description>&lt;p&gt;Корпорация Google, возможно, начнет создавать собственные игры для мобильной платформы Android. Об этом свидетельствует тот факт, что компания взяла на работу опытного разработчика Ноа Фалстейна, который получил должность главного гейм-дизайнера в разделе Android Play Studio&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/_drafts/id-2152/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/_drafts/id-2152/</guid>
-      <description>&lt;p&gt;[widgetkit id=&amp;ldquo;0&amp;rdquo; widget=&amp;ldquo;slideshow&amp;rdquo;]&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/_drafts/id-2458/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/_drafts/id-2458/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt; ОСНОВНЫЕ ВИДЫ РАБОТ&lt;/p&gt;
-&lt;p&gt;ВОССТАНОВЛЕНИЕ РАМ ГРУЗОВЫХ АВТОМОБИЛЕЙ ЛЮБЫХ ПРОИЗВОДИТЕЛЕЙ&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Бесплатный антивирус для предприятий</title>
-      <link>http://localhost:1313/posts/_drafts/id-2185/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/_drafts/id-2185/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

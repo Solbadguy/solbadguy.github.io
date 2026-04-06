@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Как исключить ip-адрес из логов SARG? | My Blog</title>
 <meta name="keywords" content="it, linux, sarg">
 <meta name="description" content="Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,79 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Как исключить ip-адрес из логов SARG?">
+  <meta property="og:description" content="Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2015-05-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2015-05-07T00:00:00+00:00">
+    <meta property="article:tag" content="It">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Sarg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Как исключить ip-адрес из логов SARG?">
+  <meta name="twitter:description" content="Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Как исключить ip-адрес из логов SARG?",
+      "item": "https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как исключить ip-адрес из логов SARG?",
+  "name": "Как исключить ip-адрес из логов SARG?",
+  "description": "Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.\n",
+  "keywords": [
+    "it", "linux", "sarg"
+  ],
+  "articleBody": "Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.\nСделать это так же легко как и присвоить имена :\nsudo nano /etc/sarg/exclude_users , где вписываем нужные адреса,каждый с новой строки. К слову подобным образом из выдачи саржа можно убрать любой сайт, для этого достаточно открыть соответствующий конфигурационный файл и вписать в него адрес.\n/etc/sarg/exclude_hosts Возможные варианты написания:\n192.168.10.10 - исключить только этот адрес; 192.168.10.0/24 - полностью исключить по маске (классу); s1.acme.foo - исключить только имя хоста; *.acme.foo - полностью исключить адрес по маске.\nЯ не говорил, что логотип SARG довольно просто можно заменить?\nДавайте откроем файл /etc/sarg/sarg-reports.conf и внесем в него несколько изменений (место хранения отчетов, заменим логотип и адрес для его размещения):\nHTMLOUT=/var/www/squid-reports LOGOIMG=/sqiud-reports/logo.png LOGOLINK=“http://10.0.0.1/squid-reports”\n",
+  "wordCount" : "123",
+  "inLanguage": "en",
+  "datePublished": "2015-05-07T00:00:00Z",
+  "dateModified": "2015-05-07T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +168,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +184,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Как исключить ip-адрес из логов SARG?
     </h1>
@@ -145,17 +211,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/it/">It</a></li>
-      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
-      <li><a href="http://localhost:1313/tags/sarg/">Sarg</a></li>
+      <li><a href="https://solbadguy.github.io/tags/it/">It</a></li>
+      <li><a href="https://solbadguy.github.io/tags/linux/">Linux</a></li>
+      <li><a href="https://solbadguy.github.io/tags/sarg/">Sarg</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/">
+  <a class="prev" href="https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/">
     <span class="title">« Prev</span>
     <br>
     <span>SARG: присваиваем ip-адресам имена сотрудников</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/">
+  <a class="next" href="https://solbadguy.github.io/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/">
     <span class="title">Next »</span>
     <br>
     <span>В новостной ленте «Вконтакте» появятся рекламные записи.</span>
@@ -167,7 +233,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

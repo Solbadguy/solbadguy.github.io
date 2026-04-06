@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Stati on My Blog</title>
-    <link>http://localhost:1313/categories/stati/</link>
+    <link>https://solbadguy.github.io/categories/stati/</link>
     <description>Recent content in Stati on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/stati/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/categories/stati/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VDS диски в Windows. Автомонтирование.</title>
-      <link>http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/</link>
+      <link>https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/</guid>
+      <guid>https://solbadguy.github.io/posts/vds-diski-v-windows-avtomontirovanie/</guid>
       <description>&lt;p&gt;При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Windows 10 после чистой установки: Chocolatey and Pshell scripts.</title>
-      <link>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</link>
+      <link>https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</guid>
+      <guid>https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</guid>
       <description>&lt;p&gt;Ряд дейсвий, которые я выполяю после чистой установки Windows 10.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Программе установки Windows не удалось настроить Windows для работы с оборудованием</title>
-      <link>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</link>
+      <link>https://solbadguy.github.io/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</guid>
+      <guid>https://solbadguy.github.io/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</guid>
       <description>&lt;p&gt;Нужно было установить Windows 7 на китайский ноутбук, при установке с флешки постоянно возникала ошибка &amp;ldquo;Программе установки Windows не удалось настроить Windows для работы с оборудованием&amp;rdquo;. Что интересно, выскакивала ровно тогда, когда процесс настройки оборудования заканчивался на 100%.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Оптимизация изображений для сайта - JPEGoptim и OptiPNG</title>
-      <link>http://localhost:1313/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/</link>
+      <link>https://solbadguy.github.io/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/</link>
       <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/</guid>
+      <guid>https://solbadguy.github.io/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/</guid>
       <description>&lt;p&gt;Рассказ про то, как быстро оптимизировать вес изображений без потери качества используя только консоль.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Создание загрузочной флешки с Windows XP</title>
-      <link>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</link>
+      <link>https://solbadguy.github.io/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</link>
       <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</guid>
+      <guid>https://solbadguy.github.io/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</guid>
       <description>&lt;p&gt;DirectGRUB - это мелкая утилита, которая позволит создавать загрузочные флешки с Win XP за пять минут.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Восстановление пароля Enterprise Security Suite</title>
-      <link>http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/</link>
+      <link>https://solbadguy.github.io/posts/vosstanovlenie-parolya-enterprise-security-suite/</link>
       <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/</guid>
+      <guid>https://solbadguy.github.io/posts/vosstanovlenie-parolya-enterprise-security-suite/</guid>
       <description>&lt;p&gt;В случае, если пароль администратора для доступа к серверу ESS утерян, то существует возможность его просмотра или изменения с использованием прямого доступа к базе данных Сервера. Этот способ удобен тем, что позволяет быстро восстановить пароль не выполняя при этом ненужных действий.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Отключение проверки цифровой подписи драйверов Windows 7</title>
-      <link>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</link>
+      <link>https://solbadguy.github.io/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</link>
       <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</guid>
+      <guid>https://solbadguy.github.io/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</guid>
       <description>&lt;p&gt;Наверняка многие пользователи сталкивались с проблемой, когда драйвер от устройства, которое он имеет на руках, напрочь отказывается устанавливаться. Под катом решение проблемы отключения проверки цифровой подписи драйверов в Windows 7.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Обман MultiRom</title>
-      <link>http://localhost:1313/posts/obman-multirom/</link>
+      <link>https://solbadguy.github.io/posts/obman-multirom/</link>
       <pubDate>Wed, 27 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/obman-multirom/</guid>
+      <guid>https://solbadguy.github.io/posts/obman-multirom/</guid>
       <description>&lt;p&gt;Сразу хочу сказать, что ничего не имею против отдельных личностей и команды MultiRom  в целом. Они делают по настоящему хорошие переводы. Однако на просторах интернета я очень часто слышал мнение, что &amp;ldquo;они самые лучшие&amp;rdquo;, т.к.&amp;quot; ОПТИМИЗИРУюТ прошивки&amp;quot;, &amp;ldquo;там больше свободной Оперативной памяти&amp;rdquo; и т.п. .  Неприятно было узнать о том, что это просто фокус.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Как восстановить ассоциации файлов Windows 7/8?</title>
-      <link>http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</link>
+      <link>https://solbadguy.github.io/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</link>
       <pubDate>Sun, 19 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</guid>
       <description>&lt;p&gt;Бывает такое, что в результате небрежных/необдуманных действий пользователя (реже ошибок в самой системе) в ОС Windows 7/8 могут нарушиться стандартные ассоциации файлов и приложений, которые должны их открывать. В результате ярлыки приложений могут открываться через Word, а архивы через системный плеер.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Автоматическое выключение компьютера в заданное время</title>
-      <link>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</link>
+      <link>https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</guid>
+      <guid>https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</guid>
       <description>&lt;p&gt;Наверняка у многих людей возникали ситуации, когда нужно было уйти/лечь спать/погулять с собачкой при этом оставив работать компьютер в течении заданного времени. Многие наверняка решают подобные проблемы используя сторонние программы, забыв (или не зная) о том, что в Windows уже есть такой набор функций - &lt;strong&gt;shutdown.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Раздача WiFi с ноутбука через командную строку (ОС Windows)</title>
-      <link>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
+      <link>https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
       <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
+      <guid>https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
       <description>&lt;p&gt;Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.&lt;/p&gt;
 &lt;p&gt;Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. &lt;/p&gt;</description>
     </item>
     <item>
       <title>Как заблокировать порно сайты от детей?</title>
-      <link>http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/</link>
+      <link>https://solbadguy.github.io/posts/kak-zablokirovat-porno-sajty-ot-detej/</link>
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/</guid>
+      <guid>https://solbadguy.github.io/posts/kak-zablokirovat-porno-sajty-ot-detej/</guid>
       <description>&lt;p&gt;Многие родители со временем начинают беспокоится о том, что их дети сидя в интернете могут наткнуться на порно сайты или непристойные картинки. &lt;/p&gt;</description>
     </item>
   </channel>

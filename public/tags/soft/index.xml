@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Soft on My Blog</title>
-    <link>http://localhost:1313/tags/soft/</link>
+    <link>https://solbadguy.github.io/tags/soft/</link>
     <description>Recent content in Soft on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/soft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/soft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Корректное отображение кириллицы в Midnight Commander</title>
-      <link>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
+      <link>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
+      <guid>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
       <description>&lt;p&gt;Возникла необходимость воспользоваться специализированным дистрибутивом, который работает под Debian, так вот русской локализации в нем конечно же не было. Файлы и папки в консоли\ файловом менеджере в названии которых была кириллица отображались неправильно - вместо букв отображались знаки вопроса. Решить эту проблему очень просто.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Бесплатный антивирус для предприятий</title>
-      <link>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</link>
+      <link>https://solbadguy.github.io/posts/besplatnyj-antivirus-dlya-predpriyatij/</link>
       <pubDate>Tue, 17 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</guid>
+      <guid>https://solbadguy.github.io/posts/besplatnyj-antivirus-dlya-predpriyatij/</guid>
       <description>&lt;p&gt;Работая в сфере информационных технологий, многие (если не каждый) сталкивались с вопросом о выборе антивирусного программного обеспечения. Вопрос можно считать довольно серьезным, особенно, если учитывать специфику - вы находитесь не возле своего домашнего компьютера.&lt;/p&gt;</description>
     </item>
   </channel>

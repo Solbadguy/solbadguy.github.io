@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Windows 10 после чистой установки: Chocolatey and Pshell scripts. | My Blog</title>
 <meta name="keywords" content="chocolatey, howto, powershell, script, windows-10">
 <meta name="description" content="Ряд дейсвий, которые я выполяю после чистой установки Windows 10.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,81 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Windows 10 после чистой установки: Chocolatey and Pshell scripts.">
+  <meta property="og:description" content="Ряд дейсвий, которые я выполяю после чистой установки Windows 10.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-03-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-03-04T00:00:00+00:00">
+    <meta property="article:tag" content="Chocolatey">
+    <meta property="article:tag" content="Howto">
+    <meta property="article:tag" content="Powershell">
+    <meta property="article:tag" content="Script">
+    <meta property="article:tag" content="Windows-10">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Windows 10 после чистой установки: Chocolatey and Pshell scripts.">
+  <meta name="twitter:description" content="Ряд дейсвий, которые я выполяю после чистой установки Windows 10.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Windows 10 после чистой установки: Chocolatey and Pshell scripts.",
+      "item": "https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Windows 10 после чистой установки: Chocolatey and Pshell scripts.",
+  "name": "Windows 10 после чистой установки: Chocolatey and Pshell scripts.",
+  "description": "Ряд дейсвий, которые я выполяю после чистой установки Windows 10.\n",
+  "keywords": [
+    "chocolatey", "howto", "powershell", "script", "windows-10"
+  ],
+  "articleBody": "Ряд дейсвий, которые я выполяю после чистой установки Windows 10.\nПримечание:\nНачну с того, что для установки рекомендую не популярные редакции типа Win10 Home/Pro, а совершенно другую редакцию - Windows 10 LTSC. У нее есть как и свои плюсы (отсутствие маркета, предустановленного ПО, Кортаны и пр.), так и минусы на вроде отсутствия BitLocker-a (подробнее в таблице). В любом случае это мой субъективный выбор.\nWindows 10 после чистой установки Мне довольно часто приходится устанавливать Win10 на новое железо, накатывать одно и тоже ПО снова и снова.. в какой-то момент делать все это руками надоело, поэтому было рождено решение в виде пары bat-скриптов, которые делают львиную долю работы за меня..\nУстанавливаем ПО Скачать с Github\nЕсли коротко, то суть такая:\nРаспакуем архив и запустим файл - #1-install-choko.bat ( так мы устанавливаем на свой ПК Chocolatey — это своеобразный менеджер пакетов в среде Windows по аналогии с apt-get в Linux); В папке с распакованным архивом выбираем вариант набора ПО в соотв. с вашими требованиями (для дома это - #2-install-home_pack.bat); Открываем его в блокноте, символ # перед строкой запрещает ПО к установке и наоборот. Т.о., если вам не нужна та или иная программа ставьте в начале строки символ решетки; Сохраняем изменения и запускаем батник от имени администратора; Профит. Настроим сеть А именно установим альтернативные DNS-серверы.\nAdGuard DNS – это альтернативный способ заблокировать рекламу, защитить личные данные и оградить детей от взрослых материалов.\nОткройте Панель управления через меню “Пуск” или через поиск Windows. Перейдите в раздел “Сеть и Интернет” и затем в “Центр управления сетями и общим доступом”. В левой стороне экрана найдите “Изменение параметров адаптера” и кликните по нему. Выделите ваше активное подключение, затем кликните по нему правой клавишей мыши и выберите “Свойства”. Найдите в списке пункт “IP версии 4 (TCP/IP)”, выделите его и затем снова нажмите “Свойства”. Выберите “Использовать следующие адреса DNS-серверов” и введите: 176.103.130.130 176.103.130.131 Удалим предустановленное ПО и отключим телеметрию Для достижения этой цели мы так же будем использовать проект с Github -a.\nDebloat Windows 10 - это набор сценариев Powershell, которые блокируют, отключают, изменяют или оптимизируют различные функции Windows 10, которые пользователи могут счесть раздражающими или, по крайней мере, не очень полезными.\nПодготовка:\nДля начала скопируем последнюю версию архива Включим выполнение сценариев PowerShell: PS\u003e Set-ExecutionPolicy Unrestricted -Scope CurrentUser PS\u003e ls -Recurse *.ps*1 | Unblock-File Процесс:\nСкрипты нужно запускать из PowerShell с правами администратора - Пуск -\u003e Все программы -\u003e Powershell -\u003e Запустить от имени администратора -\u003e Файл -\u003e Открыть.\nИз названия скрипта понятно для чего он нужен.\n",
+  "wordCount" : "407",
+  "inLanguage": "en",
+  "datePublished": "2020-03-04T00:00:00Z",
+  "dateModified": "2020-03-04T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +170,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +186,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Windows 10 после чистой установки: Chocolatey and Pshell scripts.
     </h1>
@@ -183,19 +251,19 @@ PS&gt; ls -Recurse *.ps*1 | Unblock-File
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/chocolatey/">Chocolatey</a></li>
-      <li><a href="http://localhost:1313/tags/howto/">Howto</a></li>
-      <li><a href="http://localhost:1313/tags/powershell/">Powershell</a></li>
-      <li><a href="http://localhost:1313/tags/script/">Script</a></li>
-      <li><a href="http://localhost:1313/tags/windows-10/">Windows-10</a></li>
+      <li><a href="https://solbadguy.github.io/tags/chocolatey/">Chocolatey</a></li>
+      <li><a href="https://solbadguy.github.io/tags/howto/">Howto</a></li>
+      <li><a href="https://solbadguy.github.io/tags/powershell/">Powershell</a></li>
+      <li><a href="https://solbadguy.github.io/tags/script/">Script</a></li>
+      <li><a href="https://solbadguy.github.io/tags/windows-10/">Windows-10</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/">
+  <a class="prev" href="https://solbadguy.github.io/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/">
     <span class="title">« Prev</span>
     <br>
     <span>Linux Mint 19. Настраиваем удаленное подключение через VNC</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/">
+  <a class="next" href="https://solbadguy.github.io/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/">
     <span class="title">Next »</span>
     <br>
     <span>Учим систему докладывать о событиях в Телеграм</span>
@@ -207,7 +275,7 @@ PS&gt; ls -Recurse *.ps*1 | Unblock-File
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

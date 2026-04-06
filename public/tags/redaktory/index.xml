@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Redaktory on My Blog</title>
-    <link>http://localhost:1313/tags/redaktory/</link>
+    <link>https://solbadguy.github.io/tags/redaktory/</link>
     <description>Recent content in Redaktory on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/redaktory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/redaktory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Корректное отображение кириллицы в Midnight Commander</title>
-      <link>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
+      <link>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</link>
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
+      <guid>https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/</guid>
       <description>&lt;p&gt;Возникла необходимость воспользоваться специализированным дистрибутивом, который работает под Debian, так вот русской локализации в нем конечно же не было. Файлы и папки в консоли\ файловом менеджере в названии которых была кириллица отображались неправильно - вместо букв отображались знаки вопроса. Решить эту проблему очень просто.&lt;/p&gt;</description>
     </item>
     <item>
       <title>7 лучших альтернатив Notepad &#43;&#43; для Linux</title>
-      <link>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</link>
+      <link>https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/</link>
       <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</guid>
+      <guid>https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/</guid>
       <description>&lt;p&gt;Notepad ++ это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad ++. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad ++ так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad ++ для Linux.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Оптимизация системной памяти Android | My Blog</title>
 <meta name="keywords" content="android, miui, optimizaciya-pamyati">
 <meta name="description" content="По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,79 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Оптимизация системной памяти Android">
+  <meta property="og:description" content="По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-08-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-08-31T00:00:00+00:00">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Miui">
+    <meta property="article:tag" content="Optimizaciya-Pamyati">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Оптимизация системной памяти Android">
+  <meta name="twitter:description" content="По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Оптимизация системной памяти Android",
+      "item": "https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Оптимизация системной памяти Android",
+  "name": "Оптимизация системной памяти Android",
+  "description": "По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.\n",
+  "keywords": [
+    "android", "miui", "optimizaciya-pamyati"
+  ],
+  "articleBody": "По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.\nОптимизация системной памяти Android Первым делом немного терминологии о вспомогательных методах работы памяти:\nSwap - создает блоки подкачки во внутренней памяти или в памяти флеш-карты, скорость работы напрямую зависит от скорости накопителя, однако пользователю эта разница вряд ли будет заметна. zRam - создает блоки подкачки в оперативной памяти, что делает этот способ намного эффективнее.\nЗачем оно вообще нужно и кому?\nВ первую очередь эта опция поможет людям, которые часто страдают от того, что приложения выгружаются из оперативной памяти. Включение оптимизации памяти в настройках позволяет ОС Android “перемещать” части приложений или приложения полностью из оперативной памяти во “вспомогательную”.\nСтоит отметить, что в теории включение оптимизации системной памяти android может сэкономить заряд аккумулятора вашего устройства.\nСуть логики проста - при каждом новом запуске приложения расходуется N-ное количество энергии. Важно знать, что в момент запуска приложения происходит нагрузка на процессор, он повышает частоты, тем самым обеспечивая быстрый запуск приложения. Вот именно в этот момент и происходит вся экономия - если приложение не выгружалось(закрывалось) из памяти, то и затрат на новый запуск не будет, т.е нагрузка меньше.\nОднако тестов такой экономии я не проводил, т.к. в значительном приросте времени работы аккумулятора сомневаюсь.\nКак включить оптимизацию системной памяти Android? Опция включается так: Настройки - Дополнительные настройки - Для разработчиков - Оптимизация системной памяти.\nКак включить пункт меню для разработчиков:\nЗаходим в меню настроек и ищем там раздел «О телефоне», открываем. Открыв его скролим вниз и ищем «Номер сборки», тяпаем по нему семь раз\nКак часто система будет пользоваться такой возможностью?\nЗа вероятность/количество обращений к zRam, отвечает функция под названием “Swappiness”, по умолчанию в моем смартфоне указано значение 100 - это означает что в 100% случаев приложения будут обращаться к zRam за помощью.\nКак поменять значение Swappiness?\nСамый простой способ, это скачать терминал и прописать в нем: echo “60” \u003e /proc/sys/vm/swappiness где 60 это наше значение от 1 до 100.\nлибо идем по пути:\n/proc/sys/vm/ открываем файл swappiness и меняем число от 1 до 100.\nКак проверить работает ли оптимизация памяти?\nВ моем смартфоне оптимизация включена по умолчанию, проверить ее работу можно двумя способами:\nСкачать программу Diskinfo. После установки заходим в нее и в самом низу ищем пункт swap. Если пункт присутствует, значит оптимизация работает. Запустить 5-6 приложения и посмотреть не выгружаются ли они. Что касается вариантов настройки оптимизации:\nПо умолчанию в моем девайсе было выставлено значение “Средняя”, при таком выборе swap файл равен 1ГБ. Остальные варианты видимо меняют размер Swap в большую или меньшую сторону.\n",
+  "wordCount" : "431",
+  "inLanguage": "en",
+  "datePublished": "2016-08-31T00:00:00Z",
+  "dateModified": "2016-08-31T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +168,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +184,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Оптимизация системной памяти Android
     </h1>
@@ -163,17 +229,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
-      <li><a href="http://localhost:1313/tags/miui/">Miui</a></li>
-      <li><a href="http://localhost:1313/tags/optimizaciya-pamyati/">Optimizaciya-Pamyati</a></li>
+      <li><a href="https://solbadguy.github.io/tags/android/">Android</a></li>
+      <li><a href="https://solbadguy.github.io/tags/miui/">Miui</a></li>
+      <li><a href="https://solbadguy.github.io/tags/optimizaciya-pamyati/">Optimizaciya-Pamyati</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/">
+  <a class="prev" href="https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/">
     <span class="title">« Prev</span>
     <br>
     <span>Как отключить службы Google/Xiaomi в прошивках MIUI</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/">
+  <a class="next" href="https://solbadguy.github.io/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/">
     <span class="title">Next »</span>
     <br>
     <span>Отключение проверки цифровой подписи драйверов Windows 7</span>
@@ -185,7 +251,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

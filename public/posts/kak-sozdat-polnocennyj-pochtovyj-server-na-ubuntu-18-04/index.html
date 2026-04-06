@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Как создать полноценный почтовый сервер на Ubuntu 18.04 | My Blog</title>
 <meta name="keywords" content="iredmail, mail-server, ubuntu">
 <meta name="description" content="Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/">
+<link rel="canonical" href="https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/">
+<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,13 +70,79 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Как создать полноценный почтовый сервер на Ubuntu 18.04">
+  <meta property="og:description" content="Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-01-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-01-15T00:00:00+00:00">
+    <meta property="article:tag" content="Iredmail">
+    <meta property="article:tag" content="Mail-Server">
+    <meta property="article:tag" content="Ubuntu">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Как создать полноценный почтовый сервер на Ubuntu 18.04">
+  <meta name="twitter:description" content="Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://solbadguy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Как создать полноценный почтовый сервер на Ubuntu 18.04",
+      "item": "https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как создать полноценный почтовый сервер на Ubuntu 18.04",
+  "name": "Как создать полноценный почтовый сервер на Ubuntu 18.04",
+  "description": "Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.\n",
+  "keywords": [
+    "iredmail", "mail-server", "ubuntu"
+  ],
+  "articleBody": "Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.\nЧто такое iRedMail? iRedMail — это скрипт оболочки, который автоматически устанавливает и настраивает все необходимые компоненты почтового сервера на вашем сервере Linux, что само-собой исключает ручную установку и настройку.\nС помощью iRedMail вы можете легко создавать неограниченные почтовые ящики и неограниченные почтовые домены через веб-интерфейс. Почтовые ящики могут храниться в базе данных MariaDB / MySQL, PostreSQL или OpenLDAP.\nПрограммное обеспечение с открытым исходным кодом, используемое в iRedMail, выглядит следующим образом:\nPostfix SMTP server Dovecot IMAP server Nginx web server OpenLDAP, ldapd MySQL/MariaDB, PostgreSQL Amavised-new SpamAssassin ClamAV Roundcube webmail SOGo Groupware Fail2ban mlmmj mailing list manager Netdata server monitoring iRedAPD Postfix policy server for greylisting Действие 1. Покупаем доменное имя и арендуем VPS Для настройки полноценного почтового сервера на ubuntu 18.04 нам потребуется сервер с 2ГБ ОП. Делая выбор надо помнить о том, что провайдер не должен блокировать подключения на порт 25.\nЯ остановил свой выбор на ihor.ru, вы в свою очередь можете выбрать любой другой. После того как вы определились с хостингом, требуется зарегистрировать доменное имя. Выбирайте из расчета цены и стоимости продления.\nДействие 2. Настраиваем домен Первым делом требуется создать МХ-запись в редакторе DNS у регистратора.\nВведите @в поле Имя, чтобы представить основное доменное имя, а затем введите mail.your-domain.comв поле значение. Действие 3. Настройка имени почтового сервера Залогиньтесь через SSH, а далее выполните:\napt update \u0026\u0026 apt upgrade -y Установите FQDN — имя вашей системы:\nhostnamectl set-hostname mail.your-domain.com Отредактируем hosts-файл:\nnano /etc/hosts 127.0.0.1 mail.your-domain.com localhost Проверим:\nhostname -f Действие 4. Установка крайней версии iRedMail Всегда свежую версию можно найти на оф. сайте по кнопке *Stable*.\nНа момент написания статьи это -0.9.9:\nwget https://bitbucket.org/zhb/iredmail/downloads/iRedMail-0.9.9.tar.bz2 Извлечем файлы из архива:\ntar xvf iRedMail-0.9.9.tar.bz2 Перейдем в только что полученную папку:\ncd iRedMail-0.9.9 Добавим права на исполнение и запустим скрипт:\nchmod +x iRedMail.sh \u0026\u0026 bash iRedMail.sh После выполнения вышеуказанных команд запустится мастер настройки:\nОтвечаем «YES», на первый вопрос. На следующем экране вам будет предложено выбрать путь хранения почты. Используем тот, что указан по умолчанию — поэтому просто нажмите Enter. По умолчанию выбран nginx. Просто нажмите «Enter». Выбираем БД для хранения почты, я остановился на Марии. Укажем пароль для root пользователя. Затем введите свой первый почтовый домен. Задайте пароль для администратора почтового домена. Оставляем по умолчанию — 4 компонента. Ответьте «YES» (сейчас и в дальнейшем), когда система спросить о том продолжать ли ей. Перезагрузим систему:\nshutdown -r now Действие 5. Установка сертификата от Let’s Encrypt Первым делом получим необходимое ПО:\napt install software-properties-common -y add-apt-repository ppa:certbot/certbot -y apt install certbot -y Затем выполним запрос:\ncertbot certonly --webroot --agree-tos --email your-email-address -d mail.your-domain.com -w /var/www/html/ На вопрос о том получать ли новости можно ответить отказом.\nУстановка сертификата в Nginx После получения сертификата TLS, давайте сконфигурируем nginx:\nnano /etc/nginx/templates/ssl.tmpl Найдем две строки:\nssl_certificate /etc/ssl/certs/iRedMail.crt; ssl_certificate_key /etc/ssl/private/iRedMail.key; Поменяем путь:\nssl_certificate /etc/letsencrypt/live/mail.your-domain.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/mail.your-domain.com/privkey.pem; Сохраняем изменения. Затем проверим конфигурацию и перезапустим службу:\nnginx -t systemctl reload nginx Открываем браузер и переходим в веб-интерфейс:\nhttps://your-domain.com/iredadmin теперь он должен открываться без предупреждений.\nУстановим TLS сертификат в Postfix and Dovecot Отредактируем конфигурационный файл Postfix\nnano /etc/postfix/main.cf Найдем строки (начиная с 95):\nsmtpd_tls_key_file = /etc/ssl/private/iRedMail.key smtpd_tls_cert_file = /etc/ssl/certs/iRedMail.crt smtpd_tls_CAfile = /etc/ssl/certs/iRedMail.crt Исправим путь на:\nsmtpd_tls_key_file = /etc/letsencrypt/live/mail.your-domain.com/privkey.pem smtpd_tls_cert_file = /etc/letsencrypt/live/mail.your-domain.com/cert.pem smtpd_tls_CAfile = /etc/letsencrypt/live/mail.your-domain.com/chain.pem Сохраним файл и перезапустим Postfix:\nsystemctl reload postfix Отредактируем конфигурационный файл Dovecot:\nnano /etc/dovecot/dovecot.conf Найдем строки (начиная с 47):\nssl_cert = ",
+  "wordCount" : "1298",
+  "inLanguage": "en",
+  "datePublished": "2020-01-15T00:00:00Z",
+  "dateModified": "2020-01-15T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solbadguy.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,12 +168,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
                     <span>Обо мне</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Посты">
+                <a href="https://solbadguy.github.io/posts/" title="Посты">
                     <span>Посты</span>
                 </a>
             </li>
@@ -118,7 +184,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Как создать полноценный почтовый сервер на Ubuntu 18.04
     </h1>
@@ -354,17 +420,17 @@ TTL - 5 min
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/iredmail/">Iredmail</a></li>
-      <li><a href="http://localhost:1313/tags/mail-server/">Mail-Server</a></li>
-      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="https://solbadguy.github.io/tags/iredmail/">Iredmail</a></li>
+      <li><a href="https://solbadguy.github.io/tags/mail-server/">Mail-Server</a></li>
+      <li><a href="https://solbadguy.github.io/tags/ubuntu/">Ubuntu</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/">
+  <a class="prev" href="https://solbadguy.github.io/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/">
     <span class="title">« Prev</span>
     <br>
     <span>Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/">
+  <a class="next" href="https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/">
     <span class="title">Next »</span>
     <br>
     <span>Администрирование 1C-сервера под Linux</span>
@@ -376,7 +442,7 @@ TTL - 5 min
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
     <span>
         Powered by

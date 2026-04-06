@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vagrant on My Blog</title>
-    <link>http://localhost:1313/tags/vagrant/</link>
+    <link>https://solbadguy.github.io/tags/vagrant/</link>
     <description>Recent content in Vagrant on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://solbadguy.github.io/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.</title>
-      <link>http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</link>
+      <link>https://solbadguy.github.io/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</link>
       <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</guid>
+      <guid>https://solbadguy.github.io/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</guid>
       <description>&lt;p&gt;Во время работы столкнулся с не очевидной ошибкой - A possible reason for your Virtualbox VM entering the &amp;ldquo;gurumeditation&amp;rdquo; state. О том &amp;ldquo;откуда ноги растут&amp;rdquo; в продолжении.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vagrant problem solving</title>
-      <link>http://localhost:1313/posts/vagrant-problem-solving/</link>
+      <link>https://solbadguy.github.io/posts/vagrant-problem-solving/</link>
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vagrant-problem-solving/</guid>
+      <guid>https://solbadguy.github.io/posts/vagrant-problem-solving/</guid>
       <description></description>
     </item>
   </channel>
