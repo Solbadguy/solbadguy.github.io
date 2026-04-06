@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Как создать Swap файл подкачки в Linux-подобных ОС | My Blog</title>
+<meta name="keywords" content="linux, ubuntu">
+<meta name="description" content="Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Как создать Swap файл подкачки в Linux-подобных ОС
+    </h1>
+    <div class="post-meta"><span title='2016-03-02 00:00:00 +0000 UTC'>March 2, 2016</span>&nbsp;·&nbsp;<span>3 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).</p>
+<h2 id="что-такое-swap-файл-подкачки">Что такое Swap (файл подкачки)<a hidden class="anchor" aria-hidden="true" href="#что-такое-swap-файл-подкачки">#</a></h2>
+<p>Swap — это механизм памяти, при работе которого неактивные процессы выгружаются из оперативной памяти на жёсткий диск, таким образом происходит ее разгрузка. Это полезно, если количество памяти строго ограничено, говоря простым языком, если памяти катастрофически мало или ее не хватает.</p>
+<p>Swap может быть представлен в двух исполнениях:</p>
+<ol>
+<li>отдельный раздел на диске</li>
+<li>файл на диске.</li>
+</ol>
+<p>Примечательно, что в случае, если ваша система работает на SSD диске, то производительность swap файла не будет сильно уступать по скорости доступа ОП.</p>
+<h3 id="проверяем-наличие-swap-файла-подкачки-в-linux">Проверяем наличие Swap файла подкачки в Linux<a hidden class="anchor" aria-hidden="true" href="#проверяем-наличие-swap-файла-подкачки-в-linux">#</a></h3>
+<p>Заходим на сервер через SSH, для проверки наличия файла подкачки вводим команду:</p>
+<pre tabindex="0"><code>swapon -s
+</code></pre><p>При наличии файла подкачки результат команды будет таким:</p>
+<pre tabindex="0"><code>[root@server]# swapon -s
+Filename Type Size Used Priority
+/var/swap.img file 1023992 30248 -1
+</code></pre><p>Есть и альтернативный метод:</p>
+<pre tabindex="0"><code>free
+</code></pre><p>Если файла подкачки нет, то напротив соответствующего пункта будут нули:</p>
+<pre tabindex="0"><code>Swap:            0          0          0
+</code></pre><h2 id="как-создать-swap-файл-подкачки-в-linux">Как создать Swap файл подкачки в Linux<a hidden class="anchor" aria-hidden="true" href="#как-создать-swap-файл-подкачки-в-linux">#</a></h2>
+<p>Переходим в папку /var:</p>
+<pre tabindex="0"><code>cd /var
+</code></pre><p>Создаем Swap файл и задаем права доступа к нему:</p>
+<pre tabindex="0"><code>touch swap.img
+chmod 0600 swap.img
+</code></pre><h3 id="выбираем-размер-файла-подкачки"> Выбираем размер файла подкачки<a hidden class="anchor" aria-hidden="true" href="#выбираем-размер-файла-подкачки">#</a></h3>
+<p>Как говорил Владимир Павлович - &ldquo;<strong>размер Swap файла должен быть равен объему оперативной памяти, либо превышать ее в два раза</strong>&rdquo;. Из вышесказанного делаем вывод, что при размере памяти равному 1024мб, размер файла подкачки будет равен 1024мб/2048мб.</p>
+<p>Используя консольную утилиту dd заполним только что созданный файл нулями:</p>
+<pre tabindex="0"><code>dd if=/dev/zero of=/var/swap.img bs=1024k count=1000 status=progress
+</code></pre><p>Инициализируем Swap файл командой mkswap:</p>
+<pre tabindex="0"><code>mkswap /var/swap.img
+</code></pre><p><em>Поздравляю, Swap файл готов к использованию.</em></p>
+<p>Включаем Swap командой swapon:</p>
+<pre tabindex="0"><code>swapon /var/swap.img
+</code></pre><p>Проверяем действительно ли это так:</p>
+<pre tabindex="0"><code>swapon -s
+</code></pre><p>или</p>
+<pre tabindex="0"><code>free
+</code></pre><h3 id="добавляем-swap-в-fstab">Добавляем Swap в fstab<a hidden class="anchor" aria-hidden="true" href="#добавляем-swap-в-fstab">#</a></h3>
+<p>Важно знать, что Swap файл будет работать только до перезагрузки системы, после его нужно будет включать заново. Чтобы избавить себя от этих занятий, давайте пропишем в системе, что он есть и его нужно использовать. Выполним команду:</p>
+<pre tabindex="0"><code>echo &#34;/var/swap.img none swap sw 0 0&#34; &gt;&gt; /etc/fstab
+</code></pre><p>или</p>
+<pre tabindex="0"><code>nano /etc/fstab
+</code></pre><p>и дописываем там строку</p>
+<pre tabindex="0"><code>/var/swap.img    none    swap    sw    0    0
+</code></pre><h3 id="зададим-приоритеты-использования-памяти-в-системе"> Зададим приоритеты использования памяти в системе<a hidden class="anchor" aria-hidden="true" href="#зададим-приоритеты-использования-памяти-в-системе">#</a></h3>
+<p>Поскольку теперь в системе есть по сути два варианта памяти - RAM и Swap, то неплохо будет определить, каким образом система будет их использовать. Используя утилиту sysctl с параметром запуска vm.swappiness, зададим, на каком этапе загрузки RAM (оперативной памяти) будет использоваться Swap. Значение sysctl может варьироваться в пределах от 0 до 100. В случае, если указать максимальное значение - 100, система будет использовать только ОП и наоборот, если указать 0, то она будет использовать только Swap.</p>
+<p>Я предерживаюсь мнения, что стоит остановить свой выбор на значении vm.swappiness=30. В этом случае при загрузке RAM на 70%, неактивные процессы будут выгружаться в Swap.</p>
+<p>Выполняем команду:</p>
+<pre tabindex="0"><code>sysctl -w vm.swappiness=30
+</code></pre><p>Для отключения свап-файла используйте команду:</p>
+<pre tabindex="0"><code>swapoff /var/swap.img
+</code></pre><p>На этом вопрос о том как создать Swap файл подкачки в Linux можно считать закрытым.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Автоматическое выключение компьютера в заданное время</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Долой Phpmyadmin- Импорт базы msql прямо из консоли</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

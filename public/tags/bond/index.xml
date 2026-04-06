@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bond on My Blog</title>
+    <link>http://localhost:1313/tags/bond/</link>
+    <description>Recent content in Bond on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bond/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian 11 - объединение сетевых интерфейсовonding setup</title>
+      <link>http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/</guid>
+      <description>&lt;p&gt;Появилась задача объединить все сетевые интерфейсы на сервере, для того, чтобы обеспечить максимальную пропускную способность в обе стороны. Шаги под катом.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

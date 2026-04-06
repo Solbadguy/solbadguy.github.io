@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Настройка MIUI 7, оптимизация энергопотребления. | My Blog</title>
+<meta name="keywords" content="android, miui">
+<meta name="description" content="Инструкция в первую очередь направлена не на отключение и выпиливание сервисов от Xiaomi\Google, а на повседневное использование телефона в качестве основного девайса со всеми его прелестями и недостатками. Отключение тех приложений, которые будут в инструкции указаны, не несет никаких последствий в нормальной работе устройства, а всего лишь дает возможность избавиться от назойливых сервисов, которые постоянно пытаются отправить логи и отчеты об ошибках (отчеты об использовании устройства), а также предоставляют выбор пользователю &ldquo;отключать&rdquo; или &ldquo;не отключать&rdquo; данные сервисы и их приложения.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Настройка MIUI 7, оптимизация энергопотребления.
+    </h1>
+    <div class="post-meta"><span title='2016-06-09 00:00:00 +0000 UTC'>June 9, 2016</span>&nbsp;·&nbsp;<span>8 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Инструкция в первую очередь направлена не на отключение и выпиливание сервисов от Xiaomi\Google, а на повседневное использование телефона в качестве основного девайса со всеми его прелестями и недостатками. Отключение тех приложений, которые будут в инструкции указаны, не несет никаких последствий в нормальной работе устройства, а всего лишь дает возможность избавиться от назойливых сервисов, которые постоянно пытаются отправить логи и отчеты об ошибках (отчеты об использовании устройства), а также предоставляют выбор пользователю <strong>&ldquo;отключать&rdquo;</strong> или <strong>&ldquo;не отключать&rdquo;</strong> данные сервисы и их приложения.</p>
+<pre tabindex="0"><code>Данная инструкция выложена в качестве тестового образца, на основании которой можно оптимизировать работу данного устройства. Автор статьи не несет ответственности за последствия и неработоспособность различных версий прошивок. Все что Вы делаете, Вы делаете на свой страх и риск.
+</code></pre><hr>
+<h2 id="настройка-miui-7-оптимизация-энергопотребления">Настройка MIUI 7, оптимизация энергопотребления.<a hidden class="anchor" aria-hidden="true" href="#настройка-miui-7-оптимизация-энергопотребления">#</a></h2>
+<p>Не будем вдаваться в подробности по прошивке и установке Root прав, а представим, что уже имеем установленную нам нужную прошивку с ROOT правами. У меня установлена прошивка от команды Xiaomi.eu версии 7.2.7.0. На ней через TWRP установлена последняя версия SuperSU (Root), мною была выполнена первоначальная настройка телефона, установлена одна SIM карта  и накопитель - на 32 Gb.</p>
+<h3 id="настройка-после-прошивки">Настройка после прошивки<a hidden class="anchor" aria-hidden="true" href="#настройка-после-прошивки">#</a></h3>
+<ol>
+<li><strong>Мобильная сеть</strong></li>
+</ol>
+<pre tabindex="0"><code>Мобильная сеть --&gt; VoLTE включен
+</code></pre><p>Снимаем галочку</p>
+<pre tabindex="0"><code>Мобильная сеть --&gt; Всегда принимать MMS
+</code></pre><p>Не пользуюсь, выключаем.</p>
+<pre tabindex="0"><code>Информация SIM карты ---&gt; Тип сети ---&gt; Только 2G (энергосбережение)
+</code></pre><p>Данная настройка актуальна для моего использования. Сеть 2G позволяет мне получать сообщения в фоне от viber, mymail, whatsapp и сервисные сообщения от m-banking. Если необходим интернет побыстрее, то я вручную переключаю в 3G, так как 4G в моем городе нету, да и мне хватает с головой и 3G. Тут предпочтения каждого. Идем дальше.</p>
+<p> </p>
+<hr>
+<p><strong>2. Wi-Fi</strong> </p>
+<pre tabindex="0"><code>Дополнительно ---&gt; Wi-fi в спящем режиме ---&gt; включен. (можно поставить другой параметр для энергосбережения).
+</code></pre><p>Я использую Wi-fi всегда по назначению, есть доступный роутер - &ldquo;включаю&rdquo;, нету возможности -&ldquo;отключаю&rdquo;. Постоянно не молотит у меня Wi-fi.</p>
+<pre tabindex="0"><code>Сканировать Wi-fi всегда ---&gt; отключено по стандарту.
+</code></pre><p>И хорошо. Ибо данная опция, связываясь с сервисами от Google, начинает искать доступные Wi-fi сети по технологии, которая понятна только компании Google и безбожно нагружает аккумулятор устройства.</p>
+<hr>
+<p><strong>3. Еще</strong></p>
+<pre tabindex="0"><code>VPN ---&gt; снимаю галку с &#34;Включить VPN&#34;.
+</code></pre><p>В Titanium Backup можно эту вещь заморозить, но надобности в этом нету. На оптимизацию не влияет.</p>
+<pre tabindex="0"><code>Широковещательные сообщения.
+</code></pre><p>Для РФ это не актуально - убираем галки.</p>
+<hr>
+<p><strong>4. Уведомления</strong></p>
+<pre tabindex="0"><code>Строка состояния ---&gt; Ставлю галочки на &#34;Иконки уведомлений&#34;, &#34;Скорость сети&#34;, &#34;Имя оператора&#34;.
+</code></pre><p>Так информативнее и нагляднее выглядят параметры в строке состояния.</p>
+<hr>
+<p><strong>5. Темы</strong> Многие темы, которые можно установить, являются устаревшими для данной версии прошивки. Если на версии 7.1.3.0 эти версии тем работают без нареканий, то уже на версиях выше 7.2.4 проявляется эффект нагрузки процессора. Так произошло и у меня. Установил свою любимую тему, настроил в ней компоненты, а через несколько дней в <a href="https://play.google.com/store/apps/details?id=nextapp.systempanel.r1&amp;hl=ru">SystemPanel</a> увидел активность процессора в ночном режиме около 1-2%, что уже не есть хорошо. Поэтому пришлось заново проводить тесты, ибо предыдущие уже были неточны. На данный момент установлена стоковая тема с икон-паком от команды MultiRom.</p>
+<hr>
+<p><strong>6. Экран</strong></p>
+<pre tabindex="0"><code>Яркость ---&gt; автояркость ---&gt; галочка стоит.
+</code></pre><p>На данном устройстве датчик освещенности работает весьма корректно. Мне очень нравится, как он выбирает уровень освещенности. А если опция работает корректно, то почему бы ей не воспользоваться.</p>
+<pre tabindex="0"><code> Тон и контрастность ---&gt; цветовой фон --- «НАТУРАЛЬНЫЙ», Контрастность --- «Увеличение контрастности».
+</code></pre><p>При этом параметре шрифт в браузерах становится более черным (более жесткие очертания), что приятно для глаза. Для успокоения души можно установить &ldquo;по стандарту&rdquo; настройки контрастности (меньше разряжает аккумулятор). Индивидуально для каждого.</p>
+<hr>
+<p><strong>7. Экран блокировки</strong></p>
+<pre tabindex="0"><code>Сведения о владельце
+</code></pre><p>В основном записываю сюда свою ФИО.</p>
+<pre tabindex="0"><code>Включать экран при уведомлениях ---&gt; галочка установлена.
+</code></pre><pre tabindex="0"><code>Предотвращение случайных нажатий ---&gt; снял галочку.
+</code></pre><p>Разницы сильной не почувствовал со случайными нажатиями, а вот назойливое сообщение о том, что датчик срабатывает и нужно зажимать комбинацию клавиш решил убрать, ибо раздражало порой.</p>
+<hr>
+<p><strong>8. Дополнительно</strong></p>
+<pre tabindex="0"><code>Конфиденциальность ---&gt; Неизвестные источники ---&gt; галочка установлена.
+</code></pre><p>Тут все понятно. Скачали со стороннего источника файл (отличный от маркета), хотим установить, а система ругается.</p>
+<pre tabindex="0"><code>Дата и время ---&gt; Снимаю галки с &#34;Дата и время сети&#34; и &#34;Часовой пояс сети&#34;.
+</code></pre><p>Один раз выставил через сеть время, больше нету необходимости. А на аккумулятор дает нагрузку постоянная синхронизация с сервером времени.</p>
+<pre tabindex="0"><code>Язык и ввод ---&gt; Если в системе установлена стандартная клавиатура от Google, то идем в ее настройки ---&gt; аккаунты ---&gt; снимаем галочку с &#34;Помочь улучшить клавиатуру Google&#34;
+</code></pre><p>Не будет отправлять логи.</p>
+<pre tabindex="0"><code>Если нужна синхронизация пользовательского словаря, тогда устанавливаем галочку на &#34;Синхронизировать клавиатуру&#34;
+</code></pre><p>У меня снято. Словарь я сохраняю через Titanium Backup.</p>
+<pre tabindex="0"><code>Управление одной рукой -&gt; отключаю.
+</code></pre><p>Телефон не большой, пальцем достаю без проблем. А вот лишняя функция висящая в фоне мне не нужна.</p>
+<pre tabindex="0"><code>Батарея и производительность ---&gt; Управление питанием ---&gt; Ничего не настраивал.
+</code></pre><p>Однако, мною замечено, что настройка этих параметров положительно влияет на автономность телефона. Фишка от xiaomi актуальна и она работает. Мне помогала выжить из разряженного телефона пол дня работы как «звонилка». Настройки индивидуальны для каждого. Останавливаться нет смысла. Позже приведу тесты с настроенными профилями данной функции.</p>
+<pre tabindex="0"><code>-&gt; Оптимизация системы ---&gt; отключить системную анимацию.
+</code></pre><p>Ни разу не пользовался данной функцией. Отключена по стандарту.</p>
+<pre tabindex="0"><code>-&gt; Фоновый режим ---&gt; стандартный. А для приложений ---&gt; пользовательские настройки
+</code></pre><p>Необходимы для того, чтобы в фоне приходили оповещения. Скажу, что данная опция очень полезна и решает проблемы «неприхода» уведомлений в фоне. Ставим сюда только необходимые для этого приложения, иначе ненужные приложения будут «отъедать» часть оперативной памяти, которой тут и так не сильно много свободной.</p>
+<pre tabindex="0"><code>-&gt; Память ---&gt; В самом низу &#34;Настройки памяти&#34; ---&gt; Выставляю &#34;все на внешнюю память&#34;.
+</code></pre><pre tabindex="0"><code>Для разработчиков ---&gt; Отладка по USB ---&gt; галка установлена.
+</code></pre><p>Отладка мне нужна для корректной работы TitaniumBackup.</p>
+<pre tabindex="0"><code>-&gt; Отображение ---&gt; тут можно поиграться с параметрами анимации и визуальных переходов
+</code></pre><p>По стандарту стоят везде - 1Х. Установив эти параметры в положение &ldquo;Отключено&rdquo; либо &ldquo;0.5&rdquo; можно визуально повысить скорость работы оболочки.</p>
+<pre tabindex="0"><code>-&gt; Приложения ---&gt; Оптимизация системной памяти ---&gt; Средняя либо Высокая.
+</code></pre><p>Позволяет создавать системе swap файл подкачки. Но про это подробнее можно найти в интернете.</p>
+<pre tabindex="0"><code>-&gt; Включить оптимизацию MIUI ---&gt; снимаю галку. 
+</code></pre><p>Сильных визуальных отличий не увидел. Но на форуме проскакивали сообщения, что отключение данного параметра немного уменьшает потребление заряда оболочкой MIUI.</p>
+<hr>
+<p><strong>9. Mi аккаунт</strong></p>
+<pre tabindex="0"><code>Mi cloud -&gt; Ставлю галки на те данные, которые мне нужно, чтобы обновлялись и можно было бы их восстановить на новой прошивке.
+</code></pre><p>Это контакты, смс, журнал вызовов, заметки, Wi-fi точки, календарь для праздников своей страны, браузер для восстановления вкладок (если используете стандартный браузер от xiaomi). Остальные мне не нужны. Если галки сняты, то данная функция не доступна для бекапа и успокаивается с обращениями к серверах от xiaomi.</p>
+<hr>
+<p><strong>10. Другие аккаунты</strong></p>
+<pre tabindex="0"><code>Внизу три точки &#34;Еще&#34; ---&gt; отключаю автосинхронизацию данных.
+</code></pre><p>Очень полезная штука и заряд батареи экономит и не «будит» устройство понапрасну.</p>
+<hr>
+<p><strong>11. Синхронизация</strong></p>
+<pre tabindex="0"><code>Включить синхронизацию ---&gt; снимаю галку.
+</code></pre><p>Вручную синхронизирую через день или пару дней. А обращение к своим серверам ограничивает эта вкладка как надо. Успокаиваются такие сервисы как «xiaomi micloud» и «синхронизация календаря».</p>
+<hr>
+<p><strong>12. Системные приложения</strong></p>
+<ul>
+<li><strong>Mi Cloud – Мы уже разобрали.</strong></li>
+</ul>
+<p>Идем дальше.</p>
+<ul>
+<li><strong>Вызовы &mdash;&gt; Поиск Т9 &mdash;&gt; Алфавитный.</strong></li>
+</ul>
+<p>Полезная опция. Позволяет в номеронабирателе искать абонента по первым буквам имени.</p>
+<ul>
+<li><strong>Входящие вызовы &mdash;&gt; Устанавливаю галки на «Уведомление вспышкой» и «Датчик приближения» для отключения экрана, когда подносишь телефон к уху.</strong></li>
+</ul>
+<p>Датчик работает на данной модели корректно, что радует.</p>
+<ul>
+<li><strong>Снимаю галку с «Неизвестный вызов без звука».</strong></li>
+<li><strong>Напоминания о пропущенных вызовах &mdash;&gt; 1 раз.</strong></li>
+<li><strong>Вибрация при ответе собеседника &mdash;&gt; ставлю «Вибрировать».</strong></li>
+</ul>
+<p>Опять же полезная функция при ответе абонента.</p>
+<ul>
+<li><strong>Уведомление о вызове &mdash;&gt; «Воспроизводить непрерывно».</strong></li>
+</ul>
+<p>Актуально для функции от оператора «Ожидание вызова». Можно включить через USSD запрос конкретного оператора связи.</p>
+<ul>
+<li><strong>SIP телефония – позволяет осуществлять телефонные вызовы с использованием технологии VoIP &mdash;&gt; Все отключено.</strong></li>
+</ul>
+<p>Не вижу смысла в этой опции. А расход заряда повышает значительно при активации.</p>
+<ul>
+<li><strong>Остальные опции по стандарту.</strong></li>
+<li><strong>Контакты &mdash;&gt; «Фото в списке контактов» и «Иконка контакта без фото» &mdash;&gt; Ставлю галочки.</strong></li>
+</ul>
+<p>В телефонной книге красивее отображаются контакты.</p>
+<ul>
+<li><strong>«Контакты» &mdash;&gt; Импорт и экспорт</strong></li>
+</ul>
+<p>Позволяет копировать контакты в виде визитной карточки на внешний накопитель и обратно в телефонную книгу, а также на SIM карту</p>
+<ul>
+<li><strong>-&ndash;&gt; Отображение &mdash;&gt; Сортировать и показывать контакты &mdash;&gt; Ставлю «По фамилии».</strong></li>
+<li><strong>-&ndash;&gt; Фильтр контактов &mdash;&gt; Опция позволяет указывать с какого аккаунта отображать контакты в телефонной книге.</strong></li>
+</ul>
+<p>У меня установлен «Mi аккаунт». С Google были косяки, когда последние контакты, добавленные у телефонную книгу, после синхронизации не отображались. Возможно сервер их не сохранял после синхронизации. С аккаунтом Mi таких проблем не наблюдалось.</p>
+<ul>
+<li><strong>-&ndash;&gt; Дополнительно &mdash;&gt; Обновить индекс Т9 – Актуально, когда включена опция «Поиск по Т9».</strong></li>
+</ul>
+<p>Позволяет перестроить базу поиска контактов в телефонной книге по первой букве имени.</p>
+<ul>
+<li><strong>Сообщения &mdash;&gt; Количество напоминаний &mdash;&gt; 1 раз.</strong></li>
+<li><strong>-&ndash;&gt; Отчет о доставке &mdash;&gt; Включено.</strong></li>
+<li><strong>-&ndash;&gt; Дополнительно &mdash;&gt; Отключаю опции связанные с MMS &mdash;&gt; Разрешить WAP Push – Отключаю.</strong></li>
+</ul>
+<p>Сервисные сообщения через wap сообщения как приходили, так и приходят. Возможно это сообщения от оператора. Тогда отключение актуально для энергосбережения.</p>
+<ul>
+<li><strong>Безопасность &mdash;&gt; Разрешаю доступ к интернету для обновлений баз антивируса. «Очистка в заблокированном режиме» &mdash;&gt; Через 5 минут.</strong></li>
+</ul>
+<p>В фоне после пяти минут остаются работать только те приложения, которые активны в «фоновом режиме», который мы настраивали в «Батареи и производительности»</p>
+<p><strong>По остальным параметрам кратко:</strong></p>
+<ul>
+<li><strong>-&ndash;&gt; «Очистка» &mdash;&gt; Стандартные.</strong></li>
+<li>-&ndash;&gt; <strong>«Трафик» &mdash;&gt; Настраиваю трафик, который мне дает оператор на месяц.</strong></li>
+<li><strong>-&ndash;&gt; «Трафик в панели уведомлений» &mdash;&gt; галка активна.</strong> Для того, чтобы контролировать расход.</li>
+<li><strong>«Скорость сети» &mdash;&gt; Включено.</strong></li>
+<li><strong>«Черный список» &mdash;&gt; Отключено.</strong></li>
+</ul>
+<p>Пока не востребована. Работает корректно. Всегда «Занят» для абонента в черном списке.</p>
+<ul>
+<li><strong>«Антивирус» &mdash;&gt; Устанавливаю антивирусные базы AVL и Tencent.</strong></li>
+</ul>
+<p>На данной прошивке обе версии баз обновляются корректно. Тут все.</p>
+<p><strong>Камера &mdash;&gt;</strong></p>
+<p>Тут все понятно, настройки элементарны. Я немного подкручиваю насыщенность и резкость фото.</p>
+<ul>
+<li><strong>Галерея &mdash;&gt; Автоповорот &mdash;&gt; Ставлю галку.</strong></li>
+<li><strong>«Облачные альбомы» &mdash;&gt; Синхронизацию отключаю.</strong></li>
+</ul>
+<p>Делаю все вручную, если требуется. Отключаю доступ к интернету и сохраняю на SD карту.</p>
+<p><strong>Музыка &mdash;&gt; Стандартные настройки.</strong></p>
+<ul>
+<li><strong>Видео &mdash;&gt; Отключаю «мобильный интернет» и «Push уведомления о новых видео».</strong> Не нужно мне, чтобы еще и видео приложение лезло в интернет.</li>
+<li><strong>«Использовать внешний накопитель» &mdash; тут все ясно.</strong> Сохраняем на SD карту.</li>
+<li><strong>Диктофон &mdash;&gt; Устанавливаю в положение «ВКЛ» &mdash; «Индикатор записи» и «Выключать все звуки».</strong> Последняя опция позволяет работать шумоподавлению. Ограничивает посторонние шумы при записи диктофона. Качество стандарт. На высоком качестве проявляются искажения высоких частот.</li>
+</ul>
+<hr>
+<p>Настройка MIUI, оптимизация энергопотребления - <a href="http://admin.netlab-kursk.ru/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">часть 2</a></p>
+<pre tabindex="0"><code>За труды над инструкцией спасибо
+</code></pre><p><a href="http://4pda.ru/forum/index.php?showuser=1128731">BIGGY</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
+      <li><a href="http://localhost:1313/tags/miui/">Miui</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Android - Удаляем рекламу из приложений</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Настройка MIUI 7: удаляем системные приложения</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

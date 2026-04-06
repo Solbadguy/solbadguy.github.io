@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sarg on My Blog</title>
+    <link>http://localhost:1313/tags/sarg/</link>
+    <description>Recent content in Sarg on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 May 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sarg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SARG: присваиваем ip-адресам имена сотрудников</title>
+      <link>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</guid>
+      <description>&lt;p&gt;Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как исключить ip-адрес из логов SARG?</title>
+      <link>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</guid>
+      <description>&lt;p&gt;Наверняка после того, как все ip-адреса получили &lt;a href=&#34;https://netlab-kursk.ru/nastrojka-sarg-na-baze-ubuntu-server/&#34;&gt;читаемые имена&lt;/a&gt; многим захотелось исключить свой айпи из списков.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Настройка SaRG на базе Ubuntu Server</title>
+      <link>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</link>
+      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</guid>
+      <description>&lt;p&gt;Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

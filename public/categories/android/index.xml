@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Android on My Blog</title>
+    <link>http://localhost:1313/categories/android/</link>
+    <description>Recent content in Android on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Создаем backup android-устройства через ADB в Ubuntu</title>
+      <link>http://localhost:1313/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/</guid>
+      <description>&lt;p&gt;Ранее я писал на эту &lt;a href=&#34;http://localhost:1313/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/&#34;&gt;тему&lt;/a&gt; отдельную заметку, с тех пор было выпущено несколько версий ОС android, каждый из нас наверняка узнал что-то новое. Я в частности немного поработал с ADB, об этом и пойдет речь ниже.&lt;/p&gt;
+&lt;h2&gt;&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Минимальный набор сервисов Google</title>
+      <link>http://localhost:1313/posts/minimalnyj-nabor-servisov-google/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/minimalnyj-nabor-servisov-google/</guid>
+      <description>&lt;p&gt;Специально подготовленный архив для TWRP, который включает в себя только три сервиса от GOOGLE - PlayMarket, Синхронизация календаря \ контактов.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Что такое «mab» в прошивках Xiaomi и как его удалить.</title>
+      <link>http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/</guid>
+      <description>&lt;p&gt;Не так давно во всех новых прошивках смартфонов от компании Xiaomi появилось новое приложение с очень уж подозрительными разрешениями. Во всем интернете есть множество вопросов об этом приложении на совершенно разных языках, но единственного ответа нет нигде.&lt;/p&gt;
+&lt;p&gt;В статье я напишу, все что удалось выяснить, а так же о способах по его удалению.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Полный список сервисов Google для android 4.0.4, 5.1, 6.0</title>
+      <link>http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/</link>
+      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/</guid>
+      <description>&lt;p&gt;В продолжении статьи можно найти полный список сервисов Google для android 4.0.4, 5.1, 6.0, в т.ч. для архитектур arm и arm64. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xiaomi Redmi 3 (3s/3x/3Pro) не удается войти в режим download</title>
+      <link>http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/</guid>
+      <description>&lt;p&gt;Несколько раз мне пришлось столкнуться с тем, что на устройстве Xiaomi Redmi 3 (3s/3x/Pro) не удается войти в режим download, т.к. он просто перезагружался в систему. О том как действовать в такой ситуации читайте ниже. Эта инструкция вероятнее всего подойдет не только для указанных в заголовке устройств. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android в помощь системному администратору.</title>
+      <link>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
+      <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
+      <description>&lt;p&gt;Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android приложения для системного администратора</title>
+      <link>http://localhost:1313/posts/_drafts/id-2979/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/_drafts/id-2979/</guid>
+      <description>&lt;p&gt;Ранее я уже писал на эту &lt;a href=&#34;http://admin.netlab-kursk.ru/android-v-pomoshh-sistemnomu-administratoru/&#34;&gt;тему&lt;/a&gt;, однако сейчас пришло осознание того, что статья не отвечает потребностям большинства, поэтому я решил написать вторую часть статьи &amp;ldquo;андроид в помощь системному администратору&amp;rdquo;.  По возможности я постараюсь затронуть все возможные направления. Материал будет обновляться, ваши предложения приветствуются.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on My Blog</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unix</title>
+      <link>http://localhost:1313/categories/unix/</link>
+      <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/unix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu-Server</title>
+      <link>http://localhost:1313/categories/ubuntu-server/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/ubuntu-server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stati</title>
+      <link>http://localhost:1313/categories/stati/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/stati/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Novosti</title>
+      <link>http://localhost:1313/categories/novosti/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/novosti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>http://localhost:1313/categories/android/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/android/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sovety-Po-Nastrojke-Android-Os</title>
+      <link>http://localhost:1313/categories/sovety-po-nastrojke-android-os/</link>
+      <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/sovety-po-nastrojke-android-os/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu-Desktop</title>
+      <link>http://localhost:1313/categories/ubuntu-desktop/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/ubuntu-desktop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proshivki</title>
+      <link>http://localhost:1313/categories/proshivki/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/proshivki/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>News</title>
+      <link>http://localhost:1313/categories/news/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/news/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Internet</title>
+      <link>http://localhost:1313/categories/internet/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/internet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zentyal</title>
+      <link>http://localhost:1313/categories/zentyal/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/zentyal/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

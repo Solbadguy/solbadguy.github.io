@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>It on My Blog</title>
+    <link>http://localhost:1313/tags/it/</link>
+    <description>Recent content in It on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Администрирование 1C-сервера под Linux</title>
+      <link>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</link>
+      <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</guid>
+      <description>&lt;p&gt;Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой &amp;ldquo;Администриарование сервера 1С&amp;rdquo;. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RDesktop - подключение к Windows из Linux по RDP</title>
+      <link>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</guid>
+      <description>&lt;p&gt;Простой способ подключения к станциям под управлением Windows из под любого Linux-based дистрибутива.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Восстановление пароля Enterprise Security Suite</title>
+      <link>http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/</link>
+      <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/</guid>
+      <description>&lt;p&gt;В случае, если пароль администратора для доступа к серверу ESS утерян, то существует возможность его просмотра или изменения с использованием прямого доступа к базе данных Сервера. Этот способ удобен тем, что позволяет быстро восстановить пароль не выполняя при этом ненужных действий.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Монтирование дисков Linux и fstab</title>
+      <link>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</link>
+      <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</guid>
+      <description>&lt;p&gt;Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows 10 можно будет купить на USB-носителе</title>
+      <link>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</guid>
+      <description>&lt;p&gt;Microsoft планирует продавать Windows 10 на USB-носителях, а не только на DVD-дисках, как было раньше.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Раздача WiFi с ноутбука через командную строку (ОС Windows)</title>
+      <link>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
+      <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
+      <description>&lt;p&gt;Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.&lt;/p&gt;
+&lt;p&gt;Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IfTop мониторинг сети на Ubuntu Server</title>
+      <link>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</guid>
+      <description>&lt;p&gt;Сразу оговорюсь, что эта консольная утилита работает не только под Ubuntu. Информация о использовании сетевого трафика выводится прямо в консоли.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SARG: присваиваем ip-адресам имена сотрудников</title>
+      <link>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/</guid>
+      <description>&lt;p&gt;Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как исключить ip-адрес из логов SARG?</title>
+      <link>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/</guid>
+      <description>&lt;p&gt;Наверняка после того, как все ip-адреса получили &lt;a href=&#34;https://netlab-kursk.ru/nastrojka-sarg-na-baze-ubuntu-server/&#34;&gt;читаемые имена&lt;/a&gt; многим захотелось исключить свой айпи из списков.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Настройка SaRG на базе Ubuntu Server</title>
+      <link>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</link>
+      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/</guid>
+      <description>&lt;p&gt;Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android в помощь системному администратору.</title>
+      <link>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</link>
+      <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/</guid>
+      <description>&lt;p&gt;Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Вышел Zentyal 4.1</title>
+      <link>http://localhost:1313/posts/vyshel-zentyal-4-1/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vyshel-zentyal-4-1/</guid>
+      <description>&lt;p&gt;Позавчера команда, которая ведет разработку Zentyal на своем официальном сайте опубликовала новость, о том, что в свет вышел дистрибутив версии 4.1.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как узнать открытые порты?</title>
+      <link>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи, которые тесно связаны с работой в интернете когда-нибудь сталкивались с таким вопросом - &amp;ldquo;как узнать открытые порты?&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Статусы портов в командной строке</title>
+      <link>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</guid>
+      <description>&lt;p&gt;Зачастую, при просмотре состояния открытых соединений через командную строку, в поле статус отображаются разные значения. Давайте разберемся в том, о чем они сообщают.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Пользователи Yahoo перестанут использовать пароли</title>
+      <link>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</link>
+      <pubDate>Wed, 18 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/</guid>
+      <description>&lt;p&gt;Руководство компании &amp;ldquo;Yahoo&amp;rdquo; решило полностью отказаться от использования паролей, которые требовались для входа в аккаунт электронной почты.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Бесплатный антивирус для предприятий</title>
+      <link>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</link>
+      <pubDate>Tue, 17 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</guid>
+      <description>&lt;p&gt;Работая в сфере информационных технологий, многие (если не каждый) сталкивались с вопросом о выборе антивирусного программного обеспечения. Вопрос можно считать довольно серьезным, особенно, если учитывать специфику - вы находитесь не возле своего домашнего компьютера.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android приложения для системного администратора</title>
+      <link>http://localhost:1313/posts/_drafts/id-2979/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/_drafts/id-2979/</guid>
+      <description>&lt;p&gt;Ранее я уже писал на эту &lt;a href=&#34;http://admin.netlab-kursk.ru/android-v-pomoshh-sistemnomu-administratoru/&#34;&gt;тему&lt;/a&gt;, однако сейчас пришло осознание того, что статья не отвечает потребностям большинства, поэтому я решил написать вторую часть статьи &amp;ldquo;андроид в помощь системному администратору&amp;rdquo;.  По возможности я постараюсь затронуть все возможные направления. Материал будет обновляться, ваши предложения приветствуются.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

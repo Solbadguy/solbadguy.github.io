@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Монтирование дисков Linux и fstab | My Blog</title>
+<meta name="keywords" content="it, linux, komandnaya-stroka">
+<meta name="description" content="Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Монтирование дисков Linux и fstab
+    </h1>
+    <div class="post-meta"><span title='2015-07-06 00:00:00 +0000 UTC'>July 6, 2015</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.</p>
+<p>Простой пример: вы вставили Flash-накопитель в соответствующий разъем вашего ПК и вам нужно его открыть что бы произвести какие либо действия с файлами.</p>
+<p>Перед этим вы должны его примонтировать, в большинстве дистрибутивов можно примонтировать в графическом режиме одним кликом мыши.</p>
+<p>Но все же знать как это работает и иметь навык совершить это без наличия графической среды, желательно.</p>
+<p>Итак, монтирование файловой системы выполняется при помощи команды <strong>mount</strong>, а отмонтировать можно при помощи команды <strong>umount</strong>. Синтаксис команды такой:</p>
+<blockquote>
+<p>mount [опции] &lt;устройство&gt; &lt;точка монтирования&gt;</p>
+</blockquote>
+<p>Выполнять команду следует с привилегиями пользователя root. Сделать это можно добавив перед командой mount слово sudo.</p>
+<blockquote>
+<p>sudo mount [опции] &lt;устройство&gt; &lt;точка монтирования&gt;</p>
+</blockquote>
+<p>Синтаксис команды umount:</p>
+<blockquote>
+<p>umount &lt;устройство или точка монтирования&gt;</p>
+</blockquote>
+<p>Под точкой монтирования подразумевается каталог в который будет примонтировано устройство. Например: нам надо примонтировать один из разделов жесткого диска sda2 в каталог /mnt/disk2. При указании команды устройством указывать /dev/sda2, а точкой монтирования будет /mnt/disk2. Итак наша команда должна выглядеть так:</p>
+<blockquote>
+<p>sudo mount /dev/sda2 /mnt/disk2</p>
+</blockquote>
+<p>При необходимости можно указать дополнительные опции.</p>
+<p><strong>Количество опции довольно обширное, рассмотрим чаще всего используемые опции:</strong></p>
+<blockquote>
+<p>- t : Задает тип файловой системы (ex2,ext3,ext4,iso9660,vfat,ntfs,ntfs-3g и т. д.)</p>
+<p>- r : Монтирование файловой системы в режиме «только чтение»</p>
+<p>- w: Монтирование файловой системы в режиме «чтение/запись». Используется по умолчанию.</p>
+<p>- a : Монтирование всех файловых систем указанных в файле /etc/fstab (кроме тех для которых указано noauto, их следует монтировать в ручную). Автоматически при загрузке системы вызывается команда mount -a.</p>
+</blockquote>
+<p>Так же при помощи команды mount можно монтировать iso образы дисков. Выполнить монтирование можно командой:</p>
+<blockquote>
+<p>mount -o loop /disk/image.iso /mnt/obraz/</p>
+</blockquote>
+<p>Если по каким то причинам монтирование не удается, возможно у вас не подключен модуль loop в ядре. Подключается он так:</p>
+<blockquote>
+<p>sudo modprobe loop</p>
+</blockquote>
+<p>Если вы не хотите каждый раз монтировать разделы в ручную после загрузки, вам нужно прописать данные разделы в файл /etc/fstab. Структура файла такова:</p>
+<p>устройство точка_монтирования тип_ФС опции флаг_РК флаг_проверки</p>
+<p>Тип_ФС — это тип файловой системы. Флаг_РК — это флаг резервного копирования, возможные значения 1 или 0. Если установлена 1, то программа dump за архивирует данную файловую файловую систему при создании резервной копии, если же установлен 0, то резервная копия создаваться не будет. Флаг_проверки, возможные значения 1 или 0, если установлена 1 то данная файловая система будет проверятся на наличие ошибок программой fsck в случае некорректного размонтирования или же если будет достигнуто максимальное число операций монтирования для этой файловой системы.</p>
+<p><strong>Возможные значения для поля опции(приведены наиболее часто используемые):</strong></p>
+<ul>
+<li>auto — файловая система монтирует при загрузке системы, установлена по умолчания, указывать не обязательно.</li>
+<li>noauto — файловая система не монтируется при загрузке системы.</li>
+<li>exec — разрешает запуск выполняемых файлов на этой файловой системе, используется по умолчанию. Указывать не обязательно.</li>
+<li>noexece — Запрещает запуск исполняемых файлов для данной файловой системы</li>
+<li>ro - монтирует файловую систему только для чтения.</li>
+<li>rw — монтирует файловую систему в режиме &lt;чтение/запись&gt;</li>
+<li>user — данную файловую систему разрешается монтировать/размонтировать обычному пользователю (не root)</li>
+<li>nouser — файловую систему может монтировать только root. Установлена по умолчанию.</li>
+<li>umask — определяет маску прав доступа при создании файлов.</li>
+<li>defaults — стандартный набо опций установленных по умолчанию. Эквивалентно: rw,suid,dev,exec,auto,nouser,async.</li>
+<li>sync/async - Все операции ввода / вывода файловой системы должны выполняться синхронно/асинхронно.</li>
+<li>errors=remount-ro - При ошибке перемонтировать с параметром только для чтения (ro).</li>
+</ul>
+<p>Пример файла /etc/fstab:</p>
+<blockquote>
+<p># /etc/fstab: static file system information.</p>
+<h1></h1>
+<p># Use &lsquo;blkid&rsquo; to print the universally unique identifier for a</p>
+<p># device; this may be used with UUID= as a more robust way to name devices</p>
+<p># that works even if disks are added and removed. See fstab(5).</p>
+<h1></h1>
+<p># <!-- raw HTML omitted --> <!-- raw HTML omitted --> <!-- raw HTML omitted --> <!-- raw HTML omitted --> <!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p># / was on /dev/sdb1 during installation</p>
+<p>UUID=f93578ec-4647-4d45-bbf6-e46646e7bf75 / ext4 errors=remount-ro 0 1</p>
+<p># /home was on /dev/sdb2 during installation</p>
+<p>UUID=ac8cf60b-1e73-4aa6-888a-f47a7eb60829 /home ext4 defaults 0 1</p>
+<p>/var/lib/tftpboot/linux/Kubuntu-14.04/kubuntu-14.04.1-desktop-amd64.iso /mnt/tmp udf,iso9660 user,loop 0 0</p>
+</blockquote>
+<p>В этом файле, в разделе файловая система(устройство) указаны UUID номера устроств, а не /dev/sda1 например, для чего это сделано?</p>
+<p>Казалось бы проще указывать короткие имена и их проще запомнить. Но может случится такая ситуация, у вас 2 жестких диска SATA вы их отсоединили и случайно поменяли местами SATA кабели для каждого из дисков, диск с системой стал sdb, а был sda, ну и диск sdb стал sda соответственно. Тогда при включении система не сможет загрузиться, так как не сможет примонтировать корневой раздел.</p>
+<p>Если бы был указан UUID номер, то такой проблемы бы не возникло, система всё равно нашла бы нужный ей раздел и примонтировала бы его.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/it/">It</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/komandnaya-stroka/">Komandnaya-Stroka</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Windows 10 можно будет купить на USB-носителе</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

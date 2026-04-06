@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on My Blog</title>
+    <link>http://localhost:1313/tags/docker/</link>
+    <description>Recent content in Docker on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Блокируем рекламу в домашней сети. Docker iHole &#43; DnsCrypt</title>
+      <link>http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/</guid>
+      <description>&lt;p&gt;Короткая паста о том как поднять подобную связку на своем железе.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Установка Docker на Ubuntu 16.04</title>
+      <link>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt; — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

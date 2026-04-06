@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Windows on My Blog</title>
+    <link>http://localhost:1313/tags/windows/</link>
+    <description>Recent content in Windows on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VDS диски в Windows. Автомонтирование.</title>
+      <link>http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/</guid>
+      <description>&lt;p&gt;При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nextcloud через webDAV: «Windows не может получить доступ ...</title>
+      <link>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/</guid>
+      <description>&lt;p&gt;Ошибка возникает при попытке подключения сетевого хранилища через webdav стандартными средствами Windows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Программе установки Windows не удалось настроить Windows для работы с оборудованием</title>
+      <link>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</link>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</guid>
+      <description>&lt;p&gt;Нужно было установить Windows 7 на китайский ноутбук, при установке с флешки постоянно возникала ошибка &amp;ldquo;Программе установки Windows не удалось настроить Windows для работы с оборудованием&amp;rdquo;. Что интересно, выскакивала ровно тогда, когда процесс настройки оборудования заканчивался на 100%.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Создание загрузочной флешки с Windows XP</title>
+      <link>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</guid>
+      <description>&lt;p&gt;DirectGRUB - это мелкая утилита, которая позволит создавать загрузочные флешки с Win XP за пять минут.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x</title>
+      <link>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Данная инструкция к действию пригодится в первую очередь тем, кто по каким-либо причинам не хочет пользоваться кастомными прошивками от известных ромоделов (Xiaomi.eu, multirom и прочих). Данный способ позволит установить TWRP на разблокированный загрузчик телефона, а так же получить рут-права.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Отключение проверки цифровой подписи драйверов Windows 7</title>
+      <link>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</link>
+      <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи сталкивались с проблемой, когда драйвер от устройства, которое он имеет на руках, напрочь отказывается устанавливаться. Под катом решение проблемы отключения проверки цифровой подписи драйверов в Windows 7.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Автоматическое выключение компьютера в заданное время</title>
+      <link>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/</guid>
+      <description>&lt;p&gt;Наверняка у многих людей возникали ситуации, когда нужно было уйти/лечь спать/погулять с собачкой при этом оставив работать компьютер в течении заданного времени. Многие наверняка решают подобные проблемы используя сторонние программы, забыв (или не зная) о том, что в Windows уже есть такой набор функций - &lt;strong&gt;shutdown.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

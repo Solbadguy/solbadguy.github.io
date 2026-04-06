@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Настройка MIUI 7: удаляем системные приложения | My Blog</title>
+<meta name="keywords" content="android, miui">
+<meta name="description" content="Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Настройка MIUI 7: удаляем системные приложения
+    </h1>
+    <div class="post-meta"><span title='2016-06-09 00:00:00 +0000 UTC'>June 9, 2016</span>&nbsp;·&nbsp;<span>5 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона</p>
+<p><code>Прежде, чем приступить к каким-либо действиям настоятельно рекомендую сделать бэкап!</code></p>
+<h2 id="удаляем-системные-приложения-miui-7">Удаляем системные приложения MIUI 7<a hidden class="anchor" aria-hidden="true" href="#удаляем-системные-приложения-miui-7">#</a></h2>
+<p>Идем по пути <strong>system/app</strong> и попадаем в папку с основными системными приложениями. Вот тут то мы и начнем избавляться от тех приложений, которые, по моему мнению, не нужны в системе.</p>
+<p>Ниже приведены приложения, которые удаляются без последствий. Замечу, что у каждого этот список индивидуален и зависит именно от того, используете ли Вы сервисы от xiaomi или нет, а также зависит от версии прошивки и локализаций (multirom, xiaomi.eu, miui.su, miui.pro, авторские решения). Я использую сервисы от xiaomi, поэтому список довольно узок. Еще постараюсь указать какие приложения присутствуют на разных версиях прошивок.</p>
+<hr>
+<p><strong>SYSTEM/APP</strong></p>
+<p><strong>BugReport</strong> – Отправка отчетов об ошибках (присутствует на всех версиях) – <em>Для оптимизации</em> <strong>CloudPrint2</strong> – Виртуальный принтер. Мне он не нужен и наврятле понадобиться (7.1.2.0 – 7.1.3.0 отсутствует) – <em>на оптимизацию не влияет</em> <strong>Email</strong> – Довольно универсальное приложение почты от Xiaomi. Если используете, то нет смысла от нее избавляться. Мне не нужна поддержка корпоративной почты, тем более, что использую другое приложение, поэтому удаляю. (на всех версиях прошивок, исключение некоторые авторские) -<em>на оптимизацию не влияет</em> <strong>Fastdormancy</strong> – Функция данная, если я правильно понимаю, используется сотовыми операторами Европы и Азии. Почитать можно в интернете про технологию. После прочтения понял, что мой сотовый оператор ее не поддерживает. А еще может довольно сильно высаживать заряд аккумулятора, если нет поддержки оператором. Однозначно «под нож». (наблюдал только xiaomi.eu и последней версии от multirom) – <em>для оптимизации</em> <strong>MiLinkService</strong> – «полезная» фишка для устройств от Xiaomi. Позволяет передавать файлы между устройствами от фирмы Xiaomi. Излишне для меня. Убрал. (Присутствует на всех версиях, кроме некоторых авторских) - <em>на оптимизацию не влияет</em> <strong>PrintSpooler</strong> – печати. Та же учесть, что и с другими сервисами от «виртуального принтера». (Присутствует на всех версиях, кроме некоторых авторских) - <em>на оптимизацию не влияет</em> <strong>QuickSearchBox</strong> – Быстрый поиск от Xiaomi, который появляется, если провести по экрану снизу вверх. Попробовал и понял, что немного кривоват в использовании. Альтернатива Google Now. Работает классно, четко отзывается на вызов. Короче, рекомендую. (Присутствует на всех версиях, кроме некоторых авторских) - <em>на оптимизацию не влияет</em> <strong>StepsProvider</strong> – в предыдущих сборках не было этого сервиса. Возможно отвечает за шагометр. Не понимаю, зачем его добавили. Убрал. (Наблюдалось на 7.2.4.0 и 7.2.7.0 от xiaomi.eu) – <em>для оптимизации</em> <strong>Stk</strong> – сервисное приложение от сотового оператора. У MTS Беларусь в этом приложении мало полезных функций. Просто удалил, но лучше заморозить в Titanium, иначе после полного сброса к заводским настройкам могут проявится проблемы с определением сети. (Присутствует на всех версиях) – <em>для оптимизации</em> <strong>Updater</strong> – Обновление прошивки через системное приложение. Как раз многие спрашивают «Как отключить приходящие уведомления об появлении новой версии ПО». Удаляем и забываем про это. <strong>Примечание:</strong> Что касается прошивок DEV, то это приложение удалять нельзя, иначе телефон блокируется и просит ввести логин и пароль аккаунта MI. Но после ввода зависал на проверке. Проверял на двух DEV версиях. В стабильных версиях все отлично. (Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em> <strong>Whetstone</strong> – И снова отправка логов, которые связаны с производительностью процессора. Очень часто данный сервис будит устройство. Проверено. Удаляю. (Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em></p>
+<hr>
+<p><strong>SYSTEM/DATA-APP</strong></p>
+<p><strong>klobugreport</strong>. Удаляем его. Отвечает за отправку логов об ошибках. (Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em></p>
+<hr>
+<p><strong>SYSTEM/PRIV-APP</strong> </p>
+<p><strong>Browser</strong> – Стандартный браузер от Xiaomi. Сначала я постоянно его удалял из-за китайщины. Но потом нарвался на <strong>патченную версию из 7.1.2.0 Multirom от Viset</strong> находится в моей папке. Был приятно удивлен. Браузер полностью русский, в новостях большинство новостных порталов моей страны и соседних стран. Круто. Настроил его и понял, что браузер очень шустрый. Поддержка Flash. Просто версию от xiaomi.eu заменил на версию из прошивки 7.1.2.0 от Viset (встала без проблем). И конечно же <strong>разрешения</strong> на папку <strong>«0755»</strong> и на сам apk файл <strong>«0644»</strong>. (Присутствует на всех версиях, кроме некоторых авторских) – <em>на оптимизацию не влияет</em> <strong>CellBroadcastReceiver</strong> – Широковещательные сообщения (цунами, катастрофы и другое), которые там распространены в Европе и Азии. Не практикую. Удалил. (Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em> <strong>GoogleFeedback</strong> – Отзывы Google. Удалил. (Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em> <strong>Shell</strong> – Часть оболочки MIUI, в которой хранятся сводки и логи работы оболочки, которые в последствии отправляются куда-то. Удалил, потестировал, проблем не выявлено. (в комментариях сообщают, что после удаления у них не работает режим разработчика). Отлично. В дополнение скажу, что удаление этого сервиса помогает избавится от <strong>процесса «Shell»</strong>, который висит в памяти и иногда достаточно сильно нагружает процессор.</p>
+<p>(Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em> <strong>YellowPage</strong> – Желтые страницы. Позволяет видеть более подробную информацию об корпоративных клиентах, их номерах и счетах. Удалил. (Присутствует на всех версиях, кроме некоторых авторских) – <em>для оптимизации</em> <strong>Weather, WeatherProvider</strong> – Погода и сервер погоды. Приложение хорошее, отличается от различных редакций (локализаций). Допустим у Multirom температурный график выполнен в виду синусоидальных кривых. Смотрится классно. Однако, чаще всего в прогнозе вместо обычных нам единиц измерения скорости ветра и атмосферного давления, стоят км/ч и Па соответственно. Удаляю и устанавливаю альтернативную <strong>Погода BZ</strong>. Имхо лучшее погодное приложение. Выглядит привычно, отлично внедряется в виджеты стандартной погоды, а также в кастомные темы и экраны блокировки. (Присутствует на всех версиях, кроме некоторых авторских) - <em>на оптимизацию не влияет</em></p>
+<pre tabindex="0"><code>Про заморозку (отключение) приложений через Titanium BackUp:
+Скажу, что этот метод более безопасен, чем просто удалять из системы приложения. Но когда есть резервная копия приложений, тогда разницы значительной нет.
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
+      <li><a href="http://localhost:1313/tags/miui/">Miui</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Настройка MIUI 7, оптимизация энергопотребления.</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Автоматическое выключение компьютера в заданное время</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

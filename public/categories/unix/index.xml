@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Unix on My Blog</title>
+    <link>http://localhost:1313/categories/unix/</link>
+    <description>Recent content in Unix on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Права для директории .ssh - шпаргалка</title>
+      <link>http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/</link>
+      <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/</guid>
+      <description>&lt;p&gt;Если создаете папки и файлы руками, не забывайте про правильные права на файлы&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Debian 11 - объединение сетевых интерфейсовonding setup</title>
+      <link>http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/</guid>
+      <description>&lt;p&gt;Появилась задача объединить все сетевые интерфейсы на сервере, для того, чтобы обеспечить максимальную пропускную способность в обе стороны. Шаги под катом.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Переименование ноды Proxmox VE</title>
+      <link>http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/</link>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/</guid>
+      <description>&lt;p&gt;Во время одной из установок ОС была допущена опечатка в имени сервера. Под катом решение этой проблемы.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Connection error 401: permission denied - invalid PVE ticket</title>
+      <link>http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/</guid>
+      <description>&lt;p&gt;Не совсем очевидное решение данной ошибки.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Получаем WildCard от Let’s Encrypt</title>
+      <link>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</link>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</guid>
+      <description>&lt;p&gt;Немного о том как вручную получить WildCard для домена и его поддоменов, используя верификацию через dns record.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zabbix - Database error Connection refused</title>
+      <link>http://localhost:1313/posts/zabbix-database-error-connection-refused/</link>
+      <pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/zabbix-database-error-connection-refused/</guid>
+      <description>&lt;p&gt;Некоторое время назад понадобилось обновить zabbix до следующей версии, при этом ВМ, на которых работал фронт и БД жили отдельно, а настройки сети получали по dhcp.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chrony Forward time jump detected! / Chrony время не синхронизируется</title>
+      <link>http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/</guid>
+      <description>&lt;p&gt;Заметил, что после перезагрузки ноутбука время отображается неверно. Решение под катом.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима</title>
+      <link>http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/</guid>
+      <description>&lt;p&gt;Ноутбук под управлением Fedora 35 не возобновлял работу после перехода в ждущий режим. Вместо локскрина был черный экран. Решение в продолжении статьи.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH-Jump. Получаем доступ к удаленному серверу.</title>
+      <link>http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/</guid>
+      <description>&lt;p&gt;Jump-host — это промежуточный хост или SSH-шлюз в удаленную сеть, через который можно установить соединение с другим хостом в другой сети, например демилитаризованной зоне ( &lt;strong&gt;DMZ&lt;/strong&gt; ). &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.</title>
+      <link>http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/</guid>
+      <description>&lt;p&gt;Во время работы столкнулся с не очевидной ошибкой - A possible reason for your Virtualbox VM entering the &amp;ldquo;gurumeditation&amp;rdquo; state. О том &amp;ldquo;откуда ноги растут&amp;rdquo; в продолжении.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yakuake. Настройка под себя, исправление проблем.</title>
+      <link>http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/</guid>
+      <description>&lt;p&gt;Yakuake — выпадающий эмулятор терминала, основанный на библиотеке приложения Konsole от KDE. В статье пойдет речь о том как его &amp;ldquo;готовить для себя&amp;rdquo;, а так же об исправлении проблемы с которой мне пришлось столкнуться.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bash. Погода в консоли</title>
+      <link>http://localhost:1313/posts/pogoda-v-konsoli/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/pogoda-v-konsoli/</guid>
+      <description>&lt;p&gt;На досуге добавил в свой терминал очередной alias, решил поделиться.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Блокируем рекламу в домашней сети. Docker iHole &#43; DnsCrypt</title>
+      <link>http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/</guid>
+      <description>&lt;p&gt;Короткая паста о том как поднять подобную связку на своем железе.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH-Jump. Настройка.</title>
+      <link>http://localhost:1313/posts/ssh-jump-nastrojka/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh-jump-nastrojka/</guid>
+      <description>&lt;p&gt;В свое время открыл для себя такую вещь как &lt;a href=&#34;https://wiki.gentoo.org/wiki/SSH_jump_host&#34;&gt;SSH-Jump&lt;/a&gt;, с тех пор пользуюсь ей ежедневно. Сегодня подобные &amp;ldquo;прыжки&amp;rdquo; пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>grub-install: warning: this GPT partition label contains no BIOS Boot Partition; embedding won’t be possible.</title>
+      <link>http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/</guid>
+      <description>&lt;p&gt;Во время установки Debian 10 на компьютер в котором было установлено 2 HDD по 4TB + был создан Raid 1 я столкнулся с этой ошибкой. Решение оказалось простым, хоть явно об этом нигде и не сказано.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Настраиваем отправку почты с сервера через пакет SSMTP</title>
+      <link>http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/</link>
+      <pubDate>Fri, 24 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/</guid>
+      <description>&lt;p&gt;Заметку эту написал для локальной вики, а затем решил выложить и здесь.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Supervisor. Настраиваем перезапуск программы.</title>
+      <link>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</guid>
+      <description>&lt;p&gt;В повседневной работе появилась задача - автоматизировать перезапуск программы с кастомными параметрами, в случае, если по какой-то причине она будет завершена.&lt;/p&gt;
+&lt;p&gt;Решение - Supervisor.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Netplan Wifi on Ubuntu 18.04</title>
+      <link>http://localhost:1313/posts/netplan-wifi-on-ubuntu-18-04/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/netplan-wifi-on-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;Пару слов о том как настроить WiFI подключение из консоли.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux Mint 19. Настраиваем удаленное подключение через VNC</title>
+      <link>http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/</guid>
+      <description>&lt;p&gt;В статье мы реализуем удаленный доступ с любого устройства к своему рабочему ПК. Данный метод был проверен на ОС Linux Mint 19. Работа на отличных от Mint -a системах не гарантируется.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Учим систему докладывать о событиях в Телеграм</title>
+      <link>http://localhost:1313/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/</guid>
+      <description>&lt;p&gt;При написании скриптов, мне иногда нужнен отчет об их работе. Самый простой вариант это E-mail. Однако имея на своем смартфоне несколько мессенджеров, неплохо было бы получать уведомления туда.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hetzner StorageBox. Настраиваем авторизацию по ключам.</title>
+      <link>http://localhost:1313/posts/hetzner-storagebox-nastraivaem-avtorizaciyu-po-klyucham/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hetzner-storagebox-nastraivaem-avtorizaciyu-po-klyucham/</guid>
+      <description>&lt;p&gt;Эта заметка в первую очередь написана для себя самого, дабы упростить авторизацию в удаленном хранилище авторы предлагают использовать ключи. В продолжении паста с оф.вики Хетцнера.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx</title>
+      <link>http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/</guid>
+      <description>&lt;p&gt;Logrotate - это системная утилита, которая управляет автоматической ротацией и сжатием лог-файлов. Если в процессе длительной работы сервера файлы не были ротированы, сжаты и периодически не удалялись, то рано или поздно они могут занять весь доступный объем памяти.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как создать полноценный почтовый сервер на Ubuntu 18.04</title>
+      <link>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Let’s Encrypt сертификат для сайта. Centosginx</title>
+      <link>http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/</guid>
+      <description>&lt;h2 id=&#34;установка-бесплатного-ssl-сертификата-lets-encrypt-на-nginx-на-серверах-под-управлением-ос-centos&#34;&gt;&lt;strong&gt;Установка бесплатного SSL сертификата Let’s Encrypt на Nginx на серверах под управлением ОС Centos.&lt;/strong&gt;&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Vagrant problem solving</title>
+      <link>http://localhost:1313/posts/vagrant-problem-solving/</link>
+      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vagrant-problem-solving/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc</title>
+      <link>http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/</guid>
+      <description>&lt;p&gt;В статье будет описана установка, настройка и несколько способов просмотра видеопотока через трансляции p2p телевидения. Результатом выполнения этой инструкции будет &amp;ldquo;комбайн&amp;rdquo;, который позволит одновременный просмотр такого ТВ с разных устройств в высоком качестве.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Установка Docker на Ubuntu 16.04</title>
+      <link>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt; — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Convert PDF to JPG in Ubuntu</title>
+      <link>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/</guid>
+      <description>&lt;p&gt;Очень простой и удобным метод конвертирования изображений из PDF в JPG.  В качестве альтернативы можно рассмотреть пакет imagemagick, но на момент написания статьи он не совсем верно обработал выходные изображения.&lt;/p&gt;
+&lt;p&gt;В данной заметке я предлагаю использовать утилиты из пакета Poppler, которые, наоборот, справились на 5+.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Motd script for SSH login</title>
+      <link>http://localhost:1313/posts/motd-script-for-ssh-login/</link>
+      <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/motd-script-for-ssh-login/</guid>
+      <description>&lt;p&gt;В этом небольшом руководстве пойдет речь о кастомизации сообщения motd при авторизации в системе. В РУнете информация устарела, либо ее нет, либо я плохо искал. В продолжении статьи готовый скрипт, примерный выхлоп и пошаговое руководство.&lt;/p&gt;
+&lt;p&gt;При необходимости скрипт легко меняется под ваши нужды.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proxmox VE 5.0 fix update</title>
+      <link>http://localhost:1313/posts/proxmox-ve-5-0-fix-update/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/proxmox-ve-5-0-fix-update/</guid>
+      <description>&lt;p&gt;Сразу после установки Proxmox 5.0 абсолютно все сталкиваются с ошибкой обновления. Дело том, что обновление по умолчанию стучится на корпоративные репозитории, где без подписки получает отпул. В итоге, после того как ввести в терминале apt update пользователь получает примерно такое сообщение:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RDesktop - подключение к Windows из Linux по RDP</title>
+      <link>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/</guid>
+      <description>&lt;p&gt;Простой способ подключения к станциям под управлением Windows из под любого Linux-based дистрибутива.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как создать Swap файл подкачки в Linux-подобных ОС</title>
+      <link>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</link>
+      <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</guid>
+      <description>&lt;p&gt;Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Монтирование дисков Linux и fstab</title>
+      <link>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</link>
+      <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/</guid>
+      <description>&lt;p&gt;Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IfTop мониторинг сети на Ubuntu Server</title>
+      <link>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</guid>
+      <description>&lt;p&gt;Сразу оговорюсь, что эта консольная утилита работает не только под Ubuntu. Информация о использовании сетевого трафика выводится прямо в консоли.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как узнать открытые порты?</title>
+      <link>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи, которые тесно связаны с работой в интернете когда-нибудь сталкивались с таким вопросом - &amp;ldquo;как узнать открытые порты?&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Статусы портов в командной строке</title>
+      <link>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/</guid>
+      <description>&lt;p&gt;Зачастую, при просмотре состояния открытых соединений через командную строку, в поле статус отображаются разные значения. Давайте разберемся в том, о чем они сообщают.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Бесплатный антивирус для предприятий</title>
+      <link>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</link>
+      <pubDate>Tue, 17 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/</guid>
+      <description>&lt;p&gt;Работая в сфере информационных технологий, многие (если не каждый) сталкивались с вопросом о выборе антивирусного программного обеспечения. Вопрос можно считать довольно серьезным, особенно, если учитывать специфику - вы находитесь не возле своего домашнего компьютера.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ansible-install ubuntu serv</title>
+      <link>http://localhost:1313/posts/_drafts/id-3416/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/_drafts/id-3416/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt-get install language-pack-ru
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;update-locale LANG=ru_RU.UTF-8
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

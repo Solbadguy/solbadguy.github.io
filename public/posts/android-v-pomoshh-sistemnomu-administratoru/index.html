@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Android в помощь системному администратору. | My Blog</title>
+<meta name="keywords" content="android, it, linux, rdp, komandnaya-stroka, hosting">
+<meta name="description" content="Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Android в помощь системному администратору.
+    </h1>
+    <div class="post-meta"><span title='2015-04-07 00:00:00 +0000 UTC'>April 7, 2015</span>&nbsp;·&nbsp;<span>3 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?</p>
+<blockquote>
+<p>Ничего необычного андроид не может предложить, однако некоторые утилиты, доступные на этой платформе могут очень сильно пригодиться в определенных ситуациях. В статье рассмотрены только бесплатные программы, так что, если я не написал об этом, значит по умолчанию так оно и есть.</p>
+</blockquote>
+<h3 id="ssh-доступ-к-linux">Ssh доступ к Linux<a hidden class="anchor" aria-hidden="true" href="#ssh-доступ-к-linux">#</a></h3>
+<p><a href="https://play.google.com/store/apps/details?id=org.connectbot">ConnectBot</a> - абсолютно бесплатное приложение, представляет собой простой и в тоже время функциональный SSH-клиент, альтернатив которому не много, на данный момент считаю лучшим решением.</p>
+<h3 id="hackers-keyboard">Hacker’s Keyboard<a hidden class="anchor" aria-hidden="true" href="#hackers-keyboard">#</a></h3>
+<p><img alt="Android в помощь системному администратору." loading="lazy" src="images/hackers_keyboard_hochquer.png"></p>
+<p>Установив на свой девайс ConnectBot, я сразу понял, что чего-то не хватает. Не хватало, как выяснил позже полноценной клавиатуры.</p>
+<p>Лучшим решением считаю приложение под названием <a href="https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard">Hacker’s Keyboard</a>. К слову распрастроняется оно бесплатно, не содержит рекламы, а так же, что самое важное, позволяет пользоваться полноценной клавиатурой на экране вашего девайса.</p>
+<p>Программа отлично понимает русский, разработчик заранее позаботился о существовании словаря к ней, что позволяет пользоваться ей на постоянной основе.</p>
+<h3 id="openvpn-на-вашем-android">OpenVPN на вашем android<a hidden class="anchor" aria-hidden="true" href="#openvpn-на-вашем-android">#</a></h3>
+<p><img alt="open vpn" loading="lazy" src="images/open-vpn-700x431.jpg"></p>
+<p><a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn">OpenVPN for Android</a> - Плюсом данного приложения является его стабильность, распространяется бесплатно, не требует рута.</p>
+<h3 id="тестирование-сети">Тестирование сети<a hidden class="anchor" aria-hidden="true" href="#тестирование-сети">#</a></h3>
+<p><img alt="ping i dns" loading="lazy" src="images/ping-i-dns-700x369.png"></p>
+<p>Бесплатное приложение <a href="https://play.google.com/store/apps/details?id=com.ulfdittmer.android.ping">Ping &amp; DNS</a>, название которого говорит само за себя - с легкостью позволяет узнать пингуется ли ваш сервер (доступно ICMP и TCP), предоставляет полную информацию о любом DNS сервере, позволит проверить диапазон портов на статус (открытзакрыт).</p>
+<h3 id="утилиты-для-wifi">Утилиты для WiFi<a hidden class="anchor" aria-hidden="true" href="#утилиты-для-wifi">#</a></h3>
+<p>Лучшим выбором станет <a href="https://play.google.com/store/apps/details?id=com.farproc.wifi.analyzer">Wifi Analyzer</a> или <a href="https://play.google.com/store/apps/details?id=de.android.telnet">Network Signal Info</a>, функционал у обоих примерно одинаковый.</p>
+<p>Обе программы предоставляют, по запросу, полную информацию по активному соединению (беспроводное или мобильное не важно). В отличие от стандартного информера андроид, который понимает, только 4 уровня сигнала, программа(ы) предлагает вам 14 полос мощности сигнала.</p>
+<p>Это действительно работает - даже просто повернув смартфон в другую сторону от точки доступа уровень сигнала сети меняется.</p>
+<h3 id="rdp-или-vnc">RDP или VNC<a hidden class="anchor" aria-hidden="true" href="#rdp-или-vnc">#</a></h3>
+<p><a href="https://play.google.com/store/apps/details?id=com.tux.client">2X RDP Client</a> - мне понравилось.</p>
+<p>Разумеется для удаленного доступа есть еще и <a href="https://play.google.com/store/apps/details?id=com.teamviewer.teamviewer.market.mobile&amp;hl=ru">TeamViewer</a>.</p>
+<h3 id="работа-с-файлами-через-ftp-ftps-sftp-или-scp">Работа с файлами через ftp, ftps, sftp или scp<a hidden class="anchor" aria-hidden="true" href="#работа-с-файлами-через-ftp-ftps-sftp-или-scp">#</a></h3>
+<p><img alt="AndFTP" loading="lazy" src="images/AndFTP-700x442.jpg"></p>
+<p>Мой выбор остановился на <a href="https://play.google.com/store/apps/details?id=lysesoft.andftp">AndFTP</a>, функционал которого легко расширяется, за счет использования плагинов. Рекламы в приложении я не заметил.</p>
+<h3 id="файловый-менеджер">Файловый менеджер<a hidden class="anchor" aria-hidden="true" href="#файловый-менеджер">#</a></h3>
+<p>На ПКе, самым популярным менеджером является Total Commander, который к слову доступен и на андроид, однако мой выбор пал на <a href="https://play.google.com/store/apps/details?id=com.ghostsq.commander">Ghost Commander</a>. К слову за счет <a href="https://play.google.com/store/apps/details?id=com.ghostsq.commander.samba&amp;feature=search_result">плагинов</a>, телефон можно будет использоваться как клиент samba.</p>
+<h3 id="мониторинг">Мониторинг<a hidden class="anchor" aria-hidden="true" href="#мониторинг">#</a></h3>
+<p>Наиболее удачным решением, для этой задачи на мой скромный взгляд является утилита под названием <a href="https://play.google.com/store/apps/details?id=ua.cv.westward.networktools&amp;feature=search_result">Network Tools</a>.</p>
+<p>Через заданный (вами) период времени программа будет проверять ответ от заданного вами ресурса, в случае, если ответа нет, она обязательно об этом сообщит. Так же умеет whois, ping и traceroute.</p>
+<p>Разумеется можно добавить несколько ресурсов для мониторинга.</p>
+<h3 id="обмен-данными-с-пк-через-wifi">Обмен данными с ПК через WiFi<a hidden class="anchor" aria-hidden="true" href="#обмен-данными-с-пк-через-wifi">#</a></h3>
+<p>Для обмена файлами с ПК можно использовать <a href="https://play.google.com/store/apps/details?id=com.sand.airdroid&amp;hl=ru">AirDroid</a> (просто открываете веб сайт, сканируете штрихкод, пользуетесь). Регистрация для пользования сервисом не нужна, лично я  давно не использую шнурок.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
+      <li><a href="http://localhost:1313/tags/it/">It</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/rdp/">Rdp</a></li>
+      <li><a href="http://localhost:1313/tags/komandnaya-stroka/">Komandnaya-Stroka</a></li>
+      <li><a href="http://localhost:1313/tags/hosting/">Hosting</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Настройка SaRG на базе Ubuntu Server</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/">
+    <span class="title">Next »</span>
+    <br>
+    <span>eBay будет хранить персональные данные россиян в России</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

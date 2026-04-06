@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc | My Blog</title>
+<meta name="keywords" content="aceproxy, acestream, ubuntu, tv">
+<meta name="description" content="В статье будет описана установка, настройка и несколько способов просмотра видеопотока через трансляции p2p телевидения. Результатом выполнения этой инструкции будет &ldquo;комбайн&rdquo;, который позволит одновременный просмотр такого ТВ с разных устройств в высоком качестве.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc
+    </h1>
+    <div class="post-meta"><span title='2018-09-04 00:00:00 +0000 UTC'>September 4, 2018</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>В статье будет описана установка, настройка и несколько способов просмотра видеопотока через трансляции p2p телевидения. Результатом выполнения этой инструкции будет &ldquo;комбайн&rdquo;, который позволит одновременный просмотр такого ТВ с разных устройств в высоком качестве.</p>
+<hr>
+<p><strong>AceStream</strong> - это протокол одноранговой мультимедийной потоковой передачи, построенный с использованием технологии BitTorrent, для трансляции и просмотра &ldquo;тяжелых&rdquo; видеопотоков.</p>
+<p><strong>AceProxy</strong> - прокси, который написан на Python + gevent и должен работать как на Linux, так и на Windows. Позволяет просматривать потоки Ace Stream или файлы BitTorrent через HTTP.</p>
+<p><strong>Docker</strong> — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы.</p>
+<hr>
+<h3 id="установка-docker">Установка Docker<a hidden class="anchor" aria-hidden="true" href="#установка-docker">#</a></h3>
+<p><strong>Почему бы не установить весь этот &ldquo;комбайн&rdquo; на рабочую систему?</strong></p>
+<ol>
+<li>Крайняя версия AceStream выпущена для ubuntu 16 (за окном уже 18.04);</li>
+<li>Избавимся от лишних проблем;</li>
+<li>С контейнером работать удобнее.</li>
+</ol>
+<hr>
+<p><strong>Установка Docker была описана ранее</strong> - <em><a href="/ustanovka-docker-na-ubuntu-16-04/">читать тут</a></em>.</p>
+<hr>
+<p><strong>Cначала получим чистую Ubuntu 16.04</strong></p>
+<pre tabindex="0"><code>docker pull ubuntu
+</code></pre><p><strong>Запустим контейнер, предварительно открыв нужный для работы AceProxy порт</strong></p>
+<pre tabindex="0"><code>docker run -d -p 8000:8000 --name tv --restart always ubuntu:16.04 tail -f /dev/null
+</code></pre><p><strong>Проверим, что контейнер успешно запустился</strong></p>
+<pre tabindex="0"><code>docker ps
+</code></pre><p><strong>Выхлоп</strong></p>
+<pre tabindex="0"><code>63d3fba11111        ubuntu:16.04                     &#34;tail -f /dev/null&#34;      10 seconds ago      Up 9 seconds        0.0.0.0:8000-&gt;8000/tcp   tv
+</code></pre><hr>
+<h3 id="установка-acestream">Установка AceStream<a hidden class="anchor" aria-hidden="true" href="#установка-acestream">#</a></h3>
+<p><strong>Переходим в наш контейнер</strong></p>
+<pre tabindex="0"><code>docker exec -it tv /bin/bash
+</code></pre><p><strong>Обновим БД пакетов и  установим необходимые нам утилиты</strong></p>
+<pre tabindex="0"><code>apt update &amp; apt install nano mc wget -y
+</code></pre><p><strong>Скачаем архив с AceStream и распакуем его</strong></p>
+<pre tabindex="0"><code>wget http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz &amp;&amp; tar zxvf acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz &amp;&amp; rm acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz
+</code></pre><p><strong>Перенесем все в /opt/</strong></p>
+<pre tabindex="0"><code>mv acestream_3.1.16_ubuntu_16.04_x86_64/ /opt/acestream
+</code></pre><p><strong>Установим зависимости</strong></p>
+<pre tabindex="0"><code>apt-get install python python-setuptools python-m2crypto python-apsw python-pip -y
+pip install greenlet gevent psutil
+</code></pre><p>Готово.</p>
+<hr>
+<h3 id="установка-aceproxy">Установка AceProxy<a hidden class="anchor" aria-hidden="true" href="#установка-aceproxy">#</a></h3>
+<p><strong>Установим необходимые утилиты</strong></p>
+<pre tabindex="0"><code>apt-get install python-gevent git python-psutil python-pkg-resources -y
+</code></pre><p>Скопируем свежую версию AceProxy от <a href="https://github.com/pepsik-kiev">Pepsik-Kiev</a>.</p>
+<pre tabindex="0"><code>cd /opt &amp;&amp; git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
+</code></pre><p><strong>Поправим конфиг</strong></p>
+<pre tabindex="0"><code>nano /opt/HTTPAceProxy/aceconfig.py
+</code></pre><p>Нужно изменить две строчки</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Было</strong>  <code>acespawn = False acecmd = 'acestreamengine --client-console --live-buffer 25 --vod-buffer 10 --vod-drop-max-age 120' </code></th>
+          <th> <strong>Стало</strong>  <code>acespawn = True acecmd = '/opt/acestream/acestreamengine --client-console --live-buffer 25 --vod-buffer 10 --vod-drop-max-age 120' </code></th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<p><strong>Запустим прокси</strong></p>
+<pre tabindex="0"><code>python /opt/HTTPAceProxy/acehttp.py
+</code></pre><p><strong>Примерный выхлоп</strong></p>
+<pre tabindex="0"><code>Ace Stream HTTP Proxy server on Python 2.7.12 starting .....
+Ace Stream HTTP Proxy server IP: 172.17.0.8 autodetected
+Ace Stream engine spawned with pid 26
+Server started at 172.17.0.9:8000 Use &lt;Ctrl-C&gt; to stop
+</code></pre><p><strong>Основная часть уже сделана. Дело за малым - найти плейлист.</strong></p>
+<p>Этот момент я описывать не буду. Задача простая, если уметь в гуглпоиск.</p>
+<hr>
+<h3 id="использование-aceproxy">Использование AceProxy<a hidden class="anchor" aria-hidden="true" href="#использование-aceproxy">#</a></h3>
+<p>Итак плейлист вы нашли, а устройство с docker -ом на борту в вашей домашней сети имеет адрес 192.168.1.15. На устройстве воспроизведения адрес плейлиста будет таким:</p>
+<pre tabindex="0"><code>http://addrsite.m3u?ip=192.168.1.15:8000
+</code></pre><p>По мимо готовых плейлистов прокси умеет проигрывать acestream id</p>
+<pre tabindex="0"><code>http://192.168.1.15:8000/pid/acestreamid/stream.mp4
+</code></pre><p>Найти такие адреса можно в интернете например через <a href="https://acestreamsearch.com/">https://acestreamsearch.com/</a>.  Используя этот сайт можно даже создать свой плейлист, который должен выглядеть примерно так</p>
+<pre tabindex="0"><code>#EXTM3U
+#EXTINF:-1,Название1 (Категория)
+http://192.168.1.15:8000/pid/xxxxxxxxxxxxxxxxxxxxxx/stream. mp4
+#EXTINF:-1,Название2 (Категория)
+http://192.168.1.15:8000/pid/yyyyyyyyyyyyyyyyyyyyyy/stream. mp4
+#EXTINF:-1,Название3 (Категория)
+http://192.168.1.15:8000/pid/zzzzzzzzzzzzzzzzzzzzzz/stream. mp4
+</code></pre><p><em>где x,y,z - адреса трансляций формата acestream.</em> Пробел перед mp4 не нужен.</p>
+<hr>
+<h3 id="постскриптум"><strong>Постскриптум</strong><a hidden class="anchor" aria-hidden="true" href="#постскриптум">#</a></h3>
+<p>Со временем каждый наверняка заметит, что если смотреть ТТВ долго и часто, то в домашней папке пользователя накопится достаточное количество файлов кэша, причем они могут занимать очень много места. Встроенный механизм удаления кэша где-то есть, но искать его я не стал.</p>
+<h4 id="удаление-кеша">Удаление кеша<a hidden class="anchor" aria-hidden="true" href="#удаление-кеша">#</a></h4>
+<hr>
+<p><strong>Открываем список заданий на хосте</strong></p>
+<pre tabindex="0"><code>crontab -e
+</code></pre><p><strong>Добавляем в конец файла</strong></p>
+<pre tabindex="0"><code>00 10,17,01 * * * docker exec tv bash -c &#34;find /root/.ACEStream/.acestream_cache/live.* -delete&#34;
+01 10,17,01 * * * docker exec tv bash -c &#34;find /root/.ACEStream/.acestream_cache/hls.* -delete&#34;
+</code></pre><p>Файлы кэша будут удаляться в 10, 17 и 1 ночи.</p>
+<h4 id="upd2-авт-обновление-прокси">Upd#2 Авт. обновление прокси<a hidden class="anchor" aria-hidden="true" href="#upd2-авт-обновление-прокси">#</a></h4>
+<hr>
+<p><strong>Создадим исполняемый скрипт и добавим его в пользовательский крон</strong></p>
+<pre tabindex="0"><code>touch auto-update-aceproxy.sh &amp; nano auto-update-aceproxy.sh
+</code></pre><p><strong>Код скрипта</strong></p>
+<pre tabindex="0"><code>#!/bin/bash
+DATE=$(date +%Y%m%d)
+mkdir /opt/BackUP-HTTPAceProxy/$DATE
+tar -czf /opt/BackUP-HTTPAceProxy/$DATE/aceproxy.tar.gz /opt/HTTPAceProxy/
+rm -R /opt/HTTPAceProxy
+cd /opt &amp;&amp; git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
+cd /opt/HTTPAceProxy
+sed -i.bak aceconfig.py
+sed -i &#39;s/acespawn = False/acespawn = True/&#39; aceconfig.py sed -i &#34;s/acecmd = &#39;acestreamengine --client-console --live-buffer 25 --vod-buffer 10 --vod-drop-max-age 120&#39;/acecmd = &#39;\/opt\/acestream\/acestreamengine --client-console --live-buffer 25 --vod-buffer 10 --vod-drop-max-age 120&#39;/&#34; aceconfig.py
+python /opt/HTTPAceProxy/acehttp.py 
+exit
+</code></pre><p><strong>Добавим скрипт в планировщик</strong></p>
+<pre tabindex="0"><code>crontab -e
+@weekly docker exec container_name /bin/bash -c &#34;sh /path_to_script/acestream_update.sh&#34;
+</code></pre><p>Раз в неделю скрипт будет создавать резервную копию рабочей версии прокси (архивируя папку и перенося ее в /opt/BackUP&hellip;). Удалять текущую версию, скачивать новую + править конфиг.</p>
+<h4 id="upd3-удаление-старых-архивов-с-рк">Upd#3 Удаление старых архивов с РК<a hidden class="anchor" aria-hidden="true" href="#upd3-удаление-старых-архивов-с-рк">#</a></h4>
+<hr>
+<pre tabindex="0"><code>crontab -e
+0 0 1 * * docker exec ttv bash -c &#34;find /opt/BackUP-HTTPAceProxy/ -mtime +21 -print0 | xargs -0 rm -f&#34;
+</code></pre><p>Раз в месяц будет выполняться команда, которая удаляет архивы старше трех недель (21 дня).</p>
+<hr>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/aceproxy/">Aceproxy</a></li>
+      <li><a href="http://localhost:1313/tags/acestream/">Acestream</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="http://localhost:1313/tags/tv/">Tv</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Создаем backup android-устройства через ADB в Ubuntu</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Установка Docker на Ubuntu 16.04</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

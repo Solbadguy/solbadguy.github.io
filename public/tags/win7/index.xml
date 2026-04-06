@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Win7 on My Blog</title>
+    <link>http://localhost:1313/tags/win7/</link>
+    <description>Recent content in Win7 on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/win7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Программе установки Windows не удалось настроить Windows для работы с оборудованием</title>
+      <link>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</link>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/</guid>
+      <description>&lt;p&gt;Нужно было установить Windows 7 на китайский ноутбук, при установке с флешки постоянно возникала ошибка &amp;ldquo;Программе установки Windows не удалось настроить Windows для работы с оборудованием&amp;rdquo;. Что интересно, выскакивала ровно тогда, когда процесс настройки оборудования заканчивался на 100%.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Отключение проверки цифровой подписи драйверов Windows 7</title>
+      <link>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</link>
+      <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи сталкивались с проблемой, когда драйвер от устройства, которое он имеет на руках, напрочь отказывается устанавливаться. Под катом решение проблемы отключения проверки цифровой подписи драйверов в Windows 7.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как восстановить ассоциации файлов Windows 7/8?</title>
+      <link>http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</link>
+      <pubDate>Sun, 19 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/</guid>
+      <description>&lt;p&gt;Бывает такое, что в результате небрежных/необдуманных действий пользователя (реже ошибок в самой системе) в ОС Windows 7/8 могут нарушиться стандартные ассоциации файлов и приложений, которые должны их открывать. В результате ярлыки приложений могут открываться через Word, а архивы через системный плеер.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Раздача WiFi с ноутбука через командную строку (ОС Windows)</title>
+      <link>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
+      <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
+      <description>&lt;p&gt;Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.&lt;/p&gt;
+&lt;p&gt;Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows 10 станет последней в линейке ОС Microsoft</title>
+      <link>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</guid>
+      <description>&lt;p&gt;По словам представителя компании Джери Никсона Windows 10 станет последним крупным обновлением, которое выпустит Microsoft.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как узнать открытые порты?</title>
+      <link>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-uznat-otkrytye-porty/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи, которые тесно связаны с работой в интернете когда-нибудь сталкивались с таким вопросом - &amp;ldquo;как узнать открытые порты?&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

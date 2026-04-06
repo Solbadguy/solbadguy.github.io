@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>1c-Server on My Blog</title>
+    <link>http://localhost:1313/tags/1c-server/</link>
+    <description>Recent content in 1c-Server on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/1c-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1C server - Ragent: not running.</title>
+      <link>http://localhost:1313/posts/1c-server-ragent-not-running/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/1c-server-ragent-not-running/</guid>
+      <description>&lt;p&gt;Не так давно столкнулся с проблемой на сервере 1С (Ubuntu 16.04) - аутсорсинговая компания решила поэксперементировать на проде, в результате чего на системном разделе закончилось место.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

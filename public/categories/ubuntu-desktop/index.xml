@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ubuntu-Desktop on My Blog</title>
+    <link>http://localhost:1313/categories/ubuntu-desktop/</link>
+    <description>Recent content in Ubuntu-Desktop on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ubuntu-desktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как изменить цвет шрифта на рабочем столе в XFCE 4.12</title>
+      <link>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</guid>
+      <description>&lt;p&gt;В большинстве случаев, если вы выбираете темный фон для рабочего стола,  приходится осознать неприятный факт - черный шрифт под иконками  имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>7 лучших альтернатив Notepad &#43;&#43; для Linux</title>
+      <link>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</guid>
+      <description>&lt;p&gt;Notepad ++ это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad ++. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad ++ так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad ++ для Linux.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Простой и минималистичный конфиг для Conky</title>
+      <link>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</guid>
+      <description>&lt;p&gt;Подозреваю, что после установки ОС, почти каждый пользователь первым делом занимается персонализацией системы под себя. У абсолютного большинства людей все сводится к установке понравившихся обоев и замены цвета панелек. Я предлагаю пойти дальше, под катом краткий ман по установке Conky, а так же простой, но симпатичный конфиг для Conky.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conky Ubuntu - установка</title>
+      <link>http://localhost:1313/posts/conky-ubuntu-ustanovka/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/conky-ubuntu-ustanovka/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи ПК когда-нибудь задавались целью получения удобного доступа к системной информации своего компьютера. Это особенно актуально для владельцев портативной техники (ноутбуки), т.к. те зачастую могут сильно перегреваться. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elementary tweaks Freya - установка</title>
+      <link>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</guid>
+      <description>&lt;p&gt;Даже самый удачный &amp;ldquo;минимализм&amp;rdquo; лучше настраивать &amp;ldquo;под себя&amp;rdquo;, давайте разберемся чем может помочь Elementary tweaks и как его установить. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wifi Hotspot Manjaro</title>
+      <link>http://localhost:1313/posts/wifi-hotspot-manjaro/</link>
+      <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wifi-hotspot-manjaro/</guid>
+      <description>&lt;p&gt;Часто бывает так, что работая за ноутбуком, который подключен к интернету через кабель, хочется видеть Wifi на других девайсах (допустим смартфон под управлением android).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как узнать время через консоль Linux</title>
+      <link>http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/</guid>
+      <description>&lt;p&gt;Наверное у многих были ситуации, когда под руками только консоль, а время узнать нужно.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как установить Telegram на Ubuntu/Linux</title>
+      <link>http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/</link>
+      <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/</guid>
+      <description>&lt;p&gt;Если вы пользуетесь мессенжером от Павла Дурова на телефоне, то вам наверняка захочется продолжать общение и на персональном компьютере.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Plasma 5 install usb error</title>
+      <link>http://localhost:1313/posts/plasma-5-install-usb-error/</link>
+      <pubDate>Tue, 17 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/plasma-5-install-usb-error/</guid>
+      <description>&lt;p&gt;У некоторых убунтуводов во время установки дистрибутива основанного на kubuntu plasma 5 с флешки возникают проблемы.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

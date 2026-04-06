@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Xiaomi on My Blog</title>
+    <link>http://localhost:1313/tags/xiaomi/</link>
+    <description>Recent content in Xiaomi on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/xiaomi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Что такое «mab» в прошивках Xiaomi и как его удалить.</title>
+      <link>http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/</guid>
+      <description>&lt;p&gt;Не так давно во всех новых прошивках смартфонов от компании Xiaomi появилось новое приложение с очень уж подозрительными разрешениями. Во всем интернете есть множество вопросов об этом приложении на совершенно разных языках, но единственного ответа нет нигде.&lt;/p&gt;
+&lt;p&gt;В статье я напишу, все что удалось выяснить, а так же о способах по его удалению.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xiaomi Redmi 3 (3s/3x/3Pro) не удается войти в режим download</title>
+      <link>http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/</guid>
+      <description>&lt;p&gt;Несколько раз мне пришлось столкнуться с тем, что на устройстве Xiaomi Redmi 3 (3s/3x/Pro) не удается войти в режим download, т.к. он просто перезагружался в систему. О том как действовать в такой ситуации читайте ниже. Эта инструкция вероятнее всего подойдет не только для указанных в заголовке устройств. &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

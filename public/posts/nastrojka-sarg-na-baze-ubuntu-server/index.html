@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Настройка SaRG на базе Ubuntu Server | My Blog</title>
+<meta name="keywords" content="it, linux, sarg, internet">
+<meta name="description" content="Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Настройка SaRG на базе Ubuntu Server
+    </h1>
+    <div class="post-meta"><span title='2015-04-08 00:00:00 +0000 UTC'>April 8, 2015</span>&nbsp;·&nbsp;<span>5 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.</p>
+<p>Лично мне это ни когда не было интересно, однако ситуации и требования бывают разные. В своей практике я всегда опирался на unix подобные ОС, в данном случае все действия будут проводится на Ubuntu Server 14.04.</p>
+<p>В статье подразумевается, что Squid3 у вас уже установлен и весь http трафик идет через него, лично я использую его в режиме прозрачного прокси, что позволяет избавиться от необходимости бегать и настраивать каждую рабочую станцию отдельно.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Если сквид у вас уже работает, это значит, что логи о использовании сети у вас уже есть, осталось только получить инструмент, который в удобной форме будет их представлять.</p>
+<p>Подобных инструментов множество, однако я остановил свой выбор на SARG (Squid Analysis Report Generator).</p>
+<hr>
+<h2 id="установка-веб-сервера">Установка Веб-сервера<a hidden class="anchor" aria-hidden="true" href="#установка-веб-сервера">#</a></h2>
+<p>Перед тем, как начать установку и настройку SARG, давайте установим простенький веб-сервер, он необходим для того, чтобы иметь возможность просматривать сгенерированные &ldquo;саржем&rdquo; HTML отчеты. Для этих целей можно использовать и Apache, однако, если он не установлен можно обойтись более простым решением - lighttpd.</p>
+<pre tabindex="0"><code>sudo apt-get install lighttpd
+</code></pre><p>После установки необходимых пакетов lighttpd готов работать, для проверки наберем в адресной строке браузера адрес сервера. Если все сделано правильно, должна открыться стандартная страница, которая поздравит вас с тем, что веб-сервер работает.</p>
+<p>Однако есть нюанс - конфиг из коробки настроен таким образом, что веб-сервер будет обрабатывать запросы со всех доступных ему интерфейсов, но нам оно надо?</p>
+<p>Давайте ограничим его работу только локальной сетью, открываем файл конфигурации:</p>
+<pre tabindex="0"><code>sudo nano /etc/lighttpd/lighttpd.conf
+</code></pre><p>Найдем и раскомментируем строку:</p>
+<pre tabindex="0"><code>server.bind = &#34;10.0.0.1&#34;, где 10.0.0.1 адрес для примера, меняем на свой.
+</code></pre><p>Перезагрузим свежеустановленный веб-сервер для вступления изменений в силу:</p>
+<pre tabindex="0"><code>sudo /etc/init.d/lighttpd restart
+</code></pre><hr>
+<h2 id="установка-и-настройка-sarg">Установка и настройка SARG<a hidden class="anchor" aria-hidden="true" href="#установка-и-настройка-sarg">#</a></h2>
+<p>Пришла очередь Sarg, произведем его установку следующей командой:</p>
+<pre tabindex="0"><code>sudo apt-get install sarg
+</code></pre><p>Sarg как и lighttpd готов сразу начать работу, однако стандартная конфигурация меня несколько не устраивает, отмечу, что конфиг саржа позволяет вносить множество изменений в его внешний вид.</p>
+<p>Настройка SARG производится в файле - /etc/sarg/sarg.conf. Откроем его для внесения правок:</p>
+<pre tabindex="0"><code>sudo nano /etc/sarg/sarg.conf
+</code></pre><p>Вносим требуемые изменения:</p>
+<pre tabindex="0"><code>language Russian_UTF-8
+graphs yes
+graph_days_bytes_bar_color orange
+output_dir /var/www/squid-reports
+charset UTF-8
+</code></pre><p>Далее в конфиге ищем и комментируем строку:</p>
+<pre tabindex="0"><code>#site_user_time_date_type table
+</code></pre><p>Запустить генерацию отчетов Sarg можно следующей командой (заодно давайте проверим как он работает):</p>
+<pre tabindex="0"><code>sudo /usr/bin/sarg
+</code></pre><p>В зависимости от объема логов, время требуемое для генерации отчетов может значительно меняться, у меня это заняло около 5 секунд.</p>
+<p>Обращаю внимание на то, что в зависимости от версии сквида путь до логов меняется, это одна из причин, по которой логи могут не преобразовываться саржем в наглядные списки.</p>
+<pre tabindex="0"><code>Для того, чтобы все заработало пришлось дописать в этой строке &#34;3&#34; (тройку).
+
+access_log /var/log/squid3/access.log
+</code></pre><p>После сообщения о завершении генерации отчетов открываем адрес:</p>
+<blockquote>
+<p>http://10.0.0.1/squid-reports, должна открыться примерно такая страница</p>
+</blockquote>
+<p> </p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/sarg_spisok.jpg"><img alt="Настройка SaRG на базе Ubuntu Server" loading="lazy" src="/posts/nastrojka-sarg-na-baze-ubuntu-server/images/sarg_spisok.jpg" title="Настройка SaRG на базе Ubuntu Server"></a></p>
+<p>SARG сгенерирует отчеты исходя их всех доступных ему логов, готовый отчет будет содержать в себе следующую информацию:</p>
+<ul>
+<li>Детализация по пользователям;</li>
+<li>Детализация по одному конкретному пользователю (список сайтов, время,дата и количество обращений к адресу);</li>
+<li>Список наиболее популярных сайтов;</li>
+<li>Потребляемый трафик;</li>
+<li>Общее количество трафика потребляемое за сутки, неделю, месяц;</li>
+<li>Сводку за день, неделю, месяц.</li>
+</ul>
+<hr>
+<h2 id="настраиваем-cron-sarg">Настраиваем Cron SARG<a hidden class="anchor" aria-hidden="true" href="#настраиваем-cron-sarg">#</a></h2>
+<p>После проведенных нами действий Sarg уже работает должным образом, однако я преследую еще одну цель - автоматизацию.</p>
+<p>Ранее я писал, что SARG может генерировать отчеты по заданным интервалам, однако этот функционал в нем работает крайне плохо, у меня в свое время он генерировал только ежедневные отчеты, но наотрез отказывался формировать еженедельные и месячные. Решение оказалось очень простым.</p>
+<p>Настроим Cron для SARG, выполняем команду:</p>
+<pre tabindex="0"><code>sudo nano /etc/crontab
+</code></pre><p>Вносим расписание:</p>
+<blockquote>
+<p>00 08-18 * * * root sarg-reports today 00 22 * * * root sarg-reports daily 30 22 * * 0 root sarg-reports weekly 30 23 1 * * root sarg-reports monthly</p>
+</blockquote>
+<p>Теперь крон настроен таким образом, что будет формировать отчеты каждый час в течении рабочего дня (с 8:00 до 18:00), в 22:00 генерируется полный отчет за сутки, по воскресеньям генерируется отчет за неделю и наконец 1го числа каждого месяца будет появляться отчет о пользовании интернетом за месяц.</p>
+<!-- raw HTML omitted -->
+<hr>
+<p>Далее по очереди настроим каждый файл (до внесения изменений в них, отчеты за длительные промежутки времени у меня не формировались).</p>
+<p>Генерирование отчетов за день (если файла нет, то создаем):</p>
+<pre tabindex="0"><code>sudo nano /etc/cron.daily/sarg
+</code></pre><p>Мои значения:</p>
+<pre tabindex="0"><code>if [ -x /usr/sbin/sarg-reports ]; then
+/usr/sbin/sarg-reports daily
+fi
+</code></pre><p>Или</p>
+<pre tabindex="0"><code>sarg -d day-1 -w /tmp/sarg.daily -o /var/www/squid-reports/Daily /var/log/squid3/access.log*
+</code></pre><hr>
+<p>Крон отвечающий за генерирование отчетов за неделю:</p>
+<pre tabindex="0"><code>sudo nano /etc/cron.weekly/sarg
+</code></pre><hr>
+<p>Значения по умолчанию:</p>
+<pre tabindex="0"><code>#!/bin/sh
+
+if [ -x /usr/sbin/sarg-reports ]; then
+/usr/sbin/sarg-reports weekly
+fi
+</code></pre><hr>
+<p>Вписываем эти строки (старые удаляем, на всякий случай сделайте бекап)</p>
+<pre tabindex="0"><code>#!/bin/sh
+
+sarg -d week-1 -w /tmp/sarg.weekly -o /var/www/squid-reports/Weekly /var/log/squid3/access.log*
+</code></pre><p>Генерирование отчетов за месяц:</p>
+<pre tabindex="0"><code>sudo nano /etc/cron.monthly/sarg
+</code></pre><hr>
+<p>Значения по умолчанию:</p>
+<pre tabindex="0"><code>#!/bin/sh
+
+if [ -x /usr/sbin/sarg-reports ]; then
+/usr/sbin/sarg-reports monthly
+fi
+</code></pre><hr>
+<p>Вписываем эти строки (старые удаляем, на всякий случай сделайте бекап)</p>
+<pre tabindex="0"><code>#!/bin/sh
+
+sarg -d month-1 -w /tmp/sarg.monthly -o /var/www/squid-reports/Monthly /var/log/squid3/access.log*
+</code></pre><hr>
+<p>Установим свеженастроенным файлам права на выполнение:</p>
+<pre tabindex="0"><code>chmod 755 /etc/cron.daily/sarg /etc/cron.weekly/sarg /etc/cron.monthly/sarg
+</code></pre><hr>
+<p>Обращаю внимание на то, что в задаче строго прописаны пути, адаптируйте их под свои нужды при надобности.</p>
+<p>Для  запуска создания отчетов вручную используем следующие команды:</p>
+<ul>
+<li>sudo sarg</li>
+<li>sudo /etc/cron.daily/sarg</li>
+<li>sudo /etc/cron.weekly/sarg</li>
+<li>sudo /etc/cron.monthly/sarg</li>
+</ul>
+<p>В случае, если для ротации логов squid используется logrotate обязательно проверьте охватываемый период времени в</p>
+<pre tabindex="0"><code>sudo nano /etc/logrotate.d/squid3
+</code></pre><p><em>UPD после некоторого времени перешел на lightsquid. Установка к слову очень простая, все требуемое выполняет.</em></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/it/">It</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/sarg/">Sarg</a></li>
+      <li><a href="http://localhost:1313/tags/internet/">Internet</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Как заблокировать порно сайты от детей?</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Android в помощь системному администратору.</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

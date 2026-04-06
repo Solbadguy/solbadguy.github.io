@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Proshivki on My Blog</title>
+    <link>http://localhost:1313/categories/proshivki/</link>
+    <description>Recent content in Proshivki on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/proshivki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x</title>
+      <link>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Данная инструкция к действию пригодится в первую очередь тем, кто по каким-либо причинам не хочет пользоваться кастомными прошивками от известных ромоделов (Xiaomi.eu, multirom и прочих). Данный способ позволит установить TWRP на разблокированный загрузчик телефона, а так же получить рут-права.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как создать резервную копию прошивки телефона?</title>
+      <link>http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/</guid>
+      <description>&lt;p&gt;Каждый человек, который хочет поменять прошивку в своем смартфоне/планшете всегда должен помнить - бэкап это залог спокойного сна и крепких нервов! Прежде чем приступить к прошивке своего девайса в обязательном порядке нужно создавать резервную копию прошивки. О том, как это быстро сделать читайте под катом.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

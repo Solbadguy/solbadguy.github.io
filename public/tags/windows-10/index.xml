@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Windows-10 on My Blog</title>
+    <link>http://localhost:1313/tags/windows-10/</link>
+    <description>Recent content in Windows-10 on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windows-10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 10 после чистой установки: Chocolatey and Pshell scripts.</title>
+      <link>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/</guid>
+      <description>&lt;p&gt;Ряд дейсвий, которые я выполяю после чистой установки Windows 10.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Новый комплект поставки лицензионной Windows 10 (unboxing)</title>
+      <link>http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/</guid>
+      <description>&lt;p&gt;Ранее я &lt;a href=&#34;http://admin.netlab-kursk.ru/windows-10-mozhno-budet-kupit-na-usb-nositele/&#34;&gt;уже писал&lt;/a&gt;, что с официальным анонсом Windows 10 мелкомягкие решили пересмотреть формат распространения коробочных лицензий на свой продукт. Под катом пара своих фотографий, которые не поленился сделать. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows 10 можно будет купить на USB-носителе</title>
+      <link>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/</guid>
+      <description>&lt;p&gt;Microsoft планирует продавать Windows 10 на USB-носителях, а не только на DVD-дисках, как было раньше.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Раздача WiFi с ноутбука через командную строку (ОС Windows)</title>
+      <link>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</link>
+      <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/</guid>
+      <description>&lt;p&gt;Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.&lt;/p&gt;
+&lt;p&gt;Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows 10 станет последней в линейке ОС Microsoft</title>
+      <link>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/</guid>
+      <description>&lt;p&gt;По словам представителя компании Джери Никсона Windows 10 станет последним крупным обновлением, которое выпустит Microsoft.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

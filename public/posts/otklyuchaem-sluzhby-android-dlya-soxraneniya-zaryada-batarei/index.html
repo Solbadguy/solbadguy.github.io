@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Отключаем службы Android для сохранения заряда батареи | My Blog</title>
+<meta name="keywords" content="android">
+<meta name="description" content="Эта статья не претендует на уникальность, однако советы представленные в ней действительно могут помочь заставить телефон жить на аккумуляторе немного дольше.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Отключаем службы Android для сохранения заряда батареи
+    </h1>
+    <div class="post-meta"><span title='2015-05-25 00:00:00 +0000 UTC'>May 25, 2015</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Эта статья не претендует на уникальность, однако советы представленные в ней действительно могут помочь заставить телефон жить на аккумуляторе немного дольше.</p>
+<blockquote>
+<p>Disclaimer: Все что вы делаете, вы делаете осознанно и на свой страх и риск. Автор не несет ответственности за работоспособность вашего аппарата!</p>
+</blockquote>
+<p>Для выполнения всех действий требуется root</p>
+<ol>
+<li>Нам понадобятся:</li>
+<li>Аппарат</li>
+<li>Программа <a href="https://play.google.com/store/apps/details?id=cn.wq.disableservice&amp;hl=ru">Disable Service</a> (продвинутые юзеры могут сразу устанавливать My Android Tools. Это более расширенная программа того же автора, но для начинающих в ней много лишнего. Продвинутые и богатые могут поддержать автора, купив Pro версию).</li>
+<li>Программа <a href="https://play.google.com/store/apps/details?id=com.uzumapps.wakelockdetector&amp;hl=ru">Wakelock Detector</a></li>
+<li>Прямые руки</li>
+</ol>
+<p><strong>Делаем бекап, на случай, если что-то пойдет не так, что бы потом не было мучительно больно!</strong> Устанавливаем программу Wakelock Detector, следуем инструкции, смотрим, как резвятся программы и сервисы, не дают спать аппарату и жрут при этом батарею. Наполняемся праведным гневом, устанавливаем Disable Service и приступаем к делу.</p>
+<p>В последних обновлениях Google Play, Корпорация Добра (тм) решила, что все пользователи андроида озаботились своим здоровьем, накупили браслетов и занимаются фитнесом в поте лица, меряя калории и пульсы на своих аппаратах.</p>
+<p>Так же у всех резко появились наручные дисплеи для показа погоды и СМС. Заботясь об этом, Корпорация Добра (тм) напихала специальных сервисов для связи с этой носимой дребеденью, и повелела каждые 15 минут проверять, нету ли вблизи фитнесового браслета, не начать ли считать калории и пульсы, не показать ли пришедшую СМС&rsquo;ку.</p>
+<p>Поскольку у 99% пользователей таковых приблуд нет, аппарат, проснувшись, ничего не находит и скушав заряда батареи, снова засыпает, что бы через 15 минут повторить цикл. Приступаем.</p>
+<hr>
+<h4 id="запускаем-disable-service"><strong>Запускаем Disable Service.</strong><a hidden class="anchor" aria-hidden="true" href="#запускаем-disable-service">#</a></h4>
+<p>Первую вкладку &ldquo;Third party&rdquo; мы пока не трогаем. Белые цифры - количество сервисов. Синие - количество запущенных сервисов, красные - количество деактивированнх сервисов. Сейчас их у нас будет. Переходим на вкладку &ldquo;System&rdquo;, находим &ldquo;Сервисы Google Play&rdquo; - заходим туда. В левом верхнем углу нажимаем &ldquo;full/short&rdquo; - получаем полные названия сервисов и, пользуясь поиском (значек лупы) вводим заветные слова, сначала &ldquo;fitness&rdquo;, потом &ldquo;wearable&rdquo; со всего что содержит эти слова снимаем галочки.</p>
+<p>Затем ищем сервисы:</p>
+<pre tabindex="0"><code>com.google.android.gms.auth.be.proximity.authorization.userpresence.UserPresenceService
+com.google.android.gmx.config.ConfigFetchService
+</code></pre><p>Прибиваем и их.</p>
+<p>Затем ограничиваем обращение сервисов к поиску местоположения:</p>
+<pre tabindex="0"><code>com.google.android.location.network.networklocationservice
+com.google.android.location.fused.nlplocationreceiverservice 
+com.google.android.location.geocode.geocodeservice 
+com.google.android.location.internal.server.googlelocationservice 
+com.google.android.location.reporting.service.reportingandroidservice 
+com.google.android.location.reporting.locationreceiverservice 
+com.google.android.location.reporting.service.reportingsyncservice 
+com.google.android.location.reporting.service.locationhistoryinjectorservice 
+com.google.android.location.reporting.service.initializerservice 
+com.google.android.location.reporting.service.Settingschangedservice
+</code></pre><p><strong>Первая часть работы сделана.</strong></p>
+<blockquote>
+<p>Дальнейшие копания в этой части лучше не делать просто так. Можете наоборот увеличить расход батареи из-за введения в цикл сервисов, у которых деактивирована часть, необходимая для корректного завершения их работы. В самом худшем случае - получите бутлуп. Хотя это и не страшно, у нас же есть бекап, правда ведь? Но лучше не доводить до беды и не лезть туда, куда не нужно. Помните! Не всегда название сервиса обозначает то, что вы думаете! Например, сервис GTalkService, к программе GTalk отношения никакого не имеет!</p>
+</blockquote>
+<hr>
+<h4 id="теперь-переходим-на-вкладку-программ-third-party">Теперь переходим на вкладку программ &ldquo;Third Party&rdquo;<a hidden class="anchor" aria-hidden="true" href="#теперь-переходим-на-вкладку-программ-third-party">#</a></h4>
+<p>Здесь - полная свобода действий, но опять же - с умом.</p>
+<p>Лично я, прибил у Viber службу InAppBillingService, которому сильно не спалось, т.к. платными звонками в этой программе не пользуюсь. У программы 360 SmartKey отменил сервисы: CompatService и DownloadingService, они мне не нужны, кнопка работает и без них.</p>
+<p>Для программ, которые должны периодически просыпаться (почта, погода, сообщения), лучше ничего не трогать.</p>
+<p>Для более осмысленных действий хорошо бы прочитать ветки программ Disable Service и My Android Tools, но это для самых продвинутых юзеров. И так уже пришлось прочитать многабукафф :).</p>
+<p>В конце - перезагружаем аппарат и при помощи Wakelock Detector наблюдаем его тихий храп. Если какая-то из программ еще мешает этому процессу - вы знаете что делать. Так же рекомендую установить программу Greenify, для усмирения особо буйных (типа - Facebook, Facebook Messenger и т.д.).</p>
+<blockquote>
+<p>В результате, получим реально долгоживущий аппарат без особых ограничений. Сколько и как - зависит от установленных у вас программ. У меня выигрыш составил около 30%. Поведение новых программ желательно проверять на первое время при помощи Wakelock Detector и, на основании этих данных, принимать решение о их дальнейшей судьбе.</p>
+</blockquote>
+<p>В связи с популярностью этой темы мне бы хотелось &ldquo;продемонстрировать&rdquo; эффективность советов, которые приведены на сайте как в этой статье так и в других.</p>
+<p>Честно говоря я давно забыл, что такое &ldquo;заряжать телефон каждый вечер&rdquo;, т.к. необходимость в этом появляется один, максимум два раза в неделю.</p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2015/05/save_battery.jpg"><img alt="Отключаем службы Android для сохранения заряда батареи" loading="lazy" src="/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/images/save_battery-169x300.jpg"></a></p>
+<p>Автор - <a href="http://4pda.ru/forum/index.php?showuser=270192">Kucher2000</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/yandeks-zapustil-svoe-radio/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Яндекс запустил свое радио</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Adblock Plus анонсировал мобильный браузер для Android</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

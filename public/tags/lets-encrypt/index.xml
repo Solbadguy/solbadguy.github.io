@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lets-Encrypt on My Blog</title>
+    <link>http://localhost:1313/tags/lets-encrypt/</link>
+    <description>Recent content in Lets-Encrypt on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/lets-encrypt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Получаем WildCard от Let’s Encrypt</title>
+      <link>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</link>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/</guid>
+      <description>&lt;p&gt;Немного о том как вручную получить WildCard для домена и его поддоменов, используя верификацию через dns record.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Let’s Encrypt сертификат для сайта. Centosginx</title>
+      <link>http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/</guid>
+      <description>&lt;h2 id=&#34;установка-бесплатного-ssl-сертификата-lets-encrypt-на-nginx-на-серверах-под-управлением-ос-centos&#34;&gt;&lt;strong&gt;Установка бесплатного SSL сертификата Let’s Encrypt на Nginx на серверах под управлением ОС Centos.&lt;/strong&gt;&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

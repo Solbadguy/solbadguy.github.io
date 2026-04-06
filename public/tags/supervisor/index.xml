@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Supervisor on My Blog</title>
+    <link>http://localhost:1313/tags/supervisor/</link>
+    <description>Recent content in Supervisor on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 May 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/supervisor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supervisor. Настраиваем перезапуск программы.</title>
+      <link>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</guid>
+      <description>&lt;p&gt;В повседневной работе появилась задача - автоматизировать перезапуск программы с кастомными параметрами, в случае, если по какой-то причине она будет завершена.&lt;/p&gt;
+&lt;p&gt;Решение - Supervisor.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mail-Server on My Blog</title>
+    <link>http://localhost:1313/tags/mail-server/</link>
+    <description>Recent content in Mail-Server on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mail-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как создать полноценный почтовый сервер на Ubuntu 18.04</title>
+      <link>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

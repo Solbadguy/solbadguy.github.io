@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Twrp on My Blog</title>
+    <link>http://localhost:1313/tags/twrp/</link>
+    <description>Recent content in Twrp on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/twrp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр.</title>
+      <link>http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/</link>
+      <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/</guid>
+      <description>&lt;p&gt;Этот мануал можно считать уневерсальным, т.к. вероятнее всего он будет работать и на других смарфонах Xiaomi. Для всех манипуляций, которые требуеют наличия ПК, мной был использован ноутбук под управлением &lt;strong&gt;Debian 9 Stretch&lt;/strong&gt;. Установка производилась на Xiaomi Redmi 3s. При желании мануал можно адаптировать  Мануал адаптирован и для ОС семейства Windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;О том, как установить TWRP на постоянной основе читайте в этой&lt;/strong&gt; &lt;a href=&#34;http://admin.netlab-kursk.ru/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/&#34;&gt;&lt;em&gt;&lt;strong&gt;статье&lt;/strong&gt;&lt;/em&gt;.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Полное удаление cервисов Google Play с вашего смартфона</title>
+      <link>http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/</guid>
+      <description>&lt;p&gt;Радикальный метод удаления всех сервисов и программ, которые имеют отношение к Google. Если предустановленный производителем софт вам не нужен, то этот способ правильный выбор.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x</title>
+      <link>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Данная инструкция к действию пригодится в первую очередь тем, кто по каким-либо причинам не хочет пользоваться кастомными прошивками от известных ромоделов (Xiaomi.eu, multirom и прочих). Данный способ позволит установить TWRP на разблокированный загрузчик телефона, а так же получить рут-права.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

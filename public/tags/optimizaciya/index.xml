@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Optimizaciya on My Blog</title>
+    <link>http://localhost:1313/tags/optimizaciya/</link>
+    <description>Recent content in Optimizaciya on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/optimizaciya/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google отдает предпочтение сайтам, которые обладают мобильной версией</title>
+      <link>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</link>
+      <pubDate>Mon, 02 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/</guid>
+      <description>&lt;p&gt;Гугл официально заявил о том, что сайты, которые оптимизированы под мобильные устройства будут более предпочтительными в формировании поисковой выдачи.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

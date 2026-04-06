@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gaaps on My Blog</title>
+    <link>http://localhost:1313/tags/gaaps/</link>
+    <description>Recent content in Gaaps on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gaaps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Полный список сервисов Google для android 4.0.4, 5.1, 6.0</title>
+      <link>http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/</link>
+      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/</guid>
+      <description>&lt;p&gt;В продолжении статьи можно найти полный список сервисов Google для android 4.0.4, 5.1, 6.0, в т.ч. для архитектур arm и arm64. &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ubuntu on My Blog</title>
+    <link>http://localhost:1313/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 May 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supervisor. Настраиваем перезапуск программы.</title>
+      <link>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/</guid>
+      <description>&lt;p&gt;В повседневной работе появилась задача - автоматизировать перезапуск программы с кастомными параметрами, в случае, если по какой-то причине она будет завершена.&lt;/p&gt;
+&lt;p&gt;Решение - Supervisor.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx</title>
+      <link>http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/</guid>
+      <description>&lt;p&gt;Logrotate - это системная утилита, которая управляет автоматической ротацией и сжатием лог-файлов. Если в процессе длительной работы сервера файлы не были ротированы, сжаты и периодически не удалялись, то рано или поздно они могут занять весь доступный объем памяти.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как создать полноценный почтовый сервер на Ubuntu 18.04</title>
+      <link>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Администрирование 1C-сервера под Linux</title>
+      <link>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</link>
+      <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/</guid>
+      <description>&lt;p&gt;Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой &amp;ldquo;Администриарование сервера 1С&amp;rdquo;. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc</title>
+      <link>http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/</guid>
+      <description>&lt;p&gt;В статье будет описана установка, настройка и несколько способов просмотра видеопотока через трансляции p2p телевидения. Результатом выполнения этой инструкции будет &amp;ldquo;комбайн&amp;rdquo;, который позволит одновременный просмотр такого ТВ с разных устройств в высоком качестве.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Установка Docker на Ubuntu 16.04</title>
+      <link>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt; — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как изменить цвет шрифта на рабочем столе в XFCE 4.12</title>
+      <link>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/</guid>
+      <description>&lt;p&gt;В большинстве случаев, если вы выбираете темный фон для рабочего стола,  приходится осознать неприятный факт - черный шрифт под иконками  имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Прошивка сматфонов Xiaomi в Ubuntu</title>
+      <link>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</link>
+      <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</guid>
+      <description>&lt;p&gt;Среди владельцев сматфонов Xiaomi и пользователей *buntu, есть много тех, кто не знает о том, что их девайс можно прошить прямо из консоли, ни какие программы на вроде Miflash при этом не понадобятся. Автор статьи, описывая действия, предварительно скачал архив с прошивкой рассчитанной для установки из MiFlash. Материал в первую очередь написан для тех, кто не работает под Windows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как создать Swap файл подкачки в Linux-подобных ОС</title>
+      <link>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</link>
+      <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/</guid>
+      <description>&lt;p&gt;Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>7 лучших альтернатив Notepad &#43;&#43; для Linux</title>
+      <link>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/</guid>
+      <description>&lt;p&gt;Notepad ++ это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad ++. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad ++ так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad ++ для Linux.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Простой и минималистичный конфиг для Conky</title>
+      <link>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/</guid>
+      <description>&lt;p&gt;Подозреваю, что после установки ОС, почти каждый пользователь первым делом занимается персонализацией системы под себя. У абсолютного большинства людей все сводится к установке понравившихся обоев и замены цвета панелек. Я предлагаю пойти дальше, под катом краткий ман по установке Conky, а так же простой, но симпатичный конфиг для Conky.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conky Ubuntu - установка</title>
+      <link>http://localhost:1313/posts/conky-ubuntu-ustanovka/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/conky-ubuntu-ustanovka/</guid>
+      <description>&lt;p&gt;Наверняка многие пользователи ПК когда-нибудь задавались целью получения удобного доступа к системной информации своего компьютера. Это особенно актуально для владельцев портативной техники (ноутбуки), т.к. те зачастую могут сильно перегреваться. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elementary tweaks Freya - установка</title>
+      <link>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/</guid>
+      <description>&lt;p&gt;Даже самый удачный &amp;ldquo;минимализм&amp;rdquo; лучше настраивать &amp;ldquo;под себя&amp;rdquo;, давайте разберемся чем может помочь Elementary tweaks и как его установить. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IfTop мониторинг сети на Ubuntu Server</title>
+      <link>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/</guid>
+      <description>&lt;p&gt;Сразу оговорюсь, что эта консольная утилита работает не только под Ubuntu. Информация о использовании сетевого трафика выводится прямо в консоли.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

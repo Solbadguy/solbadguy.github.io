@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Удаление ненужных системных приложений (Android 4.1.2) | My Blog</title>
+<meta name="keywords" content="android">
+<meta name="description" content="Раз уж вы читаете эту статью, то наверное допускаете, что в вашем смартфоне, есть некоторое количество системных приложений, которыми вы точно не пользуетесь. Часть таких приложений просто занимает место в физической памяти телефона, часть из них на постоянной основе висит в автозагрузке занимая тем самым место в оперативной памяти телефона.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Удаление ненужных системных приложений (Android 4.1.2)
+    </h1>
+    <div class="post-meta"><span title='2016-02-02 00:00:00 +0000 UTC'>February 2, 2016</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Раз уж вы читаете эту статью, то наверное допускаете, что в вашем смартфоне, есть некоторое количество системных приложений, которыми вы точно не пользуетесь. Часть таких приложений просто занимает место в физической памяти телефона, часть из них на постоянной основе висит в автозагрузке занимая тем самым место в оперативной памяти телефона.</p>
+<blockquote>
+<p>Для удаления таких приложений нужен root, само собой вы делаете все на свой страх и риск. В названии не просто так указана версия ОС смартфона, в других версиях поведение системы после удаления таких приложений может отличаться.</p>
+</blockquote>
+<p>Для удобного удаления можно использовать любой файловый менеджер. Папка с системными приложениями находится по этому пути - &ldquo;system/app&rdquo;.</p>
+<p><strong>ApplicationsProvider.apk</strong>-- удалять нельзя (утилита отвечает за приложения на телефоне) <strong>BackupRestoreConfirmation.apk</strong>-- можно удалять (приблуда для гуглобекапа) бесполезна, ибо CWM рулит <strong>Bluetooth.apk-</strong>- не удалять (блютуз сервис на телефоне) <strong>Browser.apk</strong>-- можно удалять (корявый стандартный браузер, лучше установить вместо него дельфина или UC <strong>CABLService.apk</strong>-- не надо удалять (сервис подсветки) <strong>Calculator.apk</strong>-- можно удалять <strong>Calendar.apk</strong>-- стандартный гуглокалендарь можно удалить, но я лично пользуюсь, оставил <strong>CalendarProvider.apk-</strong>- синхронизация карендаря с гуглоучеткой можно удалять <strong>CalendarWiget.apk</strong>-- виджет календаря можно удалять <strong>CallRecorder.apk</strong>-- утилита записи звонков, если не используете, можно удалять <strong>CellBCSettings.apk</strong>-- можно удалять(настройки широковещательных сообщений оператора сети в России бесполезна) <strong>CellBroadcastReceiver.apk</strong>-- можно удалять (прием широковещательных сообщений оператора) <strong>CertInstaller.apk</strong>-- не удалять, установщик сертификатов <strong>Contacts.apk</strong>-- не удалять, список контактов <strong>ContactsProvider.apk</strong>-- не удалять, неодходима для работы контактов <strong>DataMonitor.apk</strong>-- что то связанное с передачей данных, я оставил (дополнение: это виджет, можно удалять) <strong>DefaultContainerService.apk</strong>-- не удалять, необходима для работы системы <strong>DeskClock.apk</strong>-- системные часы. Лучше не удалять (дополнение: при желании можно удалить, влияния на работу системы не окажет. Но я оставил) <strong>DeviceInfo.apk</strong>-- сервисная утилита, не удалять <strong>DownloadProvider.apk</strong>-- не удалять сервис загрузки(удалите, скачать ничего не получится) <strong>DownloadProviderUI.apk</strong>-- графический интерфейс загрузок можно удалить <strong>DRMProvider.apk</strong>-- не удалять (нужен для воспроизведения системных звуков) <strong>Email.apk</strong>-- можно удалять <strong>Exchange.apk</strong>-- не удалять. ( по сути мэйл клиент для эксчейнжа, но после того как удалил наблюдались серьезные проблемы в работе телефона) <strong>FaceLock.apk</strong>-- можно удалять (блокировка экрана на основе сканирования лица) <strong>FactoryKit.apk</strong>-- не удалять, сервисная утилита <strong>FastBoot.apk</strong>-- не удалять, сервисная утилита <strong>FileExplorer.apk</strong>-- можно удалять <strong>FM.apk-</strong>- если не слушаете радио, то можно удалять <strong>Gallery2.apk</strong>-- не удалять, даже если есть сторонняя программа для изображений- необходима для работы камеры <strong>GenieWiget.apk</strong>--можно удалять <strong>GoogleBackupTransport.apk</strong>-- гуглобекап, можно удалять <strong>GoogleCalendarSyncAdapter.apk</strong>-- синхронизация календаря, можно удалять <strong>GoogleContactsSyncAdapter.apk</strong>-- синхронизация контактов, лучше не удалять. Просто удобно <strong>GoogleFeedback.apk</strong>-- можно удалять (сервис репортов приложений) (дополнение: говорят может глючить маркет, но лично у меня всё ок) <strong>GoogleLoginService.apk</strong>-- не удалять нужна для работы гаппсов <strong>GooglePartnerSetup.apk</strong>-- можно удалять (передает данные об использовании устройства в Гугл <strong>GooglePlay.apk</strong>-- не удалять. Собственно маркет <strong>GooglePlayServices.apk</strong>-- удалять бессмысленно, она снова появляется)) утилита для гугл плей <strong>GoogleQuickSearchBox.apk</strong>-- строка поиска гугл. Можно удалять <strong>GoogleServicesFramework.apk</strong>- не удалять, нужна для работы системы <strong>GoogleTTS.apk</strong>-- перевод текста в голос. Можно удалять <strong>Hangouts.apk</strong>- гугломессенджер, можно удалять <strong>Home2.apk</strong>-- стандартный лончер, лучше оставить. (хотя если есть альтернативный, и он системный, то можно смело удалять) <strong>HTMLViewer.apk</strong>-- просмотрщик HTML документов, лучше не удалять <strong>InputDevices.apk</strong>-- служба ввода данных, не удалять <strong>KeyChain.apk</strong>-- служба ключей безопасности, думаю лучше оставить <strong>LatinME.apk</strong>-- стандартная гуглоклавиатура можно оставить, можо удалить. Я удалил. <strong>LEDFlashlight.apk</strong>-- виджет фонарика <strong>LunarService.apk</strong>-- что это- не знаю. Удалил. Последствий нет. <strong>MediaProvider.apk</strong>-- не удалять, нужен для работы системы <strong>Mms.apk-</strong>- сервис смс и ммс, не удалять <strong>Music.apk</strong>-- стандартный плеер, можно удалять, если есть другой <strong>MusicFX.apk</strong>-- стандартный эквалайзер, можно удалять,если есть другой (вайпер например) <strong>NetworkLocation.apk</strong>-- сервис определения местоположения но вышкам связи (AGPS) (я удалил, на нашем аппарате и так превосходый GPS, справляется и без помощников) <strong>OneTimeInitializer.apk</strong>-- не знаю, что это. Оставил <strong>PackageInstaller.apk</strong>-- сервис установки приложений, не удалять <strong>Phone.apk</strong>-- звонилка, не удалять <strong>PicoTTS.apk</strong>-- сервис текст в речь. Удаляем <strong>PrivInit.apk</strong>-- не знаю, что это. Оставил <strong>Protips.apk</strong>-- советы по управлению. Включаются при первом запуске. Можно удалять <strong>Provision.apk</strong>-- сервис по настройке телефона после перепрошивки (выбор языка и т.д.) Может повлиять на скачивание приложений с маркета. Лучше не удалять <strong>qrd_omadownload.apk</strong>--не знаю. Оставил <strong>QRDUpdate.apk</strong>-- не знаю. Оставил <strong>QuickSearchBox.apk</strong>- гуглопоиск, можно удалять <strong>RestoreAirplaneMode.apk</strong>-- что то связанное с режимом полета. Оставил <strong>Settings.apk</strong>-- настройки. Не удалять <strong>SettingsProvider.apk</strong>-- тоже не удалять <strong>SetupWizard.apk</strong>-- лучше не удалять <strong>SharedStorageBackup.apk</strong>-- тоже, что то связано с гуглобекапом. Удалил Далее по списку ничего удалять не стоит, кроме: <strong>STK.apk</strong>, <strong>SoundRecorder.apk</strong>, <strong>VideoEditor.apk</strong>, <strong>VoiceDialer.apk</strong>, <strong>VoiceSearchStub.apk</strong>, VpnDialogs.apk в зависимости от того, пользуетесь вы этим или нет.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Как создать резервную копию прошивки телефона?</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Простой и минималистичный конфиг для Conky</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

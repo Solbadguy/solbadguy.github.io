@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Openmediavault on My Blog</title>
+    <link>http://localhost:1313/tags/openmediavault/</link>
+    <description>Recent content in Openmediavault on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/openmediavault/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenMediaVault WebGui login not working</title>
+      <link>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openmediavault-webgui-login-not-working/</guid>
+      <description>&lt;p&gt;OpenMediaVault - это отличная система для управления хранением файлов, которая работает по принципу &amp;ldquo;настроил и забыл&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Совсем недавно потребовалось попасть в веб-интерфейс управления такой системы, НО учетные данные для входа система принимать отказалась. Ниже возможные решения.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

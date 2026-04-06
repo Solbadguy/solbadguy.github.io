@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64 | My Blog</title>
+<meta name="keywords" content="linux">
+<meta name="description" content="Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64
+    </h1>
+    <div class="post-meta"><span title='2015-09-30 00:00:00 +0000 UTC'>September 30, 2015</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.</p>
+<p><strong>Увеличиваем максимальный размер сегмента памяти до 4Гб (Обычно половина объема ОЗУ):</strong></p>
+<pre tabindex="0"><code>#echo &#34;kernel.shmmax=1073741824&#34; &gt;&gt;/etc/sysctl.conf
+#sysctl -p
+</code></pre><p><strong>Генерируем необходимые локали и задаем переменную среды LANG, для работы скрипта инициализации БД.</strong></p>
+<pre tabindex="0"><code>#locale-gen en_US ru_RU ru_RU.UTF-8
+#export LANG=&#34;ru_RU.UTF-8&#34;
+</code></pre><p><strong>Устанавливаем необходимые зависимости:</strong></p>
+<pre tabindex="0"><code>#apt-get install libssl0.9.8 libossp-uuid16 libxslt1.1 libicu52 libt1-5 t1utils imagemagick ttf-mscorefonts-installer unixodbc texlive-base libgfs-1.3-2
+</code></pre><p><strong>Качаем с сайта 1C необходимые пакеты Postgre 9.2.4 и устанавливаем их именно в такой последовательности:</strong></p>
+<pre tabindex="0"><code>#dpkg -i libpq5_9.2.4-1.1C_amd64.deb
+#wget http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-common/postgresql-client-common_154_all.deb
+#dpkg -i postgresql-client-common_154_all.deb
+#dpkg -i postgresql-client-9.2_9.2.4-1.1C_amd64.deb
+#wget http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-common/postgresql-common_154_all.deb
+#dpkg -i postgresql-common_154_all.deb
+</code></pre><p><strong>Пересобираем</strong> <strong>contrib:</strong></p>
+<pre tabindex="0"><code>#dpkg -x postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb tmpdir
+#dpkg -e postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb tmpdir/DEBIAN
+#mcedit ./tmpdir/DEBIAN/control
+ищем строку libicu46 (&gt;= 1.4.6) и меняем ее на libicu52 (&gt;= 1.4.6)
+сохраняем изменения
+#rm postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb
+#dpkg -b tmpdir postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb
+#dpkg -i postgresql-contrib-9.2_9.2.4-1.1C_amd64.deb
+#dpkg -i postgresql-9.2_9.2.4-1.1C_amd64.deb
+</code></pre><p><strong>Проверяем, запущен ли сервер:</strong></p>
+<pre tabindex="0"><code>#service postgresql status
+Выхлоп:
+9.2/main (port 5433): online
+</code></pre><p><strong>Создаем директорию для хранения баз банных 1С:</strong></p>
+<pre tabindex="0"><code>#mkdir /mnt/1с/db/
+#chown postgres:postgres -R /mnt/1c/db
+</code></pre><p><strong>Инициализируем БД и создаем администратора БД:</strong></p>
+<pre tabindex="0"><code>#su postgres
+$/usr/lib/postgresql/9.2/bin/initdb -D /mnt/1c/db --locale=ru_RU.UTF-8
+$psql -U postgres -c &#34;alter user postgres with password &#39;наш_пароль&#39;;&#34;
+</code></pre><p><strong>Правим конфиг для корректной авторизации администратора БД (/mnt/1c/db/pg_hba.conf).</strong> <em>Меняем</em>:</p>
+<pre tabindex="0"><code># IPv4 local connections:
+host all all 127.0.0.1/32 ident
+# IPv6 local connections:
+host all all ::1/128 ident
+</code></pre><p><em>На</em>:</p>
+<pre tabindex="0"><code># IPv4 local connections:
+host all all 127.0.0.1/32 md5
+# IPv6 local connections:
+host all all ::1/128 md5
+</code></pre><p><strong>Перезапускаем PostgreSQL:</strong></p>
+<pre tabindex="0"><code>#service postgresql restart
+</code></pre><p><strong>Проверяем:</strong></p>
+<pre tabindex="0"><code>#netstat -atn|grep 5432
+выхлоп:
+tcp 0 0 0.0.0.0:5432 0.0.0.0:* LISTEN
+значит все гуд
+</code></pre><p><strong>На этом этапе установка PostgreSQL завершена.</strong></p>
+<hr>
+<h2 id="устанавливаем-сервер-1с">Устанавливаем сервер 1С<a hidden class="anchor" aria-hidden="true" href="#устанавливаем-сервер-1с">#</a></h2>
+<p><strong>Создаем симлинк:</strong></p>
+<pre tabindex="0"><code>#ln -s /usr/lib/x86_64-linux-gnu/libMagickWand.so.5 /usr/lib/x86_64-linux-gnu/libMagickWand.so
+</code></pre><p><strong>Ставим все необходимые пакеты:</strong></p>
+<pre tabindex="0"><code>#dpkg -i 1c-enterprise83-common_8.3.4-476_amd64.deb
+1c-enterprise83-server_8.3.4-476_amd64.deb
+1c-enterprise83-ws_8.3.4-476_amd64.deb
+1c-enterprise83-common-nls_8.3.4-476_amd64.deb
+1c-enterprise83-server-nls_8.3.4-476_amd64.deb
+1c-enterprise83-ws-nls_8.3.4-476_amd64.deb
+#wget http://old-releases.ubuntu.com/ubuntu/pool/universe/t/ttf2pt1/ttf2pt1_3.4.4-1.4_amd64.deb
+#dpkg -i ttf2pt1_3.4.4-1.4_amd64.deb
+</code></pre><p><strong>Разрешаем запись:</strong></p>
+<pre tabindex="0"><code>#chown -R usr1cv8:grp1cv8 /opt/1C
+</code></pre><p><strong>Перезапускаем сервер 1с:</strong></p>
+<pre tabindex="0"><code>#service srv1cv83 restart
+</code></pre><p><strong>Проверяем порты:</strong></p>
+<pre tabindex="0"><code>#netstat -atn |grep 0.0.0.0:15
+
+tcp 0 0 0.0.0.0:1560 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:1540 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:1541 0.0.0.0:* LISTEN
+</code></pre><p><strong>Так же можно для профилактики проверить, все ли процессы сервера запущены:</strong></p>
+<pre tabindex="0"><code>#ps aux|grep 1c
+
+usr1cv8 28351 0.0 1.1 264284 22664 ? Ssl 10:01 0:00 /opt/1C/v8.3/x86_64/ragent -daemon
+usr1cv8 28354 0.3 2.0 776216 41956 ? Sl 10:01 0:00 /opt/1C/v8.3/x86_64/rmngr -port 1541 -host test -range 1560:1591
+usr1cv8 28378 0.1 1.6 323900 34076 ? Sl 10:01 0:00 /opt/1C/v8.3/x86_64/rphost -range 1560:1591 -reghost test -regport 1541 -pid f10fbd88-c9eb-11e3-0599-40618600e473
+root 28439 0.0 0.0 13472 892 pts/2 S+ 10:03 0:00 grep --color=auto 1c
+</code></pre><p><strong>Установка Sentinel HASP USB:</strong></p>
+<pre tabindex="0"><code>#wget ftp://ftp.cis-app.com/pub/hasp/Sentinel_HASP/Runtime_(Drivers)/6.62/Sentinel_LDK_Ubuntu_DEB_Run-time_Installer.tar.gz
+#dpkg --add-architecture i386
+#apt-get update
+#apt-get install libc6:i386
+#dpkg -i aksusbd_2.2-1_i386.deb
+#/etc/init.d/aksusbd restart
+</code></pre><p><strong>Тушим сервер. Вставляем ключи USB. Запускаем сервер.</strong></p>
+<pre tabindex="0"><code>#service aksusbd status
+
+AKSUSB is running.
+WINEHASP is running.
+HASPLM is running.
+</code></pre><p><strong>На этом этапе всё готово для создания БД из под оснастки Windows &ldquo;Администрирование серверов предприятия&rdquo;!!!!!!!!!!!!!!!!!!!</strong></p>
+<hr>
+<h3 id="возможные-ошибки">Возможные ошибки:<a hidden class="anchor" aria-hidden="true" href="#возможные-ошибки">#</a></h3>
+<p><strong><em>&ldquo;Ошибка СУБД: ERROR: type &ldquo;mvarchar&rdquo; does not exist at character 31&rdquo;</em></strong></p>
+<p>Означает что база данных была создана не из оснастки 1с. Необходимо удалить БД и создать ее из оснастки. ______________________________________________________________________</p>
+<p><strong>1С Предприятие</strong> <strong><em>Ошибка СУБД:</em></strong> <strong><em>ERROR: invalid byte sequence for encoding &ldquo;UTF8&rdquo;: 0x01 (0x01 это для примера, адреса бывают разные)</em></strong></p>
+<p>Невосстановимая ошибка приводящая к вылету клиента Наблюдается на платформе 1C 8.3.4 и 8.3.5 Редко на УТ 10, и часто на УТ 11</p>
+<p>Лекарство: Установить значение параметра standard_conforming_strings в конфиге postgresql.conf в значение &lsquo;off&rsquo; Параметр лучше поправить как для БД, так и в глобальных настройках. ______________________________________________________________________</p>
+<p><strong><em>Ошибка при получении характеристик</em></strong> <strong><em>по причине:</em></strong> <strong><em>{(1, 31)}: Поле не найдено &ldquo;Свойство.Presentation&rdquo;</em></strong> <strong><em>SELECT &laquo;?&raquo;</em></strong></p>
+<p>Означает, что не хватает прав на справочники &ldquo;ЗначенияСвойствОбъектов&rdquo;, &ldquo;ЗначенияСвойствОбъектовИерархия&rdquo; и план видов характеристик &ldquo;ДополнительныеРеквизитыИСведения&rdquo;. Соответственно лечится установкой прав на эти объектов хотя бы на &ldquo;чтение/просмотр&rdquo; ______________________________________________________________________</p>
+<h3 id="улучшаем-работу-сервера-1с-предприятие-835">Улучшаем работу сервера 1С предприятие 8.3.5<a hidden class="anchor" aria-hidden="true" href="#улучшаем-работу-сервера-1с-предприятие-835">#</a></h3>
+<p>Через оснастку администрирования серверов 1с для конкретной БД выставляем свойства:</p>
+<p><em>Количество ИБ на процесс = 1</em> <em>Количество соединений на процесс = 10</em></p>
+<p>Это даёт нам автоматическую балансировку нагрузки по рабочим процессам. Сервер сам создаёт нужное количество рабочих процессов согласно указанным параметрам и также автоматически закрывает неиспользуемые рабочие процессы. Тем самым мы обеспечили не только балансировку, но и ротацию (перезагрузку) рабочих процессов с целью защиты от «пожирания памяти».</p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2015/09/serv1c835.jpg"><img alt="1С предприятие 8.3.5 утилита" loading="lazy" src="/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/images/serv1c835-300x193.jpg"></a></p>
+<p>за текст выражайте благодарности этому ростовскому <a href="https://www.blogger.com/profile/17029131705967099468">парню</a>.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Замена диска в программном Raid 1. Ubuntu Server 14.04</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Монтирование дисков Linux и fstab</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

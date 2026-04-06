@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04 | My Blog</title>
+<meta name="keywords" content="zabbix-proxy, zabbix-proksi">
+<meta name="description" content="В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04
+    </h1>
+    <div class="post-meta"><span title='2020-07-01 00:00:00 +0000 UTC'>July 1, 2020</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.</p>
+<p><strong>Zabbix proxy</strong>  - это сервис, который собирант данные о производительности и доступности конечных устройств, а затем  передает их Zabbix-серверу.</p>
+<p>Как правило он используется для мониторинга инфраструктуры, которая находится за брандмауэром, либо для разгрузки Zabbix-сервера в больших средах.</p>
+<hr>
+<p>А теперь мы установим последнюю версию 5.0 прокси-сервера Zabbix в Ubuntu (20.04, 18.04)</p>
+<hr>
+<h2 id="шаг-1-установка-zabbix-proxy-в-ubuntu"><strong>Шаг 1: Установка Zabbix Proxy в Ubuntu</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-1-установка-zabbix-proxy-в-ubuntu">#</a></h2>
+<p>Для установки прокси мной была заранее подготовлена чистая вирт, на которой я и буду выполнять настройку этого сервиса.</p>
+<pre tabindex="0"><code>sudo wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+$(lsb_release -sc)_all.deb
+sudo dpkg -i zabbix-release_5.0-1+$(lsb_release -sc)_all.deb
+sudo apt update
+sudo apt -y install zabbix-proxy-mysql
+</code></pre><hr>
+<h2 id="шаг-2-настройка-базы-данных"><strong>Шаг 2. Настройка базы данных</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-2-настройка-базы-данных">#</a></h2>
+<p>Для примера я буду использовать пароль rootDBpass  в качестве пароля root-пользователя базы данных и zabbixDBpass  в качестве пароля базы данных Zabbix. Из соображений безопасности обязательно меняйте его на свой.</p>
+<p><strong>2.1 Настройка Mysql</strong></p>
+<pre tabindex="0"><code>sudo mysql_secure_installation
+
+Enter current password for root (enter for none): Press the Enter
+Set root password? [Y/n]: Y
+New password: &lt;Enter root DB password&gt;
+Re-enter new password: &lt;Repeat root DB password&gt;
+Remove anonymous users? [Y/n]: Y
+Disallow root login remotely? [Y/n]: Y
+Remove test database and access to it? [Y/n]:  Y
+Reload privilege tables now? [Y/n]:  Y
+</code></pre><p><strong>2.2 Создание БД</strong></p>
+<pre tabindex="0"><code>sudo mysql -uroot -p&#39;rootDBpass&#39;
+mysql&gt; create database zabbix_proxy character set utf8 collate utf8_bin;
+mysql&gt; grant all privileges on zabbix_proxy.* to zabbix@localhost identified by &#39;zabbixDBpass&#39;;
+mysql&gt; quit;
+</code></pre><p><strong>3.1 Импорт схемы БД</strong></p>
+<pre tabindex="0"><code>zcat /usr/share/doc/zabbix-proxy-mysql*/schema.sql.gz |  mysql -uzabbix -p&#39;zabbixDBpass&#39; zabbix_proxy
+</code></pre><hr>
+<h2 id="шаг-3-настройка-прокси"><strong>Шаг 3: Настройка прокси</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-3-настройка-прокси">#</a></h2>
+<p>В рамках этой статья я назову свой прокси <em><strong>Zproxy</strong></em> и настрою его для связи с Zabbix-сервером по адресу <em><strong>192.168.0.3</strong></em>  -  измените эти значения  в соответствии с вашей средой.</p>
+<p>Сколпируйте, а затем откройте файл <code>zabbix_proxy.conf</code>с помощью команды:</p>
+<pre tabindex="0"><code>sudo cp /etc/zabbix/zabbix_proxy.conf /etc/zabbix/zabbix_proxy.conf_bk
+sudo nano /etc/zabbix/zabbix_proxy.conf
+</code></pre><p>теперь нам надо исправить некоторые значения:</p>
+<pre tabindex="0"><code>Server=192.168.0.3
+Hostname=Zproxy
+DBName=zabbix_proxy
+DBUser=zabbix
+</code></pre><p>Сохраните изменения.</p>
+<hr>
+<h2 id="шаг-4-запустите-и-включите-прокси-сервис"><strong>Шаг 4. Запустите и включите прокси-сервис</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-4-запустите-и-включите-прокси-сервис">#</a></h2>
+<p>Перезапустим службу и включим автозапуск при загрузке ОС:</p>
+<pre tabindex="0"><code>sudo systemctl restart zabbix-proxy
+sudo systemctl enable zabbix-proxy
+</code></pre><hr>
+<h2 id="шаг-5-зарегистрируйте-прокси-сервер-в-веб-интерфейсе-zabbix"><strong>Шаг 5: Зарегистрируйте прокси-сервер в веб-интерфейсе Zabbix</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-5-зарегистрируйте-прокси-сервер-в-веб-интерфейсе-zabbix">#</a></h2>
+<p>Теперь, когда ваш прокси-сервер работает, вам необходимо зарегистрировать его в веб-интерфейсе Zabbix.</p>
+<p>Для этого перейдем по пути:</p>
+<p><em>Администрирование -&gt; Прокси-&gt; Создать прокси , где укажем следующее:</em></p>
+<ul>
+<li>Имя - Zproxy</li>
+<li>Режим - Активный</li>
+</ul>
+<p>Обратите внимание, что для работы прокси в активном режиме « <em>Имя прокси»</em> должно совпадать с параметром « <em>hostname</em> » в <code>zabbix_proxy.conf</code>.</p>
+<hr>
+<h2 id="шаг-6-настройте-хосты-в-zabbix-для-мониторинга-через-прокси"><strong>Шаг 6: Настройте хосты в Zabbix для мониторинга через прокси</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-6-настройте-хосты-в-zabbix-для-мониторинга-через-прокси">#</a></h2>
+<p>На данный момент наш прокси работает, но он не передает никаких данных, т.к. мы не еще не создали ни одного узла сети, который бы работал через него.</p>
+<p>В настройке узла нет ничего сложного, отмечу лишь, что адреса клиентов должны быть &ldquo;локальными&rdquo;, т.е. находмться в той же сети что и сам прокси.</p>
+<p>По окончании настройки не забудьте выбрать наш новенький прокси в одноименном пункте настроек.</p>
+<hr>
+<h2 id="шаг-7-настройка-шифрования-psk-на-прокси-необязательно"><strong>Шаг 7. Настройка шифрования PSK на прокси (необязательно)</strong><a hidden class="anchor" aria-hidden="true" href="#шаг-7-настройка-шифрования-psk-на-прокси-необязательно">#</a></h2>
+<p>Zabbix поддерживает зашифрованные соединения между сервером Zabbix и прокси-сервером, используя протокол TLS (vLS). Вы можете использовать шифрование на основании сертификатов или ключей (PSK). В этом руководстве мы настроим последнее.</p>
+<p><strong>7.1. Создадим PSK ключ</strong></p>
+<pre tabindex="0"><code>openssl rand -hex 32 
+ 382eb0sadasdc207cc4980cdb1bb181asdasd82b7fddcda00281311a8fb955
+</code></pre><p>полученный ключ - <em>382eb0sadasdc207cc4980cdb1bb181asdasd82b7fddcda00281311a8fb955</em></p>
+<p>Создайте и откройте файл <code>zabbix_proxy.psk:</code></p>
+<pre tabindex="0"><code>sudo nano /etc/zabbix/zabbix_proxy.psk
+</code></pre><p>скопируйте в него только что созданный ключ.</p>
+<p>Изменим права:</p>
+<pre tabindex="0"><code>sudo chown zabbix: zabbix /etc/zabbix/zabbix_proxy.psk 
+sudo chmod 644 /etc/zabbix/zabbix_proxy.psk
+</code></pre><p><strong>7.2. Настроим прокси для работы через PSK</strong></p>
+<p>Откроем файл конф.:</p>
+<pre tabindex="0"><code>sudo nano /etc/zabbix/zabbix_proxy.conf
+</code></pre><p>Добавим строчки:</p>
+<pre tabindex="0"><code>TLSConnect = psk 
+TLSAccept = psk 
+TLSPSKFile = /etc/zabbix/zabbix_proxy.psk 
+TLSPSKIdentity = zproxy_psk
+</code></pre><p>Перезапустим прокси:</p>
+<pre tabindex="0"><code>sudo systemctl restart zabbix-proxy
+</code></pre><p><strong>7.3. Включим шифрование на Zabbix-сервере</strong></p>
+<p>Связь между прокси и Zabbix-сервером еще не зашифрована, потому что мы включили шифрование PSK на стороне прокси, но не на стороне сервера.</p>
+<p>Нам нужно включить шифрование на стороне сервера, поэтому зайдите в веб-интерфейс и выберите свой прокси, а затем выберите параметр Шифрование, где:</p>
+<ul>
+<li>Установите тип PSK</li>
+<li>Скопируйте имя</li>
+<li>Скопируйте ключ</li>
+</ul>
+<hr>
+<p>На этом настройку Zappix-proxy можно считать оконченной.</p>
+<p>Напомню лишь, что его логи можно отслеживать командой:</p>
+<pre tabindex="0"><code>tail -500 /var/log/zabbix/zabbix_proxy.log
+</code></pre><p>а так же помните, что Zabbix-прокси использует порт <strong>10051</strong> для связи с Zabbix-сервером, поэтому убедитесь, что вы разрешаете тсходящий трафик на этом порту.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/zabbix-proxy/">Zabbix-Proxy</a></li>
+      <li><a href="http://localhost:1313/tags/zabbix-proksi/">Zabbix-Proksi</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Настраиваем отправку почты с сервера через пакет SSMTP</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Supervisor. Настраиваем перезапуск программы.</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

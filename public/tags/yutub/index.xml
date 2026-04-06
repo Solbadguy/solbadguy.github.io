@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Yutub on My Blog</title>
+    <link>http://localhost:1313/tags/yutub/</link>
+    <description>Recent content in Yutub on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/yutub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>На Ютубе появится платная подписка.</title>
+      <link>http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/</guid>
+      <description>&lt;p&gt;В скором будущем на популярнейшем видеопортале YouTube появится платная подписка.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

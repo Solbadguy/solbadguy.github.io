@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x | My Blog</title>
+<meta name="keywords" content="android, fastboot, root, twrp, windows">
+<meta name="description" content=" 
+Данная инструкция к действию пригодится в первую очередь тем, кто по каким-либо причинам не хочет пользоваться кастомными прошивками от известных ромоделов (Xiaomi.eu, multirom и прочих). Данный способ позволит установить TWRP на разблокированный загрузчик телефона, а так же получить рут-права.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/obo-mne/" title="Обо мне">
+                    <span>Обо мне</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Посты">
+                    <span>Посты</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x
+    </h1>
+    <div class="post-meta"><span title='2016-10-20 00:00:00 +0000 UTC'>October 20, 2016</span>&nbsp;·&nbsp;<span>2 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p> </p>
+<p>Данная инструкция к действию пригодится в первую очередь тем, кто по каким-либо причинам не хочет пользоваться кастомными прошивками от известных ромоделов (Xiaomi.eu, multirom и прочих). Данный способ позволит установить TWRP на разблокированный загрузчик телефона, а так же получить рут-права.</p>
+<p>В статье будет рассмотрена Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x используя ПК под управлением Ubuntu и Windows. Все действия аналогичны и для других устройств, <em>мануал можно считать универсальным, за исключением архивов с TWRP, которые подойдут только для Redmi 3 /Redmi 3s/ Redmi 3x.</em></p>
+<hr>
+<p><strong>Все дальнейшие действия подразумевают, что вы выполнили следующее</strong>:</p>
+<ol>
+<li>Разблокировали bootloader официальным способом (MiFlashUnlock);</li>
+<li>Скачали архив с TWRP -</li>
+</ol>
+<ul>
+<li><a href="/upload/TWRP_ido.zip">скачать TWRP для Redmi 3</a></li>
+<li><a href="/upload/TWRP_redmi3sx.zip">скачать TWRP для Redmi 3s</a></li>
+<li><a href="/upload/TWRP_redmi3sx.zip">скачать TWRP для Redmi 3x</a></li>
+</ul>
+<hr>
+<h2 id="установка-twrp-на-глобальной-прошивке-xiaomi-redmi-3redmi-3sredmi-3x">Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x<a hidden class="anchor" aria-hidden="true" href="#установка-twrp-на-глобальной-прошивке-xiaomi-redmi-3redmi-3sredmi-3x">#</a></h2>
+<hr>
+<h3 id="осwindows"><strong>ОС Windows</strong><a hidden class="anchor" aria-hidden="true" href="#осwindows">#</a></h3>
+<p><strong>Установка</strong>:</p>
+<ol>
+<li><strong>Скачаем софт, необходимый для работы со смартфоном</strong> - <a href="/upload/minimal_adb_fastboot_v1.4_setup.exe">скачать minimal_adb_fastboot</a>;</li>
+<li><strong>Установим adb по адресу</strong> - C:/adb (пусть может быть любым, но так проще);</li>
+<li><strong>Распакуем содержимое архива с TWRP по адресу</strong> - C:/adb ;</li>
+<li><strong>Выключим устройство</strong>;</li>
+<li><strong>Переводим смартфон в режим fastboot</strong> - для этого нужно зажмать кнопку включения и громкость минус, после вибрации отпустить кнопку включения.</li>
+<li><strong>На экране должен появиться заяц в шапке</strong>;</li>
+<li><strong>В папке с распакованными файлами ищем файл</strong> - flash_twrp_redmi3sx.bat (flash_twrp_ido_protect.bat для Redmi3);</li>
+<li><strong>Запускаем его</strong> (желательно сделать это от имени администратора, во избежание проблем).</li>
+<li><strong>В случае успешной установки TWRP запустится сам</strong>.</li>
+</ol>
+<hr>
+<h3 id="ос-ubuntu-linux">ОС Ubuntu (Linux)<a hidden class="anchor" aria-hidden="true" href="#ос-ubuntu-linux">#</a></h3>
+<p><strong>Установка</strong>:</p>
+<p><strong>1</strong>. <strong>Установим необходимые утилиты:</strong></p>
+<pre tabindex="0"><code>sudo apt-get install android-tools-adb android-tools-fastboot
+</code></pre><p><strong>2. Переводим выключенное устройство в режим fastboot;</strong></p>
+<p><strong>3.</strong> <strong>Проверим видит ли ПК ваш смартфон:</strong></p>
+<pre tabindex="0"><code>sudo fastboot devices
+</code></pre><p>В результате терминал должен будет показать что-то подобное (это значит что убунту видит смартфон):</p>
+<pre tabindex="0"><code>1904bd21 fastboot
+</code></pre><p><strong>4. Переходим в папку с TWRP</strong>:</p>
+<pre tabindex="0"><code>cd ~/redmi3/twrp/
+</code></pre><p><strong>5. Поочередно вводим следующие команды:</strong></p>
+<pre tabindex="0"><code>sudo fastboot erase recovery
+
+sudo fastboot flash recovery twrp_redmi3sx.img
+
+sudo fastboot boot twrp_redmi3sx.img
+</code></pre><p>В случае успешной установки терминал ответит &ldquo;ОКAY&rdquo; на все введенные команды.  TWRP должен открыться сам.</p>
+<p><em><strong>Для получения рут-прав достаточно скачать архив с <a href="/upload/superSU-2.76.zip">superSU</a> и установить его через TWRP.</strong></em></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/android/">Android</a></li>
+      <li><a href="http://localhost:1313/tags/fastboot/">Fastboot</a></li>
+      <li><a href="http://localhost:1313/tags/root/">Root</a></li>
+      <li><a href="http://localhost:1313/tags/twrp/">Twrp</a></li>
+      <li><a href="http://localhost:1313/tags/windows/">Windows</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Полное удаление cервисов Google Play с вашего смартфона</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Прошивка сматфонов Xiaomi в Ubuntu</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

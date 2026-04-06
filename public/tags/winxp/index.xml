@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Winxp on My Blog</title>
+    <link>http://localhost:1313/tags/winxp/</link>
+    <description>Recent content in Winxp on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/winxp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Создание загрузочной флешки с Windows XP</title>
+      <link>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/</guid>
+      <description>&lt;p&gt;DirectGRUB - это мелкая утилита, которая позволит создавать загрузочные флешки с Win XP за пять минут.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

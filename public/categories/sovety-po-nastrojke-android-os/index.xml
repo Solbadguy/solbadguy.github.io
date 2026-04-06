@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sovety-Po-Nastrojke-Android-Os on My Blog</title>
+    <link>http://localhost:1313/categories/sovety-po-nastrojke-android-os/</link>
+    <description>Recent content in Sovety-Po-Nastrojke-Android-Os on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/sovety-po-nastrojke-android-os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр.</title>
+      <link>http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/</link>
+      <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/</guid>
+      <description>&lt;p&gt;Этот мануал можно считать уневерсальным, т.к. вероятнее всего он будет работать и на других смарфонах Xiaomi. Для всех манипуляций, которые требуеют наличия ПК, мной был использован ноутбук под управлением &lt;strong&gt;Debian 9 Stretch&lt;/strong&gt;. Установка производилась на Xiaomi Redmi 3s. При желании мануал можно адаптировать  Мануал адаптирован и для ОС семейства Windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;О том, как установить TWRP на постоянной основе читайте в этой&lt;/strong&gt; &lt;a href=&#34;http://admin.netlab-kursk.ru/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/&#34;&gt;&lt;em&gt;&lt;strong&gt;статье&lt;/strong&gt;&lt;/em&gt;.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Полное удаление cервисов Google Play с вашего смартфона</title>
+      <link>http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/</guid>
+      <description>&lt;p&gt;Радикальный метод удаления всех сервисов и программ, которые имеют отношение к Google. Если предустановленный производителем софт вам не нужен, то этот способ правильный выбор.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Прошивка сматфонов Xiaomi в Ubuntu</title>
+      <link>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</link>
+      <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/</guid>
+      <description>&lt;p&gt;Среди владельцев сматфонов Xiaomi и пользователей *buntu, есть много тех, кто не знает о том, что их девайс можно прошить прямо из консоли, ни какие программы на вроде Miflash при этом не понадобятся. Автор статьи, описывая действия, предварительно скачал архив с прошивкой рассчитанной для установки из MiFlash. Материал в первую очередь написан для тех, кто не работает под Windows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как отключить службы Google/Xiaomi в прошивках MIUI</title>
+      <link>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</link>
+      <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/</guid>
+      <description>&lt;p&gt;Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Оптимизация системной памяти Android</title>
+      <link>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</link>
+      <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/</guid>
+      <description>&lt;p&gt;По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как удалить рут права? - Полное удаление root прав SuperSU</title>
+      <link>http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/</guid>
+      <description>&lt;p&gt;Рут права на смартфоне позволяют владельцу сделать свою жизнь намного проще, возможностей, которые он предоставляет много (напр. &lt;a href=&#34;http://admin.netlab-kursk.ru/android-udalyaem-reklamu-iz-prilozhenij/&#34;&gt;удаление рекламы&lt;/a&gt;). Однако сейчас я хочу рассказать о том как их полностью их удалить, возможно это понадобится пользователям &lt;a href=&#34;https://play.google.com/store/apps/details?id=ru.sberbankmobile&amp;amp;hl=ru&#34;&gt;сбербанка&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?</title>
+      <link>http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</link>
+      <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/</guid>
+      <description>&lt;p&gt;Как вы знаете с недавнего времени смартфоны от Xiaomi продаются с заблокированным загрузчиком, о причинах говорить не буду, лучше давайте узнаем как проверить статус бутлоадера в Linux-подобных ОС.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MIUI 7, фото звонящего не отображается</title>
+      <link>http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</link>
+      <pubDate>Fri, 24 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/</guid>
+      <description>&lt;p&gt;Многие владельцы смартфонов под управлением MIUI 7 сталкиваются с проблемой, когда фотографии присвоенные контактам не отображаются при входящем звонке. Решение проблемы очень простое, подробности ниже.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android - Удаляем рекламу из приложений</title>
+      <link>http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/</guid>
+      <description>&lt;p&gt;Root-доступ на android-смартфоне дает каждому пользователю практически неограниченные возможности по его настройке. В статье пойдет речь об одном из самых популярных методов его настройки &amp;ldquo;под себя&amp;rdquo; - удаление рекламы из приложений.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Настройка MIUI 7, оптимизация энергопотребления.</title>
+      <link>http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/</guid>
+      <description>&lt;p&gt;Инструкция в первую очередь направлена не на отключение и выпиливание сервисов от Xiaomi\Google, а на повседневное использование телефона в качестве основного девайса со всеми его прелестями и недостатками. Отключение тех приложений, которые будут в инструкции указаны, не несет никаких последствий в нормальной работе устройства, а всего лишь дает возможность избавиться от назойливых сервисов, которые постоянно пытаются отправить логи и отчеты об ошибках (отчеты об использовании устройства), а также предоставляют выбор пользователю &lt;strong&gt;&amp;ldquo;отключать&amp;rdquo;&lt;/strong&gt; или &lt;strong&gt;&amp;ldquo;не отключать&amp;rdquo;&lt;/strong&gt; данные сервисы и их приложения.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Настройка MIUI 7: удаляем системные приложения</title>
+      <link>http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/</guid>
+      <description>&lt;p&gt;Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Удаление ненужных системных приложений (Android 4.1.2)</title>
+      <link>http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/</guid>
+      <description>&lt;p&gt;Раз уж вы читаете эту статью, то наверное допускаете, что в вашем смартфоне, есть некоторое количество системных приложений, которыми вы точно не пользуетесь. Часть таких приложений просто занимает место в физической памяти телефона, часть из них на постоянной основе висит в автозагрузке занимая тем самым место в оперативной памяти телефона.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Оптимизируем свой смартфон на Android</title>
+      <link>http://localhost:1313/posts/optimiziruem-svoj-smartfon-na-android/</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/optimiziruem-svoj-smartfon-na-android/</guid>
+      <description>&lt;p&gt;Несколько простых советов о том, как научить свой смартфон жить дольше, заставив его при этом экономнее относится к заряду батареи.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Отключаем службы Android для сохранения заряда батареи</title>
+      <link>http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/</link>
+      <pubDate>Mon, 25 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/</guid>
+      <description>&lt;p&gt;Эта статья не претендует на уникальность, однако советы представленные в ней действительно могут помочь заставить телефон жить на аккумуляторе немного дольше.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

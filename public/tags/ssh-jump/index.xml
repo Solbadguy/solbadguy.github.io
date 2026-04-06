@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ssh-Jump on My Blog</title>
+    <link>http://localhost:1313/tags/ssh-jump/</link>
+    <description>Recent content in Ssh-Jump on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ssh-jump/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH-Jump. Настройка.</title>
+      <link>http://localhost:1313/posts/ssh-jump-nastrojka/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh-jump-nastrojka/</guid>
+      <description>&lt;p&gt;В свое время открыл для себя такую вещь как &lt;a href=&#34;https://wiki.gentoo.org/wiki/SSH_jump_host&#34;&gt;SSH-Jump&lt;/a&gt;, с тех пор пользуюсь ей ежедневно. Сегодня подобные &amp;ldquo;прыжки&amp;rdquo; пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
