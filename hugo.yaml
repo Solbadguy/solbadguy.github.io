@@ -1,6 +1,7 @@
-baseURL: "https://example.com/"
+baseURL = "https://solbadguy.github.io/"
 locale: "ru"
-title: "engineer@blog:~$"
+defaultContentLanguage = "ru"
+title: "admin46@blog:~$"
 theme: "terminal"
 paginate: 10
 
@@ -10,11 +11,18 @@ pygmentsCodeFences: true
 pygmentsUseClasses: true
 
 params:
-  author: "Linux Engineer"
+  env = "production"                 # включает SEO-режим
+  disableAnalytics = true            # отключает google_analytics.html
+  author: "admin46"
   description: "Заметки из /var/log жизни Linux-инженера"
   hostname: "blog"
   username: "engineer"
   prompt: "~$"
+  # SEO
+  keywords = ["блог", "linux", "it", "администрирование", "devops"]
+  description = "Личный блог admin46 — заметки по Linux, DevOps, сетям и инфраструктуре."
+  # OpenGraph / Twitter
+  images = ["images/og-image.png"]
 
 menu:
   main:
