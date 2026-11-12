@@ -11,17 +11,12 @@ pygmentsCodeFences: true
 pygmentsUseClasses: true
 
 params:
-  env: "production"                 # включает SEO-режим
-  disableAnalytics: true            # отключает google_analytics.html
   author: "admin46"
-  description: "Заметки из /var/log жизни Linux-инженера"
   hostname: "blog"
-  username: "engineer"
+  username: "admin46"
   prompt: "~$"
-  # SEO
-  keywords: ["блог", "linux", "it", "администрирование", "devops"]
   description: "Личный блог admin46 — заметки по Linux, DevOps, сетям и инфраструктуре."
-  # OpenGraph / Twitter
+  keywords: ["блог", "linux", "it", "администрирование", "devops"]
   images: ["images/og-image.png"]
 
 menu:
