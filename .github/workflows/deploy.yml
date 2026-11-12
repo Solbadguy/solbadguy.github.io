@@ -20,11 +20,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.152.2'
+          hugo-version: 'latest' # <-- ИЗМЕНЕНО: используем последнюю стабильную версию
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo --gc --minify # <-- ДОБАВЛЕНО: --gc для очистки кэша и мусора
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
