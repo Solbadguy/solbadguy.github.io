@@ -1,347 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubuntu-Server | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Ubuntu-Server | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/categories/ubuntu-server/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/categories/ubuntu-server/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/categories/ubuntu-server/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/categories/ubuntu-server/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Ubuntu-Server">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ubuntu-Server">
-
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/categories/">Categories</a></div>
-  <h1>
-    Ubuntu-Server
-  </h1>
-</header>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">connect to nextcloud waiting for authorization
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Не так давно мне потребовалось настроить крайнюю версию Nextcloud -a на виртуальной машине. В данной заметке пойдет речь об одной из ошибок, которые пришлось решать на пути к его полноценной работе.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-10-30 00:00:00 +0000 UTC'>October 30, 2020</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to connect to nextcloud waiting for authorization" href="https://solbadguy.github.io/posts/connect-to-nextcloud-waiting-for-authorization/"></a>
-</article>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.
-...</p>
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2020-07-01 00:00:00 +0000 UTC'>July 1, 2020</span>&nbsp;·&nbsp;<span>4 min</span></footer>
-  <a class="entry-link" aria-label="post link to Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04" href="https://solbadguy.github.io/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Администрирование 1C-сервера под Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой “Администриарование сервера 1С”. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-09-20 00:00:00 +0000 UTC'>September 20, 2019</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Администрирование 1C-сервера под Linux" href="https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">1C server - Ragent: not running.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Не так давно столкнулся с проблемой на сервере 1С (Ubuntu 16.04) - аутсорсинговая компания решила поэксперементировать на проде, в результате чего на системном разделе закончилось место.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-06-10 00:00:00 +0000 UTC'>June 10, 2019</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to 1C server - Ragent: not running." href="https://solbadguy.github.io/posts/1c-server-ragent-not-running/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenMediaVault WebGui login not working
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>OpenMediaVault - это отличная система для управления хранением файлов, которая работает по принципу “настроил и забыл”.
-Совсем недавно потребовалось попасть в веб-интерфейс управления такой системы, НО учетные данные для входа система принимать отказалась. Ниже возможные решения.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-06-26 00:00:00 +0000 UTC'>June 26, 2018</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to OpenMediaVault WebGui login not working" href="https://solbadguy.github.io/posts/openmediavault-webgui-login-not-working/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Корректное отображение кириллицы в Midnight Commander
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Возникла необходимость воспользоваться специализированным дистрибутивом, который работает под Debian, так вот русской локализации в нем конечно же не было. Файлы и папки в консоли\ файловом менеджере в названии которых была кириллица отображались неправильно - вместо букв отображались знаки вопроса. Решить эту проблему очень просто.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-01-18 00:00:00 +0000 UTC'>January 18, 2017</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Корректное отображение кириллицы в Midnight Commander" href="https://solbadguy.github.io/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Долой Phpmyadmin- Импорт базы msql прямо из консоли
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Зачастую вебмастера могут сталкиваться с ограничениями хостинга на размер загружаемой базы. Для решения этой проблемы нужно писать в саппорт, ждать ждать ждать…. Но ведь есть и другие способы.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-03-01 00:00:00 +0000 UTC'>March 1, 2016</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Долой Phpmyadmin- Импорт базы msql прямо из консоли" href="https://solbadguy.github.io/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Замена диска в программном Raid 1. Ubuntu Server 14.04
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2015-10-09 00:00:00 +0000 UTC'>October 9, 2015</span>&nbsp;·&nbsp;<span>0 min</span></footer>
-  <a class="entry-link" aria-label="post link to Замена диска в программном Raid 1. Ubuntu Server 14.04" href="https://solbadguy.github.io/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-09-30 00:00:00 +0000 UTC'>September 30, 2015</span>&nbsp;·&nbsp;<span>4 min</span></footer>
-  <a class="entry-link" aria-label="post link to Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64" href="https://solbadguy.github.io/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SARG: присваиваем ip-адресам имена сотрудников
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-07 00:00:00 +0000 UTC'>May 7, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to SARG: присваиваем ip-адресам имена сотрудников" href="https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://solbadguy.github.io/categories/ubuntu-server/page/2/">Next&nbsp;&nbsp;»
-    </a>
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
   </nav>
-</footer>
-    </main>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/categories/ubuntu-server</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">ls -la /categories/ubuntu-server/</div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
+        <span style="color: var(--fg-subtle);">$ </span>Ubuntu-Server
+      </h1>
+      
+      <ul class="post-list">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <li class="post-item">
+            <span class="post-item-date">30 января 2020</span>
+            <a href="http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/" class="post-item-title">connect to nextcloud waiting for authorization</a>
+          </li>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <li class="post-item">
+            <span class="post-item-date">1 января 2020</span>
+            <a href="http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/" class="post-item-title">Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2019</span>
+            <a href="http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/" class="post-item-title">Администрирование 1C-сервера под Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">10 января 2019</span>
+            <a href="http://localhost:1313/posts/1c-server-ragent-not-running/" class="post-item-title">1C server - Ragent: not running.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">26 января 2018</span>
+            <a href="http://localhost:1313/posts/openmediavault-webgui-login-not-working/" class="post-item-title">OpenMediaVault WebGui login not working</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2017</span>
+            <a href="http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/" class="post-item-title">Корректное отображение кириллицы в Midnight Commander</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2016</span>
+            <a href="http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/" class="post-item-title">Долой Phpmyadmin- Импорт базы msql прямо из консоли</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2015</span>
+            <a href="http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/" class="post-item-title">Замена диска в программном Raid 1. Ubuntu Server 14.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2015</span>
+            <a href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/" class="post-item-title">Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/" class="post-item-title">SARG: присваиваем ip-адресам имена сотрудников</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/" class="post-item-title">Как исключить ip-адрес из логов SARG?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">8 января 2015</span>
+            <a href="http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/" class="post-item-title">Настройка SaRG на базе Ubuntu Server</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

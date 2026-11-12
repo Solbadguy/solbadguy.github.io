@@ -1,206 +1,149 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Как отключить службы Google/Xiaomi в прошивках MIUI | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Как отключить службы Google/Xiaomi в прошивках MIUI | My Blog</title>
-<meta name="keywords" content="android, google, miui, root, optimizaciya-pamyati">
-<meta name="description" content="Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Как отключить службы Google/Xiaomi в прошивках MIUI">
-  <meta property="og:description" content="Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2016-08-31T00:00:00+00:00">
-    <meta property="article:modified_time" content="2016-08-31T00:00:00+00:00">
-    <meta property="article:tag" content="Android">
-    <meta property="article:tag" content="Google">
-    <meta property="article:tag" content="Miui">
-    <meta property="article:tag" content="Root">
-    <meta property="article:tag" content="Optimizaciya-Pamyati">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Как отключить службы Google/Xiaomi в прошивках MIUI">
-  <meta name="twitter:description" content="Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://solbadguy.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Как отключить службы Google/Xiaomi в прошивках MIUI",
-      "item": "https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Как отключить службы Google/Xiaomi в прошивках MIUI",
-  "name": "Как отключить службы Google\/Xiaomi в прошивках MIUI",
-  "description": "Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.\n",
-  "keywords": [
-    "android", "google", "miui", "root", "optimizaciya-pamyati"
-  ],
-  "articleBody": "Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.\nЧем этот способ лучше удаления сервисов Google/Xiaomi? Ответ напрашивается сам собой - при необходимости вы сможете вернуть все в исходное состояние (например вам нужно установить программу из каталога программ Google, установить стороннюю тему MIUI).\nСПОСОБ ОПРОБОВАН МНОЙ НА DEVELOPER MIUI 7, РАБОТА НА 8 НЕ ГАРАНТИРОВАНА!\nПеред запуском скрипта желательно сделать бэкап раздела system, через TWRP, на случай, если что-то пойдет не так.\nКак отключить службы Google/Xiaomi в прошивках MIUI Для успешного выполнения нам потребуется:\nRoot-доступ на вашем устройстве BusyBox (как правило уже есть в MIUI) Terminal Emulator for Android TWRP Установка:\nСкачиваем архив Копируем его на флеш-карту устройства Устанавливаем через TWRP Запуск скрипта:\n1. После установки и загрузки системы открываем эмулятор терминала; 2. Вводим команду:\nsu 3. На запрос SuperSU о запросе прав отвечаем “предоставить”;\n4. В терминале вводим команду:\nsh /data/local/tmp/miui/services.sh 5. Скрипт предложит несколько вариантов его работы - вводим 2(сервисы google) и\\или 3(xiaomi) тем самым отключая их (если они уже были выключены соотв. включаем). Можно оставить те или другие сервисы включенными\\отключенными.\n6. После выбора скрипт будет запущен, после чего телефон должен будет перезагрузиться.\nОтключение сервисов освободило примерно 100мб оперативной памяти, на моем девайсе. Ко всему прочему кол-во исходящих соединений (при подключении к сети интернет) уменьшилось в несколько раз.\nСписок сервисов, которые “отрабатывает” скрипт можно найти ниже.\nXiaomi\nBugreport Cloud Backup Cloud Service Find Device Game Center MiDrop MiLink MiLiveTalk MiPlay Mipub MiVoip Payment Service StepsProvider Whetstone Xiaomi Account Xiaomi Market Xiaomi Vip Xiaomi Service Framework Google\ncom.android.vending; com.google.androidforwork; com.google.android.apps.books; com.google.android.apps.cloudprint; com.google.android.apps.enterprise.dmagent; com.google.android.apps.docs; com.google.android.apps.docs.editors.docs; com.google.android.apps.docs.editors.sheets; com.google.android.apps.docs.editors.slides; com.google.android.apps.fitness; com.google.android.apps.genie.geniewidget; com.google.android.apps.gcs; com.google.android.apps.magazines; com.google.android.apps.maps; com.google.android.apps.messaging; com.google.android.apps.photos; com.google.android.apps.plus; com.google.android.apps.translate; com.google.android.apps.tycho; com.google.android.backuptransport; com.google.android.calculator; com.google.android.calendar; com.google.android.configupdater; com.google.android.contacts; com.google.android.deskclock; com.google.android.ears; com.google.android.earth; com.google.android.gm.exchange; com.google.android.gm; com.google.android.gms; com.google.android.googlequicksearchbox; com.google.android.gsf; com.google.android.gsf.login; com.google.android.facelock; com.google.android.feedback; com.google.android.inputmetod.hindi; com.google.android.inputmetod.japanese; com.google.android.inputmetod.korean; com.google.android.inputmetod.pinyin; com.google.android.inputmetod.zhuyin; com.google.android.keep; com.google.android.marvin.talkback; com.google.android.music; com.google.android.onetimeinitializer; com.google.android.partnersetup; com.google.android.play.games; com.google.android.street; com.google.android.syncadapters.calendar; com.google.android.syncadapters.contacts; com.google.android.tag; com.google.android.talk; com.google.android.tts; com.google.android.videos; com.google.android.walletfcrel; com.google.android.webview; com.google.android.youtube; ",
-  "wordCount" : "337",
-  "inLanguage": "en",
-  "datePublished": "2016-08-31T00:00:00Z",
-  "dateModified": "2016-08-31T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "My Blog",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://solbadguy.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
+
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+        <div class="reading-progress"><div class="reading-progress-bar" id="progress-bar"></div></div>
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/posts/index</span><span class="prompt">$</span>
+</nav>
+
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">Как отключить службы Google/Xiaomi в прошивках MIUI</h1>
+      <div class="post-meta">
+        <span>31 января 2016</span>
+        
+        
+        
+        
+        
+        
+        
+        
+        <span>2 мин чтения</span>
+        <span>337 слов</span>
+
+        
+      </div>
+      
+        <div class="tags">
+          
+            <a href="/tags/android/" class="tag">android</a>
+          
+            <a href="/tags/google/" class="tag">google</a>
+          
+            <a href="/tags/miui/" class="tag">miui</a>
+          
+            <a href="/tags/root/" class="tag">root</a>
+          
+            <a href="/tags/optimizaciya-pamyati/" class="tag">optimizaciya-pamyati</a>
+          
         </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
+      
+    </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Как отключить службы Google/Xiaomi в прошивках MIUI
-    </h1>
-    <div class="post-meta"><span title='2016-08-31 00:00:00 +0000 UTC'>August 31, 2016</span>&nbsp;·&nbsp;<span>2 min</span>
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      <div class="age-banner">
+        ⚠ Этой статье больше 10 лет. Информация может быть устаревшей.
+      </div>
+    
 
-</div>
-  </header> 
-  <div class="post-content"><p>Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.</p>
+    <div class="post-layout">
+      <div class="post-content">
+        <p>Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.</p>
 <p>Чем этот способ лучше удаления сервисов Google/Xiaomi? Ответ напрашивается сам собой - при необходимости вы сможете вернуть все в исходное состояние (например вам нужно установить программу из каталога программ Google, установить стороннюю тему MIUI).</p>
 <hr>
 <p><strong>СПОСОБ ОПРОБОВАН МНОЙ НА DEVELOPER MIUI 7, РАБОТА НА 8 НЕ ГАРАНТИРОВАНА!</strong></p>
 <hr>
 <p><strong>Перед запуском скрипта желательно сделать бэкап раздела system, через TWRP, на случай, если что-то пойдет не так.</strong></p>
-<h2 id="как-отключить-службы-googlexiaomi-в-прошивках-miui">Как отключить службы Google/Xiaomi в прошивках MIUI<a hidden class="anchor" aria-hidden="true" href="#как-отключить-службы-googlexiaomi-в-прошивках-miui">#</a></h2>
+<h2 id="как-отключить-службы-googlexiaomi-в-прошивках-miui">Как отключить службы Google/Xiaomi в прошивках MIUI</h2>
 <p><strong>Для успешного выполнения нам потребуется:</strong></p>
 <ol>
 <li>Root-доступ на вашем устройстве</li>
@@ -305,156 +248,102 @@ com.google.android.walletfcrel;
 com.google.android.webview;
 com.google.android.youtube;
 </code></pre>
+      </div>
+      
 
-  </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://solbadguy.github.io/tags/android/">Android</a></li>
-      <li><a href="https://solbadguy.github.io/tags/google/">Google</a></li>
-      <li><a href="https://solbadguy.github.io/tags/miui/">Miui</a></li>
-      <li><a href="https://solbadguy.github.io/tags/root/">Root</a></li>
-      <li><a href="https://solbadguy.github.io/tags/optimizaciya-pamyati/">Optimizaciya-Pamyati</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://solbadguy.github.io/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Xiaomi Redmi 3 (3s/3x/3Pro) не удается войти в режим download</span>
-  </a>
-  <a class="next" href="https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/">
-    <span class="title">Next »</span>
-    <br>
-    <span>Оптимизация системной памяти Android</span>
-  </a>
+    </div>
+
+    
+
+    
+
+
+
+<nav class="prev-next">
+  
+    <a href="http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/">
+      <div class="label">← Предыдущий</div>
+      <div class="title">Оптимизация системной памяти Android</div>
+    </a>
+  
+  
+    <a href="http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/" style="text-align: right;">
+      <div class="label">Следующий →</div>
+      <div class="title">Xiaomi Redmi 3 (3s/3x/3Pro) не удается войти в режим download</div>
+    </a>
+  
 </nav>
 
-  </footer>
-</article>
-    </main>
+
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+<section class="related">
+  <div class="related-title">Похожие посты</div>
+  <ul class="related-list">
+    
+      <li>
+        <a href="http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/">
+          <div class="date">31 января 2016</div>
+          <div class="title">Оптимизация системной памяти Android</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/">
+          <div class="date">19 января 2016</div>
+          <div class="title">Как удалить рут права? - Полное удаление root прав SuperSU</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/obman-multirom/">
+          <div class="date">27 января 2016</div>
+          <div class="title">Обман MultiRom</div>
+        </a>
+      </li>
+    
+  </ul>
+</section>
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+  </article>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

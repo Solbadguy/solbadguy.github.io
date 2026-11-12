@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{ partial "head.html" . }}
+<body>
+  <div class="site-wrapper">
+    {{ partial "sidebar.html" . }}
+    <div class="main-content">
+      {{ if .IsPage }}
+        <div class="reading-progress"><div class="reading-progress-bar" id="progress-bar"></div></div>
+      {{ end }}
+      <div class="content-container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+  </div>
+  {{ partial "search-overlay.html" . }}
+  
+  <!-- Модальное окно помощи -->
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}"></script>
+</body>
+</html>

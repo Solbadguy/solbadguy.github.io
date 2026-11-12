@@ -1,347 +1,216 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>It | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>It | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/tags/it/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/tags/it/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/tags/it/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/tags/it/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="It">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="It">
-
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/tags/">Tags</a></div>
-  <h1>
-    It
-  </h1>
-</header>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Администрирование 1C-сервера под Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой “Администриарование сервера 1С”. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-09-20 00:00:00 +0000 UTC'>September 20, 2019</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Администрирование 1C-сервера под Linux" href="https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/"></a>
-</article>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">RDesktop - подключение к Windows из Linux по RDP
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Простой способ подключения к станциям под управлением Windows из под любого Linux-based дистрибутива.
-...</p>
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2017-08-17 00:00:00 +0000 UTC'>August 17, 2017</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to RDesktop - подключение к Windows из Linux по RDP" href="https://solbadguy.github.io/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Восстановление пароля Enterprise Security Suite
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>В случае, если пароль администратора для доступа к серверу ESS утерян, то существует возможность его просмотра или изменения с использованием прямого доступа к базе данных Сервера. Этот способ удобен тем, что позволяет быстро восстановить пароль не выполняя при этом ненужных действий.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-03-09 00:00:00 +0000 UTC'>March 9, 2017</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Восстановление пароля Enterprise Security Suite" href="https://solbadguy.github.io/posts/vosstanovlenie-parolya-enterprise-security-suite/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Монтирование дисков Linux и fstab
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-06 00:00:00 +0000 UTC'>July 6, 2015</span>&nbsp;·&nbsp;<span>4 min</span></footer>
-  <a class="entry-link" aria-label="post link to Монтирование дисков Linux и fstab" href="https://solbadguy.github.io/posts/montirovanie-diskov-linux-i-fstab/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Windows 10 можно будет купить на USB-носителе
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Microsoft планирует продавать Windows 10 на USB-носителях, а не только на DVD-дисках, как было раньше.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-07-02 00:00:00 +0000 UTC'>July 2, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Windows 10 можно будет купить на USB-носителе" href="https://solbadguy.github.io/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Раздача WiFi с ноутбука через командную строку (ОС Windows)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.
-Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-20 00:00:00 +0000 UTC'>May 20, 2015</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Раздача WiFi с ноутбука через командную строку (ОС Windows)" href="https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">IfTop мониторинг сети на Ubuntu Server
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Сразу оговорюсь, что эта консольная утилита работает не только под Ubuntu. Информация о использовании сетевого трафика выводится прямо в консоли.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-15 00:00:00 +0000 UTC'>May 15, 2015</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to IfTop мониторинг сети на Ubuntu Server" href="https://solbadguy.github.io/posts/iftop-monitoring-seti-na-ubuntu-server/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SARG: присваиваем ip-адресам имена сотрудников
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-07 00:00:00 +0000 UTC'>May 7, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to SARG: присваиваем ip-адресам имена сотрудников" href="https://solbadguy.github.io/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как исключить ip-адрес из логов SARG?
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-05-07 00:00:00 +0000 UTC'>May 7, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как исключить ip-адрес из логов SARG?" href="https://solbadguy.github.io/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Настройка SaRG на базе Ubuntu Server
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-04-08 00:00:00 +0000 UTC'>April 8, 2015</span>&nbsp;·&nbsp;<span>5 min</span></footer>
-  <a class="entry-link" aria-label="post link to Настройка SaRG на базе Ubuntu Server" href="https://solbadguy.github.io/posts/nastrojka-sarg-na-baze-ubuntu-server/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://solbadguy.github.io/tags/it/page/2/">Next&nbsp;&nbsp;»
-    </a>
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
   </nav>
-</footer>
-    </main>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/tags/it</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">ls -la /tags/it/</div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
+        <span style="color: var(--fg-subtle);">$ </span>It
+      </h1>
+      
+      <ul class="post-list">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <li class="post-item">
+            <span class="post-item-date">20 января 2019</span>
+            <a href="http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/" class="post-item-title">Администрирование 1C-сервера под Linux</a>
+          </li>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <li class="post-item">
+            <span class="post-item-date">17 января 2017</span>
+            <a href="http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/" class="post-item-title">RDesktop - подключение к Windows из Linux по RDP</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2017</span>
+            <a href="http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/" class="post-item-title">Восстановление пароля Enterprise Security Suite</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">6 января 2015</span>
+            <a href="http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/" class="post-item-title">Монтирование дисков Linux и fstab</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2015</span>
+            <a href="http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/" class="post-item-title">Windows 10 можно будет купить на USB-носителе</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2015</span>
+            <a href="http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/" class="post-item-title">Раздача WiFi с ноутбука через командную строку (ОС Windows)</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/" class="post-item-title">IfTop мониторинг сети на Ubuntu Server</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/" class="post-item-title">SARG: присваиваем ip-адресам имена сотрудников</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/" class="post-item-title">Как исключить ip-адрес из логов SARG?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">8 января 2015</span>
+            <a href="http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/" class="post-item-title">Настройка SaRG на базе Ubuntu Server</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/" class="post-item-title">Android в помощь системному администратору.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2015</span>
+            <a href="http://localhost:1313/posts/vyshel-zentyal-4-1/" class="post-item-title">Вышел Zentyal 4.1</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-uznat-otkrytye-porty/" class="post-item-title">Как узнать открытые порты?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2015</span>
+            <a href="http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/" class="post-item-title">Статусы портов в командной строке</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2015</span>
+            <a href="http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/" class="post-item-title">Пользователи Yahoo перестанут использовать пароли</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2015</span>
+            <a href="http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/" class="post-item-title">Бесплатный антивирус для предприятий</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

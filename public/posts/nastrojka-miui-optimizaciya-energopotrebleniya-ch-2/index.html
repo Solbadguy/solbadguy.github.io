@@ -1,199 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Настройка MIUI 7: удаляем системные приложения | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Настройка MIUI 7: удаляем системные приложения | My Blog</title>
-<meta name="keywords" content="android, miui">
-<meta name="description" content="Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Настройка MIUI 7: удаляем системные приложения">
-  <meta property="og:description" content="Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2016-06-09T00:00:00+00:00">
-    <meta property="article:modified_time" content="2016-06-09T00:00:00+00:00">
-    <meta property="article:tag" content="Android">
-    <meta property="article:tag" content="Miui">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Настройка MIUI 7: удаляем системные приложения">
-  <meta name="twitter:description" content="Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://solbadguy.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Настройка MIUI 7: удаляем системные приложения",
-      "item": "https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Настройка MIUI 7: удаляем системные приложения",
-  "name": "Настройка MIUI 7: удаляем системные приложения",
-  "description": "Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона\n",
-  "keywords": [
-    "android", "miui"
-  ],
-  "articleBody": "Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона\nПрежде, чем приступить к каким-либо действиям настоятельно рекомендую сделать бэкап!\nУдаляем системные приложения MIUI 7 Идем по пути system/app и попадаем в папку с основными системными приложениями. Вот тут то мы и начнем избавляться от тех приложений, которые, по моему мнению, не нужны в системе.\nНиже приведены приложения, которые удаляются без последствий. Замечу, что у каждого этот список индивидуален и зависит именно от того, используете ли Вы сервисы от xiaomi или нет, а также зависит от версии прошивки и локализаций (multirom, xiaomi.eu, miui.su, miui.pro, авторские решения). Я использую сервисы от xiaomi, поэтому список довольно узок. Еще постараюсь указать какие приложения присутствуют на разных версиях прошивок.\nSYSTEM/APP\nBugReport – Отправка отчетов об ошибках (присутствует на всех версиях) – Для оптимизации CloudPrint2 – Виртуальный принтер. Мне он не нужен и наврятле понадобиться (7.1.2.0 – 7.1.3.0 отсутствует) – на оптимизацию не влияет Email – Довольно универсальное приложение почты от Xiaomi. Если используете, то нет смысла от нее избавляться. Мне не нужна поддержка корпоративной почты, тем более, что использую другое приложение, поэтому удаляю. (на всех версиях прошивок, исключение некоторые авторские) -на оптимизацию не влияет Fastdormancy – Функция данная, если я правильно понимаю, используется сотовыми операторами Европы и Азии. Почитать можно в интернете про технологию. После прочтения понял, что мой сотовый оператор ее не поддерживает. А еще может довольно сильно высаживать заряд аккумулятора, если нет поддержки оператором. Однозначно «под нож». (наблюдал только xiaomi.eu и последней версии от multirom) – для оптимизации MiLinkService – «полезная» фишка для устройств от Xiaomi. Позволяет передавать файлы между устройствами от фирмы Xiaomi. Излишне для меня. Убрал. (Присутствует на всех версиях, кроме некоторых авторских) - на оптимизацию не влияет PrintSpooler – печати. Та же учесть, что и с другими сервисами от «виртуального принтера». (Присутствует на всех версиях, кроме некоторых авторских) - на оптимизацию не влияет QuickSearchBox – Быстрый поиск от Xiaomi, который появляется, если провести по экрану снизу вверх. Попробовал и понял, что немного кривоват в использовании. Альтернатива Google Now. Работает классно, четко отзывается на вызов. Короче, рекомендую. (Присутствует на всех версиях, кроме некоторых авторских) - на оптимизацию не влияет StepsProvider – в предыдущих сборках не было этого сервиса. Возможно отвечает за шагометр. Не понимаю, зачем его добавили. Убрал. (Наблюдалось на 7.2.4.0 и 7.2.7.0 от xiaomi.eu) – для оптимизации Stk – сервисное приложение от сотового оператора. У MTS Беларусь в этом приложении мало полезных функций. Просто удалил, но лучше заморозить в Titanium, иначе после полного сброса к заводским настройкам могут проявится проблемы с определением сети. (Присутствует на всех версиях) – для оптимизации Updater – Обновление прошивки через системное приложение. Как раз многие спрашивают «Как отключить приходящие уведомления об появлении новой версии ПО». Удаляем и забываем про это. Примечание: Что касается прошивок DEV, то это приложение удалять нельзя, иначе телефон блокируется и просит ввести логин и пароль аккаунта MI. Но после ввода зависал на проверке. Проверял на двух DEV версиях. В стабильных версиях все отлично. (Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации Whetstone – И снова отправка логов, которые связаны с производительностью процессора. Очень часто данный сервис будит устройство. Проверено. Удаляю. (Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации\nSYSTEM/DATA-APP\nklobugreport. Удаляем его. Отвечает за отправку логов об ошибках. (Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации\nSYSTEM/PRIV-APP Browser – Стандартный браузер от Xiaomi. Сначала я постоянно его удалял из-за китайщины. Но потом нарвался на патченную версию из 7.1.2.0 Multirom от Viset находится в моей папке. Был приятно удивлен. Браузер полностью русский, в новостях большинство новостных порталов моей страны и соседних стран. Круто. Настроил его и понял, что браузер очень шустрый. Поддержка Flash. Просто версию от xiaomi.eu заменил на версию из прошивки 7.1.2.0 от Viset (встала без проблем). И конечно же разрешения на папку «0755» и на сам apk файл «0644». (Присутствует на всех версиях, кроме некоторых авторских) – на оптимизацию не влияет CellBroadcastReceiver – Широковещательные сообщения (цунами, катастрофы и другое), которые там распространены в Европе и Азии. Не практикую. Удалил. (Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации GoogleFeedback – Отзывы Google. Удалил. (Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации Shell – Часть оболочки MIUI, в которой хранятся сводки и логи работы оболочки, которые в последствии отправляются куда-то. Удалил, потестировал, проблем не выявлено. (в комментариях сообщают, что после удаления у них не работает режим разработчика). Отлично. В дополнение скажу, что удаление этого сервиса помогает избавится от процесса «Shell», который висит в памяти и иногда достаточно сильно нагружает процессор.\n(Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации YellowPage – Желтые страницы. Позволяет видеть более подробную информацию об корпоративных клиентах, их номерах и счетах. Удалил. (Присутствует на всех версиях, кроме некоторых авторских) – для оптимизации Weather, WeatherProvider – Погода и сервер погоды. Приложение хорошее, отличается от различных редакций (локализаций). Допустим у Multirom температурный график выполнен в виду синусоидальных кривых. Смотрится классно. Однако, чаще всего в прогнозе вместо обычных нам единиц измерения скорости ветра и атмосферного давления, стоят км/ч и Па соответственно. Удаляю и устанавливаю альтернативную Погода BZ. Имхо лучшее погодное приложение. Выглядит привычно, отлично внедряется в виджеты стандартной погоды, а также в кастомные темы и экраны блокировки. (Присутствует на всех версиях, кроме некоторых авторских) - на оптимизацию не влияет\nПро заморозку (отключение) приложений через Titanium BackUp: Скажу, что этот метод более безопасен, чем просто удалять из системы приложения. Но когда есть резервная копия приложений, тогда разницы значительной нет. ",
-  "wordCount" : "902",
-  "inLanguage": "en",
-  "datePublished": "2016-06-09T00:00:00Z",
-  "dateModified": "2016-06-09T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://solbadguy.github.io/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "My Blog",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://solbadguy.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
+
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+        <div class="reading-progress"><div class="reading-progress-bar" id="progress-bar"></div></div>
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/posts/index</span><span class="prompt">$</span>
+</nav>
+
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">Настройка MIUI 7: удаляем системные приложения</h1>
+      <div class="post-meta">
+        <span>9 января 2016</span>
+        
+        
+        
+        
+        
+        
+        
+        
+        <span>5 мин чтения</span>
+        <span>902 слова</span>
+
+        
+      </div>
+      
+        <div class="tags">
+          
+            <a href="/tags/android/" class="tag">android</a>
+          
+            <a href="/tags/miui/" class="tag">miui</a>
+          
         </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
+      
+    </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Настройка MIUI 7: удаляем системные приложения
-    </h1>
-    <div class="post-meta"><span title='2016-06-09 00:00:00 +0000 UTC'>June 9, 2016</span>&nbsp;·&nbsp;<span>5 min</span>
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      <div class="age-banner">
+        ⚠ Этой статье больше 10 лет. Информация может быть устаревшей.
+      </div>
+    
 
-</div>
-  </header> 
-  <div class="post-content"><p>Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона</p>
+    <div class="post-layout">
+      <div class="post-content">
+        <p>Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона</p>
 <p><code>Прежде, чем приступить к каким-либо действиям настоятельно рекомендую сделать бэкап!</code></p>
-<h2 id="удаляем-системные-приложения-miui-7">Удаляем системные приложения MIUI 7<a hidden class="anchor" aria-hidden="true" href="#удаляем-системные-приложения-miui-7">#</a></h2>
+<h2 id="удаляем-системные-приложения-miui-7">Удаляем системные приложения MIUI 7</h2>
 <p>Идем по пути <strong>system/app</strong> и попадаем в папку с основными системными приложениями. Вот тут то мы и начнем избавляться от тех приложений, которые, по моему мнению, не нужны в системе.</p>
 <p>Ниже приведены приложения, которые удаляются без последствий. Замечу, что у каждого этот список индивидуален и зависит именно от того, используете ли Вы сервисы от xiaomi или нет, а также зависит от версии прошивки и локализаций (multirom, xiaomi.eu, miui.su, miui.pro, авторские решения). Я использую сервисы от xiaomi, поэтому список довольно узок. Еще постараюсь указать какие приложения присутствуют на разных версиях прошивок.</p>
 <hr>
@@ -209,153 +149,102 @@
 <pre tabindex="0"><code>Про заморозку (отключение) приложений через Titanium BackUp:
 Скажу, что этот метод более безопасен, чем просто удалять из системы приложения. Но когда есть резервная копия приложений, тогда разницы значительной нет.
 </code></pre>
+      </div>
+      
 
-  </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://solbadguy.github.io/tags/android/">Android</a></li>
-      <li><a href="https://solbadguy.github.io/tags/miui/">Miui</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://solbadguy.github.io/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Настройка MIUI 7, оптимизация энергопотребления.</span>
-  </a>
-  <a class="next" href="https://solbadguy.github.io/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/">
-    <span class="title">Next »</span>
-    <br>
-    <span>Автоматическое выключение компьютера в заданное время</span>
-  </a>
+    </div>
+
+    
+
+    
+
+
+
+<nav class="prev-next">
+  
+    <a href="http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/">
+      <div class="label">← Предыдущий</div>
+      <div class="title">Автоматическое выключение компьютера в заданное время</div>
+    </a>
+  
+  
+    <a href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/" style="text-align: right;">
+      <div class="label">Следующий →</div>
+      <div class="title">Настройка MIUI 7, оптимизация энергопотребления.</div>
+    </a>
+  
 </nav>
 
-  </footer>
-</article>
-    </main>
+
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+<section class="related">
+  <div class="related-title">Похожие посты</div>
+  <ul class="related-list">
+    
+      <li>
+        <a href="http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/">
+          <div class="date">9 января 2016</div>
+          <div class="title">Android - Удаляем рекламу из приложений</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/">
+          <div class="date">9 января 2016</div>
+          <div class="title">Настройка MIUI 7, оптимизация энергопотребления.</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/">
+          <div class="date">3 января 2016</div>
+          <div class="title">Как создать резервную копию прошивки телефона?</div>
+        </a>
+      </li>
+    
+  </ul>
+</section>
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+  </article>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

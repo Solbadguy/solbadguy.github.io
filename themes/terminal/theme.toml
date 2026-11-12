@@ -1,0 +1,7 @@
+name = "Terminal"
+license = "MIT"
+description = "Тема для Hugo в стиле терминала"
+min_version = "0.100.0"
+
+[author]
+  name = "Your Name"

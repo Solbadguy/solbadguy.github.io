@@ -1,0 +1,50 @@
+baseURL: "https://example.com/"
+locale: "ru"
+title: "engineer@blog:~$"
+theme: "terminal"
+paginate: 10
+
+enableEmoji: true
+enableRobotsTXT: true
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+
+params:
+  author: "Linux Engineer"
+  description: "Заметки из /var/log жизни Linux-инженера"
+  hostname: "blog"
+  username: "engineer"
+  prompt: "~$"
+
+menu:
+  main:
+    - name: "~/posts"
+      url: /posts/
+      weight: 1
+    - name: "~/archive"
+      url: /archive/
+      weight: 2
+    - name: "~/uses"
+      url: /uses/
+      weight: 3
+    - name: "~/now"
+      url: /now/
+      weight: 4
+    - name: "~/obo-mne"
+      url: /obo-mne/
+      weight: 5
+    - name: "~/changelog"
+      url: /changelog/
+      weight: 6
+
+outputs:
+  home:
+    - HTML
+    - JSON
+
+outputFormats:
+  JSON:
+    mediaType: application/json
+    baseName: index
+    isPlainText: true
+    notAlternative: true

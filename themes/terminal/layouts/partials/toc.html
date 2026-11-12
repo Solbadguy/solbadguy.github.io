@@ -1,0 +1,16 @@
+{{ $headings := .Content | findRE "<h[23][^>]*id=\"[^\"]+\"[^>]*>" }}
+{{ if gt (len $headings) 2 }}
+<aside class="toc" id="toc">
+  <div class="toc-title">Содержание</div>
+  <ul class="toc-list">
+    {{ range $headings }}
+      {{ $level := substr . 1 1 }}
+      {{ $id := replaceRE `.*id="([^"]+)".*` "$1" . }}
+      {{ $text := replaceRE `<[^>]+>` "" . | htmlUnescape }}
+      <li class="toc-{{ $level }}">
+        <a href="#{{ $id }}">{{ $text }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</aside>
+{{ end }}

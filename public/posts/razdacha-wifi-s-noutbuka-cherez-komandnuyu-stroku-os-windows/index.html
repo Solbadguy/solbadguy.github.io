@@ -1,208 +1,149 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Раздача WiFi с ноутбука через командную строку (ОС Windows) | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Раздача WiFi с ноутбука через командную строку (ОС Windows) | My Blog</title>
-<meta name="keywords" content="it, microsoft, win7, windows-10, internet, komandnaya-stroka">
-<meta name="description" content="Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.
-Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. ">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Раздача WiFi с ноутбука через командную строку (ОС Windows)">
-  <meta property="og:description" content="Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.
-Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. ">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2015-05-20T00:00:00+00:00">
-    <meta property="article:modified_time" content="2015-05-20T00:00:00+00:00">
-    <meta property="article:tag" content="It">
-    <meta property="article:tag" content="Microsoft">
-    <meta property="article:tag" content="Win7">
-    <meta property="article:tag" content="Windows-10">
-    <meta property="article:tag" content="Internet">
-    <meta property="article:tag" content="Komandnaya-Stroka">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Раздача WiFi с ноутбука через командную строку (ОС Windows)">
-  <meta name="twitter:description" content="Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.
-Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. ">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://solbadguy.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Раздача WiFi с ноутбука через командную строку (ОС Windows)",
-      "item": "https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Раздача WiFi с ноутбука через командную строку (ОС Windows)",
-  "name": "Раздача WiFi с ноутбука через командную строку (ОС Windows)",
-  "description": "Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.\nДавайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. ",
-  "keywords": [
-    "it", "microsoft", "win7", "windows-10", "internet", "komandnaya-stroka"
-  ],
-  "articleBody": "Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.\nДавайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. Разумеется, этот способ не единственный, однако автор использует именно его. Windows 7 и последующие ОС (8, 10) в этом плане предлагают довольно большую гибкость. Клиенты, подключенные к точке, созданной таким образом, будут автоматически получать настройки по DHCP и сразу будут готовы к работе.\nМаксимально возможное количество подключенных устройств равно 100, а скорость канала связи (WiFi) созданного на моем ноутбуке равняется 74MB.\nРаздача WiFi с ноутбука через командную строку 1. Откроем центр управления сетями:\nНа клавиатуре Win + R (поочередно нажимаем на две эти кнопки)\nДалее вводим:\nncpa.cpl\n2. Разрешим другим пользоваться вашим интернет каналом:\nЗатем выбираем действующее подключение\nПоставим пару галочек\n3. Откроем командную строку (важно открыть ее от имени администратора системы):\nОткрываем “Пуск”, в поле для поиска пишем : “командная строка”\n4. Проверим поддерживает ли адаптер, установленный в ноутбуке, нужный нам режим работы:\nnetsh wlan show drivers Если вы видите указание о том, что он не поддерживается - пробуйте обновить драйвера.\n5. Зададим название сети и укажем пароль к ней (значения SSID и Key можно менять):\nnetsh wlan set hostednetwork mode=allow ssid=netlab-kursk key=qwerty12 6. Запустим раздачу wifi с ноутбука\nnetsh wlan start hostednetwork 7. Для просмотра информации о вашей точке доступа вводим следующую команду:\nnetsh wlan show hostednetwork Как видно на скриншоте пользователю доступен просмотр названия его точки доступа, количество клиентов, статус ее работы, а так же канал беспроводной связи на котором она работает.\n8. Для того, чтобы остановить раздачу нужно выполнить следующую команду:\nnetsh wlan stop hostednetwork Единственным недостатком этого способа является откат всех внесенных изменений после перезагрузки системы. Но поскольку раздача WiFi с ноутбука нужна мне только в особых случаях, подобный способ меня полностью устраивает. Однако не могу не согласиться с тем, что каждый раз вводить все эти команды вряд ли кому-нибудь захочется. Для запуска раздачи wifi через командную строку в один клик я сделал для себя два специальных файла:\nРаздача WiFi с ноутбука через командную строку - СТАРТ\nРаздача WiFi с ноутбука через командную строку - СТОП\nПри необходимости вы можете подправить их под свои нужды, для этого следует использовать “Блокнот”. Если не хочется кликать на запуск каждый раз, то можно добавить скрипт в автозагрузку.\n",
-  "wordCount" : "379",
-  "inLanguage": "en",
-  "datePublished": "2015-05-20T00:00:00Z",
-  "dateModified": "2015-05-20T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://solbadguy.github.io/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "My Blog",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://solbadguy.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
+
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+        <div class="reading-progress"><div class="reading-progress-bar" id="progress-bar"></div></div>
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/posts/index</span><span class="prompt">$</span>
+</nav>
+
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">Раздача WiFi с ноутбука через командную строку (ОС Windows)</h1>
+      <div class="post-meta">
+        <span>20 января 2015</span>
+        
+        
+        
+        
+        
+        
+        
+        
+        <span>2 мин чтения</span>
+        <span>379 слов</span>
+
+        
+      </div>
+      
+        <div class="tags">
+          
+            <a href="/tags/it/" class="tag">it</a>
+          
+            <a href="/tags/microsoft/" class="tag">microsoft</a>
+          
+            <a href="/tags/win7/" class="tag">win7</a>
+          
+            <a href="/tags/windows-10/" class="tag">windows-10</a>
+          
+            <a href="/tags/internet/" class="tag">internet</a>
+          
+            <a href="/tags/komandnaya-stroka/" class="tag">komandnaya-stroka</a>
+          
         </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
+      
+    </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Раздача WiFi с ноутбука через командную строку (ОС Windows)
-    </h1>
-    <div class="post-meta"><span title='2015-05-20 00:00:00 +0000 UTC'>May 20, 2015</span>&nbsp;·&nbsp;<span>2 min</span>
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      <div class="age-banner">
+        ⚠ Этой статье больше 11 лет. Информация может быть устаревшей.
+      </div>
+    
 
-</div>
-  </header> 
-  <div class="post-content"><p>Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.</p>
+    <div class="post-layout">
+      <div class="post-content">
+        <p>Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.</p>
 <p>Давайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. </p>
 <p>Разумеется, этот способ не единственный, однако автор использует именно его. Windows 7 и последующие ОС (8, 10) в этом плане предлагают довольно большую гибкость. <em>Клиенты, подключенные к точке, созданной таким образом, будут автоматически получать настройки по DHCP и сразу будут готовы к работе.</em></p>
 <p>Максимально возможное количество подключенных устройств равно 100, а скорость канала связи (WiFi) созданного на моем ноутбуке равняется 74MB.</p>
-<h1 id="раздача-wifi-с-ноутбука-через-командную-строку">Раздача WiFi с ноутбука через командную строку<a hidden class="anchor" aria-hidden="true" href="#раздача-wifi-с-ноутбука-через-командную-строку">#</a></h1>
+<h1 id="раздача-wifi-с-ноутбука-через-командную-строку">Раздача WiFi с ноутбука через командную строку</h1>
 <p>1. Откроем центр управления сетями:</p>
 <blockquote>
 <p>На клавиатуре Win + R (поочередно нажимаем на две эти кнопки)</p>
@@ -210,35 +151,35 @@
 <p>ncpa.cpl</p>
 </blockquote>
 <p>2. Разрешим другим пользоваться вашим интернет каналом:</p>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/run-ncpa-cpl.jpg"><img alt="Раздача WiFi с ноутбука, через командную строку (ОС Windows)" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/run-ncpa-cpl.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/run-ncpa-cpl.jpg"><img src="images/run-ncpa-cpl.jpg" alt="Раздача WiFi с ноутбука, через командную строку (ОС Windows)"></a></p>
 <p>Затем выбираем действующее подключение</p>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/wireless-connection-windows.jpg"><img alt="Раздача WiFi с ноутбука, через командную строку (ОС Windows)" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/wireless-connection-windows.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/wireless-connection-windows.jpg"><img src="images/wireless-connection-windows.jpg" alt="Раздача WiFi с ноутбука, через командную строку (ОС Windows)"></a></p>
 <p>Поставим пару галочек</p>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2015/05/wireless-network.jpg"><img alt="Раздача WiFi с ноутбука через командную строку" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/wireless-network.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2015/05/wireless-network.jpg"><img src="images/wireless-network.jpg" alt="Раздача WiFi с ноутбука через командную строку"></a></p>
 <p>3. Откроем командную строку (важно открыть ее от имени администратора системы):</p>
 <p>Открываем &ldquo;Пуск&rdquo;, в поле для поиска пишем : &ldquo;командная строка&rdquo;</p>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/adm_consol.jpg"><img alt="Раздача WiFi с ноутбука через командную строку" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/adm_consol.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/adm_consol.jpg"><img src="images/adm_consol.jpg" alt="Раздача WiFi с ноутбука через командную строку"></a></p>
 <p>4. Проверим поддерживает ли адаптер, установленный в ноутбуке, нужный нам режим работы:</p>
 <blockquote>
 <pre tabindex="0"><code>netsh wlan show drivers
 </code></pre></blockquote>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/netsh-wlan-show-driver.jpg"><img alt="netsh-wlan-show-driver" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/netsh-wlan-show-driver.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/netsh-wlan-show-driver.jpg"><img src="images/netsh-wlan-show-driver.jpg" alt="netsh-wlan-show-driver"></a></p>
 <p>Если вы видите указание о том, что он не поддерживается - пробуйте обновить драйвера.</p>
 <p>5. Зададим название сети и укажем пароль к ней (значения SSID и Key можно менять):</p>
 <blockquote>
 <pre tabindex="0"><code>netsh wlan set hostednetwork mode=allow ssid=netlab-kursk key=qwerty12
 </code></pre></blockquote>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/ssid_hotspot_wlan.jpg"><img alt="Раздача WiFi с ноутбука через командную строку" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/ssid_hotspot_wlan.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/ssid_hotspot_wlan.jpg"><img src="images/ssid_hotspot_wlan.jpg" alt="Раздача WiFi с ноутбука через командную строку"></a></p>
 <p>6. Запустим раздачу wifi с ноутбука</p>
 <blockquote>
 <pre tabindex="0"><code>netsh wlan start hostednetwork
 </code></pre></blockquote>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/ssid_hotspot_wlan.jpg"><img alt="Раздача WiFi с ноутбука через командную строку" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/ssid_hotspot_wlan.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/ssid_hotspot_wlan.jpg"><img src="images/ssid_hotspot_wlan.jpg" alt="Раздача WiFi с ноутбука через командную строку"></a></p>
 <p>7. Для просмотра информации о вашей точке доступа вводим следующую команду:</p>
 <blockquote>
 <pre tabindex="0"><code>netsh wlan show hostednetwork
 </code></pre></blockquote>
-<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/show-wlan.jpg"><img alt="Раздача WiFi с ноутбука через командную строку" loading="lazy" src="/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/images/show-wlan.jpg"></a></p>
+<p><a href="http://admin.netlab-kursk.ru/wp-content/uploads/2016/03/show-wlan.jpg"><img src="images/show-wlan.jpg" alt="Раздача WiFi с ноутбука через командную строку"></a></p>
 <p>Как видно на скриншоте пользователю доступен просмотр названия его точки доступа, количество клиентов, статус ее работы, а так же канал беспроводной связи на котором она работает.</p>
 <p>8. Для того, чтобы остановить раздачу нужно выполнить следующую команду:</p>
 <blockquote>
@@ -249,157 +190,102 @@
 <p>Раздача WiFi с ноутбука через командную строку - <a href="http://admin.netlab-kursk.ru/upload/Bat_wifi/wlan_start.bat">СТАРТ</a></p>
 <p>Раздача WiFi с ноутбука через командную строку - <a href="http://admin.netlab-kursk.ru/upload/Bat_wifi/wlan_stop.bat">СТОП</a></p>
 <p>При необходимости вы можете подправить их под свои нужды, для этого следует использовать &ldquo;Блокнот&rdquo;. Если не хочется кликать на запуск каждый раз, то можно добавить скрипт в автозагрузку.</p>
+      </div>
+      
 
-  </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://solbadguy.github.io/tags/it/">It</a></li>
-      <li><a href="https://solbadguy.github.io/tags/microsoft/">Microsoft</a></li>
-      <li><a href="https://solbadguy.github.io/tags/win7/">Win7</a></li>
-      <li><a href="https://solbadguy.github.io/tags/windows-10/">Windows-10</a></li>
-      <li><a href="https://solbadguy.github.io/tags/internet/">Internet</a></li>
-      <li><a href="https://solbadguy.github.io/tags/komandnaya-stroka/">Komandnaya-Stroka</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://solbadguy.github.io/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Adblock Plus анонсировал мобильный браузер для Android</span>
-  </a>
-  <a class="next" href="https://solbadguy.github.io/posts/iftop-monitoring-seti-na-ubuntu-server/">
-    <span class="title">Next »</span>
-    <br>
-    <span>IfTop мониторинг сети на Ubuntu Server</span>
-  </a>
+    </div>
+
+    
+
+    
+
+
+
+<nav class="prev-next">
+  
+    <a href="http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/">
+      <div class="label">← Предыдущий</div>
+      <div class="title">IfTop мониторинг сети на Ubuntu Server</div>
+    </a>
+  
+  
+    <a href="http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/" style="text-align: right;">
+      <div class="label">Следующий →</div>
+      <div class="title">Adblock Plus анонсировал мобильный браузер для Android</div>
+    </a>
+  
 </nav>
 
-  </footer>
-</article>
-    </main>
+
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+<section class="related">
+  <div class="related-title">Похожие посты</div>
+  <ul class="related-list">
+    
+      <li>
+        <a href="http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/">
+          <div class="date">12 января 2015</div>
+          <div class="title">Windows 10 станет последней в линейке ОС Microsoft</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/kak-uznat-otkrytye-porty/">
+          <div class="date">1 января 2015</div>
+          <div class="title">Как узнать открытые порты?</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/">
+          <div class="date">1 января 2015</div>
+          <div class="title">Статусы портов в командной строке</div>
+        </a>
+      </li>
+    
+  </ul>
+</section>
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+  </article>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

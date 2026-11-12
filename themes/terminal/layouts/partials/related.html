@@ -1,0 +1,16 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if gt (len $related) 0 }}
+<section class="related">
+  <div class="related-title">Похожие посты</div>
+  <ul class="related-list">
+    {{ range $related }}
+      <li>
+        <a href="{{ .Permalink }}">
+          <div class="date">{{ .Date.Format "2 января 2006" }}</div>
+          <div class="title">{{ .Title }}</div>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

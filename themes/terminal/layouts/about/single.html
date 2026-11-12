@@ -1,0 +1,73 @@
+{{ define "main" }}
+  {{ partial "breadcrumbs.html" . }}
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+
+    <div class="about-layout">
+      <div class="about-content">
+        {{ .Content }}
+      </div>
+
+      <div class="about-stack">
+        <div class="terminal-header">
+          <span>tech_stack.toml</span>
+        </div>
+        <div class="stack-list">
+          
+          <div class="stack-category">
+            <h4>OS & Core</h4>
+            <div class="stack-tags">
+              <span class="tag">Fedora</span>
+              <span class="tag">Debian/Ubuntu</span>
+              <span class="tag">Bash</span>
+              <span class="tag">Systemd</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h4>Containers & Orchestration</h4>
+            <div class="stack-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Helm</span>
+              <span class="tag">Podman</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h4>CI/CD & IaC</h4>
+            <div class="stack-tags">
+              <span class="tag">GitLab CI</span>
+              <span class="tag">Ansible</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Make</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h4>Monitoring & Logging</h4>
+            <div class="stack-tags">
+              <span class="tag">Zabbix</span>
+              <span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span>
+              <span class="tag">Loki</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h4>Networking & Security</h4>
+            <div class="stack-tags">
+              <span class="tag">Nginx</span>
+              <span class="tag">HAProxy</span>
+              <span class="tag">WireGuard</span>
+              <span class="tag">Let's Encrypt</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </article>
+{{ end }}

@@ -1,348 +1,206 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sovety-Po-Nastrojke-Android-Os | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Sovety-Po-Nastrojke-Android-Os | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/categories/sovety-po-nastrojke-android-os/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/categories/sovety-po-nastrojke-android-os/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/categories/sovety-po-nastrojke-android-os/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/categories/sovety-po-nastrojke-android-os/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Sovety-Po-Nastrojke-Android-Os">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sovety-Po-Nastrojke-Android-Os">
-
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/categories/">Categories</a></div>
-  <h1>
-    Sovety-Po-Nastrojke-Android-Os
-  </h1>
-</header>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Этот мануал можно считать уневерсальным, т.к. вероятнее всего он будет работать и на других смарфонах Xiaomi. Для всех манипуляций, которые требуеют наличия ПК, мной был использован ноутбук под управлением Debian 9 Stretch. Установка производилась на Xiaomi Redmi 3s. При желании мануал можно адаптировать Мануал адаптирован и для ОС семейства Windows.
-О том, как установить TWRP на постоянной основе читайте в этой статье.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-07-04 00:00:00 +0000 UTC'>July 4, 2017</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр." href="https://solbadguy.github.io/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/"></a>
-</article>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Полное удаление cервисов Google Play с вашего смартфона
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Радикальный метод удаления всех сервисов и программ, которые имеют отношение к Google. Если предустановленный производителем софт вам не нужен, то этот способ правильный выбор.
-...</p>
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2016-11-16 00:00:00 +0000 UTC'>November 16, 2016</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Полное удаление cервисов Google Play с вашего смартфона" href="https://solbadguy.github.io/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Прошивка сматфонов Xiaomi в Ubuntu
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Среди владельцев сматфонов Xiaomi и пользователей *buntu, есть много тех, кто не знает о том, что их девайс можно прошить прямо из консоли, ни какие программы на вроде Miflash при этом не понадобятся. Автор статьи, описывая действия, предварительно скачал архив с прошивкой рассчитанной для установки из MiFlash. Материал в первую очередь написан для тех, кто не работает под Windows.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-10-17 00:00:00 +0000 UTC'>October 17, 2016</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Прошивка сматфонов Xiaomi в Ubuntu" href="https://solbadguy.github.io/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как отключить службы Google/Xiaomi в прошивках MIUI
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-08-31 00:00:00 +0000 UTC'>August 31, 2016</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как отключить службы Google/Xiaomi в прошивках MIUI" href="https://solbadguy.github.io/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Оптимизация системной памяти Android
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-08-31 00:00:00 +0000 UTC'>August 31, 2016</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to Оптимизация системной памяти Android" href="https://solbadguy.github.io/posts/optimizaciya-sistemnoj-pamyati-android/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как удалить рут права? - Полное удаление root прав SuperSU
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Рут права на смартфоне позволяют владельцу сделать свою жизнь намного проще, возможностей, которые он предоставляет много (напр. удаление рекламы). Однако сейчас я хочу рассказать о том как их полностью их удалить, возможно это понадобится пользователям сбербанка.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-08-19 00:00:00 +0000 UTC'>August 19, 2016</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как удалить рут права? - Полное удаление root прав SuperSU" href="https://solbadguy.github.io/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Как вы знаете с недавнего времени смартфоны от Xiaomi продаются с заблокированным загрузчиком, о причинах говорить не буду, лучше давайте узнаем как проверить статус бутлоадера в Linux-подобных ОС.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-08-18 00:00:00 +0000 UTC'>August 18, 2016</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?" href="https://solbadguy.github.io/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">MIUI 7, фото звонящего не отображается
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Многие владельцы смартфонов под управлением MIUI 7 сталкиваются с проблемой, когда фотографии присвоенные контактам не отображаются при входящем звонке. Решение проблемы очень простое, подробности ниже.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-06-24 00:00:00 +0000 UTC'>June 24, 2016</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to MIUI 7, фото звонящего не отображается" href="https://solbadguy.github.io/posts/miui-7-foto-zvonyashhego-na-ves-ekran/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Android - Удаляем рекламу из приложений
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Root-доступ на android-смартфоне дает каждому пользователю практически неограниченные возможности по его настройке. В статье пойдет речь об одном из самых популярных методов его настройки “под себя” - удаление рекламы из приложений.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-06-09 00:00:00 +0000 UTC'>June 9, 2016</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Android - Удаляем рекламу из приложений" href="https://solbadguy.github.io/posts/android-udalyaem-reklamu-iz-prilozhenij/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Настройка MIUI 7, оптимизация энергопотребления.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Инструкция в первую очередь направлена не на отключение и выпиливание сервисов от Xiaomi\Google, а на повседневное использование телефона в качестве основного девайса со всеми его прелестями и недостатками. Отключение тех приложений, которые будут в инструкции указаны, не несет никаких последствий в нормальной работе устройства, а всего лишь дает возможность избавиться от назойливых сервисов, которые постоянно пытаются отправить логи и отчеты об ошибках (отчеты об использовании устройства), а также предоставляют выбор пользователю “отключать” или “не отключать” данные сервисы и их приложения.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-06-09 00:00:00 +0000 UTC'>June 9, 2016</span>&nbsp;·&nbsp;<span>8 min</span></footer>
-  <a class="entry-link" aria-label="post link to Настройка MIUI 7, оптимизация энергопотребления." href="https://solbadguy.github.io/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://solbadguy.github.io/categories/sovety-po-nastrojke-android-os/page/2/">Next&nbsp;&nbsp;»
-    </a>
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
   </nav>
-</footer>
-    </main>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/categories/sovety-po-nastrojke-android-os</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">ls -la /categories/sovety-po-nastrojke-android-os/</div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
+        <span style="color: var(--fg-subtle);">$ </span>Sovety-Po-Nastrojke-Android-Os
+      </h1>
+      
+      <ul class="post-list">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <li class="post-item">
+            <span class="post-item-date">4 января 2017</span>
+            <a href="http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/" class="post-item-title">Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр.</a>
+          </li>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <li class="post-item">
+            <span class="post-item-date">16 января 2016</span>
+            <a href="http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/" class="post-item-title">Полное удаление cервисов Google Play с вашего смартфона</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2016</span>
+            <a href="http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/" class="post-item-title">Прошивка сматфонов Xiaomi в Ubuntu</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">31 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/" class="post-item-title">Как отключить службы Google/Xiaomi в прошивках MIUI</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">31 января 2016</span>
+            <a href="http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/" class="post-item-title">Оптимизация системной памяти Android</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">19 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/" class="post-item-title">Как удалить рут права? - Полное удаление root прав SuperSU</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/" class="post-item-title">Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">24 января 2016</span>
+            <a href="http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/" class="post-item-title">MIUI 7, фото звонящего не отображается</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2016</span>
+            <a href="http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/" class="post-item-title">Android - Удаляем рекламу из приложений</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2016</span>
+            <a href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/" class="post-item-title">Настройка MIUI 7, оптимизация энергопотребления.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2016</span>
+            <a href="http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/" class="post-item-title">Настройка MIUI 7: удаляем системные приложения</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2016</span>
+            <a href="http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/" class="post-item-title">Удаление ненужных системных приложений (Android 4.1.2)</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2015</span>
+            <a href="http://localhost:1313/posts/optimiziruem-svoj-smartfon-na-android/" class="post-item-title">Оптимизируем свой смартфон на Android</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">25 января 2015</span>
+            <a href="http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/" class="post-item-title">Отключаем службы Android для сохранения заряда батареи</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

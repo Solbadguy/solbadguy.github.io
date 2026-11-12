@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ partial "breadcrumbs.html" . }}
+  <div class="terminal">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <span class="r"></span><span class="y"></span><span class="g"></span>
+      </div>
+      <div class="terminal-title">find /tags -type d</div>
+    </div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem;">
+        <span style="color: var(--accent);">$ </span>{{ .Title }}
+      </h1>
+      <div class="tags" style="gap: 0.75rem;">
+        {{ range .Data.Terms.Alphabetical }}
+          <a href="{{ .Page.Permalink }}" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            {{ .Page.Title }} <span style="opacity: 0.5;">({{ .Count }})</span>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ end }}

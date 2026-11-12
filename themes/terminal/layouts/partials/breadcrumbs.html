@@ -1,0 +1,19 @@
+<nav class="breadcrumbs">
+  {{ $slug := "" }}
+  {{ with .File }}
+    {{ $slug = .TranslationBaseName }}
+  {{ else }}
+    {{ $slug = urlize .Title }}
+  {{ end }}
+
+  {{ $path := "" }}
+  {{ if .IsHome }}
+    {{ $path = "~" }}
+  {{ else if .Section }}
+    {{ $path = printf "~/%s/%s" .Section $slug }}
+  {{ else }}
+    {{ $path = printf "~/%s" $slug }}
+  {{ end }}
+
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">{{ $path }}</span><span class="prompt">$</span>
+</nav>

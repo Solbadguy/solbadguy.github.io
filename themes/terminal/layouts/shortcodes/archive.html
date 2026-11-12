@@ -1,0 +1,9 @@
+{{ $pages := where .Site.RegularPages "Section" "posts" }}
+{{ range $pages.GroupByDate "2006" }}
+### {{ .Key }}
+
+{{ range .Pages }}
+- [{{ .Title }}]({{ .Permalink }}) — {{ .Date.Format "2 января" }}
+{{ end }}
+
+{{ end }}

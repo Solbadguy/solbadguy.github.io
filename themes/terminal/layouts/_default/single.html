@@ -1,0 +1,64 @@
+{{ define "main" }}
+  {{ partial "breadcrumbs.html" . }}
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-meta">
+        <span>{{ .Date.Format "2 января 2006" }}</span>
+        
+        {{/* Склонение слов */}}
+        {{ $w := .WordCount }}
+        {{ $rem10 := mod $w 10 }}
+        {{ $rem100 := mod $w 100 }}
+        {{ $wText := "слов" }}
+        {{ if eq $rem10 1 }}{{ if ne $rem100 11 }}{{ $wText = "слово" }}{{ end }}{{ end }}
+        {{ if ge $rem10 2 }}{{ if le $rem10 4 }}{{ if or (ge $rem100 20) (le $rem100 4) }}{{ $wText = "слова" }}{{ end }}{{ end }}{{ end }}
+        <span>{{ .ReadingTime }} мин чтения</span>
+        <span>{{ $w }} {{ $wText }}</span>
+
+        {{ if .Lastmod }}{{ if gt .Lastmod .Date }}
+          {{ $lm := .Lastmod.Format "2 января 2006" }}
+          <span>обновлено {{ $lm }}</span>
+        {{ end }}{{ end }}
+      </div>
+      {{ with .Params.tags }}
+        <div class="tags">
+          {{ range . }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </header>
+
+    {{/* Баннер устаревания: только если > 5 лет (1825 дней) */}}
+    {{ $ageDays := div (sub now.Unix .Date.Unix) 86400 }}
+    {{ if gt $ageDays 1825 }}
+      {{ $ageYears := div $ageDays 365 }}
+      {{ $yRem10 := mod $ageYears 10 }}
+      {{ $yRem100 := mod $ageYears 100 }}
+      {{ $yText := "лет" }}
+      {{ if eq $yRem10 1 }}{{ if ne $yRem100 11 }}{{ $yText = "год" }}{{ end }}{{ end }}
+      {{ if ge $yRem10 2 }}{{ if le $yRem10 4 }}{{ if or (ge $yRem100 20) (le $yRem100 4) }}{{ $yText = "года" }}{{ end }}{{ end }}{{ end }}
+      
+      <div class="age-banner">
+        ⚠ Этой статье больше {{ $ageYears }} {{ $yText }}. Информация может быть устаревшей.
+      </div>
+    {{ end }}
+
+    <div class="post-layout">
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+      {{ partial "toc.html" . }}
+    </div>
+
+    {{ if .Params.editURL }}
+      <a href="{{ .Params.editURL }}" class="edit-link" target="_blank" rel="noopener">
+        ✎ Редактировать на GitLab
+      </a>
+    {{ end }}
+
+    {{ partial "prev-next.html" . }}
+    {{ partial "related.html" . }}
+  </article>
+{{ end }}

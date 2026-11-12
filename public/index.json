@@ -1,0 +1,849 @@
+[
+  {
+    "title": "Права для директории .ssh - шпаргалка",
+    "permalink": "http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/",
+    "date": "2024-11-18",
+    "tags": ["linux","permissions"],
+    "content": "Если создаете папки и файлы руками, не забывайте про правильные права на файлы\nИмя Файл\\Директория Права SSH folder ~/.ssh 700 Public key ~/.ssh/id_rsa.pub 644 Private key ~/.ssh/id_rsa 600 Home folder ~ 755 at most authorized_keys ~/.ssh/authorized_keys 600 "
+  },
+  {
+    "title": "Debian 11 - объединение сетевых интерфейсов\bonding setup",
+    "permalink": "http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/",
+    "date": "2022-11-25",
+    "tags": ["bond"],
+    "content": "Появилась задача объединить все сетевые интерфейсы на сервере, для того, чтобы обеспечить максимальную пропускную способность в обе стороны. Шаги под катом.\nВозможные варианты:\nBalance-rr/mode 0 Active-backup/mode 1 Balance-xor/mode 2 Broadcast/mode 3 802.3ad/mode 4 Balance-tlb/mode 5 Balance-alb/mode 6 Есть два способа настроить:\nИспользуя конф. файл /etc/network/interfaces Используя нетворк менеджер - NMCLI Я использую первый вариант.\nУстановим ПО sudo apt update \u0026amp;amp;\u0026amp;amp; sudo apt upgrade …"
+  },
+  {
+    "title": "Переименование ноды Proxmox VE",
+    "permalink": "http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/",
+    "date": "2022-11-22",
+    "tags": ["proxmox"],
+    "content": "Во время одной из установок ОС была допущена опечатка в имени сервера. Под катом решение этой проблемы.\nРедактируем три файла, которые содержат имя хоста\nnano /etc/hosts nano /etc/hostname nano /etc/postfix/main.cf Перезагружаем ОС\nКопируем содержимое папки с неверным именем хоста в папку, которая именуется верно.\ncd /etc/pve/nodes/ cp -r old_hostname/qemu-server new_hostname/qemu-server rm -r old_hostname cd /var/lib/rrdcached/db/pve2-node/ cp -r old_hostname new_hostname rm -r old_hostname …"
+  },
+  {
+    "title": "Connection error 401: permission denied - invalid PVE ticket",
+    "permalink": "http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/",
+    "date": "2022-11-14",
+    "tags": ["proxmox","pve"],
+    "content": "Не совсем очевидное решение данной ошибки.\n1. Удаляем файлы:\n/etc/pve/pve-root-ca.pem /etc/pve/priv/pve-root-ca.key /etc/pve/nodes//pve-ssl.pem /etc/pve/nodes//pve-ssl.key /etc/pve/authkey.pub /etc/pve/priv/authkey.key /etc/pve/priv/authorized_keys 2. pvecm updatecerts -f 3 systemctl restart pvedaemon pveproxy\n"
+  },
+  {
+    "title": "Получаем WildCard от Let’s Encrypt",
+    "permalink": "http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/",
+    "date": "2022-11-07",
+    "tags": ["lets-encrypt","linux","ssl"],
+    "content": "Немного о том как вручную получить WildCard для домена и его поддоменов, используя верификацию через dns record.\nУстановим certbot\napt install certbot -y Протестируем\nsudo certbot --dry-run --manual --agree-tos --preferred-challenges dns certonly --server https://acme-v02.api.letsencrypt.org/directory -d *.netlab-kursk.ru -d netlab-kursk.ru Важный момент - в процессе работы certbot попросит добавить две txt-записи на вашем DNS-сервере. (ttl выставляем 60 сек)\nСтатус обновления DNS-записей удобно …"
+  },
+  {
+    "title": "Zabbix - Database error Connection refused",
+    "permalink": "http://localhost:1313/posts/zabbix-database-error-connection-refused/",
+    "date": "2022-09-09",
+    "tags": ["zabbix"],
+    "content": "Некоторое время назад понадобилось обновить zabbix до следующей версии, при этом ВМ, на которых работал фронт и БД жили отдельно, а настройки сети получали по dhcp.\nзначения в файле /etc/zabbix/zabbix_server.conf поменял сразу, но проблемы это не решило. При этом напрямую подкл к базе через mysql -u -p -h xx.xx.xx.xx отрабатывало отлично.\nА проблема заключалась чуть \u0026amp;ldquo;глубже\u0026amp;rdquo;, в другом файле\nvi /usr/share/zabbix/conf/zabbix.conf.php\n"
+  },
+  {
+    "title": "Chrony Forward time jump detected! / Chrony время не синхронизируется",
+    "permalink": "http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/",
+    "date": "2022-05-13",
+    "tags": ["chrony"],
+    "content": "Заметил, что после перезагрузки ноутбука время отображается неверно. Решение под катом.\nsystemctl status chronyd chronyd[1311]: Forward time jump detected! chronyc sources -v .-- Source mode \u0026amp;#39;^\u0026amp;#39; = server, \u0026amp;#39;=\u0026amp;#39; = peer, \u0026amp;#39;#\u0026amp;#39; = local clock. / .- Source state \u0026amp;#39;*\u0026amp;#39; = current best, \u0026amp;#39;+\u0026amp;#39; = combined, \u0026amp;#39;-\u0026amp;#39; = not combined, | / \u0026amp;#39;x\u0026amp;#39; = may be in error, \u0026amp;#39;~\u0026amp;#39; = too variable, \u0026amp;#39;?\u0026amp;#39; = unusable. || .- xxxx [ yyyy ] +/- zzzz || Reachability register …"
+  },
+  {
+    "title": "Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима",
+    "permalink": "http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/",
+    "date": "2022-05-13",
+    "tags": [],
+    "content": "Ноутбук под управлением Fedora 35 не возобновлял работу после перехода в ждущий режим. Вместо локскрина был черный экран. Решение в продолжении статьи.\nДля решения этой проблемы нужно активировать OLD -овый спящий режим S3 вместо стандартно включенного S0ix / Modern Standard, который активирован по умолчанию и никогда не работал у меня ни в Windows, ни в Linux.\nДля смены настроек спящего режима придется активировать расширенные настройки BIOS. Для этого: сначала отключите OneKeyBattery в биосе, …"
+  },
+  {
+    "title": "SSH-Jump. Получаем доступ к удаленному серверу.",
+    "permalink": "http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/",
+    "date": "2022-04-29",
+    "tags": [],
+    "content": "Jump-host — это промежуточный хост или SSH-шлюз в удаленную сеть, через который можно установить соединение с другим хостом в другой сети, например демилитаризованной зоне ( DMZ ). Настроим ssh config:\nvi ~/.ssh/config ### Jump-host Host ext-srv User ssh_user PreferredAuthentications publickey IdentityFile ~/.ssh/priv_key HostName extsrv.example.org Port 22 ### Хост к которому получим доступ через jump Host int-srv HostName intsrv.example.org User ssh_user PreferredAuthentications publickey …"
+  },
+  {
+    "title": "Vagrant. A possible reason for your Virtualbox VM entering the \"gurumeditation\" state.",
+    "permalink": "http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/",
+    "date": "2021-06-07",
+    "tags": ["vagrant"],
+    "content": "Во время работы столкнулся с не очевидной ошибкой - A possible reason for your Virtualbox VM entering the \u0026amp;ldquo;gurumeditation\u0026amp;rdquo; state. О том \u0026amp;ldquo;откуда ноги растут\u0026amp;rdquo; в продолжении.\nВо время очередного запуска команды vagrant up, старт виртуалок заканчивался такой ошибкой. Логи в этом случае, к сожалению, не подсказывали направление для поиска причины ошибки.\nВ самом Vbox -e сразу под именем ВМ был указан статус - \u0026amp;ldquo;критическая ошибка\u0026amp;rdquo;.\nПозже вспомнил, что ради интереса …"
+  },
+  {
+    "title": "Yakuake. Настройка под себя, исправление проблем.",
+    "permalink": "http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/",
+    "date": "2021-03-12",
+    "tags": ["yakuake"],
+    "content": "Yakuake — выпадающий эмулятор терминала, основанный на библиотеке приложения Konsole от KDE. В статье пойдет речь о том как его \u0026amp;ldquo;готовить для себя\u0026amp;rdquo;, а так же об исправлении проблемы с которой мне пришлось столкнуться.\nИтак что умеет yakuake**:** Плавное появление из верхней части экрана; Поддержка вкладок; Настраиваемые размеры и скорость анимации; Поддержка стилей оформления; Поддержка интерфейса D-Bus. Проблемы и пути решения Сразу после установки и кратковременного пользования …"
+  },
+  {
+    "title": "Bash. Погода в консоли",
+    "permalink": "http://localhost:1313/posts/pogoda-v-konsoli/",
+    "date": "2020-12-28",
+    "tags": ["alias-bash","konsol"],
+    "content": "На досуге добавил в свой терминал очередной alias, решил поделиться.\nЕсть сайт wttr.in, который мгновенно отдает погоду в зависимости от вашей локации.\nВ терминале запрос будет выглядеть так\ncurl wttr.in Результат\nИдем дальше - сделаем красиво.\nnano ~/.bashrc # Погода alias погода=\u0026amp;#39;curl http://wttr.in\u0026amp;#39; Откроем терминал еще раз. Пишем \u0026amp;ldquo;погода\u0026amp;rdquo;.\nРезультат сразу в консоли.\n"
+  },
+  {
+    "title": "connect to nextcloud waiting for authorization",
+    "permalink": "http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/",
+    "date": "2020-10-30",
+    "tags": ["nextcloud"],
+    "content": "Не так давно мне потребовалось настроить крайнюю версию Nextcloud -a на виртуальной машине. В данной заметке пойдет речь об одной из ошибок, которые пришлось решать на пути к его полноценной работе.\nДано:\nUbuntu srv 20.04 Nextcloud 20 Клиентское приложение под Debian в формате .appimage. Проблема:\nКлиент настольной синхронизации никак не может авторизоваться в клауде.\nРешение:\nПравим файл /var/nextcloud/config/config.php\nДобавим туда строки\n\u0026amp;#39;overwrite.cli.url\u0026amp;#39; =\u0026amp;gt; …"
+  },
+  {
+    "title": "Блокируем рекламу в домашней сети. Docker\u2029iHole + DnsCrypt",
+    "permalink": "http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/",
+    "date": "2020-09-24",
+    "tags": ["dnscrypt","docker","pihole"],
+    "content": "Короткая паста о том как поднять подобную связку на своем железе.\nИзобретать велосипед мы не будем поэтому воспользуемся своими навыками искать, открываем github.com и через пару секунд находим проект, который отвечает нашим задачам - https://github.com/losuler/pihole-dnscrypt\nНам потрбуется следующее ПО: apt install docker docker-compose git -y Установка: Перейдем в рабочую папку:\ncd /opt Клонируем репозиторий:\ngit clone https://gitlab.com/losuler/pihole-dnscrypt-docker Поправим путь в сервисе, …"
+  },
+  {
+    "title": "SSH-Jump. Настройка.",
+    "permalink": "http://localhost:1313/posts/ssh-jump-nastrojka/",
+    "date": "2020-09-22",
+    "tags": ["ssh","ssh-jump"],
+    "content": "В свое время открыл для себя такую вещь как SSH-Jump, с тех пор пользуюсь ей ежедневно. Сегодня подобные \u0026amp;ldquo;прыжки\u0026amp;rdquo; пришлось настроить для пары вирт и .. я решил все описать в этой короткой заметке.\nSSH-Jump. Настройка. Открываем файл:\nnano ~/.ssh/config В конец файла добавляем следующую конфигурацию:\nHost worksrv HostName *внешний адрес нашего сервера* IdentityFile ~/.ssh/id_rsa User *имя пользоваетеля* Host gitwork HostName *вн.адрес вирт машины* IdentityFile ~/.ssh/id_rsa Port 22 …"
+  },
+  {
+    "title": "grub-install: warning: this GPT partition label contains no BIOS Boot Partition; embedding won’t be possible.",
+    "permalink": "http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/",
+    "date": "2020-07-31",
+    "tags": ["debian","grub"],
+    "content": "Во время установки Debian 10 на компьютер в котором было установлено 2 HDD по 4TB + был создан Raid 1 я столкнулся с этой ошибкой. Решение оказалось простым, хоть явно об этом нигде и не сказано.\nТак вот система устанавливалась в Legacy, без всяких изысков во время разметки дисков.\nНа этапе установки Grub сталкивался со следующим:\nВ логах была одна интересная запись:\ngrub-install: warning: this GPT partition label contains no BIOS Boot Partition; embedding won’t be possible. Интереса ради я …"
+  },
+  {
+    "title": "Настраиваем отправку почты с сервера через пакет SSMTP",
+    "permalink": "http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/",
+    "date": "2020-07-24",
+    "tags": ["ssmtp"],
+    "content": "Заметку эту написал для локальной вики, а затем решил выложить и здесь.\n#1 Установка\napt-get install ssmtp -y #2 Настройка\nРедактируем основной конф. файл:\nnano /etc/ssmtp/ssmtp.conf Приведем его к такому виду:\n#от имени кого будут отправляться письма root=username@domen.ru #С какого домена будут приходить письма rewriteDomain=domen.ru #Сервер яндекса mailhub=smtp.yandex.ru:465 #имя нашего сервера hostname=domen.ru #Разрешаем шифрование UseTLS=YES #авторизация на Яндексе …"
+  },
+  {
+    "title": "Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04",
+    "permalink": "http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/",
+    "date": "2020-07-01",
+    "tags": ["zabbix-proxy","zabbix-proksi"],
+    "content": "В этом руководстве мы шаг за шагом пройдем путь от подготовки до полноценного запуска Zabbix Proxy 5 на Ubuntu 20.04 (Focal) или Ubuntu 18.04 (Bionic) LTS.\nZabbix proxy - это сервис, который собирант данные о производительности и доступности конечных устройств, а затем передает их Zabbix-серверу.\nКак правило он используется для мониторинга инфраструктуры, которая находится за брандмауэром, либо для разгрузки Zabbix-сервера в больших средах.\nА теперь мы установим последнюю версию 5.0 …"
+  },
+  {
+    "title": "Supervisor. Настраиваем перезапуск программы.",
+    "permalink": "http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/",
+    "date": "2020-05-29",
+    "tags": ["supervisor","ubuntu"],
+    "content": "В повседневной работе появилась задача - автоматизировать перезапуск программы с кастомными параметрами, в случае, если по какой-то причине она будет завершена.\nРешение - Supervisor.\nSupervisor - менеджер процессов, который выступает в качестве прослойки для мониторинга и управления процессами, запущенных пользователем.\nУстановка Supervisor apt install supervisor Конфигурационные файлы Supervisor находятся в каталоге /etc/supervisor/conf.d, где каждый имеет расширение .conf .\nПример …"
+  },
+  {
+    "title": "Netplan Wifi on Ubuntu 18.04",
+    "permalink": "http://localhost:1313/posts/netplan-wifi-on-ubuntu-18-04/",
+    "date": "2020-05-12",
+    "tags": ["netplan"],
+    "content": "Пару слов о том как настроить WiFI подключение из консоли.\nПервое, что необходимо помнить при настройке сети через Netplan - интервалы, отступы и т.д. имеют решающее значение и должны быть точными.\nПример настройки наиболее распространенных вариантов подключения можно найти по адресу:\ncat /usr/share/doc/netplan/examples/ В данном случае меня интересует файл:\ncat /usr/share/doc/netplan/examples/wireless.yaml network: version: 2 renderer: networkd wifis: wlp2s0b1: dhcp4: yes dhcp6: no addresses: …"
+  },
+  {
+    "title": "VDS диски в Windows. Автомонтирование.",
+    "permalink": "http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/",
+    "date": "2020-04-15",
+    "tags": ["cmd","vhd","windows"],
+    "content": "При работе с ЭЦП познакомился с такой полезной штукой как VDS-диск, мне нужен был накопитель, но под руками не было никаких USB-флешек. В продолжении материал о том, как добиться того, чтобы они подхватывались после перезагрузки у обычного пользователя.\nНемного о самих дисках:\nVHD (Virtual Hard Drive) - это виртуальные диски, которые выглядят в системе как отдельные физические диски и могут использоваться для хранения произвольных данных. Существенный недостаток таких дисков — при каждой …"
+  },
+  {
+    "title": "Linux Mint 19. Настраиваем удаленное подключение через VNC",
+    "permalink": "http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/",
+    "date": "2020-03-11",
+    "tags": ["linux-mint","vnc"],
+    "content": "В статье мы реализуем удаленный доступ с любого устройства к своему рабочему ПК. Данный метод был проверен на ОС Linux Mint 19. Работа на отличных от Mint -a системах не гарантируется.\nИнформация о системе:\nDistributor ID:\tLinuxMint Description:\tLinux Mint 19.1 Tessa Release:\t19.1 Codename:\ttessa Установим пакет, который отвечает за реализацию VNC-сервера:\nsudo apt install vino Однако он не имеет графической оболочки, поэтому нам придется установить еще один пакет:\nsudo apt install dconf-editor …"
+  },
+  {
+    "title": "Windows 10 после чистой установки: Chocolatey and Pshell scripts.",
+    "permalink": "http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/",
+    "date": "2020-03-04",
+    "tags": ["chocolatey","howto","powershell","script","windows-10"],
+    "content": "Ряд дейсвий, которые я выполяю после чистой установки Windows 10.\nПримечание:\nНачну с того, что для установки рекомендую не популярные редакции типа Win10 Home/Pro, а совершенно другую редакцию - Windows 10 LTSC. У нее есть как и свои плюсы (отсутствие маркета, предустановленного ПО, Кортаны и пр.), так и минусы на вроде отсутствия BitLocker-a (подробнее в таблице). В любом случае это мой субъективный выбор.\nWindows 10 после чистой установки Мне довольно часто приходится устанавливать Win10 на …"
+  },
+  {
+    "title": "Учим систему докладывать о событиях в Телеграм",
+    "permalink": "http://localhost:1313/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/",
+    "date": "2020-02-03",
+    "tags": ["telegram"],
+    "content": "При написании скриптов, мне иногда нужнен отчет об их работе. Самый простой вариант это E-mail. Однако имея на своем смартфоне несколько мессенджеров, неплохо было бы получать уведомления туда.\nУчим систему докладывать о событиях в Телеграм Создаем Бота Получаем его ID через @BotFather Получаем ID чата используя команду: curl https://api.telegram.org/bot\u0026amp;lt;Token\u0026amp;gt;/getUpdates в случае если ничего не пришло в ответ - отправьте в чат любое сообщение от своего имени.\nСоставляем команду для …"
+  },
+  {
+    "title": "Hetzner StorageBox. Настраиваем авторизацию по ключам.",
+    "permalink": "http://localhost:1313/posts/hetzner-storagebox-nastraivaem-avtorizaciyu-po-klyucham/",
+    "date": "2020-01-21",
+    "tags": ["hetzner","ssh","ssh-keygen"],
+    "content": "Эта заметка в первую очередь написана для себя самого, дабы упростить авторизацию в удаленном хранилище авторы предлагают использовать ключи. В продолжении паста с оф.вики Хетцнера.\nПервым делаем сгенерируем ключи (если их еще нет):\nssh-keygen Generating public/private rsa key pair. Enter file in which to save the key (/root/.ssh/id_rsa): Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /root/.ssh/id_rsa. Your public key has been …"
+  },
+  {
+    "title": "Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx",
+    "permalink": "http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/",
+    "date": "2020-01-15",
+    "tags": ["logrotate","nginx","ubuntu"],
+    "content": "Logrotate - это системная утилита, которая управляет автоматической ротацией и сжатием лог-файлов. Если в процессе длительной работы сервера файлы не были ротированы, сжаты и периодически не удалялись, то рано или поздно они могут занять весь доступный объем памяти.\nЕсли вы используете сервер, отличный от Ubuntu, убедитесь, что утилита установлена, запросив информацию:\nlogrotate --version Ожидаемый результат:\nlogrotate 3.8.7 Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx …"
+  },
+  {
+    "title": "Как создать полноценный почтовый сервер на Ubuntu 18.04",
+    "permalink": "http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/",
+    "date": "2020-01-15",
+    "tags": ["iredmail","mail-server","ubuntu"],
+    "content": "Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.\nЧто такое iRedMail? iRedMail — это скрипт оболочки, который автоматически устанавливает и настраивает все необходимые компоненты почтового сервера на вашем …"
+  },
+  {
+    "title": "Администрирование 1C-сервера под Linux",
+    "permalink": "http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/",
+    "date": "2019-09-20",
+    "tags": ["1c","it","linux","ubuntu","komandnaya-stroka"],
+    "content": "Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой \u0026amp;ldquo;Администриарование сервера 1С\u0026amp;rdquo;. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.\nПервым делом стартуем кластер\n/opt/1C/v8.3/x86_64/ras --daemon cluster Информация о кластере\n/opt/1C/v8.3/x86_64/rac cluster list Получаем список баз\n/opt/1C/v8.3/x86_64/rac infobase --cluster=UID summary list где UID - результат вывода информации первой команды. …"
+  },
+  {
+    "title": "Let’s Encrypt сертификат для сайта. Centosginx",
+    "permalink": "http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/",
+    "date": "2019-08-21",
+    "tags": ["centos","https","lets-encrypt","nginx","ssl","sertifikat"],
+    "content": "Установка бесплатного SSL сертификата Let’s Encrypt на Nginx на серверах под управлением ОС Centos. Установка Git\nyum install git Получение файлов Let’s Encrypt certbot в папку /tmp\ncd /tmp; git clone https://github.com/certbot/certbot Выставляем права на запуск\ncd certbot; chmod a+x ./certbot-auto Выпускаем сертификат\n./certbot-auto certonly --webroot --agree-tos --email admin@site.ru -w /home/bitrix/www/public/ -d site.ru -d www.site.ru Установка сертификата (SSL должен быть настроен) …"
+  },
+  {
+    "title": "1C server - Ragent: not running.",
+    "permalink": "http://localhost:1313/posts/1c-server-ragent-not-running/",
+    "date": "2019-06-10",
+    "tags": ["1c-server"],
+    "content": "Не так давно столкнулся с проблемой на сервере 1С (Ubuntu 16.04) - аутсорсинговая компания решила поэксперементировать на проде, в результате чего на системном разделе закончилось место.\nКазалось бы избитая проблема, которая решается удалением\\переносом некоторой части файлов куда-то еще. Однако в этом случае подобный подход не подошел. Клиенты по прежнему получали сообщение, о том, что сервер отвергает их запросы на подключение.\nПроблема: Статус службы говорил о том, что она не работает: …"
+  },
+  {
+    "title": "Nextcloud через webDAV: «Windows не может получить доступ ...",
+    "permalink": "http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/",
+    "date": "2019-06-04",
+    "tags": ["nextcloud","webdav","windows"],
+    "content": "Ошибка возникает при попытке подключения сетевого хранилища через webdav стандартными средствами Windows.\nОшибка при попытке восстановления подключения:\nОшибка при попытке добавить новое подключение:\nПричина:\nСтатус службы \u0026amp;ldquo;Веб-клиент\u0026amp;rdquo; по умолчанию находится в положении \u0026amp;ldquo;Запускать в ручную\u0026amp;rdquo;.\nИзменяем тип запуска на \u0026amp;quot; Запускать автоматически\u0026amp;quot;. Пробуем подключиться еще раз.\nПроцесс подключения сетевого хранилища через webdav пошагово описан на яндексе.\nИсточник - …"
+  },
+  {
+    "title": "Vagrant problem solving",
+    "permalink": "http://localhost:1313/posts/vagrant-problem-solving/",
+    "date": "2019-05-22",
+    "tags": ["vagrant"],
+    "content": "**Проблема:\n**mount: unknown filesystem type \u0026amp;lsquo;vboxsf\u0026amp;rsquo;\n**Решение:\n**vagrant plugin install vagrant-vbguest\nПроблема:\nconflicting dependencies fog-core (\u0026amp;gt; 1.43.0) and fog-core (= 1.45.0) Activated fog-core-1.45.0 which does not match conflicting dependency (\u0026amp;gt; 1.43.0) Conflicting dependency chains: fog-core (= 1.45.0), 1.45.0 activated versus: vagrant-libvirt (\u0026amp;gt; 0), 0.0.41 activated, depends on fog-core (~\u0026amp;gt; 1.43.0) Решение:\nwget -c …"
+  },
+  {
+    "title": "Создаем backup android-устройства через ADB в Ubuntu",
+    "permalink": "http://localhost:1313/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/",
+    "date": "2018-12-05",
+    "tags": ["android"],
+    "content": "Ранее я писал на эту тему отдельную заметку, с тех пор было выпущено несколько версий ОС android, каждый из нас наверняка узнал что-то новое. Я в частности немного поработал с ADB, об этом и пойдет речь ниже.\nЧто такое ADB:\nADB - Android Debug Bridge. Это утилита командной строки, которая позволяет вам выполнять следующее:\nУправлять своим устройством Android через USB с компьютера Копировать файлы туда-сюда. Устанавливать и удалять приложения Запускать команды оболочки и етс Установка ADB: sudo …"
+  },
+  {
+    "title": "Используем Docker, AceStream \u0026 AceProxy для просмотра \"Торрент ТВ\" на смартфонах, телевизорах и etc",
+    "permalink": "http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/",
+    "date": "2018-09-04",
+    "tags": ["aceproxy","acestream","ubuntu","tv"],
+    "content": "В статье будет описана установка, настройка и несколько способов просмотра видеопотока через трансляции p2p телевидения. Результатом выполнения этой инструкции будет \u0026amp;ldquo;комбайн\u0026amp;rdquo;, который позволит одновременный просмотр такого ТВ с разных устройств в высоком качестве.\nAceStream - это протокол одноранговой мультимедийной потоковой передачи, построенный с использованием технологии BitTorrent, для трансляции и просмотра \u0026amp;ldquo;тяжелых\u0026amp;rdquo; видеопотоков.\nAceProxy - прокси, который написан …"
+  },
+  {
+    "title": "Установка Docker на Ubuntu 16.04",
+    "permalink": "http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/",
+    "date": "2018-09-04",
+    "tags": ["docker","ubuntu"],
+    "content": "Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы\nЧто имеем: Свежеустановленную ОС Ubuntu 16.04 Root-доступ Доступ в интернет Установка Docker Обновим базу данных пакетов системы:\napt-get update **Импортируем GPG ключ оф. репо Docker:**apt-key adv \u0026amp;ndash;keyserver hkp://p80.pool.sks-keyservers.net:80 \u0026amp;ndash;recv-keys 58118E89F3A912897C070ADBF76221572C52609D\nДобавим репо Docker в список источников …"
+  },
+  {
+    "title": "OpenMediaVault WebGui login not working",
+    "permalink": "http://localhost:1313/posts/openmediavault-webgui-login-not-working/",
+    "date": "2018-06-26",
+    "tags": ["linux","openmediavault","komandnaya-stroka"],
+    "content": "OpenMediaVault - это отличная система для управления хранением файлов, которая работает по принципу \u0026amp;ldquo;настроил и забыл\u0026amp;rdquo;.\nСовсем недавно потребовалось попасть в веб-интерфейс управления такой системы, НО учетные данные для входа система принимать отказалась. Ниже возможные решения.\nСтандартные логин\\пароль\nWEB\nadmin openmediavault SSH\nroot openmediavault Забыли пароль web-интерфейса\nlogin ssh \u0026amp;mdash;\u0026amp;gt;\nomv-firstaid -\u0026amp;ndash;\u0026amp;gt; меняем пароль\nИзменили пароль, но авторизация не …"
+  },
+  {
+    "title": "How to Convert PDF to JPG in Ubuntu",
+    "permalink": "http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/",
+    "date": "2018-05-07",
+    "tags": ["howto","linux","komandnaya-stroka"],
+    "content": "Очень простой и удобным метод конвертирования изображений из PDF в JPG. В качестве альтернативы можно рассмотреть пакет imagemagick, но на момент написания статьи он не совсем верно обработал выходные изображения.\nВ данной заметке я предлагаю использовать утилиты из пакета Poppler, которые, наоборот, справились на 5+.\nПроизводим установку из терминала:\nsudo apt-get install poppler-utils Простейший пример конвертации PDF в JPG:\npdftocairo -jpeg \u0026amp;#34;имяфайла.pdf\u0026amp;#34; И немного о ключах:\n-png …"
+  },
+  {
+    "title": "Motd script for SSH login",
+    "permalink": "http://localhost:1313/posts/motd-script-for-ssh-login/",
+    "date": "2018-02-21",
+    "tags": ["linux","motd","ssh"],
+    "content": "В этом небольшом руководстве пойдет речь о кастомизации сообщения motd при авторизации в системе. В РУнете информация устарела, либо ее нет, либо я плохо искал. В продолжении статьи готовый скрипт, примерный выхлоп и пошаговое руководство.\nПри необходимости скрипт легко меняется под ваши нужды.\nПримерный результат Код скрипта #!/bin/sh upSeconds=\u0026amp;#34;$(/usr/bin/cut -d. -f1 /proc/uptime)\u0026amp;#34; secs=$((${upSeconds}%60)) mins=$((${upSeconds}/60%60)) hours=$((${upSeconds}/3600%24)) …"
+  },
+  {
+    "title": "Программе установки Windows не удалось настроить Windows для работы с оборудованием",
+    "permalink": "http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/",
+    "date": "2018-01-26",
+    "tags": ["win7","windows","komandnaya-stroka"],
+    "content": "Нужно было установить Windows 7 на китайский ноутбук, при установке с флешки постоянно возникала ошибка \u0026amp;ldquo;Программе установки Windows не удалось настроить Windows для работы с оборудованием\u0026amp;rdquo;. Что интересно, выскакивала ровно тогда, когда процесс настройки оборудования заканчивался на 100%.\nРешение ошибки Это заняло какое-то время, а решение как чаще всего бывает было простым.\nПосле того как выскочила ошибка выполним:\nShift+F10 (на ноутбуке может потребоваться добавить в комбинацию …"
+  },
+  {
+    "title": "Proxmox VE 5.0 fix update",
+    "permalink": "http://localhost:1313/posts/proxmox-ve-5-0-fix-update/",
+    "date": "2017-10-16",
+    "tags": [],
+    "content": "Сразу после установки Proxmox 5.0 абсолютно все сталкиваются с ошибкой обновления. Дело том, что обновление по умолчанию стучится на корпоративные репозитории, где без подписки получает отпул. В итоге, после того как ввести в терминале apt update пользователь получает примерно такое сообщение:\nW: The repository \u0026amp;#39;https://enterprise.proxmox.com/debian/pve stretch Release\u0026amp;#39; does not have a Release file. N: Data from such a repository can\u0026amp;#39;t be authenticated and is therefore potentially …"
+  },
+  {
+    "title": "Минимальный набор сервисов Google",
+    "permalink": "http://localhost:1313/posts/minimalnyj-nabor-servisov-google/",
+    "date": "2017-08-21",
+    "tags": ["gapps","google-service"],
+    "content": "Специально подготовленный архив для TWRP, который включает в себя только три сервиса от GOOGLE - PlayMarket, Синхронизация календаря \\ контактов.\nПосле установки наверняка отметите, что PlayMarket имеет черный скин, такой, если не ошибаюсь, был в версиях 4.х.х. Собственно оттуда и вырезаны эти сервисы.\nВ отличии от нанешних потребляют минимамальное количество ресурсов девайса, программы при этом обновляются, контакты\\календарь синхронизуруются.\nАвтор использует эти Gapss как альтернативу Pico. …"
+  },
+  {
+    "title": "RDesktop - подключение к Windows из Linux по RDP",
+    "permalink": "http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/",
+    "date": "2017-08-17",
+    "tags": ["it","linux","rdp"],
+    "content": "Простой способ подключения к станциям под управлением Windows из под любого Linux-based дистрибутива.\nRdesktop установка Установка простая.\napt-get install rdesktop #Команду стоит вводить от лица root Подключение к серверу rdesktop -z -P -g 1280x900 -u USERNAME -p PASSWORD SERVER_IP где:\n-z включает сжатие потока -P кэширование -g задает геометрию окна -u имя пользователя на сервере -p пароль. Опцию \u0026amp;ldquo;-g\u0026amp;rdquo; можно заменить опцией \u0026amp;ldquo;-f\u0026amp;rdquo;. Тогда rdesktop будет открыт на весь …"
+  },
+  {
+    "title": "Оптимизация изображений для сайта - JPEGoptim и OptiPNG",
+    "permalink": "http://localhost:1313/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/",
+    "date": "2017-07-12",
+    "tags": [],
+    "content": "Рассказ про то, как быстро оптимизировать вес изображений без потери качества используя только консоль.\nJPEGoptim оптимизация JPG sudo apt-get install jpegoptim JPEGoptim можно использовать со следующими ключами:\n--strip-all удаляет комментарии, Exif, IPTC, ICC, XMP --all-progressive преобразует в прогрессивный jpeg -p сохранит время создания такими же как у исходного файла -t покажет итоговый результат оптимизации для нескольких изображений -m85 устанавливает максимальное сжатие jpeg в 85. Этот …"
+  },
+  {
+    "title": "Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр.",
+    "permalink": "http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/",
+    "date": "2017-07-04",
+    "tags": ["android","fastboot","root","twrp"],
+    "content": "Этот мануал можно считать уневерсальным, т.к. вероятнее всего он будет работать и на других смарфонах Xiaomi. Для всех манипуляций, которые требуеют наличия ПК, мной был использован ноутбук под управлением Debian 9 Stretch. Установка производилась на Xiaomi Redmi 3s. При желании мануал можно адаптировать Мануал адаптирован и для ОС семейства Windows.\nО том, как установить TWRP на постоянной основе читайте в этой статье.\nГлавным преимуществом данного метода является возможность пользоваться …"
+  },
+  {
+    "title": "Создание загрузочной флешки с Windows XP",
+    "permalink": "http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/",
+    "date": "2017-06-09",
+    "tags": ["windows","winxp"],
+    "content": "DirectGRUB - это мелкая утилита, которая позволит создавать загрузочные флешки с Win XP за пять минут.\nСоздание загрузочной флешки с Windows XP На рисунке выше видно, что нужно выбрать образ, указать флэшку и нажать кнопку «Начать», и через пару минут загрузочный носитель будет готов.\nУстановка Выставляем в BIOS или Boot Menu приоритет загрузки с флэшки, загружаемся с неё, в загрузочном меню GRUB (см. рис. ниже) выбираем первую строчку: «Установка Windows XP из ISO» и начинаем установку. • …"
+  },
+  {
+    "title": "Восстановление пароля Enterprise Security Suite",
+    "permalink": "http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/",
+    "date": "2017-03-09",
+    "tags": ["it"],
+    "content": "В случае, если пароль администратора для доступа к серверу ESS утерян, то существует возможность его просмотра или изменения с использованием прямого доступа к базе данных Сервера. Этот способ удобен тем, что позволяет быстро восстановить пароль не выполняя при этом ненужных действий.\nВсе что потребуется это доступ по ssh к машинке, на которой установлен сервер ESS. В случае, если БД является внешней, то одним ssh-доступом обойтись не получится, в такой ситуации понадобится любой sql-клиент, …"
+  },
+  {
+    "title": "Что такое «mab» в прошивках Xiaomi и как его удалить.",
+    "permalink": "http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/",
+    "date": "2017-01-27",
+    "tags": ["android","root","xiaomi"],
+    "content": "Не так давно во всех новых прошивках смартфонов от компании Xiaomi появилось новое приложение с очень уж подозрительными разрешениями. Во всем интернете есть множество вопросов об этом приложении на совершенно разных языках, но единственного ответа нет нигде.\nВ статье я напишу, все что удалось выяснить, а так же о способах по его удалению.\nЧто такое «mab» в прошивках Xiaomi и как его удалить. Как Вам уже стало понятно, новое приложение называется «mab». Меня как и многих заинтересовало, а зачем …"
+  },
+  {
+    "title": "Как изменить цвет шрифта на рабочем столе в XFCE 4.12",
+    "permalink": "http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/",
+    "date": "2017-01-19",
+    "tags": ["how-to","linux","ubuntu","xfce4"],
+    "content": "В большинстве случаев, если вы выбираете темный фон для рабочего стола, приходится осознать неприятный факт - черный шрифт под иконками имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.\nКак изменить цвет шрифта на рабочем столе в XFCE 4.12 Для того, чтобы получить светло-серый шрифт, выполним следующие действия:\nНайдем в домашнем каталоге файл - .gtkrc-2,0 Воспользуемся любой программой, …"
+  },
+  {
+    "title": "Корректное отображение кириллицы в Midnight Commander",
+    "permalink": "http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/",
+    "date": "2017-01-18",
+    "tags": ["linux","soft","redaktory"],
+    "content": "Возникла необходимость воспользоваться специализированным дистрибутивом, который работает под Debian, так вот русской локализации в нем конечно же не было. Файлы и папки в консоли\\ файловом менеджере в названии которых была кириллица отображались неправильно - вместо букв отображались знаки вопроса. Решить эту проблему очень просто.\nКорректное отображение кириллицы в Midnight Commander Настраиваем языковые параметры\ndpkg-reconfigure locales Активируем локали ru_RU.CP1251 CP1251 и ru_RU.UTF-8 …"
+  },
+  {
+    "title": "Полный список сервисов Google для android 4.0.4, 5.1, 6.0",
+    "permalink": "http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/",
+    "date": "2016-12-07",
+    "tags": ["android","gaaps"],
+    "content": "В продолжении статьи можно найти полный список сервисов Google для android 4.0.4, 5.1, 6.0, в т.ч. для архитектур arm и arm64. Что с этим делать дальше? Ну например можно удалить их все воспользовавшись командой rm. Ко мне иногда обращаются с просьбой написать скрипт для удаления/заморозки тех или других программ/сервисов. Так вот именно этим реестром служб я и пользуюсь для выполнения обозначенных целей.\nСодержание:\nAndroid 4.0.4 (Ice Cream)\nAndroid 5.1 (Lollipop)\nAndroid 6.0 (Marshmallow) …"
+  },
+  {
+    "title": "Полное удаление cервисов Google Play с вашего смартфона",
+    "permalink": "http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/",
+    "date": "2016-11-16",
+    "tags": ["android","root","twrp"],
+    "content": "Радикальный метод удаления всех сервисов и программ, которые имеют отношение к Google. Если предустановленный производителем софт вам не нужен, то этот способ правильный выбор.\nРанее я уже писал о том, как отключить службы Google/Xiaomi в прошивках MIUI, но если способ описанный в той статье имеет более \u0026amp;ldquo;узкую\u0026amp;rdquo; направленность, то способ описанный в этой статье поможет произвести полное удаление cервисов Google Play с вашего смартфона в независимости от его версии (2.3+, 7.0 под …"
+  },
+  {
+    "title": "Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x",
+    "permalink": "http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/",
+    "date": "2016-10-20",
+    "tags": ["android","fastboot","root","twrp","windows"],
+    "content": " Данная инструкция к действию пригодится в первую очередь тем, кто по каким-либо причинам не хочет пользоваться кастомными прошивками от известных ромоделов (Xiaomi.eu, multirom и прочих). Данный способ позволит установить TWRP на разблокированный загрузчик телефона, а так же получить рут-права.\nВ статье будет рассмотрена Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x используя ПК под управлением Ubuntu и Windows. Все действия аналогичны и для других устройств, мануал …"
+  },
+  {
+    "title": "Прошивка сматфонов Xiaomi в Ubuntu",
+    "permalink": "http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/",
+    "date": "2016-10-17",
+    "tags": ["android","fastboot","linux","ubuntu"],
+    "content": "Среди владельцев сматфонов Xiaomi и пользователей *buntu, есть много тех, кто не знает о том, что их девайс можно прошить прямо из консоли, ни какие программы на вроде Miflash при этом не понадобятся. Автор статьи, описывая действия, предварительно скачал архив с прошивкой рассчитанной для установки из MiFlash. Материал в первую очередь написан для тех, кто не работает под Windows.\nРанее я уже писал о том, как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian, на сей раз пойдем …"
+  },
+  {
+    "title": "Xiaomi Redmi 3 (3s/3x/3Pro) не удается войти в режим download",
+    "permalink": "http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/",
+    "date": "2016-09-26",
+    "tags": ["android","fastboot","xiaomi"],
+    "content": "Несколько раз мне пришлось столкнуться с тем, что на устройстве Xiaomi Redmi 3 (3s/3x/Pro) не удается войти в режим download, т.к. он просто перезагружался в систему. О том как действовать в такой ситуации читайте ниже. Эта инструкция вероятнее всего подойдет не только для указанных в заголовке устройств. Для начала напомню о том, какие комбинации клавиш для входа в разные режимы существуют: Volume + и Power - меню выбора режима; Volume - и Power - переводит устройство в режим fastboot; Volume …"
+  },
+  {
+    "title": "Как отключить службы Google/Xiaomi в прошивках MIUI",
+    "permalink": "http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/",
+    "date": "2016-08-31",
+    "tags": ["android","google","miui","root","optimizaciya-pamyati"],
+    "content": "Ранее я уже писал о том, какие программы можно удалять из прошивок MIUI, в этот раз мне бы хотелось затронуть тему сервисов от производителя (Xiaomi) и корпорации добра (Google). В статье описан способ, который позволит отключать и включать эти сервисы по желанию.\nЧем этот способ лучше удаления сервисов Google/Xiaomi? Ответ напрашивается сам собой - при необходимости вы сможете вернуть все в исходное состояние (например вам нужно установить программу из каталога программ Google, установить …"
+  },
+  {
+    "title": "Оптимизация системной памяти Android",
+    "permalink": "http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/",
+    "date": "2016-08-31",
+    "tags": ["android","miui","optimizaciya-pamyati"],
+    "content": "По просьбам нуждающихся немного про оптимизацию системной памяти в Android, о том как ее включить и зачем это делают. Ничего нового я не открою, однако по возможности постараюсь все просто расписать.\nОптимизация системной памяти Android Первым делом немного терминологии о вспомогательных методах работы памяти:\nSwap - создает блоки подкачки во внутренней памяти или в памяти флеш-карты, скорость работы напрямую зависит от скорости накопителя, однако пользователю эта разница вряд ли будет заметна. …"
+  },
+  {
+    "title": "Отключение проверки цифровой подписи драйверов Windows 7",
+    "permalink": "http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/",
+    "date": "2016-08-29",
+    "tags": ["win7","windows"],
+    "content": "Наверняка многие пользователи сталкивались с проблемой, когда драйвер от устройства, которое он имеет на руках, напрочь отказывается устанавливаться. Под катом решение проблемы отключения проверки цифровой подписи драйверов в Windows 7.\nОтключение проверки цифровой подписи драйверов Windows 7 Я рассмотрю три варианта решения этой проблемы в Windows 7.\nВариант 1\nДля начала нам нужно открыть окно вызова программ («Выполнить»), для этого используют следующую комбинацию клавиш Win+R, в появившемся …"
+  },
+  {
+    "title": "Как удалить рут права? - Полное удаление root прав SuperSU",
+    "permalink": "http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/",
+    "date": "2016-08-19",
+    "tags": ["android","root"],
+    "content": "Рут права на смартфоне позволяют владельцу сделать свою жизнь намного проще, возможностей, которые он предоставляет много (напр. удаление рекламы). Однако сейчас я хочу рассказать о том как их полностью их удалить, возможно это понадобится пользователям сбербанка.\nПолное удаление root прав SuperSU Способ 1-й\nОткрываем SuperSU; Заходим в Настройки и листавем в самый низ; Находим пункт \u0026amp;ldquo;Полное удаление Root-прав\u0026amp;rdquo;. Важный момент - SuperSU должен будет предложить вам попытку …"
+  },
+  {
+    "title": "Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?",
+    "permalink": "http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/",
+    "date": "2016-08-18",
+    "tags": ["adb","android"],
+    "content": "Как вы знаете с недавнего времени смартфоны от Xiaomi продаются с заблокированным загрузчиком, о причинах говорить не буду, лучше давайте узнаем как проверить статус бутлоадера в Linux-подобных ОС.\nНакатим adb sudo apt-get install android-tools-adb android-tools-fastboot 2. Переводим выключенное устройство в режим fastboot (зажимаем громкость минус и питание) 3. Проверим видит ли ПК ваш тлф\nsudo fastboot devices В результате должно появиться цифровое значение - это ваше устройство. 4. Выведем …"
+  },
+  {
+    "title": "Обман MultiRom",
+    "permalink": "http://localhost:1313/posts/obman-multirom/",
+    "date": "2016-07-27",
+    "tags": ["android","miui"],
+    "content": "Сразу хочу сказать, что ничего не имею против отдельных личностей и команды MultiRom в целом. Они делают по настоящему хорошие переводы. Однако на просторах интернета я очень часто слышал мнение, что \u0026amp;ldquo;они самые лучшие\u0026amp;rdquo;, т.к.\u0026amp;quot; ОПТИМИЗИРУюТ прошивки\u0026amp;quot;, \u0026amp;ldquo;там больше свободной Оперативной памяти\u0026amp;rdquo; и т.п. . Неприятно было узнать о том, что это просто фокус.\nТеперь факты.\nMultiROM пошли простым путем, по адресу: …"
+  },
+  {
+    "title": "MIUI 7, фото звонящего не отображается",
+    "permalink": "http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/",
+    "date": "2016-06-24",
+    "tags": ["android","miui"],
+    "content": "Многие владельцы смартфонов под управлением MIUI 7 сталкиваются с проблемой, когда фотографии присвоенные контактам не отображаются при входящем звонке. Решение проблемы очень простое, подробности ниже.\nMIUI 7, фото звонящего не отображается Эта проблема появилась на версиях прошивок старше 7.1.3 stable и 6.3.3 dev, на указанных прошивках все работало как надо, в новых версиях китайцы где-то просчитались.\nДля того, чтобы исправить этот недостаток я предполагаю взять оригинальный компонент из …"
+  },
+  {
+    "title": "Как восстановить ассоциации файлов Windows 7/8?",
+    "permalink": "http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/",
+    "date": "2016-06-19",
+    "tags": ["win7","associacii-fajlov"],
+    "content": "Бывает такое, что в результате небрежных/необдуманных действий пользователя (реже ошибок в самой системе) в ОС Windows 7/8 могут нарушиться стандартные ассоциации файлов и приложений, которые должны их открывать. В результате ярлыки приложений могут открываться через Word, а архивы через системный плеер.\nВ интернете можно найти огромное количество программ, которые помогают исправить эту ошибку, однако это не наш путь.\nКак восстановить ассоциации файлов Windows 7/8? Для восстановления ассоциаций …"
+  },
+  {
+    "title": "Android - Удаляем рекламу из приложений",
+    "permalink": "http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/",
+    "date": "2016-06-09",
+    "tags": ["android","miui"],
+    "content": "Root-доступ на android-смартфоне дает каждому пользователю практически неограниченные возможности по его настройке. В статье пойдет речь об одном из самых популярных методов его настройки \u0026amp;ldquo;под себя\u0026amp;rdquo; - удаление рекламы из приложений.\nПредварительно устанавливаем более-менее серьезный файловый менеджер:\nRoot-explorer ES-проводник Далее осуществляем переход в корневую директорию устройства - \u0026amp;ldquo;/\u0026amp;rdquo;, где ищем следующую папку System/etc находим там файл hosts.\nЗаменяем его на …"
+  },
+  {
+    "title": "Настройка MIUI 7, оптимизация энергопотребления.",
+    "permalink": "http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/",
+    "date": "2016-06-09",
+    "tags": ["android","miui"],
+    "content": "Инструкция в первую очередь направлена не на отключение и выпиливание сервисов от Xiaomi\\Google, а на повседневное использование телефона в качестве основного девайса со всеми его прелестями и недостатками. Отключение тех приложений, которые будут в инструкции указаны, не несет никаких последствий в нормальной работе устройства, а всего лишь дает возможность избавиться от назойливых сервисов, которые постоянно пытаются отправить логи и отчеты об ошибках (отчеты об использовании устройства), а …"
+  },
+  {
+    "title": "Настройка MIUI 7: удаляем системные приложения",
+    "permalink": "http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/",
+    "date": "2016-06-09",
+    "tags": ["android","miui"],
+    "content": "Во второй части статьи на тему настройки MIUI 7 предлагаю заняться стандартными системными приложениями, удаление которых ни как не отразится на работе смартфона\nПрежде, чем приступить к каким-либо действиям настоятельно рекомендую сделать бэкап!\nУдаляем системные приложения MIUI 7 Идем по пути system/app и попадаем в папку с основными системными приложениями. Вот тут то мы и начнем избавляться от тех приложений, которые, по моему мнению, не нужны в системе.\nНиже приведены приложения, которые …"
+  },
+  {
+    "title": "Автоматическое выключение компьютера в заданное время",
+    "permalink": "http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/",
+    "date": "2016-04-05",
+    "tags": ["windows","komandnaya-stroka"],
+    "content": "Наверняка у многих людей возникали ситуации, когда нужно было уйти/лечь спать/погулять с собачкой при этом оставив работать компьютер в течении заданного времени. Многие наверняка решают подобные проблемы используя сторонние программы, забыв (или не зная) о том, что в Windows уже есть такой набор функций - shutdown.\nАвтоматическое выключение компьютера в заданное время Немного букв: Что такое shutdown? - это команда для выключения, перезагрузки, отправки компьютера в спящий режим. Команда имеет …"
+  },
+  {
+    "title": "Как создать Swap файл подкачки в Linux-подобных ОС",
+    "permalink": "http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/",
+    "date": "2016-03-02",
+    "tags": ["linux","ubuntu"],
+    "content": "Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).\nЧто такое Swap (файл подкачки) Swap — это механизм памяти, при работе которого неактивные процессы выгружаются из оперативной памяти на жёсткий диск, таким образом происходит ее разгрузка. Это полезно, если количество памяти строго ограничено, говоря простым языком, если памяти катастрофически …"
+  },
+  {
+    "title": "Долой Phpmyadmin- Импорт базы msql прямо из консоли",
+    "permalink": "http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/",
+    "date": "2016-03-01",
+    "tags": [],
+    "content": "Зачастую вебмастера могут сталкиваться с ограничениями хостинга на размер загружаемой базы. Для решения этой проблемы нужно писать в саппорт, ждать ждать ждать\u0026amp;hellip;. Но ведь есть и другие способы.\nИмпорт базы msql прямо из консоли Для начала хочу отметить, что далеко не все хостинг-провайдеры предоставляют доступ к консоли.\nПодключение осуществляется либо через средства в панели управления, либо через штатные средства - putty.\nДля загрузки базы на сервер используем scp (либо пользуемся …"
+  },
+  {
+    "title": "Новый комплект поставки лицензионной Windows 10 (unboxing)",
+    "permalink": "http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/",
+    "date": "2016-03-01",
+    "tags": ["microsoft","windows-10"],
+    "content": "Ранее я уже писал, что с официальным анонсом Windows 10 мелкомягкие решили пересмотреть формат распространения коробочных лицензий на свой продукт. Под катом пара своих фотографий, которые не поленился сделать. Внешний вид коробочной лицензии сильно изменился в размере, что и не удивительно - от дисков отказались.\nТеперь никаких наклеек с лиц.кодом нет, есть вот такая карточка (ключ на обратной стороне, уж извините)\nУстановочный накопитель\nПод лупой\n"
+  },
+  {
+    "title": "7 лучших альтернатив Notepad ++ для Linux",
+    "permalink": "http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/",
+    "date": "2016-02-17",
+    "tags": ["linux","ubuntu","redaktory"],
+    "content": "Notepad ++ это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad ++. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad ++ так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad ++ для Linux.\nНиже вы найдете список достойных альтернатив …"
+  },
+  {
+    "title": "Как создать резервную копию прошивки телефона?",
+    "permalink": "http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/",
+    "date": "2016-02-03",
+    "tags": ["android","bekap-proshivki"],
+    "content": "Каждый человек, который хочет поменять прошивку в своем смартфоне/планшете всегда должен помнить - бэкап это залог спокойного сна и крепких нервов! Прежде чем приступить к прошивке своего девайса в обязательном порядке нужно создавать резервную копию прошивки. О том, как это быстро сделать читайте под катом.\nВ этой публикации я предлагаю создавать полный образ всей программной начинки устройств, как правило размер такой копии колеблется в районе 1.5 - 2.5 ГБ. Выходной файл будет иметь расширение …"
+  },
+  {
+    "title": "Удаление ненужных системных приложений (Android 4.1.2)",
+    "permalink": "http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/",
+    "date": "2016-02-02",
+    "tags": ["android"],
+    "content": "Раз уж вы читаете эту статью, то наверное допускаете, что в вашем смартфоне, есть некоторое количество системных приложений, которыми вы точно не пользуетесь. Часть таких приложений просто занимает место в физической памяти телефона, часть из них на постоянной основе висит в автозагрузке занимая тем самым место в оперативной памяти телефона.\nДля удаления таких приложений нужен root, само собой вы делаете все на свой страх и риск. В названии не просто так указана версия ОС смартфона, в других …"
+  },
+  {
+    "title": "Простой и минималистичный конфиг для Conky",
+    "permalink": "http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/",
+    "date": "2016-01-28",
+    "tags": ["conky","ubuntu"],
+    "content": "Подозреваю, что после установки ОС, почти каждый пользователь первым делом занимается персонализацией системы под себя. У абсолютного большинства людей все сводится к установке понравившихся обоев и замены цвета панелек. Я предлагаю пойти дальше, под катом краткий ман по установке Conky, а так же простой, но симпатичный конфиг для Conky.\nУстановка Conky Установка Conky стандартная, ничего нового тут не увидеть:\nsudo apt-get install conky Запустить программу после установки можно одноименной …"
+  },
+  {
+    "title": "Оптимизируем свой смартфон на Android",
+    "permalink": "http://localhost:1313/posts/optimiziruem-svoj-smartfon-na-android/",
+    "date": "2015-12-21",
+    "tags": ["android"],
+    "content": "Несколько простых советов о том, как научить свой смартфон жить дольше, заставив его при этом экономнее относится к заряду батареи.\nОтключаем стандартные функции связи Возьмите в привычку, что если вы находитесь вне зоны покрытия беспроводной сети, то модуль WiFi в телефоне нужно выключать. Это правило касается и других переключателей (bluetooth, 2G/3G/4G). Если Вы находитесь в дороге, где сигнал мобильной сети оставляет желать лучшего, либо его вообще нет, то логичнее всего будет включить режим …"
+  },
+  {
+    "title": "Замена диска в программном Raid 1. Ubuntu Server 14.04",
+    "permalink": "http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/",
+    "date": "2015-10-09",
+    "tags": [],
+    "content": ""
+  },
+  {
+    "title": "Полная установка PostgreSQL 9.2.4-1.1C + 1C 8.3.5.1119 на Ubuntu Server 14.04 X64",
+    "permalink": "http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/",
+    "date": "2015-09-30",
+    "tags": ["linux"],
+    "content": "Подробный и полностью рабочий гайд по установке этой связки софта на ваши железки.\nУвеличиваем максимальный размер сегмента памяти до 4Гб (Обычно половина объема ОЗУ):\n#echo \u0026amp;#34;kernel.shmmax=1073741824\u0026amp;#34; \u0026amp;gt;\u0026amp;gt;/etc/sysctl.conf #sysctl -p Генерируем необходимые локали и задаем переменную среды LANG, для работы скрипта инициализации БД.\n#locale-gen en_US ru_RU ru_RU.UTF-8 #export LANG=\u0026amp;#34;ru_RU.UTF-8\u0026amp;#34; Устанавливаем необходимые зависимости:\n#apt-get install libssl0.9.8 libossp-uuid16 …"
+  },
+  {
+    "title": "Монтирование дисков Linux и fstab",
+    "permalink": "http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/",
+    "date": "2015-07-06",
+    "tags": ["it","linux","komandnaya-stroka"],
+    "content": "Для того чтобы пользователь Linux мог работать с файловой системой, необходимо выполнить одно условие - она должна быть примонтирована к корневой файловой системе. Давайте разберемся в нюансах и узнаем о Монтирование дисков Linux и fstab чуть-чуть побольше.\nПростой пример: вы вставили Flash-накопитель в соответствующий разъем вашего ПК и вам нужно его открыть что бы произвести какие либо действия с файлами.\nПеред этим вы должны его примонтировать, в большинстве дистрибутивов можно примонтировать …"
+  },
+  {
+    "title": "Windows 10 можно будет купить на USB-носителе",
+    "permalink": "http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/",
+    "date": "2015-07-02",
+    "tags": ["it","microsoft","windows-10"],
+    "content": "Microsoft планирует продавать Windows 10 на USB-носителях, а не только на DVD-дисках, как было раньше.\nПодобный ход вполне объясним - большинство современных ПК поставляются без дисковода для чтения оптических дисков.\nНа Flash-картах к слову будет нанесен логотип Microsoft.\nЕдинственным минусом (камнем приткновения) становится цена подобного варианта поставки ОС - стоимость копии Windows 10 на USB-носителе будет выше на 25$ по сравнению со стоимостью DVD-версии. Не стоит забывать так же и о том, …"
+  },
+  {
+    "title": "Микро-ПК Lenovo ideacentre Stick 300",
+    "permalink": "http://localhost:1313/posts/mikro-pk-lenovo-ideacentre-stick-300/",
+    "date": "2015-07-02",
+    "tags": ["internet"],
+    "content": "В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.\nПодключив его к HDMI входу, расположенному на мониторе или телевизоре, владелец ideacentre Stick 300 сможет превратить экран в полноценный компьютер.\nРазмеры микро-ПК совсем не большие - 100 × 38 × 15 мм, что приравнивает его к размеру мобильника.\nЧто под корпусом:\nПроцессор: Intel Atom Z3735F Bay Trail; ОП - 2 ГБ; Постоянная память: до 32 ГБ; Модули связи: Wi-Fi 802.11 b/g/n …"
+  },
+  {
+    "title": "Telegram и умные боты",
+    "permalink": "http://localhost:1313/posts/telegram-i-umnye-boty/",
+    "date": "2015-06-30",
+    "tags": ["android","telegram","internet"],
+    "content": "В середине прошлой недели мессенджер Telegram запустил платформу для создания ботов. Последние смогут взаимодействовать с приложениями и сервисами, которые доступны вне мессенджера. Подобная идея совсем не новая (Nimbuzz.Miranda) однако подобный функционал открывает огромные возможности для разработчиков, что в теории привлечь не только новых пользователей - Павлу Дурову, по нашему мнению, куда интереснее самоокупаемость мессенджера. В недавнем интервью он признался, что поддержка инфраструктуры …"
+  },
+  {
+    "title": "Gmail позволит возвращать отправленные письма",
+    "permalink": "http://localhost:1313/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/",
+    "date": "2015-06-29",
+    "tags": [],
+    "content": "С недавнего времени все пользователи Gmail могут воспользоваться новой функцией в почте, которая позволит вернуть назад отправленное письмо.\nТеперь любое отправленное письмо можно вернуть назад в течении 30 секунд с момента отправки. В первую очередь это сделано для того, чтобы пользователи, которые по ошибке отправили сообщение не тому адресату могли исправить свою ошибку. Данная функция в данный момент является уникальной, сообщается что Google занимался отладкой и тестированием новой функции …"
+  },
+  {
+    "title": "Conky Ubuntu - установка",
+    "permalink": "http://localhost:1313/posts/conky-ubuntu-ustanovka/",
+    "date": "2015-06-15",
+    "tags": ["conky","linux","ubuntu"],
+    "content": "Наверняка многие пользователи ПК когда-нибудь задавались целью получения удобного доступа к системной информации своего компьютера. Это особенно актуально для владельцев портативной техники (ноутбуки), т.к. те зачастую могут сильно перегреваться. Для пользователей windows и linux-подобных систем существует множество программ, которые в том или ином виде представляют нужную нам информацию, однако в плане гибкости и возможности настройки (под себя) они не могут тягаться с Conky. Изначально …"
+  },
+  {
+    "title": "Elementary tweaks Freya - установка",
+    "permalink": "http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/",
+    "date": "2015-06-15",
+    "tags": ["elementary","linux","ubuntu"],
+    "content": "Даже самый удачный \u0026amp;ldquo;минимализм\u0026amp;rdquo; лучше настраивать \u0026amp;ldquo;под себя\u0026amp;rdquo;, давайте разберемся чем может помочь Elementary tweaks и как его установить. Elementary tweaks - это утилита, разработанная для тонкой настройки внешнего вида Elementary OS.\nВ список основных возможностей утилиты можно входит: Изменение иконок, курсора, темы (GTK); Изменение шрифтов; Настройка анимации; Настройка теней; Настройка док-бара; Настройка встроенного ФМ, возможность включения/выключения функции …"
+  },
+  {
+    "title": "Wifi Hotspot Manjaro",
+    "permalink": "http://localhost:1313/posts/wifi-hotspot-manjaro/",
+    "date": "2015-06-10",
+    "tags": ["hotspot","linux","manjaro","wifi"],
+    "content": "Часто бывает так, что работая за ноутбуком, который подключен к интернету через кабель, хочется видеть Wifi на других девайсах (допустим смартфон под управлением android).\nВ этой статье я расскажу как создать точку доступа WiFi используя ноутбук под управлением ОС Manjaro.\nПо порядку:\nyaourt -S create_ap На все вопросы установщика отвечаем \u0026amp;ldquo;Да\u0026amp;rdquo;, после установки пакета точка почти готова.\nДля создания Точки доступа Wifi используем команду:\nsudo create_ap wlp2s4 eth0 netlab_wifi …"
+  },
+  {
+    "title": "Яндекс запустил свое радио",
+    "permalink": "http://localhost:1313/posts/yandeks-zapustil-svoe-radio/",
+    "date": "2015-06-04",
+    "tags": ["internet","mestnye-novosti"],
+    "content": "Наверняка многие пользователи интернета наслышаны про обилие далеких от поиска сервисов «Яндекса». Сказать, что это плохо я не могу, скорее даже наоборот. Сегодня в Москве был представлен новый сервис Яндекса - «Яндекс.Радио».\nДля начала стоит отметить, что это обычное \u0026amp;ldquo;Радио\u0026amp;rdquo;, но с некоторыми дополнениями, которые по логике должны будут выделять «Яндекс.Радио» среди всех прочих интернет радиостанций.\nЧто сказал руководитель музыкальных сервисов Яндекса: \u0026amp;ldquo;Основное отличие и …"
+  },
+  {
+    "title": "Отключаем службы Android для сохранения заряда батареи",
+    "permalink": "http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/",
+    "date": "2015-05-25",
+    "tags": ["android"],
+    "content": "Эта статья не претендует на уникальность, однако советы представленные в ней действительно могут помочь заставить телефон жить на аккумуляторе немного дольше.\nDisclaimer: Все что вы делаете, вы делаете осознанно и на свой страх и риск. Автор не несет ответственности за работоспособность вашего аппарата!\nДля выполнения всех действий требуется root\nНам понадобятся: Аппарат Программа Disable Service (продвинутые юзеры могут сразу устанавливать My Android Tools. Это более расширенная программа того …"
+  },
+  {
+    "title": "Adblock Plus анонсировал мобильный браузер для Android",
+    "permalink": "http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/",
+    "date": "2015-05-21",
+    "tags": ["android","internet"],
+    "content": "Разработчики одного из самых популярных расширений для браузеров, сделанных на движке Chromium на днях представили свой собственный браузер для платформ работающих под управлением ОС android.\nAdblock Browser позволит всем пользователям забыть о рекламе на экранах своих мобильных устройств.\nПо заверению авторов приложения переход на их браузер позволит значительно экономить заряд аккумулятора устройства, это станет возможным за счет отсутствия рекламы. Как следствие нагрузка на устройство будет …"
+  },
+  {
+    "title": "Раздача WiFi с ноутбука через командную строку (ОС Windows)",
+    "permalink": "http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/",
+    "date": "2015-05-20",
+    "tags": ["it","microsoft","win7","windows-10","internet","komandnaya-stroka"],
+    "content": "Есть вещи, которые можно с легкостью делать без установки дополнительных программ, для этого нужно просто знать алгоритм.\nДавайте разберемся как реализовать раздачу wifi с ноутбука используя только одну командную строку. Разумеется, этот способ не единственный, однако автор использует именно его. Windows 7 и последующие ОС (8, 10) в этом плане предлагают довольно большую гибкость. Клиенты, подключенные к точке, созданной таким образом, будут автоматически получать настройки по DHCP и сразу будут …"
+  },
+  {
+    "title": "IfTop мониторинг сети на Ubuntu Server",
+    "permalink": "http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/",
+    "date": "2015-05-15",
+    "tags": ["it","linux","ubuntu","internet"],
+    "content": "Сразу оговорюсь, что эта консольная утилита работает не только под Ubuntu. Информация о использовании сетевого трафика выводится прямо в консоли.\nПримечательно и очень удобно, что благодаря Iftop администратор может в режиме реального времени отсматривать сетевую нагрузку, а так же быстро выявлять пользователей, которые из чувства безнаказанности заняли весь канал.\nУстановка iftop:\nsudo apt-get install iftop\nСразу после установки можно пользоваться! Осуществляем мониторинг сети на Ubuntu:\nsudo …"
+  },
+  {
+    "title": "Windows 10 станет последней в линейке ОС Microsoft",
+    "permalink": "http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/",
+    "date": "2015-05-12",
+    "tags": ["microsoft","win7","windows-10","internet"],
+    "content": "По словам представителя компании Джери Никсона Windows 10 станет последним крупным обновлением, которое выпустит Microsoft.\nРуководство компании сочло целесообразным постоянную доработку и обновление этой ОС путем выпуска патчей и обновлений.\n\u0026amp;ldquo;Мы будем предлагать Windows 10 как сервис, который всегда будет оставаться актуальным. Ждать Windows 11 не имеет смысла, т.к. мы намерянно пропустили релиз Windows 9, для того, чтобы подчеркнуть и выделить релиз 10-ой версии \u0026amp;quot; - отметил Джери …"
+  },
+  {
+    "title": "Спрашивай.ру был взломан",
+    "permalink": "http://localhost:1313/posts/sprashivaj-ru-byl-vzloman/",
+    "date": "2015-05-12",
+    "tags": ["internet"],
+    "content": "Популярный среди школьников сайт \u0026amp;ldquo;Спрашивай.ру\u0026amp;rdquo; был взломан во время майских праздников.\nАвтором взлома является российский хакер известный под ником w0rm, дата точного взлома сайта не известна (ориентировочно лето 2014).\nОднако информация об этом появилась в мае 2015 года, в период проведения государственных праздников полная копия базы данных пользователей появилась на одном из файлообменников.\nВ общей сложности сервисом \u0026amp;ldquo;Спрашивай ру\u0026amp;rdquo; пользуется порядка 6.5 миллионов …"
+  },
+  {
+    "title": "SARG: присваиваем ip-адресам имена сотрудников",
+    "permalink": "http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/",
+    "date": "2015-05-07",
+    "tags": ["it","linux","sarg"],
+    "content": "Я больше чем уверен, что в большинстве организаций мало кто знает, что такое ip-адрес, соответственно воспринимать такую информацию стороннему человеку будет трудно. Давайте разберемся как в SARG назначить айпи-адресам имена сотрудников офиса.\nСразу к практике, через пару минут вместо холодных и непонятных для вашего руководства ip-адресов, можно будет увидеть имена того самого Лехи и Руслана.\nВ файле конфигурации саржа (/etc/sarg/sarg.conf) раскомментируем строку и сохраняем изменения\nusertab …"
+  },
+  {
+    "title": "Как исключить ip-адрес из логов SARG?",
+    "permalink": "http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/",
+    "date": "2015-05-07",
+    "tags": ["it","linux","sarg"],
+    "content": "Наверняка после того, как все ip-адреса получили читаемые имена многим захотелось исключить свой айпи из списков.\nСделать это так же легко как и присвоить имена :\nsudo nano /etc/sarg/exclude_users , где вписываем нужные адреса,каждый с новой строки. К слову подобным образом из выдачи саржа можно убрать любой сайт, для этого достаточно открыть соответствующий конфигурационный файл и вписать в него адрес.\n/etc/sarg/exclude_hosts Возможные варианты написания:\n192.168.10.10 - исключить только этот …"
+  },
+  {
+    "title": "В новостной ленте «Вконтакте» появятся рекламные записи.",
+    "permalink": "http://localhost:1313/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/",
+    "date": "2015-04-23",
+    "tags": ["vk","internet"],
+    "content": "В середине мая всех пользователей социальной сети «Вконтакте» можно будет поздравить с очередным \u0026amp;ldquo;нововведением\u0026amp;rdquo;.\nПодтверждено, что начиная с 15 мая «ВКонтакте», в новостной ленте своих пользователей, будет отображать неназойливые рекламные сообщения.\nО \u0026amp;ldquo;нововведении\u0026amp;rdquo; рассказал Александр Круглов - руководитель отдела клиентского сервиса «ВКонтакте».\nНаглядного примера подобных рекламных блоков еще нет, однако по описанию, которое дал Александр можно создать для себя …"
+  },
+  {
+    "title": "Как заблокировать порно сайты от детей?",
+    "permalink": "http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/",
+    "date": "2015-04-16",
+    "tags": ["bezopasnost","internet"],
+    "content": "Многие родители со временем начинают беспокоится о том, что их дети сидя в интернете могут наткнуться на порно сайты или непристойные картинки. В этот момент начинаешь задаваться вопросом: Как заблокировать порно сайты от детей?\nДейственных вариантов существует множество, однако автор статьи не сторонник установки сторонних программ т.к. в своем большинстве они просто дублируют доступный функционал.\nСпособы блокировки порно сайтов 1. Блокировка порно на стороне поисковых систем Каждый …"
+  },
+  {
+    "title": "Настройка SaRG на базе Ubuntu Server",
+    "permalink": "http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/",
+    "date": "2015-04-08",
+    "tags": ["it","linux","sarg","internet"],
+    "content": "Наверняка каждый системный администратор рано или поздно сталкивается с необходимостью сбора статистики использования сети интернет пользователями. Подобная информация позволит предоставлять руководству информацию о том, кто куда ходил и чем занимался.\nЛично мне это ни когда не было интересно, однако ситуации и требования бывают разные. В своей практике я всегда опирался на unix подобные ОС, в данном случае все действия будут проводится на Ubuntu Server 14.04.\nВ статье подразумевается, что …"
+  },
+  {
+    "title": "Android в помощь системному администратору.",
+    "permalink": "http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/",
+    "date": "2015-04-07",
+    "tags": ["android","it","linux","rdp","komandnaya-stroka","hosting"],
+    "content": "Наверняка многие обладатели android девайсов, работающие в области системного администрирования задавались вопросом - как можно использовать смартфон для работы?\nНичего необычного андроид не может предложить, однако некоторые утилиты, доступные на этой платформе могут очень сильно пригодиться в определенных ситуациях. В статье рассмотрены только бесплатные программы, так что, если я не написал об этом, значит по умолчанию так оно и есть.\nSsh доступ к Linux ConnectBot - абсолютно бесплатное …"
+  },
+  {
+    "title": "eBay будет хранить персональные данные россиян в России",
+    "permalink": "http://localhost:1313/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/",
+    "date": "2015-04-07",
+    "tags": ["ebay","internet"],
+    "content": "Один из крупнейших интернет-аукционов в мире, согласился хранить персональные данные российских пользователей на территории РФ.\nНа прошлой неделе представитель Ebay в России встретился с Антониной Приезжаевой, заместителем руководителя Роскомннадзора. В ходе встречи стало известно, что интернет-гигант уже начал работу, по переносу персональных данных российских пользователей, из дата-центра расположенного в Швейцарии.\n\u0026amp;ldquo;Нашей главной целью на этой встрече было стремление получить …"
+  },
+  {
+    "title": "Рунету исполняется 21 год",
+    "permalink": "http://localhost:1313/posts/runetu-ispolnyaetsya-21-god/",
+    "date": "2015-04-07",
+    "tags": ["internet"],
+    "content": "Для РУнета 7-е апреля является не просто датой, а днем рождения.\nИменно в этот день - 7-го апреля 1994 года был зарегистрирован первый сайт верхнего уровня в домене \u0026amp;ldquo;.Ru\u0026amp;rdquo;. Это событие позволило РФ стать одним из государств, которые включены во Всемирную интернет-паутину.\nПервым сайтом, зарегистрированным в зоне \u0026amp;ldquo;ру\u0026amp;rdquo; стал сайт - www.ru, репродукция которого доступна по адресу www.1-9-9-4.ru С момента регистрации первого домена, появились миллионы других сайтов, которыми …"
+  },
+  {
+    "title": "Вышел Zentyal 4.1",
+    "permalink": "http://localhost:1313/posts/vyshel-zentyal-4-1/",
+    "date": "2015-04-01",
+    "tags": ["it","linux","zentyal","bezopasnost"],
+    "content": "Позавчера команда, которая ведет разработку Zentyal на своем официальном сайте опубликовала новость, о том, что в свет вышел дистрибутив версии 4.1.\nНовый Zentyal создан на основе Ubuntu 14.04.2, в числе нововведений числится полная поддержка Microsoft, как Exchange Server и Active Directory (AD).\nВ числе прочего разработчики работали над многими компонентами, которые по умолчанию входят в состав дистрибутива:\nНами были исправлены многие баги и недочеты, о которых писали багрепортеры.\nДля …"
+  },
+  {
+    "title": "Как узнать открытые порты?",
+    "permalink": "http://localhost:1313/posts/kak-uznat-otkrytye-porty/",
+    "date": "2015-04-01",
+    "tags": ["it","win7","bezopasnost","internet"],
+    "content": "Наверняка многие пользователи, которые тесно связаны с работой в интернете когда-нибудь сталкивались с таким вопросом - \u0026amp;ldquo;как узнать открытые порты?\u0026amp;rdquo;.\nДля некоторых эта необходимость вызвана рабочими потребностями, другие же пытаются поиграть в игры через интернет, а когда у них это не получается рано или поздно они задаются именно таким вопросом.\nОС Windows 7 может предложить пользователю целый набор утилит и приложений, которые легко позволят узнать, какие порты открыты. Далее я …"
+  },
+  {
+    "title": "Статусы портов в командной строке",
+    "permalink": "http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/",
+    "date": "2015-04-01",
+    "tags": ["it","bezopasnost","internet","komandnaya-stroka"],
+    "content": "Зачастую, при просмотре состояния открытых соединений через командную строку, в поле статус отображаются разные значения. Давайте разберемся в том, о чем они сообщают.\nESTABLISHED Соединение установлено SYN_SENT Попытка установить соединение SYN_RECV Был получен запрос на соединение FIN_WAIT1 Порт закрыт, соединение завершается FIN_WAIT2 Соединение закрыто, в ближайшее время процесс будет завершен TIME_WAIT Режим ожидания CLOSE Соединение закрыто CLOSE_WAIT Соединение закрыто, завершение …"
+  },
+  {
+    "title": "Twitter могут заблокировать на территории России",
+    "permalink": "http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/",
+    "date": "2015-03-31",
+    "tags": ["internet","tvitter"],
+    "content": "Роскомнадзор в очередной раз намерен вплотную заняться американской социальной сетью \u0026amp;ldquo;Twitter\u0026amp;rdquo;.\nВ связи с последними событиями в Украине, а так же из-за массовых (повсеместных) споров и дискуссий на эту тему, ответственные службы решили ужесточить контроль за публикациями в интернете.\nОтныне любые сообщения, которые будут признаны экстремистскими будут безвозвратно стирать, а аккаунты, разместившие это сообщение будут пермаментно (без возможности восстановления) удалены.\nНа данный …"
+  },
+  {
+    "title": "Как узнать время через консоль Linux",
+    "permalink": "http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/",
+    "date": "2015-03-30",
+    "tags": ["linux"],
+    "content": "Наверное у многих были ситуации, когда под руками только консоль, а время узнать нужно.\nДля того, чтобы посмотреть текущее время через консоль Linux достаточно ввести следующую команду\ndate Для того, чтобы поменять время консоль Linux нужно ввести следующую команду:\ndate MMDDhhmmCCYY.ss где, MM — является месяцем, DD — днем, hh — часом, mm — минутой, CCYY — годом (вводим так - хххх), ss — секундами. Действие нужно выполнять из под рута.\nДля того, чтобы посмотреть полный список команд, которые …"
+  },
+  {
+    "title": "\"Одноклассники\" запустит онлайн кинотеатр для мобильных устройств",
+    "permalink": "http://localhost:1313/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/",
+    "date": "2015-03-27",
+    "tags": ["internet","mts","tv"],
+    "content": "На этой неделе в сразу несколько средств массовой информации сообщили о намерении руководства социальной сети «Одноклассники» запустить свой собственный онлайн-кинотеатр.\nДоступ к кинотеатру будет осуществляться через мобильное приложение, которое в данный момент находится в разработке. Среди \u0026amp;ldquo;фишек\u0026amp;rdquo; приложения будет возможность подписки на любимый сериал (каждая новая серия будет сопровождаться уведомлением на вашем мобильном).\nДата релиза онлайн кинотеатра однокашек еще не …"
+  },
+  {
+    "title": "Facebook запустил сервис денежных переводов",
+    "permalink": "http://localhost:1313/posts/facebook-zapustil-servis-denezhnyx-perevodov/",
+    "date": "2015-03-19",
+    "tags": ["facebook","internet"],
+    "content": "В скором времени каждый пользователь соц. сети Facebook сможет проводить денежные транзакции из своего аккаунта.\nВ настоящий момент сервис работает только на территории США, однако в скором времени планируется запуск во всем мире. Для того, чтобы пользователь мог пользоваться новым сервисом ему придется привязать к аккаунту банковскую карту (VISA или MasterCard).\nРазумеется многие сразу вспомнят про те истории, когда из соц.сети \u0026amp;ldquo;утекали\u0026amp;rdquo; личные данные пользователей, однако Facebook …"
+  },
+  {
+    "title": "Пользователи Yahoo перестанут использовать пароли",
+    "permalink": "http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/",
+    "date": "2015-03-18",
+    "tags": ["it","internet","pochta"],
+    "content": "Руководство компании \u0026amp;ldquo;Yahoo\u0026amp;rdquo; решило полностью отказаться от использования паролей, которые требовались для входа в аккаунт электронной почты.\nСейчас нововведение доступно только владельцам аккаунтов, которые проживают в США. В качестве альтернативы для авторизации пользователей выбрали обычные смс-сообщения.\nТеперь для того, чтобы зайти в свой аккаунт нужно будет ввести специальный код, который будет приходить на телефон в виде смс-сообщения. Код к слову будет уникальным, что …"
+  },
+  {
+    "title": "Бесплатный антивирус для предприятий",
+    "permalink": "http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/",
+    "date": "2015-03-17",
+    "tags": ["it","soft","bezopasnost"],
+    "content": "Работая в сфере информационных технологий, многие (если не каждый) сталкивались с вопросом о выборе антивирусного программного обеспечения. Вопрос можно считать довольно серьезным, особенно, если учитывать специфику - вы находитесь не возле своего домашнего компьютера.\nРабота организаций (пусть даже маленьких) четко регламентирована законом, поэтому поставив бесплатный антивирус на компьютер пользователя вы должны точно знать, разрешает ли вам это закон.\nМногие считают, что Бесплатный антивирус …"
+  },
+  {
+    "title": "Новая возможность на Youtube",
+    "permalink": "http://localhost:1313/posts/novaya-vozmozhnost-na-youtube/",
+    "date": "2015-03-16",
+    "tags": ["youtube","panoramnoe-video"],
+    "content": "На днях YouTube объявил о том, что пользователям сервиса доступна новая функция - просмотр панорамного видео.\nУгол обзора в подобном виде достигает всех 360 градусов, а навигация осуществляется очень простым способом - поворотом устройства в любую сторону. Оценить нововведение, на данный момент, смогут только пользователи android, однако разработчики уверяют, что в ближайшее время такая возможность появится и на других платформах.\nВладельцы настольного ПК, так же могут посмотреть на нововведение …"
+  },
+  {
+    "title": "Краткий обзор Zentyal",
+    "permalink": "http://localhost:1313/posts/kratkij-obzor-zentyal/",
+    "date": "2015-03-03",
+    "tags": ["linux","zentyal"],
+    "content": "Наверняка многим начинающим системным администраторам трудно осваивать управление сервером в организации пользуясь только командной строкой. Свою работу в далеком 2010 году я начал с администрирования Win server 2003 и до определенного времени Linux подобные системы оставались для меня некой очень интересной загадкой с приятными плюшками на подобии средства распространения - GPL.\nНа протяжении долгого времени мне хотелось поближе познакомиться с линухами, однако постоянно находились отговорки на …"
+  },
+  {
+    "title": "Google отдает предпочтение сайтам, которые обладают мобильной версией",
+    "permalink": "http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/",
+    "date": "2015-03-02",
+    "tags": ["mestnye-novosti","optimizaciya"],
+    "content": "Гугл официально заявил о том, что сайты, которые оптимизированы под мобильные устройства будут более предпочтительными в формировании поисковой выдачи.\nИзменения в алгоритме поисковой системы вступят в силу 21 апреля этого года и коснутся только пользователей мобильных гаджетов, что является логичным ходом.\nВ итоге подобные изменения должны привести к формированию разного списка результатов поиска, по одному и тому же запросу сделанному с разных платформ.\n"
+  },
+  {
+    "title": "Как установить Telegram на Ubuntu/Linux",
+    "permalink": "http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/",
+    "date": "2015-02-25",
+    "tags": ["linux","telegram"],
+    "content": "Если вы пользуетесь мессенжером от Павла Дурова на телефоне, то вам наверняка захочется продолжать общение и на персональном компьютере.\nИтак, как же установить Telegram на Ubuntu/Linux - как и для любой другой программы, телеграм можно установить разными способами.\nПервый способ наверняка будет более привычным для пользователей \u0026amp;ldquo;Windows\u0026amp;rdquo;: Заходим на оф. сайт - telegram.org Скачиваем и распаковываем полученный архив; Пользуемся поиском по программам и находим нужный нам ярлык (как …"
+  },
+  {
+    "title": "На Ютубе появится платная подписка.",
+    "permalink": "http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/",
+    "date": "2015-02-20",
+    "tags": ["youtube","yutub"],
+    "content": "В скором будущем на популярнейшем видеопортале YouTube появится платная подписка.\nОб этом сообщил вице-президент гиганта Роберт Кинкл.\n- В течении следующих месяцев мы действительно будем вводить сервис платных подписок.\nПользователи, которые активно пользуются порталом наверняка заметили, что количество рекламы там зашкаливает.\nНовый сервис по некоторым предположениям позволит пользователям полностью отключить рекламные ролики.\nНапомню, что предпосылки к этому начались еще в 2013 году, когда …"
+  },
+  {
+    "title": "Plasma 5 install usb error",
+    "permalink": "http://localhost:1313/posts/plasma-5-install-usb-error/",
+    "date": "2015-02-17",
+    "tags": [],
+    "content": "У некоторых убунтуводов во время установки дистрибутива основанного на kubuntu plasma 5 с флешки возникают проблемы.\nCan\u0026amp;#39;t open /lib/init/init-d-script saned disabled; edit /etc/default/saned именно такое сообщение видят пользователи во время установки. На этом этапе как правило установка стопорится и последующая загрузка системы невозможна.\nОднако расстраиваться и перезаписывать образ не нужно - выход есть. Когда ошибка появляется, нажмите Ctrl + Alt + F1 и выполняйте следующую команду: …"
+  },
+  {
+    "title": "Был взломан крупнейший украинский торрент-трекер",
+    "permalink": "http://localhost:1313/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/",
+    "date": "2015-02-16",
+    "tags": [],
+    "content": "Праздник всех влюбленных администрация сайта torrents.net.ua встретила неожиданным образом.\n14 февраля пользователи трекера попросту не могли его открыть, а днем позже вместо привычной главной страницы сайта пользователи увидели сообщение которое оставили злоумышленники.\n\u0026amp;ldquo;Мы извиняемся, но ваш админ некомпетентен\u0026amp;rdquo; - именно такие слова содержало послание. На данный момент не известно, был ли нанесен ущерб сайту и раздачам, которые были на нем размещены. Сообщение с главной уже убрали, …"
+  },
+  {
+    "title": "На iPhone теперь нельзя слушать музыку из \"Вконтакте\"",
+    "permalink": "http://localhost:1313/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/",
+    "date": "2015-02-12",
+    "tags": ["iphone","vk"],
+    "content": "Сегодня в магазине приложений \u0026amp;ldquo;Apple\u0026amp;rdquo; появилось обновление для приложении соц. сети \u0026amp;ldquo;Вконтакте\u0026amp;rdquo;, которое оптимизировано для последней версии IOS 8.\nСамым значимым и видимым нововведением среди прочих стало отсутствие возможности прослушивать музыку через одноименное приложение. \u0026amp;ldquo;Мы были вынуждены пойти на это в связи с новой политикой, которую проводит Apple. Мы не можем заявлять поддержку музыкального раздела в наших приложениях. В последующих обновлениях мы …"
+  },
+  {
+    "title": "Россия преуспела в блокировке информации",
+    "permalink": "http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/",
+    "date": "2015-02-10",
+    "tags": ["tvitter"],
+    "content": "В течении всего прошлого года в офис твиттера поступало огромное количество запросов на удаление размещенной на его страницы информации.\nПримечательно, что год можно условно разделить на две части - в период с июля по декабрь количество запросов увеличилось на 90%, по сравнению с периодом январь-июнь!\nАбсолютным лидером по количеству обращений (477) к твиттеру является Турция (что в принципе не удивительно).\nВторое место прочно закреплено за Россией (91 обращение). Третье место заняла Германия - …"
+  },
+  {
+    "title": "Хакеры продали с молотка уязвимость, обнаруженную в iOS 7",
+    "permalink": "http://localhost:1313/posts/xakery-prodali-s-molotka-uyazvimost-o/",
+    "date": "2014-07-30",
+    "tags": [],
+    "content": "Итальянские хакеры Луиджи Ауриема и Донато Ферран обнаружили на платформе iOS 7 так называемую «уязвимость нулевого дня», а затем продали ее на аукционе за $ 500 тысяч.\nПредполагается, что обнаруженная итальянцами «дыра» позволяет злоумышленникам разрабатывать троянский софт, попадать на айфоны и айпады госслужащих.\nСледует отметить, что «уязвимостью нулевого дня» называют прорехи в программном обеспечении, в отношении которых еще не изобретено защиты. Название срока связана с тем, что о «дыре» …"
+  },
+  {
+    "title": "MorePhone - смартфон, изгибается при вызове",
+    "permalink": "http://localhost:1313/posts/morephone-smartfon-izgibaetsya-pri-vyzove/",
+    "date": "2014-07-26",
+    "tags": [],
+    "content": "Исследователям из Human Media Lab (Канада) удалось придумать смартфон, который реагирует на входящий вызов, новое сообщение или любое другое событие, достаточно необычным способом - экран устройства изменяет форму.\nВ основе изобретения под названием MorePhone заключается использование гибкого электрофоретического дисплея с особой структурой, запоминающей форму.\nПодобная технология применена и в корпусе смартфона, благодаря чему устройство может изгибаться. Таким образом, пользователь может …"
+  },
+  {
+    "title": "YouTube запускает платную видео платформу",
+    "permalink": "http://localhost:1313/posts/youtube-zapuskaet-platnuyu-video-platformu/",
+    "date": "2014-07-17",
+    "tags": [],
+    "content": "Портал планирует запустить сервис ежемесячных подписок, который за определенную плату позволит пользователям получать доступ к некоторым специализированным видеоканалам.\nПолная подписка на новый сервис будет стоить $ 2 в месяц - за такую сумму пользователям будет предоставляться доступ к 50 каналам.\nПредполагается, что платная подписка позволит корпорации Google и правообладателям видеоконтента разделить прибыль, к тому же это станет новым источником прибыли YouTube, и не будет зависеть от …"
+  },
+  {
+    "title": "Вскоре Google может начать создание собственных Android-игр",
+    "permalink": "http://localhost:1313/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/",
+    "date": "2014-07-16",
+    "tags": [],
+    "content": "Корпорация Google, возможно, начнет создавать собственные игры для мобильной платформы Android. Об этом свидетельствует тот факт, что компания взяла на работу опытного разработчика Ноа Фалстейна, который получил должность главного гейм-дизайнера в разделе Android Play Studio\n. Запись о новой работе Фалстейна появился в LinkedIn.\nНапомним, что интерес поисковика к играм повысился еще в прошлом году, когда был выпущена первая онлайн-игра Ingress, ориентированная на ОС Android. За несколько недель …"
+  }
+]

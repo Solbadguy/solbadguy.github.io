@@ -1,348 +1,206 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubuntu | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Ubuntu | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/tags/ubuntu/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/tags/ubuntu/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/tags/ubuntu/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/tags/ubuntu/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Ubuntu">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ubuntu">
-
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/tags/">Tags</a></div>
-  <h1>
-    Ubuntu
-  </h1>
-</header>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Supervisor. Настраиваем перезапуск программы.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>В повседневной работе появилась задача - автоматизировать перезапуск программы с кастомными параметрами, в случае, если по какой-то причине она будет завершена.
-Решение - Supervisor.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-29 00:00:00 +0000 UTC'>May 29, 2020</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Supervisor. Настраиваем перезапуск программы." href="https://solbadguy.github.io/posts/supervisor-nastraivaem-perezapusk-programmy/"></a>
-</article>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Logrotate - это системная утилита, которая управляет автоматической ротацией и сжатием лог-файлов. Если в процессе длительной работы сервера файлы не были ротированы, сжаты и периодически не удалялись, то рано или поздно они могут занять весь доступный объем памяти.
-...</p>
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2020-01-15 00:00:00 +0000 UTC'>January 15, 2020</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx" href="https://solbadguy.github.io/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как создать полноценный почтовый сервер на Ubuntu 18.04
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Настройка собственного почтового сервера на Linux с нуля — это не совсем простая задача, во время ее выполнения каждый наверняка столкнется с парой подводных камней. Из этого туториала вы узнаете, как использовать iRedMail для быстрой настройки полнофункционального почтового сервера на Ubuntu 18.04, а так же, надеюсь, сохраните свое время.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-01-15 00:00:00 +0000 UTC'>January 15, 2020</span>&nbsp;·&nbsp;<span>7 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как создать полноценный почтовый сервер на Ubuntu 18.04" href="https://solbadguy.github.io/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Администрирование 1C-сервера под Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверное все те, кто сталкивался с администрирование 1С-сервера под Windows пользовались стандартной оснасткой “Администриарование сервера 1С”. А как быть, если под руками есть только никсовая консоль? Далее коротко об этом.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-09-20 00:00:00 +0000 UTC'>September 20, 2019</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Администрирование 1C-сервера под Linux" href="https://solbadguy.github.io/posts/administrirovanie-1c-servera-pod-linux/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>В статье будет описана установка, настройка и несколько способов просмотра видеопотока через трансляции p2p телевидения. Результатом выполнения этой инструкции будет “комбайн”, который позволит одновременный просмотр такого ТВ с разных устройств в высоком качестве.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-09-04 00:00:00 +0000 UTC'>September 4, 2018</span>&nbsp;·&nbsp;<span>4 min</span></footer>
-  <a class="entry-link" aria-label="post link to Используем Docker, AceStream & AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc" href="https://solbadguy.github.io/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Установка Docker на Ubuntu 16.04
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в среде виртуализации на уровне операционной системы
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2018-09-04 00:00:00 +0000 UTC'>September 4, 2018</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Установка Docker на Ubuntu 16.04" href="https://solbadguy.github.io/posts/ustanovka-docker-na-ubuntu-16-04/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как изменить цвет шрифта на рабочем столе в XFCE 4.12
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>В большинстве случаев, если вы выбираете темный фон для рабочего стола, приходится осознать неприятный факт - черный шрифт под иконками имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-01-19 00:00:00 +0000 UTC'>January 19, 2017</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как изменить цвет шрифта на рабочем столе в XFCE 4.12" href="https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Прошивка сматфонов Xiaomi в Ubuntu
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Среди владельцев сматфонов Xiaomi и пользователей *buntu, есть много тех, кто не знает о том, что их девайс можно прошить прямо из консоли, ни какие программы на вроде Miflash при этом не понадобятся. Автор статьи, описывая действия, предварительно скачал архив с прошивкой рассчитанной для установки из MiFlash. Материал в первую очередь написан для тех, кто не работает под Windows.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-10-17 00:00:00 +0000 UTC'>October 17, 2016</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Прошивка сматфонов Xiaomi в Ubuntu" href="https://solbadguy.github.io/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как создать Swap файл подкачки в Linux-подобных ОС
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Этот материал будет полезен в первую очередь тем, кто занимается администрированием серверов как на предприятии так и на VPS. Инструкция подойдет как для Debian/Ubuntu, так и для других систем (Centos).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-03-02 00:00:00 +0000 UTC'>March 2, 2016</span>&nbsp;·&nbsp;<span>3 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как создать Swap файл подкачки в Linux-подобных ОС" href="https://solbadguy.github.io/posts/kak-sozdat-swap-fajl-podkachki-v-linux/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">7 лучших альтернатив Notepad &#43;&#43; для Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Notepad &#43;&#43; это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad &#43;&#43;. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad &#43;&#43; так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad &#43;&#43; для Linux.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-02-17 00:00:00 +0000 UTC'>February 17, 2016</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to 7 лучших альтернатив Notepad &#43;&#43; для Linux" href="https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://solbadguy.github.io/tags/ubuntu/page/2/">Next&nbsp;&nbsp;»
-    </a>
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
   </nav>
-</footer>
-    </main>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/tags/ubuntu</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">ls -la /tags/ubuntu/</div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
+        <span style="color: var(--fg-subtle);">$ </span>Ubuntu
+      </h1>
+      
+      <ul class="post-list">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <li class="post-item">
+            <span class="post-item-date">29 января 2020</span>
+            <a href="http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/" class="post-item-title">Supervisor. Настраиваем перезапуск программы.</a>
+          </li>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <li class="post-item">
+            <span class="post-item-date">15 января 2020</span>
+            <a href="http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/" class="post-item-title">Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2020</span>
+            <a href="http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/" class="post-item-title">Как создать полноценный почтовый сервер на Ubuntu 18.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2019</span>
+            <a href="http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/" class="post-item-title">Администрирование 1C-сервера под Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2018</span>
+            <a href="http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/" class="post-item-title">Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2018</span>
+            <a href="http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/" class="post-item-title">Установка Docker на Ubuntu 16.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">19 января 2017</span>
+            <a href="http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/" class="post-item-title">Как изменить цвет шрифта на рабочем столе в XFCE 4.12</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2016</span>
+            <a href="http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/" class="post-item-title">Прошивка сматфонов Xiaomi в Ubuntu</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/" class="post-item-title">Как создать Swap файл подкачки в Linux-подобных ОС</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2016</span>
+            <a href="http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/" class="post-item-title">7 лучших альтернатив Notepad &#43;&#43; для Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">28 января 2016</span>
+            <a href="http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/" class="post-item-title">Простой и минималистичный конфиг для Conky</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/conky-ubuntu-ustanovka/" class="post-item-title">Conky Ubuntu - установка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/" class="post-item-title">Elementary tweaks Freya - установка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/" class="post-item-title">IfTop мониторинг сети на Ubuntu Server</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

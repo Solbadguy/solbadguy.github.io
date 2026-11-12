@@ -1,326 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubuntu-Desktop | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Ubuntu-Desktop | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/categories/ubuntu-desktop/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/categories/ubuntu-desktop/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/categories/ubuntu-desktop/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/categories/ubuntu-desktop/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Ubuntu-Desktop">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ubuntu-Desktop">
-
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/categories/">Categories</a></div>
-  <h1>
-    Ubuntu-Desktop
-  </h1>
-</header>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как изменить цвет шрифта на рабочем столе в XFCE 4.12
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>В большинстве случаев, если вы выбираете темный фон для рабочего стола, приходится осознать неприятный факт - черный шрифт под иконками имеет недостаток контраста, как результат он почти не виден. В графическом интерфейсе настроек цвета шрифта нет еще с очень старых версий вплоть до 4.12.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2017-01-19 00:00:00 +0000 UTC'>January 19, 2017</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как изменить цвет шрифта на рабочем столе в XFCE 4.12" href="https://solbadguy.github.io/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/"></a>
-</article>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">7 лучших альтернатив Notepad &#43;&#43; для Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Notepad &#43;&#43; это мой любимый текстовый редактор в ОС Windows. Однако все чаще мне приходится использовать Linux как основную ОС для рабочего и домашнего десктопа. При этом я все время скучаю по Notepad &#43;&#43;. Мне, как и большинству прльзователей, совсем не ясно почему после нескольких лет Notepad &#43;&#43; так и не обзавелся клиентом для Linux. И пока все ждут, когда же он стаент доступен, я предлагаю пройтись по доступным альтернативам Notepad &#43;&#43; для Linux.
-...</p>
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2016-02-17 00:00:00 +0000 UTC'>February 17, 2016</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to 7 лучших альтернатив Notepad &#43;&#43; для Linux" href="https://solbadguy.github.io/posts/7-luchshix-alternativ-notepad-dlya-linux/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Простой и минималистичный конфиг для Conky
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Подозреваю, что после установки ОС, почти каждый пользователь первым делом занимается персонализацией системы под себя. У абсолютного большинства людей все сводится к установке понравившихся обоев и замены цвета панелек. Я предлагаю пойти дальше, под катом краткий ман по установке Conky, а так же простой, но симпатичный конфиг для Conky.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2016-01-28 00:00:00 +0000 UTC'>January 28, 2016</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Простой и минималистичный конфиг для Conky" href="https://solbadguy.github.io/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/"></a>
-</article>
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Conky Ubuntu - установка
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверняка многие пользователи ПК когда-нибудь задавались целью получения удобного доступа к системной информации своего компьютера. Это особенно актуально для владельцев портативной техники (ноутбуки), т.к. те зачастую могут сильно перегреваться. ...</p>
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
   </div>
-  <footer class="entry-footer"><span title='2015-06-15 00:00:00 +0000 UTC'>June 15, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Conky Ubuntu - установка" href="https://solbadguy.github.io/posts/conky-ubuntu-ustanovka/"></a>
-</article>
+</aside>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Elementary tweaks Freya - установка
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Даже самый удачный “минимализм” лучше настраивать “под себя”, давайте разберемся чем может помочь Elementary tweaks и как его установить. ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-15 00:00:00 +0000 UTC'>June 15, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Elementary tweaks Freya - установка" href="https://solbadguy.github.io/posts/elementary-tweaks-freya-ustanovka/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Wifi Hotspot Manjaro
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Часто бывает так, что работая за ноутбуком, который подключен к интернету через кабель, хочется видеть Wifi на других девайсах (допустим смартфон под управлением android).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-06-10 00:00:00 +0000 UTC'>June 10, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Wifi Hotspot Manjaro" href="https://solbadguy.github.io/posts/wifi-hotspot-manjaro/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как узнать время через консоль Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Наверное у многих были ситуации, когда под руками только консоль, а время узнать нужно.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-03-30 00:00:00 +0000 UTC'>March 30, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как узнать время через консоль Linux" href="https://solbadguy.github.io/posts/kak-uznat-vremya-cherez-konsol-linux/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Как установить Telegram на Ubuntu/Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Если вы пользуетесь мессенжером от Павла Дурова на телефоне, то вам наверняка захочется продолжать общение и на персональном компьютере.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-02-25 00:00:00 +0000 UTC'>February 25, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Как установить Telegram на Ubuntu/Linux" href="https://solbadguy.github.io/posts/kak-ustanovit-telegram-na-ubuntulinux/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Plasma 5 install usb error
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>У некоторых убунтуводов во время установки дистрибутива основанного на kubuntu plasma 5 с флешки возникают проблемы.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2015-02-17 00:00:00 +0000 UTC'>February 17, 2015</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Plasma 5 install usb error" href="https://solbadguy.github.io/posts/plasma-5-install-usb-error/"></a>
-</article>
-    </main>
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/categories/ubuntu-desktop</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">ls -la /categories/ubuntu-desktop/</div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
+        <span style="color: var(--fg-subtle);">$ </span>Ubuntu-Desktop
+      </h1>
+      
+      <ul class="post-list">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <li class="post-item">
+            <span class="post-item-date">19 января 2017</span>
+            <a href="http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/" class="post-item-title">Как изменить цвет шрифта на рабочем столе в XFCE 4.12</a>
+          </li>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <li class="post-item">
+            <span class="post-item-date">17 января 2016</span>
+            <a href="http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/" class="post-item-title">7 лучших альтернатив Notepad &#43;&#43; для Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">28 января 2016</span>
+            <a href="http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/" class="post-item-title">Простой и минималистичный конфиг для Conky</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/conky-ubuntu-ustanovka/" class="post-item-title">Conky Ubuntu - установка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/" class="post-item-title">Elementary tweaks Freya - установка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">10 января 2015</span>
+            <a href="http://localhost:1313/posts/wifi-hotspot-manjaro/" class="post-item-title">Wifi Hotspot Manjaro</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/" class="post-item-title">Как узнать время через консоль Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">25 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/" class="post-item-title">Как установить Telegram на Ubuntu/Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2015</span>
+            <a href="http://localhost:1313/posts/plasma-5-install-usb-error/" class="post-item-title">Plasma 5 install usb error</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

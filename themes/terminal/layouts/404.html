@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div class="error-page">
+    <div class="error-line"><span class="red">bash:</span> {{ .Permalink }}: No such file or directory</div>
+    <div class="error-line">&nbsp;</div>
+    <div class="error-line"><span class="yellow">exit status 127</span></div>
+    <div class="error-line">&nbsp;</div>
+    <div class="error-line">Возможно, вы имели в виду:</div>
+    <div class="error-line">&nbsp;&nbsp;<a href="/">cd ~</a></div>
+    <div class="error-line">&nbsp;&nbsp;<a href="/posts/">ls ~/posts</a></div>
+    <div class="error-line">&nbsp;&nbsp;<a href="/tags/">find ~/tags</a></div>
+    <div class="error-line">&nbsp;</div>
+    <div class="error-line"><span class="green">admin46@blog:~$</span> <span class="cursor"></span></div>
+  </div>
+{{ end }}

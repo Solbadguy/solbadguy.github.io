@@ -1,196 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Микро-ПК Lenovo ideacentre Stick 300 | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Микро-ПК Lenovo ideacentre Stick 300 | My Blog</title>
-<meta name="keywords" content="internet">
-<meta name="description" content="В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Микро-ПК Lenovo ideacentre Stick 300">
-  <meta property="og:description" content="В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2015-07-02T00:00:00+00:00">
-    <meta property="article:modified_time" content="2015-07-02T00:00:00+00:00">
-    <meta property="article:tag" content="Internet">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Микро-ПК Lenovo ideacentre Stick 300">
-  <meta name="twitter:description" content="В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://solbadguy.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Микро-ПК Lenovo ideacentre Stick 300",
-      "item": "https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Микро-ПК Lenovo ideacentre Stick 300",
-  "name": "Микро-ПК Lenovo ideacentre Stick 300",
-  "description": "В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.\n",
-  "keywords": [
-    "internet"
-  ],
-  "articleBody": "В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.\nПодключив его к HDMI входу, расположенному на мониторе или телевизоре, владелец ideacentre Stick 300 сможет превратить экран в полноценный компьютер.\nРазмеры микро-ПК совсем не большие - 100 × 38 × 15 мм, что приравнивает его к размеру мобильника.\nЧто под корпусом:\nПроцессор: Intel Atom Z3735F Bay Trail; ОП - 2 ГБ; Постоянная память: до 32 ГБ; Модули связи: Wi-Fi 802.11 b/g/n и Bluetooth 4.0; Подключение внешних устройств: USB 2.0; Зарядка: Micro-USB. Владельцы Lenovo ideacentre Stick 300 смогут осуществлять комфортный серфинг в сети интернет, просматривать и редактировать текстовые файлы, воспроизводить аудио и видео файлы. Работает этот девайс под управлением ОС Windows 8.1, в будущем разработчики рекомендуют обновляться до Windows 10.\nПримерная стоимость на рос. рынке 11 тыс. рублей, что по мнению автора является завышенной ценой.\n",
-  "wordCount" : "141",
-  "inLanguage": "en",
-  "datePublished": "2015-07-02T00:00:00Z",
-  "dateModified": "2015-07-02T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://solbadguy.github.io/posts/mikro-pk-lenovo-ideacentre-stick-300/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "My Blog",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://solbadguy.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
+
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+        <div class="reading-progress"><div class="reading-progress-bar" id="progress-bar"></div></div>
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/posts/index</span><span class="prompt">$</span>
+</nav>
+
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">Микро-ПК Lenovo ideacentre Stick 300</h1>
+      <div class="post-meta">
+        <span>2 января 2015</span>
+        
+        
+        
+        
+        
+        
+        
+        
+        <span>1 мин чтения</span>
+        <span>141 слово</span>
+
+        
+      </div>
+      
+        <div class="tags">
+          
+            <a href="/tags/internet/" class="tag">internet</a>
+          
         </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
+      
+    </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://solbadguy.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Микро-ПК Lenovo ideacentre Stick 300
-    </h1>
-    <div class="post-meta"><span title='2015-07-02 00:00:00 +0000 UTC'>July 2, 2015</span>&nbsp;·&nbsp;<span>1 min</span>
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      <div class="age-banner">
+        ⚠ Этой статье больше 11 лет. Информация может быть устаревшей.
+      </div>
+    
 
-</div>
-  </header> 
-  <div class="post-content"><p>В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.</p>
+    <div class="post-layout">
+      <div class="post-content">
+        <p>В конце июня китайская компания Lenovo официально представила свой новый продукт - микро-ПК Lenovo ideacentre Stick 300.</p>
 <p>Подключив его к HDMI входу, расположенному на мониторе или телевизоре, владелец ideacentre Stick 300 сможет превратить экран в полноценный компьютер.</p>
 <p>Размеры микро-ПК совсем не большие - 100 × 38 × 15 мм, что приравнивает его к размеру мобильника.</p>
 <p>Что под корпусом:</p>
@@ -202,156 +141,106 @@
 <li>Подключение внешних устройств: USB 2.0;</li>
 <li>Зарядка: Micro-USB.</li>
 </ul>
-<p><img alt="миникомпьютер леново" loading="lazy" src="/posts/mikro-pk-lenovo-ideacentre-stick-300/images/jklo041-700x435.jpg"></p>
+<p><img src="images/jklo041-700x435.jpg" alt="миникомпьютер леново"></p>
 <p> </p>
 <p>Владельцы Lenovo ideacentre Stick 300 смогут осуществлять комфортный серфинг в сети интернет, просматривать и редактировать текстовые файлы, воспроизводить аудио и видео файлы. Работает этот девайс под управлением ОС Windows 8.1, в будущем разработчики рекомендуют обновляться до Windows 10.</p>
 <p>Примерная стоимость на рос. рынке 11 тыс. рублей, что по мнению автора является завышенной ценой.</p>
+      </div>
+      
 
-  </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://solbadguy.github.io/tags/internet/">Internet</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://solbadguy.github.io/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Windows 10 можно будет купить на USB-носителе</span>
-  </a>
-  <a class="next" href="https://solbadguy.github.io/posts/telegram-i-umnye-boty/">
-    <span class="title">Next »</span>
-    <br>
-    <span>Telegram и умные боты</span>
-  </a>
+    </div>
+
+    
+
+    
+
+
+
+<nav class="prev-next">
+  
+    <a href="http://localhost:1313/posts/telegram-i-umnye-boty/">
+      <div class="label">← Предыдущий</div>
+      <div class="title">Telegram и умные боты</div>
+    </a>
+  
+  
+    <a href="http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/" style="text-align: right;">
+      <div class="label">Следующий →</div>
+      <div class="title">Windows 10 можно будет купить на USB-носителе</div>
+    </a>
+  
 </nav>
 
-  </footer>
-</article>
-    </main>
+
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+<section class="related">
+  <div class="related-title">Похожие посты</div>
+  <ul class="related-list">
+    
+      <li>
+        <a href="http://localhost:1313/posts/telegram-i-umnye-boty/">
+          <div class="date">30 января 2015</div>
+          <div class="title">Telegram и умные боты</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/yandeks-zapustil-svoe-radio/">
+          <div class="date">4 января 2015</div>
+          <div class="title">Яндекс запустил свое радио</div>
+        </a>
+      </li>
+    
+      <li>
+        <a href="http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/">
+          <div class="date">21 января 2015</div>
+          <div class="title">Adblock Plus анонсировал мобильный браузер для Android</div>
+        </a>
+      </li>
+    
+  </ul>
+</section>
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+  </article>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

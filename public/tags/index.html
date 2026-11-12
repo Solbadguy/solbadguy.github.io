@@ -1,515 +1,544 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tags | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Tags | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/tags/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/tags/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/tags/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/tags/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Tags">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tags">
-
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-<header class="page-header">
-    <h1>Tags</h1>
-</header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://solbadguy.github.io/tags/1c/">1c <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/1c-server/">1c-server <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/aceproxy/">aceproxy <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/acestream/">acestream <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/adb/">adb <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/alias-bash/">alias-bash <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/android/">android <sup><strong><sup>24</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/associacii-fajlov/">associacii-fajlov <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/bekap-proshivki/">bekap-proshivki <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/bezopasnost/">bezopasnost <sup><strong><sup>5</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/bond/">bond <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/centos/">centos <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/chocolatey/">chocolatey <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/chrony/">chrony <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/cmd/">cmd <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/conky/">conky <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/debian/">debian <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/dnscrypt/">dnscrypt <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/docker/">docker <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ebay/">ebay <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/elementary/">elementary <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/facebook/">facebook <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/fastboot/">fastboot <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/gaaps/">gaaps <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/gapps/">gapps <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/google/">google <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/google-service/">google-service <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/grub/">grub <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/hetzner/">hetzner <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/hosting/">hosting <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/hotspot/">hotspot <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/how-to/">how-to <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/howto/">howto <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/https/">https <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/internet/">internet <sup><strong><sup>19</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/iphone/">iphone <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/iredmail/">iredmail <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/it/">it <sup><strong><sup>16</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/komandnaya-stroka/">komandnaya-stroka <sup><strong><sup>9</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/konsol/">konsol <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/lets-encrypt/">lets-encrypt <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/linux/">linux <sup><strong><sup>26</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/linux-mint/">linux-mint <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/logrotate/">logrotate <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/mail-server/">mail-server <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/manjaro/">manjaro <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/mestnye-novosti/">mestnye-novosti <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/microsoft/">microsoft <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/miui/">miui <sup><strong><sup>7</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/motd/">motd <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/mts/">mts <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/netplan/">netplan <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/nextcloud/">nextcloud <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/nginx/">nginx <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/openmediavault/">openmediavault <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/optimizaciya/">optimizaciya <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/optimizaciya-pamyati/">optimizaciya-pamyati <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/panoramnoe-video/">panoramnoe-video <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/permissions/">permissions <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/pihole/">pihole <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/pochta/">pochta <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/powershell/">powershell <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/proxmox/">proxmox <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/pve/">pve <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/rdp/">rdp <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/redaktory/">redaktory <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/root/">root <sup><strong><sup>6</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/sarg/">sarg <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/script/">script <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/sertifikat/">sertifikat <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/soft/">soft <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ssh/">ssh <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ssh-jump/">ssh-jump <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ssh-keygen/">ssh-keygen <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ssl/">ssl <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ssmtp/">ssmtp <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/supervisor/">supervisor <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/telegram/">telegram <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/tv/">tv <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/tvitter/">tvitter <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/twrp/">twrp <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/ubuntu/">ubuntu <sup><strong><sup>14</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/vagrant/">vagrant <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/vhd/">vhd <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/vk/">vk <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/vnc/">vnc <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/webdav/">webdav <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/wifi/">wifi <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/win7/">win7 <sup><strong><sup>6</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/windows/">windows <sup><strong><sup>7</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/windows-10/">windows-10 <sup><strong><sup>5</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/winxp/">winxp <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/xfce4/">xfce4 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/xiaomi/">xiaomi <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/yakuake/">yakuake <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/youtube/">youtube <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/yutub/">yutub <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/zabbix/">zabbix <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/zabbix-proksi/">zabbix-proksi <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/zabbix-proxy/">zabbix-proxy <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://solbadguy.github.io/tags/zentyal/">zentyal <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-</ul>
-    </main>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
+
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/tags/tags</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <span class="r"></span><span class="y"></span><span class="g"></span>
+      </div>
+      <div class="terminal-title">find /tags -type d</div>
+    </div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem;">
+        <span style="color: var(--accent);">$ </span>Tags
+      </h1>
+      <div class="tags" style="gap: 0.75rem;">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <a href="http://localhost:1313/tags/1c/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            1c <span style="opacity: 0.5;">(1)</span>
+          </a>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <a href="http://localhost:1313/tags/1c-server/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            1c-Server <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/aceproxy/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Aceproxy <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/acestream/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Acestream <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/adb/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Adb <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/alias-bash/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Alias-Bash <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/android/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Android <span style="opacity: 0.5;">(24)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/associacii-fajlov/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Associacii-Fajlov <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/bekap-proshivki/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Bekap-Proshivki <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/bezopasnost/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Bezopasnost <span style="opacity: 0.5;">(5)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/bond/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Bond <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/centos/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Centos <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/chocolatey/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Chocolatey <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/chrony/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Chrony <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/cmd/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Cmd <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/conky/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Conky <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/debian/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Debian <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/dnscrypt/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Dnscrypt <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/docker/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Docker <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ebay/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ebay <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/elementary/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Elementary <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/facebook/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Facebook <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/fastboot/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Fastboot <span style="opacity: 0.5;">(4)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/gaaps/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Gaaps <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/gapps/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Gapps <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/google/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Google <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/google-service/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Google-Service <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/grub/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Grub <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/hetzner/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Hetzner <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/hosting/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Hosting <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/hotspot/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Hotspot <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/how-to/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            How-To <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/howto/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Howto <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/https/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Https <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/internet/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Internet <span style="opacity: 0.5;">(19)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/iphone/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Iphone <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/iredmail/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Iredmail <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/it/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            It <span style="opacity: 0.5;">(16)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/komandnaya-stroka/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Komandnaya-Stroka <span style="opacity: 0.5;">(9)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/konsol/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Konsol <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/lets-encrypt/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Lets-Encrypt <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/linux/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Linux <span style="opacity: 0.5;">(26)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/linux-mint/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Linux-Mint <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/logrotate/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Logrotate <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/mail-server/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Mail-Server <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/manjaro/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Manjaro <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/mestnye-novosti/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Mestnye-Novosti <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/microsoft/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Microsoft <span style="opacity: 0.5;">(4)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/miui/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Miui <span style="opacity: 0.5;">(7)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/motd/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Motd <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/mts/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Mts <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/netplan/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Netplan <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/nextcloud/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Nextcloud <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/nginx/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Nginx <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/openmediavault/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Openmediavault <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/optimizaciya/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Optimizaciya <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/optimizaciya-pamyati/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Optimizaciya-Pamyati <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/panoramnoe-video/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Panoramnoe-Video <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/permissions/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Permissions <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/pihole/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Pihole <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/pochta/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Pochta <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/powershell/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Powershell <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/proxmox/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Proxmox <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/pve/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Pve <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/rdp/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Rdp <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/redaktory/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Redaktory <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/root/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Root <span style="opacity: 0.5;">(6)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/sarg/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Sarg <span style="opacity: 0.5;">(3)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/script/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Script <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/sertifikat/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Sertifikat <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/soft/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Soft <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ssh/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ssh <span style="opacity: 0.5;">(3)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ssh-jump/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ssh-Jump <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ssh-keygen/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ssh-Keygen <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ssl/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ssl <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ssmtp/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ssmtp <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/supervisor/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Supervisor <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/telegram/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Telegram <span style="opacity: 0.5;">(3)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/tv/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Tv <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/tvitter/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Tvitter <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/twrp/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Twrp <span style="opacity: 0.5;">(3)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/ubuntu/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Ubuntu <span style="opacity: 0.5;">(14)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/vagrant/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Vagrant <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/vhd/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Vhd <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/vk/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Vk <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/vnc/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Vnc <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/webdav/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Webdav <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/wifi/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Wifi <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/win7/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Win7 <span style="opacity: 0.5;">(6)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/windows/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Windows <span style="opacity: 0.5;">(7)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/windows-10/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Windows-10 <span style="opacity: 0.5;">(5)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/winxp/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Winxp <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/xfce4/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Xfce4 <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/xiaomi/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Xiaomi <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/yakuake/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Yakuake <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/youtube/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Youtube <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/yutub/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Yutub <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/zabbix/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Zabbix <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/zabbix-proksi/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Zabbix-Proksi <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/zabbix-proxy/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Zabbix-Proxy <span style="opacity: 0.5;">(1)</span>
+          </a>
+        
+          <a href="http://localhost:1313/tags/zentyal/" class="tag" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">
+            Zentyal <span style="opacity: 0.5;">(2)</span>
+          </a>
+        
+      </div>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

@@ -1,361 +1,193 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head>
-	<meta name="generator" content="Hugo 0.152.2"><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>My Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Главная">
-  <meta property="og:description" content="Добро пожаловать в мой блог!">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Главная">
-  <meta name="twitter:description" content="Добро пожаловать в мой блог!">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "My Blog",
-  "url": "https://solbadguy.github.io/",
-  "description": "",
-  "logo": "https://solbadguy.github.io/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span>Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<div class="post-content"><p>Добро пожаловать в мой блог!</p>
 
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <div class="terminal">
+    <div class="terminal-header">ls -la ~/posts</div>
+    <div class="terminal-body">
+      <ul class="post-list">
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2024</span>
+            <a href="http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/" class="post-item-title">Права для директории .ssh - шпаргалка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">25 января 2022</span>
+            <a href="http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/" class="post-item-title">Debian 11 - объединение сетевых интерфейсовonding setup</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">22 января 2022</span>
+            <a href="http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/" class="post-item-title">Переименование ноды Proxmox VE</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">14 января 2022</span>
+            <a href="http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/" class="post-item-title">Connection error 401: permission denied - invalid PVE ticket</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2022</span>
+            <a href="http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/" class="post-item-title">Получаем WildCard от Let’s Encrypt</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2022</span>
+            <a href="http://localhost:1313/posts/zabbix-database-error-connection-refused/" class="post-item-title">Zabbix - Database error Connection refused</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">13 января 2022</span>
+            <a href="http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/" class="post-item-title">Chrony Forward time jump detected! / Chrony время не синхронизируется</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">13 января 2022</span>
+            <a href="http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/" class="post-item-title">Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">29 января 2022</span>
+            <a href="http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/" class="post-item-title">SSH-Jump. Получаем доступ к удаленному серверу.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2021</span>
+            <a href="http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/" class="post-item-title">Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2021</span>
+            <a href="http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/" class="post-item-title">Yakuake. Настройка под себя, исправление проблем.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">28 января 2020</span>
+            <a href="http://localhost:1313/posts/pogoda-v-konsoli/" class="post-item-title">Bash. Погода в консоли</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2020</span>
+            <a href="http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/" class="post-item-title">connect to nextcloud waiting for authorization</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">24 января 2020</span>
+            <a href="http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/" class="post-item-title">Блокируем рекламу в домашней сети. Docker iHole &#43; DnsCrypt</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">22 января 2020</span>
+            <a href="http://localhost:1313/posts/ssh-jump-nastrojka/" class="post-item-title">SSH-Jump. Настройка.</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
 </div>
 
-<article class="first-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Права для директории .ssh - шпаргалка
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Если создаете папки и файлы руками, не забывайте про правильные права на файлы
-...</p>
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2024-11-18 00:00:00 +0000 UTC'>November 18, 2024</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Права для директории .ssh - шпаргалка" href="https://solbadguy.github.io/posts/prava-dlya-direktorii-ssh-shpargalka/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Debian 11 - объединение сетевых интерфейсовonding setup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Появилась задача объединить все сетевые интерфейсы на сервере, для того, чтобы обеспечить максимальную пропускную способность в обе стороны. Шаги под катом.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-25 00:00:00 +0000 UTC'>November 25, 2022</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Debian 11 - объединение сетевых интерфейсовonding setup" href="https://solbadguy.github.io/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Переименование ноды Proxmox VE
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Во время одной из установок ОС была допущена опечатка в имени сервера. Под катом решение этой проблемы.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 00:00:00 +0000 UTC'>November 22, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Переименование ноды Proxmox VE" href="https://solbadguy.github.io/posts/pereimenovanie-nody-proxmox-ve/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Connection error 401: permission denied - invalid PVE ticket
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Не совсем очевидное решение данной ошибки.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-14 00:00:00 +0000 UTC'>November 14, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Connection error 401: permission denied - invalid PVE ticket" href="https://solbadguy.github.io/posts/connection-error-401-permission-denied-invalid-pve-ticket/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Получаем WildCard от Let’s Encrypt
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Немного о том как вручную получить WildCard для домена и его поддоменов, используя верификацию через dns record.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-07 00:00:00 +0000 UTC'>November 7, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Получаем WildCard от Let’s Encrypt" href="https://solbadguy.github.io/posts/poluchaem-wildcard-ot-lets-encrypt/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Zabbix - Database error Connection refused
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Некоторое время назад понадобилось обновить zabbix до следующей версии, при этом ВМ, на которых работал фронт и БД жили отдельно, а настройки сети получали по dhcp.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-09-09 00:00:00 +0000 UTC'>September 9, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Zabbix - Database error Connection refused" href="https://solbadguy.github.io/posts/zabbix-database-error-connection-refused/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Chrony Forward time jump detected! / Chrony время не синхронизируется
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Заметил, что после перезагрузки ноутбука время отображается неверно. Решение под катом.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-05-13 00:00:00 +0000 UTC'>May 13, 2022</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Chrony Forward time jump detected! / Chrony время не синхронизируется" href="https://solbadguy.github.io/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ноутбук под управлением Fedora 35 не возобновлял работу после перехода в ждущий режим. Вместо локскрина был черный экран. Решение в продолжении статьи.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-05-13 00:00:00 +0000 UTC'>May 13, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима" href="https://solbadguy.github.io/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SSH-Jump. Получаем доступ к удаленному серверу.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Jump-host — это промежуточный хост или SSH-шлюз в удаленную сеть, через который можно установить соединение с другим хостом в другой сети, например демилитаризованной зоне ( DMZ ). ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-04-29 00:00:00 +0000 UTC'>April 29, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to SSH-Jump. Получаем доступ к удаленному серверу." href="https://solbadguy.github.io/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Во время работы столкнулся с не очевидной ошибкой - A possible reason for your Virtualbox VM entering the “gurumeditation” state. О том “откуда ноги растут” в продолжении.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-06-07 00:00:00 +0000 UTC'>June 7, 2021</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state." href="https://solbadguy.github.io/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://solbadguy.github.io/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>

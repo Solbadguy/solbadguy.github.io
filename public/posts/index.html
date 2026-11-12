@@ -1,361 +1,741 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts | engineer@blog:~$</title>
+  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Posts | My Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - My Blog">
-<meta name="author" content="">
-<link rel="canonical" href="https://solbadguy.github.io/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://solbadguy.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://solbadguy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://solbadguy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://solbadguy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://solbadguy.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://solbadguy.github.io/posts/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://solbadguy.github.io/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://solbadguy.github.io/posts/">
-  <meta property="og:site_name" content="My Blog">
-  <meta property="og:title" content="Posts">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Posts">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://solbadguy.github.io/posts/"
-    }
-  ]
-}
-</script>
+  
+  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="generator" content="Hugo 0.162.1">
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://solbadguy.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://solbadguy.github.io/obo-mne/" title="Обо мне">
-                    <span>Обо мне</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://solbadguy.github.io/posts/" title="Посты">
-                    <span class="active">Посты</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://solbadguy.github.io/">Home</a></div>
-  <h1>
-    Posts
-  </h1>
-</header>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Права для директории .ssh - шпаргалка
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Если создаете папки и файлы руками, не забывайте про правильные права на файлы
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-11-18 00:00:00 +0000 UTC'>November 18, 2024</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Права для директории .ssh - шпаргалка" href="https://solbadguy.github.io/posts/prava-dlya-direktorii-ssh-shpargalka/"></a>
-</article>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar">
+  <a href="/" class="sidebar-gif" title="На главную (cd /)">
+    <img src="/ragnar.gif" alt="blog logo">
+  </a>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Debian 11 - объединение сетевых интерфейсовonding setup
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Появилась задача объединить все сетевые интерфейсы на сервере, для того, чтобы обеспечить максимальную пропускную способность в обе стороны. Шаги под катом.
-...</p>
+  <div class="manifest">
+    <div class="manifest-header">whoami</div>
+    <div class="manifest-body" id="typewriter-output"
+         data-lines='[
+           {"text":"$ whoami","delay":100},
+           {"text":"admin46","delay":200},
+           {"text":"","delay":100},
+           {"text":"Собираю метрики,","delay":150},
+           {"text":"Строю дашборды.","delay":150},
+           {"text":"Глушу ложные тревоги.","delay":150},
+           {"text":"Держу руку на пульсе прода.","delay":150}
+         ]'
+         data-speed="40">
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2022-11-25 00:00:00 +0000 UTC'>November 25, 2022</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Debian 11 - объединение сетевых интерфейсовonding setup" href="https://solbadguy.github.io/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Переименование ноды Proxmox VE
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Во время одной из установок ОС была допущена опечатка в имени сервера. Под катом решение этой проблемы.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 00:00:00 +0000 UTC'>November 22, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Переименование ноды Proxmox VE" href="https://solbadguy.github.io/posts/pereimenovanie-nody-proxmox-ve/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Connection error 401: permission denied - invalid PVE ticket
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Не совсем очевидное решение данной ошибки.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-14 00:00:00 +0000 UTC'>November 14, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Connection error 401: permission denied - invalid PVE ticket" href="https://solbadguy.github.io/posts/connection-error-401-permission-denied-invalid-pve-ticket/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Получаем WildCard от Let’s Encrypt
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Немного о том как вручную получить WildCard для домена и его поддоменов, используя верификацию через dns record.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-07 00:00:00 +0000 UTC'>November 7, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Получаем WildCard от Let’s Encrypt" href="https://solbadguy.github.io/posts/poluchaem-wildcard-ot-lets-encrypt/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Zabbix - Database error Connection refused
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Некоторое время назад понадобилось обновить zabbix до следующей версии, при этом ВМ, на которых работал фронт и БД жили отдельно, а настройки сети получали по dhcp.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-09-09 00:00:00 +0000 UTC'>September 9, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Zabbix - Database error Connection refused" href="https://solbadguy.github.io/posts/zabbix-database-error-connection-refused/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Chrony Forward time jump detected! / Chrony время не синхронизируется
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Заметил, что после перезагрузки ноутбука время отображается неверно. Решение под катом.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-05-13 00:00:00 +0000 UTC'>May 13, 2022</span>&nbsp;·&nbsp;<span>2 min</span></footer>
-  <a class="entry-link" aria-label="post link to Chrony Forward time jump detected! / Chrony время не синхронизируется" href="https://solbadguy.github.io/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Ноутбук под управлением Fedora 35 не возобновлял работу после перехода в ждущий режим. Вместо локскрина был черный экран. Решение в продолжении статьи.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-05-13 00:00:00 +0000 UTC'>May 13, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима" href="https://solbadguy.github.io/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SSH-Jump. Получаем доступ к удаленному серверу.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Jump-host — это промежуточный хост или SSH-шлюз в удаленную сеть, через который можно установить соединение с другим хостом в другой сети, например демилитаризованной зоне ( DMZ ). ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-04-29 00:00:00 +0000 UTC'>April 29, 2022</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to SSH-Jump. Получаем доступ к удаленному серверу." href="https://solbadguy.github.io/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Во время работы столкнулся с не очевидной ошибкой - A possible reason for your Virtualbox VM entering the “gurumeditation” state. О том “откуда ноги растут” в продолжении.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-06-07 00:00:00 +0000 UTC'>June 7, 2021</span>&nbsp;·&nbsp;<span>1 min</span></footer>
-  <a class="entry-link" aria-label="post link to Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state." href="https://solbadguy.github.io/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://solbadguy.github.io/posts/page/2/">Next&nbsp;&nbsp;»
-    </a>
+  <nav>
+    <ul class="sidebar-menu">
+      
+        <li><a href="/posts/" >~/posts</a></li>
+      
+        <li><a href="/archive/" >~/archive</a></li>
+      
+        <li><a href="/uses/" >~/uses</a></li>
+      
+        <li><a href="/now/" >~/now</a></li>
+      
+        <li><a href="/obo-mne/" >~/obo-mne</a></li>
+      
+        <li><a href="/changelog/" >~/changelog</a></li>
+      
+    </ul>
   </nav>
-</footer>
-    </main>
+
+  <div class="sidebar-status">
+    <div class="row"><span>posts</span><span class="value">121</span></div>
+    <div class="row"><span>tags</span><span class="value">101</span></div>
+    <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
+    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+  </div>
+</aside>
+
+    <div class="main-content">
+      
+      <div class="content-container">
+        
+  <nav class="breadcrumbs">
+  
+  
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://solbadguy.github.io/">My Blog</a></span> · 
+  
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  
+  
+    
+  
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/posts/posts</span><span class="prompt">$</span>
+</nav>
+
+  <div class="terminal">
+    <div class="terminal-header">ls -la /posts/</div>
+    <div class="terminal-body">
+      <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
+        <span style="color: var(--fg-subtle);">$ </span>Posts
+      </h1>
+      
+      <ul class="post-list">
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+          <li class="post-item">
+            <span class="post-item-date">18 января 2024</span>
+            <a href="http://localhost:1313/posts/prava-dlya-direktorii-ssh-shpargalka/" class="post-item-title">Права для директории .ssh - шпаргалка</a>
+          </li>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+          <li class="post-item">
+            <span class="post-item-date">25 января 2022</span>
+            <a href="http://localhost:1313/posts/debian-11-obedinenie-setevyx-interfejsovbonding-setup/" class="post-item-title">Debian 11 - объединение сетевых интерфейсовonding setup</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">22 января 2022</span>
+            <a href="http://localhost:1313/posts/pereimenovanie-nody-proxmox-ve/" class="post-item-title">Переименование ноды Proxmox VE</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">14 января 2022</span>
+            <a href="http://localhost:1313/posts/connection-error-401-permission-denied-invalid-pve-ticket/" class="post-item-title">Connection error 401: permission denied - invalid PVE ticket</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2022</span>
+            <a href="http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/" class="post-item-title">Получаем WildCard от Let’s Encrypt</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2022</span>
+            <a href="http://localhost:1313/posts/zabbix-database-error-connection-refused/" class="post-item-title">Zabbix - Database error Connection refused</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">13 января 2022</span>
+            <a href="http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/" class="post-item-title">Chrony Forward time jump detected! / Chrony время не синхронизируется</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">13 января 2022</span>
+            <a href="http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/" class="post-item-title">Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">29 января 2022</span>
+            <a href="http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/" class="post-item-title">SSH-Jump. Получаем доступ к удаленному серверу.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2021</span>
+            <a href="http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/" class="post-item-title">Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2021</span>
+            <a href="http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/" class="post-item-title">Yakuake. Настройка под себя, исправление проблем.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">28 января 2020</span>
+            <a href="http://localhost:1313/posts/pogoda-v-konsoli/" class="post-item-title">Bash. Погода в консоли</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2020</span>
+            <a href="http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/" class="post-item-title">connect to nextcloud waiting for authorization</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">24 января 2020</span>
+            <a href="http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/" class="post-item-title">Блокируем рекламу в домашней сети. Docker iHole &#43; DnsCrypt</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">22 января 2020</span>
+            <a href="http://localhost:1313/posts/ssh-jump-nastrojka/" class="post-item-title">SSH-Jump. Настройка.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">31 января 2020</span>
+            <a href="http://localhost:1313/posts/grub-install-warning-this-gpt-partition-label-contains-no-bios-boot-partition-embedding-wont-be-possible/" class="post-item-title">grub-install: warning: this GPT partition label contains no BIOS Boot Partition; embedding won’t be possible.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">24 января 2020</span>
+            <a href="http://localhost:1313/posts/nastraivaem-otpravku-pochty-s-servera-cherez-paket-ssmtp/" class="post-item-title">Настраиваем отправку почты с сервера через пакет SSMTP</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2020</span>
+            <a href="http://localhost:1313/posts/zabbix-proxy-ustanovka-v-ubuntu-20-04-18-04/" class="post-item-title">Zabbix Proxy. Установка в Ubuntu 20.04 / 18.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">29 января 2020</span>
+            <a href="http://localhost:1313/posts/supervisor-nastraivaem-perezapusk-programmy/" class="post-item-title">Supervisor. Настраиваем перезапуск программы.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2020</span>
+            <a href="http://localhost:1313/posts/netplan-wifi-on-ubuntu-18-04/" class="post-item-title">Netplan Wifi on Ubuntu 18.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2020</span>
+            <a href="http://localhost:1313/posts/vds-diski-v-windows-avtomontirovanie/" class="post-item-title">VDS диски в Windows. Автомонтирование.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">11 января 2020</span>
+            <a href="http://localhost:1313/posts/linux-mint-19-nastraivaem-udalennoe-podklyuchenie-cherez-vnc/" class="post-item-title">Linux Mint 19. Настраиваем удаленное подключение через VNC</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2020</span>
+            <a href="http://localhost:1313/posts/windows-10-posle-chistoj-ustanovki-chocolatey-and-pshell-scripts/" class="post-item-title">Windows 10 после чистой установки: Chocolatey and Pshell scripts.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">3 января 2020</span>
+            <a href="http://localhost:1313/posts/uchim-sistemu-dokladyvat-o-sobytiyax-v-telegram/" class="post-item-title">Учим систему докладывать о событиях в Телеграм</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2020</span>
+            <a href="http://localhost:1313/posts/hetzner-storagebox-nastraivaem-avtorizaciyu-po-klyucham/" class="post-item-title">Hetzner StorageBox. Настраиваем авторизацию по ключам.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2020</span>
+            <a href="http://localhost:1313/posts/logrotate-dobavlyaem-rotaciyu-logov-dlya-virtualnyx-xostov-nginx/" class="post-item-title">Logrotate. Добавляем ротацию логов для виртуальных хостов Nginx</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2020</span>
+            <a href="http://localhost:1313/posts/kak-sozdat-polnocennyj-pochtovyj-server-na-ubuntu-18-04/" class="post-item-title">Как создать полноценный почтовый сервер на Ubuntu 18.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2019</span>
+            <a href="http://localhost:1313/posts/administrirovanie-1c-servera-pod-linux/" class="post-item-title">Администрирование 1C-сервера под Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2019</span>
+            <a href="http://localhost:1313/posts/lets-encrypt-sertifikat-dlya-sajta-centosnginx/" class="post-item-title">Let’s Encrypt сертификат для сайта. Centosginx</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">10 января 2019</span>
+            <a href="http://localhost:1313/posts/1c-server-ragent-not-running/" class="post-item-title">1C server - Ragent: not running.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2019</span>
+            <a href="http://localhost:1313/posts/nextcloud-cherez-webdav-windows-ne-mozhet-poluchit-dostup/" class="post-item-title">Nextcloud через webDAV: «Windows не может получить доступ ...</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">22 января 2019</span>
+            <a href="http://localhost:1313/posts/vagrant-problem-solving/" class="post-item-title">Vagrant problem solving</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">5 января 2018</span>
+            <a href="http://localhost:1313/posts/sozdaem-backup-android-ustrojstva-cherez-adb-v-ubuntu/" class="post-item-title">Создаем backup android-устройства через ADB в Ubuntu</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2018</span>
+            <a href="http://localhost:1313/posts/ispolzuem-docker-acestream-aceproxy-dlya-prosmotra-torrent-tv-na-smartfonaxtelevizorax-i-etc/" class="post-item-title">Используем Docker, AceStream &amp; AceProxy для просмотра &#34;Торрент ТВ&#34; на смартфонах, телевизорах и etc</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2018</span>
+            <a href="http://localhost:1313/posts/ustanovka-docker-na-ubuntu-16-04/" class="post-item-title">Установка Docker на Ubuntu 16.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">26 января 2018</span>
+            <a href="http://localhost:1313/posts/openmediavault-webgui-login-not-working/" class="post-item-title">OpenMediaVault WebGui login not working</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2018</span>
+            <a href="http://localhost:1313/posts/how-to-convert-pdf-to-jpg-in-ubuntu/" class="post-item-title">How to Convert PDF to JPG in Ubuntu</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2018</span>
+            <a href="http://localhost:1313/posts/motd-script-for-ssh-login/" class="post-item-title">Motd script for SSH login</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">26 января 2018</span>
+            <a href="http://localhost:1313/posts/programme-ustanovki-windows-ne-udalos-nastroit-windows-dlya-raboty-s-oborudovaniem/" class="post-item-title">Программе установки Windows не удалось настроить Windows для работы с оборудованием</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">16 января 2017</span>
+            <a href="http://localhost:1313/posts/proxmox-ve-5-0-fix-update/" class="post-item-title">Proxmox VE 5.0 fix update</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2017</span>
+            <a href="http://localhost:1313/posts/minimalnyj-nabor-servisov-google/" class="post-item-title">Минимальный набор сервисов Google</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2017</span>
+            <a href="http://localhost:1313/posts/rdesktop-podklyuchenie-k-windows-iz-linux-po-rdp/" class="post-item-title">RDesktop - подключение к Windows из Linux по RDP</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2017</span>
+            <a href="http://localhost:1313/posts/optimizaciya-izobrazhenij-dlya-sajta-jpegoptim-i-optipng/" class="post-item-title">Оптимизация изображений для сайта - JPEGoptim и OptiPNG</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2017</span>
+            <a href="http://localhost:1313/posts/vremennaya-ustanovka-twrp-na-of-proshivku-xiaomi-redmi-3s/" class="post-item-title">Временная установка TWRP на оф. прошивку Xiaomi Redmi 3s /Note и пр.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2017</span>
+            <a href="http://localhost:1313/posts/sozdanie-zagruzochnoj-fleshki-s-windows-xp/" class="post-item-title">Создание загрузочной флешки с Windows XP</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2017</span>
+            <a href="http://localhost:1313/posts/vosstanovlenie-parolya-enterprise-security-suite/" class="post-item-title">Восстановление пароля Enterprise Security Suite</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">27 января 2017</span>
+            <a href="http://localhost:1313/posts/chto-takoe-mab-v-novyx-proshivkax-xiaomi/" class="post-item-title">Что такое «mab» в прошивках Xiaomi и как его удалить.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">19 января 2017</span>
+            <a href="http://localhost:1313/posts/kak-izmenit-cvet-shrifta-na-rabochem-stole-v-xfce-4-12/" class="post-item-title">Как изменить цвет шрифта на рабочем столе в XFCE 4.12</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2017</span>
+            <a href="http://localhost:1313/posts/korrektnoe-otobrazhenie-kirillicy-v-midnight-commander/" class="post-item-title">Корректное отображение кириллицы в Midnight Commander</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2016</span>
+            <a href="http://localhost:1313/posts/polnyj-spisok-servisov-google-dlya-android-4-0-4-5-1-6-0/" class="post-item-title">Полный список сервисов Google для android 4.0.4, 5.1, 6.0</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">16 января 2016</span>
+            <a href="http://localhost:1313/posts/polnoe-udalenie-cervisov-google-play-s-vashego-smartfona/" class="post-item-title">Полное удаление cервисов Google Play с вашего смартфона</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2016</span>
+            <a href="http://localhost:1313/posts/ustanovka-twrp-na-globalnoj-proshivke-xiaomi-redmi-3redmi-3sredmi-3x/" class="post-item-title">Установка TWRP на глобальной прошивке Xiaomi Redmi 3/Redmi 3s/Redmi 3x</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2016</span>
+            <a href="http://localhost:1313/posts/proshivka-smatrfonov-xiaomi-v-ubuntu/" class="post-item-title">Прошивка сматфонов Xiaomi в Ubuntu</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">26 января 2016</span>
+            <a href="http://localhost:1313/posts/xiaomi-redmi-3-3s3x3pro-ne-udaetsya-vojti-v-rezhim-download/" class="post-item-title">Xiaomi Redmi 3 (3s/3x/3Pro) не удается войти в режим download</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">31 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-otklyuchit-sluzhby-googlexiaomi-v-proshivkax-miui/" class="post-item-title">Как отключить службы Google/Xiaomi в прошивках MIUI</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">31 января 2016</span>
+            <a href="http://localhost:1313/posts/optimizaciya-sistemnoj-pamyati-android/" class="post-item-title">Оптимизация системной памяти Android</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">29 января 2016</span>
+            <a href="http://localhost:1313/posts/otklyuchenie-proverki-cifrovoj-podpisi-drajverov-windows-7/" class="post-item-title">Отключение проверки цифровой подписи драйверов Windows 7</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">19 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-udalit-rut-prava-polnoe-udalenie-root-prav-supersu/" class="post-item-title">Как удалить рут права? - Полное удаление root прав SuperSU</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-proverit-status-blokirovki-zagruzchika-smartfona-v-ubuntudebian/" class="post-item-title">Как проверить статус блокировки загрузчика смартфона в Ubuntu/Debian?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">27 января 2016</span>
+            <a href="http://localhost:1313/posts/obman-multirom/" class="post-item-title">Обман MultiRom</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">24 января 2016</span>
+            <a href="http://localhost:1313/posts/miui-7-foto-zvonyashhego-na-ves-ekran/" class="post-item-title">MIUI 7, фото звонящего не отображается</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">19 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-vosstanovit-associacii-fajlov-windows-78-ispolzuem-reg-fajly/" class="post-item-title">Как восстановить ассоциации файлов Windows 7/8?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2016</span>
+            <a href="http://localhost:1313/posts/android-udalyaem-reklamu-iz-prilozhenij/" class="post-item-title">Android - Удаляем рекламу из приложений</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2016</span>
+            <a href="http://localhost:1313/posts/nastrojka-miui-7-optimizaciya-energopotrebleniya/" class="post-item-title">Настройка MIUI 7, оптимизация энергопотребления.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2016</span>
+            <a href="http://localhost:1313/posts/nastrojka-miui-optimizaciya-energopotrebleniya-ch-2/" class="post-item-title">Настройка MIUI 7: удаляем системные приложения</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">5 января 2016</span>
+            <a href="http://localhost:1313/posts/avtomaticheskoe-vyklyuchenie-kompyutera-v-zadannoe-vremya/" class="post-item-title">Автоматическое выключение компьютера в заданное время</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-sozdat-swap-fajl-podkachki-v-linux/" class="post-item-title">Как создать Swap файл подкачки в Linux-подобных ОС</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2016</span>
+            <a href="http://localhost:1313/posts/doloj-phpmyadmin-import-bazy-pryamo-iz-konsoli/" class="post-item-title">Долой Phpmyadmin- Импорт базы msql прямо из консоли</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2016</span>
+            <a href="http://localhost:1313/posts/novyj-komplekt-postavki-licenzionnoj-windows-10/" class="post-item-title">Новый комплект поставки лицензионной Windows 10 (unboxing)</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2016</span>
+            <a href="http://localhost:1313/posts/7-luchshix-alternativ-notepad-dlya-linux/" class="post-item-title">7 лучших альтернатив Notepad &#43;&#43; для Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">3 января 2016</span>
+            <a href="http://localhost:1313/posts/kak-sozdat-rezervnuyu-kopiyu-proshivki-telefona/" class="post-item-title">Как создать резервную копию прошивки телефона?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2016</span>
+            <a href="http://localhost:1313/posts/udalenie-nenuzhnyx-sistemnyx-prilozhenij-android-4-1-2/" class="post-item-title">Удаление ненужных системных приложений (Android 4.1.2)</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">28 января 2016</span>
+            <a href="http://localhost:1313/posts/prostoj-i-minimalistichnyj-konfig-dlya-conky/" class="post-item-title">Простой и минималистичный конфиг для Conky</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2015</span>
+            <a href="http://localhost:1313/posts/optimiziruem-svoj-smartfon-na-android/" class="post-item-title">Оптимизируем свой смартфон на Android</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">9 января 2015</span>
+            <a href="http://localhost:1313/posts/zamena-diska-v-programmnom-raid-1-ubuntu-server-14-04/" class="post-item-title">Замена диска в программном Raid 1. Ubuntu Server 14.04</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2015</span>
+            <a href="http://localhost:1313/posts/polnaya-ustanovka-postgresql-9-2-4-1-1c-1c-8-3-5-1119-na-ubuntu-server-14-04-x64/" class="post-item-title">Полная установка PostgreSQL 9.2.4-1.1C &#43; 1C 8.3.5.1119 на Ubuntu Server 14.04 X64</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">6 января 2015</span>
+            <a href="http://localhost:1313/posts/montirovanie-diskov-linux-i-fstab/" class="post-item-title">Монтирование дисков Linux и fstab</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2015</span>
+            <a href="http://localhost:1313/posts/windows-10-mozhno-budet-kupit-na-usb-nositele/" class="post-item-title">Windows 10 можно будет купить на USB-носителе</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2015</span>
+            <a href="http://localhost:1313/posts/mikro-pk-lenovo-ideacentre-stick-300/" class="post-item-title">Микро-ПК Lenovo ideacentre Stick 300</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2015</span>
+            <a href="http://localhost:1313/posts/telegram-i-umnye-boty/" class="post-item-title">Telegram и умные боты</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">29 января 2015</span>
+            <a href="http://localhost:1313/posts/gmail-pozvolit-vozvrashhat-otpravlennye-pisma/" class="post-item-title">Gmail позволит возвращать отправленные письма</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/conky-ubuntu-ustanovka/" class="post-item-title">Conky Ubuntu - установка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/elementary-tweaks-freya-ustanovka/" class="post-item-title">Elementary tweaks Freya - установка</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">10 января 2015</span>
+            <a href="http://localhost:1313/posts/wifi-hotspot-manjaro/" class="post-item-title">Wifi Hotspot Manjaro</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">4 января 2015</span>
+            <a href="http://localhost:1313/posts/yandeks-zapustil-svoe-radio/" class="post-item-title">Яндекс запустил свое радио</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">25 января 2015</span>
+            <a href="http://localhost:1313/posts/otklyuchaem-sluzhby-android-dlya-soxraneniya-zaryada-batarei/" class="post-item-title">Отключаем службы Android для сохранения заряда батареи</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">21 января 2015</span>
+            <a href="http://localhost:1313/posts/adblock-plus-anonsiroval-mobilnyj-brauzer-dlya-android/" class="post-item-title">Adblock Plus анонсировал мобильный браузер для Android</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2015</span>
+            <a href="http://localhost:1313/posts/razdacha-wifi-s-noutbuka-cherez-komandnuyu-stroku-os-windows/" class="post-item-title">Раздача WiFi с ноутбука через командную строку (ОС Windows)</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">15 января 2015</span>
+            <a href="http://localhost:1313/posts/iftop-monitoring-seti-na-ubuntu-server/" class="post-item-title">IfTop мониторинг сети на Ubuntu Server</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2015</span>
+            <a href="http://localhost:1313/posts/windows-10-stanet-poslednej-v-linejke-os-microsoft/" class="post-item-title">Windows 10 станет последней в линейке ОС Microsoft</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2015</span>
+            <a href="http://localhost:1313/posts/sprashivaj-ru-byl-vzloman/" class="post-item-title">Спрашивай.ру был взломан</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/sarg-prisvaivaem-ip-adresam-imena-sotrudnikov/" class="post-item-title">SARG: присваиваем ip-адресам имена сотрудников</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-isklyuchit-ip-adres-iz-logov-sarg/" class="post-item-title">Как исключить ip-адрес из логов SARG?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">23 января 2015</span>
+            <a href="http://localhost:1313/posts/v-novostnoj-lente-vkontakte-poyavyatsya-reklamnye-zapisi/" class="post-item-title">В новостной ленте «Вконтакте» появятся рекламные записи.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">16 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-zablokirovat-porno-sajty-ot-detej/" class="post-item-title">Как заблокировать порно сайты от детей?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">8 января 2015</span>
+            <a href="http://localhost:1313/posts/nastrojka-sarg-na-baze-ubuntu-server/" class="post-item-title">Настройка SaRG на базе Ubuntu Server</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/android-v-pomoshh-sistemnomu-administratoru/" class="post-item-title">Android в помощь системному администратору.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/ebay-budet-xranit-personalnye-dannye-rossiyan-v-rossii/" class="post-item-title">eBay будет хранить персональные данные россиян в России</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">7 января 2015</span>
+            <a href="http://localhost:1313/posts/runetu-ispolnyaetsya-21-god/" class="post-item-title">Рунету исполняется 21 год</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2015</span>
+            <a href="http://localhost:1313/posts/vyshel-zentyal-4-1/" class="post-item-title">Вышел Zentyal 4.1</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-uznat-otkrytye-porty/" class="post-item-title">Как узнать открытые порты?</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">1 января 2015</span>
+            <a href="http://localhost:1313/posts/statusy-portov-v-komandnoj-stroke/" class="post-item-title">Статусы портов в командной строке</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">31 января 2015</span>
+            <a href="http://localhost:1313/posts/twitter-mogut-zablokirovat-na-territorii-rossii/" class="post-item-title">Twitter могут заблокировать на территории России</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-uznat-vremya-cherez-konsol-linux/" class="post-item-title">Как узнать время через консоль Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">27 января 2015</span>
+            <a href="http://localhost:1313/posts/odnoklassniki-zapustit-onlajn-kinoteatr-dlya-mobilnyx-ustrojstv/" class="post-item-title">&#34;Одноклассники&#34; запустит онлайн кинотеатр для мобильных устройств</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">19 января 2015</span>
+            <a href="http://localhost:1313/posts/facebook-zapustil-servis-denezhnyx-perevodov/" class="post-item-title">Facebook запустил сервис денежных переводов</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">18 января 2015</span>
+            <a href="http://localhost:1313/posts/polzovateli-yahoo-perestanut-ispolzovat-paroli/" class="post-item-title">Пользователи Yahoo перестанут использовать пароли</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2015</span>
+            <a href="http://localhost:1313/posts/besplatnyj-antivirus-dlya-predpriyatij/" class="post-item-title">Бесплатный антивирус для предприятий</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">16 января 2015</span>
+            <a href="http://localhost:1313/posts/novaya-vozmozhnost-na-youtube/" class="post-item-title">Новая возможность на Youtube</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">3 января 2015</span>
+            <a href="http://localhost:1313/posts/kratkij-obzor-zentyal/" class="post-item-title">Краткий обзор Zentyal</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">2 января 2015</span>
+            <a href="http://localhost:1313/posts/google-otdaet-predpochtenie-sajtam-kotorye-obladayut-mobilnoj-versiej/" class="post-item-title">Google отдает предпочтение сайтам, которые обладают мобильной версией</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">25 января 2015</span>
+            <a href="http://localhost:1313/posts/kak-ustanovit-telegram-na-ubuntulinux/" class="post-item-title">Как установить Telegram на Ubuntu/Linux</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">20 января 2015</span>
+            <a href="http://localhost:1313/posts/na-yutube-poyavitsya-platnaya-podpiska/" class="post-item-title">На Ютубе появится платная подписка.</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2015</span>
+            <a href="http://localhost:1313/posts/plasma-5-install-usb-error/" class="post-item-title">Plasma 5 install usb error</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">16 января 2015</span>
+            <a href="http://localhost:1313/posts/byl-vzloman-krupnejshij-ukrainskij-torrent-treker/" class="post-item-title">Был взломан крупнейший украинский торрент-трекер</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">12 января 2015</span>
+            <a href="http://localhost:1313/posts/na-iphone-teper-nelzya-slushat-muzyku-iz-vkontakte/" class="post-item-title">На iPhone теперь нельзя слушать музыку из &#34;Вконтакте&#34;</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">10 января 2015</span>
+            <a href="http://localhost:1313/posts/rossiya-preuspela-v-blokirovke-informacii/" class="post-item-title">Россия преуспела в блокировке информации</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">30 января 2014</span>
+            <a href="http://localhost:1313/posts/xakery-prodali-s-molotka-uyazvimost-o/" class="post-item-title">Хакеры продали с молотка уязвимость, обнаруженную в iOS 7</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">26 января 2014</span>
+            <a href="http://localhost:1313/posts/morephone-smartfon-izgibaetsya-pri-vyzove/" class="post-item-title">MorePhone - смартфон, изгибается при вызове</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">17 января 2014</span>
+            <a href="http://localhost:1313/posts/youtube-zapuskaet-platnuyu-video-platformu/" class="post-item-title">YouTube запускает платную видео платформу</a>
+          </li>
+        
+          <li class="post-item">
+            <span class="post-item-date">16 января 2014</span>
+            <a href="http://localhost:1313/posts/vskore-google-mozhet-nachat-sozdanie-sobstv/" class="post-item-title">Вскоре Google может начать создание собственных Android-игр</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+      </div>
+    </div>
+  </div>
+  <div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="prompt">❯</span>
+      <span>grep -r</span>
+      <input id="search-input" class="search-input" type="text" placeholder="введите запрос..." autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑↓</kbd> навигация</span>
+      <span><kbd>↵</kbd> открыть</span>
+      <span><kbd>esc</kbd> закрыть</span>
+    </div>
+  </div>
+</div>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+  
+  
+  <div id="help-overlay" class="help-overlay">
+    <div class="help-modal">
+      <div class="help-title">Клавиатурные сокращения</div>
+      <ul class="help-list">
+        <li><span>Поиск</span><kbd>/</kbd></li>
+        <li><span>Главная</span><kbd>g</kbd> <kbd>h</kbd></li>
+        <li><span>Помощь</span><kbd>?</kbd></li>
+        <li><span>Закрыть</span><kbd>esc</kbd></li>
+      </ul>
+    </div>
+  </div>
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+  <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
+  
+  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
 </body>
-
 </html>
