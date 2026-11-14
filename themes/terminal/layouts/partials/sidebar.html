@@ -8,7 +8,7 @@
     <div class="manifest-body" id="typewriter-output"
          data-lines='[
            {"text":"$ whoami","delay":100},
-           {"text":"admin46","delay":200},
+           {"text":"solbadguy","delay":200},
            {"text":"","delay":100},
            {"text":"Собираю метрики,","delay":150},
            {"text":"Строю дашборды.","delay":150},
@@ -31,6 +31,10 @@
     <div class="row"><span>posts</span><span class="value">{{ len (where .Site.RegularPages "Section" "posts") }}</span></div>
     <div class="row"><span>tags</span><span class="value">{{ len .Site.Taxonomies.tags }}</span></div>
     <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
-    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+    <div class="row"><span>theme</span><span class="value">terminal</span></div>
+ <div class="row">
+    <span>engine</span>
+    <a href="https://gohugo.io/" target="_blank" rel="noopener" class="value hugo-link">hugo</a>
+  </div>
   </div>
 </aside>

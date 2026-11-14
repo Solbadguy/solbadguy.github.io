@@ -8,12 +8,18 @@
 
   {{ $path := "" }}
   {{ if .IsHome }}
-    {{ $path = "~" }}
+    {{ $path = "~/" }}
+  {{ else if eq .Section "posts" }}
+    {{ if .IsPage }}
+      {{ $path = print "~/posts/" $slug }}
+    {{ else }}
+      {{ $path = "~/posts" }}
+    {{ end }}
   {{ else if .Section }}
-    {{ $path = printf "~/%s/%s" .Section $slug }}
+    {{ $path = print "~/" .Section }}
   {{ else }}
-    {{ $path = printf "~/%s" $slug }}
+    {{ $path = print "~/" $slug }}
   {{ end }}
 
-  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">{{ $path }}</span><span class="prompt">$</span>
+  <span class="prompt">$</span> <span class="command">cat</span> <span class="path">{{ $path }}</span>
 </nav>

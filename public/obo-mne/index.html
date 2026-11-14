@@ -3,15 +3,15 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Обо мне | engineer@blog:~$</title>
-  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
+  <title>Обо мне | admin46@blog:~$</title>
+  <meta name="description" content="Личный блог admin46 — заметки по Linux, DevOps, сетям и инфраструктуре.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   
-  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="stylesheet" href="/css/style.min.87c31b830f70ebd5634621b9d374748e15041fb6f3f96d0fe51537d0e6319dbf.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="generator" content="Hugo 0.162.1">
 </head>
@@ -28,7 +28,7 @@
     <div class="manifest-body" id="typewriter-output"
          data-lines='[
            {"text":"$ whoami","delay":100},
-           {"text":"admin46","delay":200},
+           {"text":"solbadguy","delay":200},
            {"text":"","delay":100},
            {"text":"Собираю метрики,","delay":150},
            {"text":"Строю дашборды.","delay":150},
@@ -61,7 +61,11 @@
     <div class="row"><span>posts</span><span class="value">121</span></div>
     <div class="row"><span>tags</span><span class="value">101</span></div>
     <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
-    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+    <div class="row"><span>theme</span><span class="value">terminal</span></div>
+ <div class="row">
+    <span>engine</span>
+    <a href="https://gohugo.io/" target="_blank" rel="noopener" class="value hugo-link">hugo</a>
+  </div>
   </div>
 </aside>
 
@@ -82,7 +86,7 @@
     
   
 
-  <span class="user">admin46</span><span class="at">@</span><span class="host">blog</span>:<span class="path">~/index</span><span class="prompt">$</span>
+  <span class="prompt">$</span> <span class="command">cat</span> <span class="path">~/index</span>
 </nav>
 
   <article>
@@ -90,79 +94,86 @@
       <h1 class="post-title">Обо мне</h1>
     </header>
 
-    <div class="about-layout">
-      <div class="about-content">
-        <p>Привет! Я Linux-инженер с фокусом на автоматизацию, надежность и чистый код.</p>
-<p>Мой путь начался с простого любопытства: &ldquo;как это работает под капотом?&rdquo;. Сегодня я проектирую инфраструктуру, настраиваю CI/CD пайплайны и решаю задачи, которые другие считают &ldquo;магией&rdquo;.</p>
-<h3 id="принципы-работы">Принципы работы</h3>
-<ul>
-<li><strong>Автоматизируй всё</strong>, что повторяется более двух раз.</li>
-<li><strong>Документируй</strong> так, будто поддерживать это будет злой гений, который знает, где ты живешь.</li>
-<li><strong>Простота</strong> всегда побеждает хитроумные решения.</li>
-</ul>
+    
+    <div class="about-side-by-side">
+      
+      
+      <div class="about-photo-col">
+        <img src="/obo-mne/images/about-author.jpg" alt="solbadguy">
+      </div>
+
+      
+      <aside class="about-stack-col">
+        <div class="stack-container">
+          <div class="terminal-header">
+            <span>tech_stack.toml</span>
+          </div>
+          <div class="stack-list">
+            
+            <div class="stack-group">
+              <h4>OS & Core</h4>
+              <div class="tags">
+                <span class="tag">Fedora</span>
+                <span class="tag">Debian</span>
+                <span class="tag">Bash</span>
+                <span class="tag">Systemd</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h4>Containers</h4>
+              <div class="tags">
+                <span class="tag">Docker</span>
+                <span class="tag">K8s</span>
+                <span class="tag">Helm</span>
+                <span class="tag">Podman</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h4>CI/CD & IaC</h4>
+              <div class="tags">
+                <span class="tag">GitLab CI</span>
+                <span class="tag">Ansible</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Make</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h4>Observability</h4>
+              <div class="tags">
+                <span class="tag">Zabbix</span>
+                <span class="tag">Prometheus</span>
+                <span class="tag">Grafana</span>
+                <span class="tag">Loki</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h4>Network</h4>
+              <div class="tags">
+                <span class="tag">Nginx</span>
+                <span class="tag">HAProxy</span>
+                <span class="tag">WireGuard</span>
+                <span class="tag">LE</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    
+    <div class="about-text-below">
+      <p>Привет! Я Linux-инженер с фокусом на автоматизацию, надежность и чистый код.</p>
+<p>Мой путь начался с простого любопытства: «как это работает под капотом?». Сегодня я проектирую инфраструктуру, настраиваю CI/CD пайплайны и решаю задачи, которые другие считают «магией».</p>
 <p>В свободное время я исследую новые инструменты, участвую в open-source проектах и пытаюсь объяснить коту, что клавиатура — это не кровать.</p>
 
-      </div>
-
-      <div class="about-stack">
-        <div class="terminal-header">
-          <span>tech_stack.toml</span>
-        </div>
-        <div class="stack-list">
-          
-          <div class="stack-category">
-            <h4>OS & Core</h4>
-            <div class="stack-tags">
-              <span class="tag">Fedora</span>
-              <span class="tag">Debian/Ubuntu</span>
-              <span class="tag">Bash</span>
-              <span class="tag">Systemd</span>
-            </div>
-          </div>
-
-          <div class="stack-category">
-            <h4>Containers & Orchestration</h4>
-            <div class="stack-tags">
-              <span class="tag">Docker</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">Helm</span>
-              <span class="tag">Podman</span>
-            </div>
-          </div>
-
-          <div class="stack-category">
-            <h4>CI/CD & IaC</h4>
-            <div class="stack-tags">
-              <span class="tag">GitLab CI</span>
-              <span class="tag">Ansible</span>
-              <span class="tag">Terraform</span>
-              <span class="tag">Make</span>
-            </div>
-          </div>
-
-          <div class="stack-category">
-            <h4>Monitoring & Logging</h4>
-            <div class="stack-tags">
-              <span class="tag">Zabbix</span>
-              <span class="tag">Prometheus</span>
-              <span class="tag">Grafana</span>
-              <span class="tag">Loki</span>
-            </div>
-          </div>
-
-          <div class="stack-category">
-            <h4>Networking & Security</h4>
-            <div class="stack-tags">
-              <span class="tag">Nginx</span>
-              <span class="tag">HAProxy</span>
-              <span class="tag">WireGuard</span>
-              <span class="tag">Let's Encrypt</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
     </div>
+
   </article>
 
       </div>
@@ -200,6 +211,6 @@
 
   <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
   
-  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
+  <script src="/js/main.min.7b8f672c5f06d1d6cc986a6435e0609a2f11e6e6845a4ec9f052584bd3bd3105.js"></script>
 </body>
 </html>

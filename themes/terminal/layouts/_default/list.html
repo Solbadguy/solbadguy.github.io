@@ -1,7 +1,6 @@
 {{ define "main" }}
   {{ partial "breadcrumbs.html" . }}
   <div class="terminal">
-    <div class="terminal-header">ls -la {{ .RelPermalink }}</div>
     <div class="terminal-body">
       <h1 style="font-family: var(--font-mono); margin-bottom: 1.5rem; color: var(--fg);">
         <span style="color: var(--fg-subtle);">$ </span>{{ .Title }}

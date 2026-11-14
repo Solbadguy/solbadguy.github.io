@@ -3,15 +3,15 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>engineer@blog:~$</title>
-  <meta name="description" content="Заметки из /var/log жизни Linux-инженера">
+  <title>admin46@blog:~$</title>
+  <meta name="description" content="Личный блог admin46 — заметки по Linux, DevOps, сетям и инфраструктуре.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   
-  <link rel="stylesheet" href="/css/style.min.e5c291093bcadff08818e9cd3ff8c7f0dae017175af8621b8b7b894474a3cc1e.css">
+  <link rel="stylesheet" href="/css/style.min.87c31b830f70ebd5634621b9d374748e15041fb6f3f96d0fe51537d0e6319dbf.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="generator" content="Hugo 0.162.1">
 </head>
@@ -28,7 +28,7 @@
     <div class="manifest-body" id="typewriter-output"
          data-lines='[
            {"text":"$ whoami","delay":100},
-           {"text":"admin46","delay":200},
+           {"text":"solbadguy","delay":200},
            {"text":"","delay":100},
            {"text":"Собираю метрики,","delay":150},
            {"text":"Строю дашборды.","delay":150},
@@ -61,7 +61,11 @@
     <div class="row"><span>posts</span><span class="value">121</span></div>
     <div class="row"><span>tags</span><span class="value">101</span></div>
     <div class="row"><span>uptime</span><span class="value" id="uptime-counter">0s</span></div>
-    <div class="row"><span>theme</span><span class="value">monochrome</span></div>
+    <div class="row"><span>theme</span><span class="value">terminal</span></div>
+ <div class="row">
+    <span>engine</span>
+    <a href="https://gohugo.io/" target="_blank" rel="noopener" class="value hugo-link">hugo</a>
+  </div>
   </div>
 </aside>
 
@@ -69,8 +73,41 @@
       
       <div class="content-container">
         
+
+
+<section class="hero-section">
+<div class="hero-neofetch" id="neofetch-container">
+  <pre id="neofetch-output"></pre>
+</div>
+  <div class="hero-content">
+    <h1 class="hero-name">Solbadguy</h1>
+    <p class="hero-role">Linux Engineer / Observability Engineer</p>
+    <p class="hero-desc">
+      Наблюдаю за системами, пока они наблюдают за инфрой. Уже 15 лет делаю Linux предсказуемым, 
+      а алерты - осмысленными. Верю, что хороший мониторинг - это когда ты узнаёшь о проблеме раньше пользователей.
+    </p>
+    
+    <div class="hero-socials">
+      <a href="https://github.com/solbadguy" target="_blank" rel="noopener" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://hub.docker.com/u/solbadguy" target="_blank" rel="noopener" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.185M23.763 10.13c-.344-.224-.72-.35-1.113-.35-.51 0-1.003.15-1.43.43-.427.28-.76.68-.97 1.15-.21.47-.29 1.01-.23 1.55.06.54.25 1.05.55 1.5.3.45.71.82 1.19 1.07.48.25 1.02.38 1.56.38.54 0 1.08-.13 1.56-.38.48-.25.89-.62 1.19-1.07.3-.45.49-.96.55-1.5.06-.54-.02-1.08-.23-1.55-.21-.47-.54-.87-.97-1.15-.427-.28-.92-.43-1.43-.43-.393 0-.769.126-1.113.35m-1.113 3.27c-.344.224-.72.35-1.113.35-.393 0-.769-.126-1.113-.35-.344-.224-.61-.54-.77-.91-.16-.37-.21-.78-.14-1.18.07-.4.26-.77.55-1.06.29-.29.66-.48 1.06-.55.4-.07.81-.02 1.18.14.37.16.69.43.91.77.22.34.35.72.35 1.113 0 .393-.13.769-.35 1.113-.22.344-.54.61-.91.77"/></svg>
+        Docker Hub
+      </a>
+      <a href="https://t.me/solbadguy" target="_blank" rel="noopener" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="latest-posts">
   <div class="terminal">
-    <div class="terminal-header">ls -la ~/posts</div>
+    <div class="terminal-header">ls -lt ~/posts | head -n 5</div>
     <div class="terminal-body">
       <ul class="post-list">
         
@@ -95,63 +132,15 @@
           </li>
         
           <li class="post-item">
-            <span class="post-item-date">7 января 2022</span>
+            <span class="post-item-date">07 января 2022</span>
             <a href="http://localhost:1313/posts/poluchaem-wildcard-ot-lets-encrypt/" class="post-item-title">Получаем WildCard от Let’s Encrypt</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">9 января 2022</span>
-            <a href="http://localhost:1313/posts/zabbix-database-error-connection-refused/" class="post-item-title">Zabbix - Database error Connection refused</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">13 января 2022</span>
-            <a href="http://localhost:1313/posts/chrony-forward-time-jump-detected-chrony-vremya-ne-sinxroniziruetsya/" class="post-item-title">Chrony Forward time jump detected! / Chrony время не синхронизируется</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">13 января 2022</span>
-            <a href="http://localhost:1313/posts/fedora-35-not-waking-up-on-amd-ideapad-5-fedora-35-ne-vyxodit-iz-spyashhego-rezhima/" class="post-item-title">Fedora 35 - not waking up on AMD Ideapad 5/ Федора 35 - не выходит из спящего режима</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">29 января 2022</span>
-            <a href="http://localhost:1313/posts/ssh-jump-poluchaem-dostup-k-udalennomu-serveru/" class="post-item-title">SSH-Jump. Получаем доступ к удаленному серверу.</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">7 января 2021</span>
-            <a href="http://localhost:1313/posts/vagrant-a-possible-reason-for-your-virtualbox-vm-entering-the-gurumeditation-state/" class="post-item-title">Vagrant. A possible reason for your Virtualbox VM entering the &#34;gurumeditation&#34; state.</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">12 января 2021</span>
-            <a href="http://localhost:1313/posts/yakuake-nastrojka-pod-sebya-ispravlenie-problem/" class="post-item-title">Yakuake. Настройка под себя, исправление проблем.</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">28 января 2020</span>
-            <a href="http://localhost:1313/posts/pogoda-v-konsoli/" class="post-item-title">Bash. Погода в консоли</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">30 января 2020</span>
-            <a href="http://localhost:1313/posts/connect-to-nextcloud-waiting-for-authorization/" class="post-item-title">connect to nextcloud waiting for authorization</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">24 января 2020</span>
-            <a href="http://localhost:1313/posts/blokiruem-reklamu-v-domashnej-seti-dockerpihole-dnscrypt/" class="post-item-title">Блокируем рекламу в домашней сети. Docker iHole &#43; DnsCrypt</a>
-          </li>
-        
-          <li class="post-item">
-            <span class="post-item-date">22 января 2020</span>
-            <a href="http://localhost:1313/posts/ssh-jump-nastrojka/" class="post-item-title">SSH-Jump. Настройка.</a>
           </li>
         
       </ul>
     </div>
   </div>
+</section>
+
 
       </div>
     </div>
@@ -188,6 +177,6 @@
 
   <button class="back-to-top" id="back-to-top" title="cd ..">↑ cd ..</button>
   
-  <script src="/js/main.min.6b220f87bcf21b9c2612cb78b307b5cead4fa7931b54ed69f3dd12d5820488e4.js"></script>
+  <script src="/js/main.min.7b8f672c5f06d1d6cc986a6435e0609a2f11e6e6845a4ec9f052584bd3bd3105.js"></script>
 </body>
 </html>

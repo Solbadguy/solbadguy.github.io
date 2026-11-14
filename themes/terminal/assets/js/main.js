@@ -9,19 +9,17 @@ function initTypewriter() {
   let lines = [];
   try { lines = JSON.parse(linesData); } catch (e) { return; }
 
-  // Если уже видели анимацию в этой сессии браузера - показываем сразу
   if (sessionStorage.getItem('typewriter-seen') === 'true') {
     el.innerHTML = lines.map(l => `<div class="manifest-line"><span class="${l.cls || ''}">${l.text}</span></div>`).join('');
     return;
   }
 
-  // Иначе запускаем анимацию
   let lineIdx = 0, charIdx = 0, completedLinesHtml = '';
   const speed = parseInt(el.getAttribute('data-speed')) || 40;
 
   function typeNext() {
     if (lineIdx >= lines.length) {
-      el.innerHTML = completedLinesHtml; // Без курсора в конце, как вы просили
+      el.innerHTML = completedLinesHtml;
       sessionStorage.setItem('typewriter-seen', 'true');
       return;
     }
@@ -174,7 +172,7 @@ function initBackToTop() {
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// ============ ЖИВОЙ UPTIME (с сохранением в сессии) ============
+// ============ ЖИВОЙ UPTIME ============
 function initUptime() {
   const el = document.getElementById('uptime-counter');
   if (!el) return;
@@ -229,53 +227,65 @@ function initEasterEgg() {
   });
 }
 
-// ============ ANIMATED NEOFETCH ============
-function initNeofetchAnimation() {
-  const el = document.getElementById('neofetch-content');
-  if (!el) return;
+// ============ NEOFETCH DEBIAN ANIMATION ============
+function initNeofetchDebian() {
+  const container = document.getElementById('neofetch-output');
+  if (!container) return;
+  
+  // Очищаем sessionStorage для отладки, если хотите видеть анимацию каждый раз:
+  // sessionStorage.removeItem('neofetch-debian-seen'); 
 
-  const neofetchText = `       _,met$$$$$gg.          engineer@blog
-    ,g$$$$$$$$$$$$$$$P.       -----------------
-  ,g$$P"     """Y$$.".        OS: Fedora 44 x86_64
- ,$$P'              \`$$$.     Host: Production Env
-',$$P       ,ggs.     \`$$b:   Uptime: 5+ years
-\`d$$'     ,$P"'   .    $$$    Shell: bash 5.2
- $$P      d$'     ,    $$P    Editor: Neovim
- $$:      $$.   -    ,d$$'    Focus: Automation
- $$;      Y$b._   _,d$P'      Motto: "Чиню утром"
- Y$$.    \`.\`"Y$$$$P"'         
- \`$$b      "-.__              
-  \`Y$$                        
-   \`Y$$.                      
-     \`$$b.                    
-       \`Y$$b.                 
-          \`"Y$b._             
-              \`"""            
-`;
-
-  // Если уже видели - показываем сразу
-  if (sessionStorage.getItem('neofetch-seen') === 'true') {
-    el.textContent = neofetchText;
+  if (sessionStorage.getItem('neofetch-debian-seen') === 'true') {
+    // Если уже видели, рендерим сразу
+    const debianArt = getDebianArt();
+    container.innerHTML = debianArt.map(line => `<div class="debian-art">${line}</div>`).join('');
     return;
   }
 
-  let i = 0;
-  const speed = 30; // скорость печати (мс)
-
-  function typeChar() {
-    if (i < neofetchText.length) {
-      el.textContent += neofetchText.charAt(i);
-      i++;
-      setTimeout(typeChar, speed);
-    } else {
-      sessionStorage.setItem('neofetch-seen', 'true');
-    }
-  }
+  const debianArt = getDebianArt();
+  let currentLine = 0;
   
-  // Запускаем с задержкой
-  setTimeout(typeChar, 500);
+  function printNextLine() {
+    if (currentLine >= debianArt.length) {
+      sessionStorage.setItem('neofetch-debian-seen', 'true');
+      return;
+    }
+    
+    const line = document.createElement('div');
+    line.className = 'debian-art';
+    line.textContent = debianArt[currentLine];
+    container.appendChild(line);
+    
+    currentLine++;
+    setTimeout(printNextLine, 80);
+  }
+
+  printNextLine();
 }
 
+function getDebianArt() {
+  return [
+    "       _,met$$$$$gg.",
+    "    ,g$$$$$$$$$$$$$$$P.",
+    "  ,g$$P\"     \"\"\"Y$$.\"",
+    " ,$$P'              `$$$.",
+    "',$$P       ,ggs.     `$$b:",
+    "`d$$'     ,$P\"'   .    $$$",
+    " $$P      d$'     ,    $$P",
+    " $$:      $$.   -    ,d$$'",
+    " $$;      Y$b._   _,d$P'",
+    " Y$$.    `.`\"Y$$$$P\"'",
+    " `$$b      \"-.__",
+    "  `Y$$",
+    "   `Y$$.",
+    "     `$$b.",
+    "       `Y$$b.",
+    "          `\"Y$b._",
+    "              `\"\"\""
+  ];
+}
+
+// ============ ИНИЦИАЛИЗАЦИЯ ============
 document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initTOC();
@@ -287,5 +297,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initUptime();
   initHotkeys();
   initEasterEgg();
-  initNeofetchAnimation();
+  initNeofetchDebian();
 });
