@@ -15,7 +15,7 @@
           <ul class="archive-list">
             {{ range .Pages.ByDate.Reverse }}
               <li class="archive-item">
-                <span class="archive-date">{{ .Date.Format "02 января" }}</span>
+                <span class="archive-date">{{ partial "date-ru.html" (dict "date" .Date "pad" true) }}</span>
                 <a href="{{ .Permalink }}" class="archive-title">{{ .Title }}</a>
               </li>
             {{ end }}

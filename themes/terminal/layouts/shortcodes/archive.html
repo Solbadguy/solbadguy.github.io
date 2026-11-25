@@ -3,7 +3,7 @@
 ### {{ .Key }}
 
 {{ range .Pages }}
-- [{{ .Title }}]({{ .Permalink }}) — {{ .Date.Format "2 января" }}
+- [{{ .Title }}]({{ .Permalink }}) — {{ partial "date-ru.html" (dict "date" .Date) }}
 {{ end }}
 
 {{ end }}

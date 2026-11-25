@@ -38,7 +38,7 @@
       <ul class="post-list">
         {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
           <li class="post-item">
-            <span class="post-item-date">{{ .Date.Format "02 января 2006" }}</span>
+            <span class="post-item-date">{{ partial "date-ru.html" (dict "date" .Date "year" true "pad" true) }}</span>
             <a href="{{ .Permalink }}" class="post-item-title">{{ .Title }}</a>
           </li>
         {{ else }}

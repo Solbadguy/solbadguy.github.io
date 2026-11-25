@@ -6,7 +6,7 @@
     {{ range $related }}
       <li>
         <a href="{{ .Permalink }}">
-          <div class="date">{{ .Date.Format "2 января 2006" }}</div>
+          <div class="date">{{ partial "date-ru.html" (dict "date" .Date "year" true) }}</div>
           <div class="title">{{ .Title }}</div>
         </a>
       </li>

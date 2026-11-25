@@ -9,7 +9,7 @@
       <ul class="post-list">
         {{ range .Pages }}
           <li class="post-item">
-            <span class="post-item-date">{{ .Date.Format "2 января 2006" }}</span>
+            <span class="post-item-date">{{ partial "date-ru.html" (dict "date" .Date "year" true) }}</span>
             <a href="{{ .Permalink }}" class="post-item-title">{{ .Title }}</a>
           </li>
         {{ end }}
