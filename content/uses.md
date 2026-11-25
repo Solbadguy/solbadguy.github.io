@@ -12,8 +12,8 @@ type: uses
 ## [Software]
 - **OS:** Fedora 44 Workstation + KDE Plasma
 - **Terminal:** Konsole (Zsh + Starship prompt)
-- **Editor:** Neovim (LazyVim configuration)
-- **Browser:** Firefox (with uBlock Origin)
+- **Editor:** Neovim (LazyVim configuration) \ nano
+- **Browser:** Firefox (with uBlock Origin) \ Vivaldi
 - **Communication:** Telegram, Thunderbird
 
 ## [Daily CLI Tools]
