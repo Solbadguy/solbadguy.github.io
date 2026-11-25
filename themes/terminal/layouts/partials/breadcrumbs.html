@@ -1,24 +1,8 @@
 <nav class="breadcrumbs">
-  {{ $slug := "" }}
-  {{ with .File }}
-    {{ $slug = .TranslationBaseName }}
-  {{ else }}
-    {{ $slug = urlize .Title }}
-  {{ end }}
-
-  {{ $path := "" }}
-  {{ if .IsHome }}
-    {{ $path = "~/" }}
-  {{ else if eq .Section "posts" }}
-    {{ if .IsPage }}
-      {{ $path = print "~/posts/" $slug }}
-    {{ else }}
-      {{ $path = "~/posts" }}
-    {{ end }}
-  {{ else if .Section }}
-    {{ $path = print "~/" .Section }}
-  {{ else }}
-    {{ $path = print "~/" $slug }}
+  {{/* Путь берём из URL страницы: у page bundles имя файла всегда index.md */}}
+  {{ $path := "~/" }}
+  {{ if not .IsHome }}
+    {{ $path = printf "~/%s" (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink)) }}
   {{ end }}
 
   <span class="prompt">$</span> <span class="command">cat</span> <span class="path">{{ $path }}</span>

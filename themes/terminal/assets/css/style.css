@@ -337,6 +337,9 @@ a:hover { border-bottom-color: var(--fg); }
   margin-bottom: 2.5rem; align-items: start;
 }
 
+.about-main-col { min-width: 0; }
+.about-photo-col { margin-bottom: 1.5rem; }
+
 .about-photo-col img {
   width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border);
   filter: grayscale(100%); transition: filter 0.3s ease; display: block;
@@ -421,17 +424,7 @@ a:hover { border-bottom-color: var(--fg); }
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/**  .about-side-by-side { grid-template-columns: 1fr; gap: 1.5rem; } **/
-.about-side-by-side {
-  display: grid;
-  /* Левая колонка гибкая, правая фиксированная узкая */
-  grid-template-columns: 1fr 280px; 
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  align-items: start;
-  position: relative; /* Важно для абсолютного позиционирования правой колонки */
-  min-height: 300px; /* Минимальная высота, чтобы контент не схлопывался */
-}
+.about-side-by-side { grid-template-columns: 1fr; gap: 1.5rem; }
 
   .about-stack-col { position: static; }
   .about-photo-col img { aspect-ratio: auto; }

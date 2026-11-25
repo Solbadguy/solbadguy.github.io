@@ -5,12 +5,17 @@
       <h1 class="post-title">{{ .Title }}</h1>
     </header>
 
-    <!-- Сетка: Картинка шире, стек уже -->
+    <!-- Сетка: слева фото и текст под ним, справа стек -->
     <div class="about-side-by-side">
-      
-      <!-- Левая колонка: Фото -->
-      <div class="about-photo-col">
-        <img src="/obo-mne/images/about-author.jpg" alt="solbadguy">
+
+      <!-- Левая колонка: фото + описание под ним -->
+      <div class="about-main-col">
+        <div class="about-photo-col">
+          <img src="/obo-mne/images/about-author.jpg" alt="solbadguy">
+        </div>
+        <div class="about-text-below">
+          {{ .Content }}
+        </div>
       </div>
 
       <!-- Правая колонка: Tech Stack (компактный) -->
@@ -75,11 +80,6 @@
         </div>
       </aside>
 
-    </div>
-
-    <!-- Текст ПОД обоими блоками -->
-    <div class="about-text-below">
-      {{ .Content }}
     </div>
 
   </article>
