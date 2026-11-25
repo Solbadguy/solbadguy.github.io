@@ -1,6 +1,6 @@
 ---
 title: "Блог переехал на Hugo"
-date: 2026-11-25T20:22:19+03:00
+date: 2026-11-25
 draft: false
 summary: "Блог был перенесен с wordpress на hugo."
 tags: [hugo]
