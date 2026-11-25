@@ -1,14 +1,15 @@
-{{ $headings := .Content | findRE "<h[23][^>]*id=\"[^\"]+\"[^>]*>" }}
+{{/* Захватываем заголовок целиком, вместе с текстом между тегами */}}
+{{ $headings := .Content | findRE "(?s)<h[23][^>]*id=\"[^\"]+\"[^>]*>.*?</h[23]>" }}
 {{ if gt (len $headings) 2 }}
 <aside class="toc" id="toc">
   <div class="toc-title">Содержание</div>
   <ul class="toc-list">
     {{ range $headings }}
-      {{ $level := substr . 1 1 }}
+      {{ $level := substr . 1 2 }}
       {{ $id := replaceRE `.*id="([^"]+)".*` "$1" . }}
       {{ $text := replaceRE `<[^>]+>` "" . | htmlUnescape }}
       <li class="toc-{{ $level }}">
-        <a href="#{{ $id }}">{{ $text }}</a>
+        <a {{ printf "href=\"#%s\"" $id | safeHTMLAttr }}>{{ $text }}</a>
       </li>
     {{ end }}
   </ul>
