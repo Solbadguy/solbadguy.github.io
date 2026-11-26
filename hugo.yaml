@@ -1,7 +1,7 @@
 baseURL: "https://solbadguy.github.io/"
 locale: "ru"
 defaultContentLanguage: "ru"
-title: "admin46@blog:~$"
+title: "Solbadguy@blog:~$"
 theme: "terminal"
 paginate: 10
 
@@ -11,12 +11,12 @@ pygmentsCodeFences: true
 pygmentsUseClasses: true
 
 params:
-  author: "admin46"
+  author: "solbadguy"
   hostname: "blog"
-  username: "admin46"
+  username: "solbadguy"
   prompt: "~$"
-  description: "Личный блог admin46 — заметки по Linux, DevOps, сетям и инфраструктуре."
-  keywords: ["блог", "linux", "it", "администрирование", "devops"]
+  description: "Личный блог  — заметки по Linux, DevOps, мониторингу  и инфраструктуре."
+  keywords: ["блог", "linux", "it", "администрирование", "мониторинг"]
   images: ["images/og-image.png"]
 
 menu:
